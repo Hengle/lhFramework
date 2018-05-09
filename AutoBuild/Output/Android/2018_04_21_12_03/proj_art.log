@@ -1,0 +1,1673 @@
+
+LICENSE SYSTEM [2018421 12:3:9] No start/stop license dates set
+
+LICENSE SYSTEM [2018421 12:3:9] Next license update check is after 2027-08-23T00:17:35
+
+DisplayProgressbar: Unity license
+[Package Manager] Server::Start -- Port 53242 was selected
+
+ COMMAND LINE ARGUMENTS:
+/Applications/Unity/Unity.app/Contents/MacOS/Unity
+-quit
+-batchmode
+-projectPath
+/Users/laohan/workSpace/Unity/lhFramework/Art/Android
+-logFile
+/Users/laohan/workSpace/Unity/lhFramework/AutoBuild/Output/Android/2018_04_21_12_03/proj_art.log
+-executeMethod
+AutoBuild.BuildPackage
+/Users/laohan/workSpace/Unity/lhFramework/AutoBuild/Output/Android/2018_04_21_12_03/maintainer.txt
+debug
+Successfully changed project path to: /Users/laohan/workSpace/Unity/lhFramework/Art/Android
+/Users/laohan/workSpace/Unity/lhFramework/Art/Android
+Loading GUID <-> Path mappings...0.000053 seconds
+Loading Asset Database...0.011047 seconds
+Audio: FMOD Profiler initialized on port 54900
+AssetDatabase consistency checks...0.051310 seconds
+Refreshing native plugins compatible for Editor in 4.63 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+DisplayProgressbar: Unity Package Manager
+[Package Manager] Resolving 4 packages:
+[Package Manager]  * Package :  com.unity.ads@2.0.3
+    (location: /Users/laohan/Library/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3)
+[Package Manager]  * Package :  com.unity.analytics@2.0.13
+    (location: /Users/laohan/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13)
+[Package Manager]  * Package :  com.unity.purchasing@0.0.19
+    (location: /Users/laohan/Library/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19)
+[Package Manager]  * Package :  com.unity.standardevents@1.0.10
+    (location: /Users/laohan/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10)
+[Package Manager] Resolve completed
+Initialize engine version: 2017.4.0f1 (b5bd171ee9ba)
+GfxDevice: creating device client; threaded=0
+Renderer: Intel Iris OpenGL Engine
+Vendor:   Intel Inc.
+Version:  4.1 INTEL-10.30.12
+GLES:     0
+ GL_ARB_blend_func_extended GL_ARB_draw_buffers_blend GL_ARB_draw_indirect GL_ARB_ES2_compatibility GL_ARB_explicit_attrib_location GL_ARB_gpu_shader_fp64 GL_ARB_gpu_shader5 GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_occlusion_query2 GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_separate_shader_objects GL_ARB_shader_bit_encoding GL_ARB_shader_subroutine GL_ARB_shading_language_include GL_ARB_tessellation_shader GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_cube_map_array GL_ARB_texture_gather GL_ARB_texture_query_lod GL_ARB_texture_rgb10_a2ui GL_ARB_texture_storage GL_ARB_texture_swizzle GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_vertex_attrib_64bit GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_EXT_debug_label GL_EXT_debug_marker GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_texture_compression_s3tc GL_EXT_texture_filter_anisotropic GL_EXT_texture_sRGB_decode GL_APPLE_client_storage GL_APPLE_container_object_shareable GL_APPLE_fl
+ush_render GL_APPLE_object_purgeable GL_APPLE_rgb_422 GL_APPLE_row_bytes GL_APPLE_texture_range GL_ATI_texture_mirror_once GL_NV_texture_barrier
+OPENGL LOG: Creating OpenGL 4.1 graphics device ; Context level  <OpenGL 4.1> ; Context handle 244113408
+Initialize mono
+Mono path[0] = '/Applications/Unity/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Unity.app/Contents/Mono/lib/mono/2.0'
+Mono config path = '/Applications/Unity/Unity.app/Contents/Mono/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,defer=y,address=0.0.0.0:56324
+Begin MonoManager ReloadAssembly
+Initializing Unity.PackageManager (PackageManager) v2017.4.0 for Unity v2017.4.0f1
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: /Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: /Applications/Unity/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.000817 seconds.
+Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 2.07 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.776 seconds
+Registering platform support modules:
+Registered platform support modules in: 0.111814s.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Native extension for iOS target not found
+[XcodeApplications] RefreshListOfAvailableXcodeApplications in: 0.02559s.
+Native extension for Android target not found
+Begin MonoManager ReloadAssembly
+Registering precompiled user dll's ...
+Registered in 0.049092 seconds.
+Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.48 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.424 seconds
+Initializing Unity.PackageManager (PackageManager) v2017.4.0 for Unity v2017.4.0f1
+Registering platform support modules:
+Registered platform support modules in: 0.016566s.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Native extension for iOS target not found
+[XcodeApplications] RefreshListOfAvailableXcodeApplications in: 0.004006s.
+Native extension for Android target not found
+Validating Project structure ... 0.020305 seconds.
+Refresh: detecting if any assets need to be imported or removed ... Refresh: elapses 0.113656 seconds
+Refreshing native plugins compatible for Editor in 0.86 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.97 ms.
+
+----- Total AssetImport time: 0.093860s, AssetImport time: 0.000000s, Asset hashing: 0.000000s [0 B, 0.000000 mb/s]
+
+Warming cache for 848 main assets: 0.004385 seconds elapsed
+Initializing Unity extensions:
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll'  GUID: 12fd8a0055b84bb59e84c9835a37e333
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Timeline/Runtime/UnityEngine.Timeline.dll'  GUID: 6a10b2909283487f913b00d94cd3faf5
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/portable/nunit.framework.dll'  GUID: 405b9b51bb344a128608d968297df79c
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/Standalone/UnityEngine.UI.dll'  GUID: f70555f144d8491a825f0804e09c671c
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'  GUID: f5f67c52d1564df4a8936ccd202a3bd8
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll'  GUID: 844f815391db42d49455cbf1a7bfc434
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/Standalone/UnityEngine.Networking.dll'  GUID: dc443db3e92b4983b9738c1131f555cb
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/Runtime/UnityEngine.SpatialTracking.dll'  GUID: ed7343f30e3843b3afda8f8b02669cea
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll'  GUID: 4a3ecb1425d14502837abea459cf2b70
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll'  GUID: 5f32cd94baa94578a686d4b9d6b660f7
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/Runtime/UnityEngine.HoloLens.dll'  GUID: f7b54ff4a43d4fcf81b4538b678e0bcc
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll'  GUID: b5da970776034f77a070d99423d68791
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll'  GUID: adebbd281f1a4ef3a30be7f21937e02f
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll'  GUID: 870353891bb340e2b2a9c8707e7419ba
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll'  GUID: 53ebcfaa2e1e4e2dbc85882cd5a73fa1
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll'  GUID: ead147da21254ff9a0a936bdd75e1680
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Runtime/UnityEngine.GoogleAudioSpatializer.dll'  GUID: e4f4cf1b9b434137a499903a7a1d651a
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll'  GUID: 4ba2329b63d54f0187bcaa12486b1b0f
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll'  GUID: 1c6d1fbb51834b64847b1b73a75bfc77
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll'  GUID: 3a84de5cd0624681b6b6dcd8921d912a
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll'  GUID: 80a3616ca19596e4da0f10f14d241e9f
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll'  GUID: c768acbc9cf24d398488bb4c93b91288
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll'  GUID: 4113173d5e95493ab8765d7b08371de4
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll'  GUID: 4b3fa4bde7f1451a8218c03ee6a8ded8
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll'  GUID: b8a0574e92bd43a59e19d6c3c6ae54c7
+ '/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll'  GUID: 7668179ede524d6396c8b7d84461ea29
+Unloading 360 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 246.4 MB.
+System memory in use after: 246.4 MB.
+
+Unloading 125 unused Assets to reduce memory usage. Loaded Objects now: 935.
+Total: 3.614395 ms (FindLiveObjects: 1.071819 ms CreateObjectMapping: 0.109844 ms MarkObjects: 2.352228 ms  DeleteObjects: 0.078367 ms)
+
+/Applications/Unity/Unity.app/Contents/MacOS/Unity   0
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+AutoBuild:BuildPackage() (at Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs:17)
+ 
+(Filename: Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs Line: 17)
+
+-quit   1
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+AutoBuild:BuildPackage() (at Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs:17)
+ 
+(Filename: Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs Line: 17)
+
+-batchmode   2
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+AutoBuild:BuildPackage() (at Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs:17)
+ 
+(Filename: Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs Line: 17)
+
+-projectPath   3
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+AutoBuild:BuildPackage() (at Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs:17)
+ 
+(Filename: Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs Line: 17)
+
+/Users/laohan/workSpace/Unity/lhFramework/Art/Android   4
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+AutoBuild:BuildPackage() (at Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs:17)
+ 
+(Filename: Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs Line: 17)
+
+-logFile   5
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+AutoBuild:BuildPackage() (at Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs:17)
+ 
+(Filename: Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs Line: 17)
+
+/Users/laohan/workSpace/Unity/lhFramework/AutoBuild/Output/Android/2018_04_21_12_03/proj_art.log   6
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+AutoBuild:BuildPackage() (at Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs:17)
+ 
+(Filename: Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs Line: 17)
+
+-executeMethod   7
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+AutoBuild:BuildPackage() (at Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs:17)
+ 
+(Filename: Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs Line: 17)
+
+AutoBuild.BuildPackage   8
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+AutoBuild:BuildPackage() (at Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs:17)
+ 
+(Filename: Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs Line: 17)
+
+/Users/laohan/workSpace/Unity/lhFramework/AutoBuild/Output/Android/2018_04_21_12_03/maintainer.txt   9
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+AutoBuild:BuildPackage() (at Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs:17)
+ 
+(Filename: Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs Line: 17)
+
+debug   10
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+AutoBuild:BuildPackage() (at Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs:17)
+ 
+(Filename: Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs Line: 17)
+
+DisplayProgressbar: Issues Finder
+DisplayProgressbar: Issues Finder: phase 1 of 3, item 1 of 18
+Opening scene 'Assets/Scene/test.unity'
+Load scene 'Assets/Scene/test.unity' time: 0.071976 ms 
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 7000061cf000 -> priority: 1 
+  Thread -> id: 70000743c000 -> priority: 1 
+Unloading 71 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 270.0 MB.
+System memory in use after: 270.2 MB.
+
+Unloading 0 unused Assets to reduce memory usage. Loaded Objects now: 3753.
+Total: 9.786697 ms (FindLiveObjects: 1.662076 ms CreateObjectMapping: 0.201235 ms MarkObjects: 7.902550 ms  DeleteObjects: 0.019133 ms)
+
+DisplayProgressbar: Issues Finder: phase 1 of 3, item 2 of 18
+Opening scene 'Assets/Toolkit/MeshBaker/Examples/BatchPrepareObjectsForDynamicBatching.unity'
+Load scene 'Assets/Toolkit/MeshBaker/Examples/BatchPrepareObjectsForDynamicBatching.unity' time: 0.078021 ms 
+Unloading 9 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 270.9 MB.
+System memory in use after: 271.1 MB.
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 3884.
+Total: 11.155647 ms (FindLiveObjects: 1.643750 ms CreateObjectMapping: 0.210869 ms MarkObjects: 8.166532 ms  DeleteObjects: 1.132585 ms)
+
+DisplayProgressbar: Issues Finder: phase 1 of 3, item 3 of 18
+Opening scene 'Assets/Toolkit/MeshBaker/Examples/CustomizeCharacterGame.unity'
+Load scene 'Assets/Toolkit/MeshBaker/Examples/CustomizeCharacterGame.unity' time: 0.042883 ms 
+Unloading 11 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 271.6 MB.
+System memory in use after: 271.9 MB.
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 3937.
+Total: 9.995114 ms (FindLiveObjects: 1.609723 ms CreateObjectMapping: 0.227917 ms MarkObjects: 8.082711 ms  DeleteObjects: 0.072725 ms)
+
+DisplayProgressbar: Issues Finder: phase 1 of 3, item 4 of 18
+Opening scene 'Assets/Toolkit/MeshBaker/Examples/CustomizeCharacterSetup.unity'
+Load scene 'Assets/Toolkit/MeshBaker/Examples/CustomizeCharacterSetup.unity' time: 0.037664 ms 
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 271.7 MB.
+System memory in use after: 272.0 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4066.
+Total: 9.246715 ms (FindLiveObjects: 1.796107 ms CreateObjectMapping: 0.217627 ms MarkObjects: 7.080750 ms  DeleteObjects: 0.150136 ms)
+
+DisplayProgressbar: Issues Finder: phase 1 of 3, item 5 of 18
+Opening scene 'Assets/Toolkit/MeshBaker/Examples/PrepareObjectsForDynamicBatching.unity'
+Load scene 'Assets/Toolkit/MeshBaker/Examples/PrepareObjectsForDynamicBatching.unity' time: 0.028390 ms 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 271.6 MB.
+System memory in use after: 271.5 MB.
+
+Unloading 158 unused Assets to reduce memory usage. Loaded Objects now: 3799.
+Total: 9.228124 ms (FindLiveObjects: 1.666340 ms CreateObjectMapping: 0.268117 ms MarkObjects: 7.066484 ms  DeleteObjects: 0.225220 ms)
+
+DisplayProgressbar: Issues Finder: phase 1 of 3, item 6 of 18
+Opening scene 'Assets/Toolkit/MeshBaker/Examples/Scene1.unity'
+Load scene 'Assets/Toolkit/MeshBaker/Examples/Scene1.unity' time: 0.034150 ms 
+Unloading 12 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 272.7 MB.
+System memory in use after: 273.0 MB.
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 3991.
+Total: 4.752074 ms (FindLiveObjects: 1.316351 ms CreateObjectMapping: 0.086420 ms MarkObjects: 3.327536 ms  DeleteObjects: 0.020243 ms)
+
+DisplayProgressbar: Issues Finder: phase 1 of 3, item 7 of 18
+Opening scene 'Assets/Toolkit/MeshBaker/Examples/SceneBakeTexturesAtRuntime.unity'
+Load scene 'Assets/Toolkit/MeshBaker/Examples/SceneBakeTexturesAtRuntime.unity' time: 0.029961 ms 
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 271.9 MB.
+System memory in use after: 271.8 MB.
+
+Unloading 72 unused Assets to reduce memory usage. Loaded Objects now: 3813.
+Total: 5.548616 ms (FindLiveObjects: 0.923662 ms CreateObjectMapping: 0.072365 ms MarkObjects: 4.027730 ms  DeleteObjects: 0.523270 ms)
+
+DisplayProgressbar: Issues Finder: phase 1 of 3, item 8 of 18
+Opening scene 'Assets/Toolkit/MeshBaker/Examples/SceneBasic.unity'
+Load scene 'Assets/Toolkit/MeshBaker/Examples/SceneBasic.unity' time: 0.026415 ms 
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 271.1 MB.
+System memory in use after: 271.3 MB.
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 3805.
+Total: 4.303333 ms (FindLiveObjects: 0.907772 ms CreateObjectMapping: 0.074613 ms MarkObjects: 3.291587 ms  DeleteObjects: 0.027658 ms)
+
+DisplayProgressbar: Issues Finder: phase 1 of 3, item 9 of 18
+Opening scene 'Assets/Toolkit/MeshBaker/Examples/SceneDynamicAddingDelete.unity'
+Load scene 'Assets/Toolkit/MeshBaker/Examples/SceneDynamicAddingDelete.unity' time: 0.022200 ms 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 271.1 MB.
+System memory in use after: 271.3 MB.
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 3785.
+Total: 4.243797 ms (FindLiveObjects: 0.837618 ms CreateObjectMapping: 0.075969 ms MarkObjects: 3.305350 ms  DeleteObjects: 0.023472 ms)
+
+DisplayProgressbar: Issues Finder: phase 1 of 3, item 10 of 18
+Opening scene 'Assets/Toolkit/MeshBaker/Examples/SceneMultipleMaterials.unity'
+Load scene 'Assets/Toolkit/MeshBaker/Examples/SceneMultipleMaterials.unity' time: 0.020649 ms 
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 271.3 MB.
+System memory in use after: 271.6 MB.
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 3838.
+Total: 5.379366 ms (FindLiveObjects: 1.772147 ms CreateObjectMapping: 0.091575 ms MarkObjects: 3.490433 ms  DeleteObjects: 0.023917 ms)
+
+DisplayProgressbar: Issues Finder: phase 1 of 3, item 11 of 18
+<b>[Maintainer]</b> Issues Finder: something went wrong :(
+System.ArgumentException: Scene file path not valid: 'Assets/Toolkit/MeshBaker/Examples/SceneRuntimeExample.Unity'. Extension should be '.unity'
+  at (wrapper managed-to-native) UnityEditor.SceneManagement.EditorSceneManager:INTERNAL_CALL_OpenScene (string,UnityEditor.SceneManagement.OpenSceneMode,UnityEngine.SceneManagement.Scene&)
+  at UnityEditor.SceneManagement.EditorSceneManager.OpenScene (System.String scenePath) [0x00007] in /Users/builduser/buildslave/unity/build/artifacts/generated/common/editor/EditorSceneManagerBindings.gen.cs:40 
+  at CodeStage.Maintainer.Tools.CSSceneTools.OpenScene (System.String path) [0x0006a] in /Users/laohan/workSpace/Unity/lhFramework/Art/Android/Assets/Toolkit/Maintainer/Editor/Code/Tools/CSSceneTools.cs:65 
+  at CodeStage.Maintainer.Issues.IssuesFinder.ProcessSelectedScenes (System.Collections.Generic.List`1 issues) [0x000b1] in /Users/laohan/workSpace/Unity/lhFramework/Art/Android/Assets/Toolkit/Maintainer/Editor/Code/Modules/RecordsBased/Issues/IssuesFinder.cs:225 
+  at CodeStage.Maintainer.Issues.IssuesFinder.StartSearch (Boolean showResults) [0x000a7] in /Users/laohan/workSpace/Unity/lhFramework/Art/Android/Assets/Toolkit/Maintainer/Editor/Code/Modules/RecordsBased/Issues/IssuesFinder.cs:102 
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:LogError(Object)
+CodeStage.Maintainer.Issues.IssuesFinder:StartSearch(Boolean) (at Assets/Toolkit/Maintainer/Editor/Code/Modules/RecordsBased/Issues/IssuesFinder.cs:136)
+AutoBuild:BuildPackage() (at Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs:20)
+ 
+(Filename: Assets/Toolkit/Maintainer/Editor/Code/Modules/RecordsBased/Issues/IssuesFinder.cs Line: 136)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 271.6 MB.
+System memory in use after: 271.8 MB.
+
+Unloading 46 unused Assets to reduce memory usage. Loaded Objects now: 3757.
+Total: 6.245179 ms (FindLiveObjects: 2.441543 ms CreateObjectMapping: 0.173499 ms MarkObjects: 3.546844 ms  DeleteObjects: 0.081722 ms)
+
+DisplayProgressbar: Building AssetBundle
+DisplayProgressbar: Building Asset Bundle
+
+***Player size statistics***
+Total compressed size 1.0 KB. Total uncompressed size 4.2 KB.
+
+*** Completed 'Build.AssetBundle.MacStandaloneSupport' in 0 seconds (5 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 272.8 MB.
+System memory in use after: 273.0 MB.
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 3777.
+Total: 4.583851 ms (FindLiveObjects: 1.007950 ms CreateObjectMapping: 0.076732 ms MarkObjects: 3.478707 ms  DeleteObjects: 0.019336 ms)
+
+
+-------------------------------------------------------------------------------
+Bundle Name: StandaloneOSX
+Compressed Size:1.0 kb
+Uncompressed usage by category:
+Textures      0.0 kb	 0.0% 
+Meshes        0.0 kb	 0.0% 
+Animations    0.0 kb	 0.0% 
+Sounds        0.0 kb	 0.0% 
+Shaders       0.0 kb	 0.0% 
+Other Assets  0.2 kb	 5.8% 
+Levels        0.0 kb	 0.0% 
+Scripts       0.0 kb	 0.0% 
+Included DLLs 0.0 kb	 0.0% 
+File headers  4.0 kb	 94.2% 
+Complete size 4.2 kb	 100.0% 
+
+Used Assets and files from the Resources folder, sorted by uncompressed size:
+ 0.1 kb	 3.1% Built-in AssetBundleManifest: AssetBundleManifest
+ 0.1 kb	 2.7% AssetBundle Object
+-------------------------------------------------------------------------------
+Refresh: detecting if any assets need to be imported or removed ... 
+Hashing assets ... 0.000 seconds
+  file open: 0.000 seconds (2 files)
+  file read: 0.000 seconds (0.001 MB)
+  hash: 0.000 seconds
+----- Compute hash(es) for 1 asset(s).
+----- Asset named Assets/StreamingAssets/Bundle/StandaloneOSX/StandaloneOSX is skipped as no actual change.
+
+Refresh: elapses 0.113462 seconds
+Refreshing native plugins compatible for Editor in 3.87 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.70 ms.
+
+----- Total AssetImport time: 0.107161s, AssetImport time: 0.000000s, Asset hashing: 0.000343s [1.2 KB, 3.361457 mb/s]
+
+Cancelling DisplayDialog: Information Build success!
+This should not be called in batch mode.
+UnityEditor.EditorUtility:DisplayDialog(String, String, String, String)
+UnityEditor.EditorUtility:DisplayDialog(String, String, String) (at /Users/builduser/buildslave/unity/build/artifacts/generated/common/editor/EditorUtilityBindings.gen.cs:70)
+BundleManager:BuildAssetBundle() (at Assets/Toolkit/BundleManager/Editor/BundleManager.cs:37)
+BundleManager:Build() (at Assets/Toolkit/BundleManager/Editor/BundleManager.cs:19)
+AutoBuild:BuildPackage() (at Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs:24)
+
+[/Users/builduser/buildslave/unity/build/Editor/Platform/OSX/EditorUtility.mm line 297] 
+(Filename: /Users/builduser/buildslave/unity/build/artifacts/generated/common/editor/EditorUtilityBindings.gen.cs Line: 70)
+
+BuildPlayer: start building target 2
+- Starting compile Library/ScriptAssemblies/Assembly-CSharp.dll
+
+-----Compiler Commandline Arguments:
+Filename: /Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono
+Arguments: '/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.5/mcs.exe'  @Temp/UnityTempFile-4b02286c5a5bb4237b1f2f10f8715f48
+index: 81
+Responsefile: Temp/UnityTempFile-4b02286c5a5bb4237b1f2f10f8715f48 Contents: 
+-debug
+-target:library
+-nowarn:0169
+-langversion:4
+-out:'Temp/Assembly-CSharp.dll'
+-unsafe
+-optimize
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.CoreModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.AccessibilityModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.ParticleSystemModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.PhysicsModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.VehiclesModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.ClothModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.AIModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.AnimationModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.TextRenderingModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.UIModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.TerrainPhysicsModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.IMGUIModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.ClusterInputModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.ClusterRendererModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.UNETModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.DirectorModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.UnityAnalyticsModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.PerformanceReportingModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.UnityConnectModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.WebModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.ARModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.VRModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.UIElementsModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.StyleSheetsModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.AssetBundleModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.AudioModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.CrashReportingModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.GameCenterModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.GridModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.ImageConversionModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.InputModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.JSONSerializeModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.ParticlesLegacyModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.Physics2DModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.ScreenCaptureModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.SharedInternalsModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.SpriteMaskModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.SpriteShapeModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.TerrainModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.TilemapModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.UnityWebRequestModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.UnityWebRequestAudioModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.UnityWebRequestTextureModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.UnityWebRequestWWWModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.VideoModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Managed/UnityEngine.WindModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/Standalone/UnityEngine.Networking.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/Standalone/UnityEngine.UI.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Timeline/Runtime/UnityEngine.Timeline.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/Runtime/UnityEngine.SpatialTracking.dll'
+-r:'/Users/laohan/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll'
+-define:UNITY_5_3_OR_NEWER
+-define:UNITY_5_4_OR_NEWER
+-define:UNITY_5_5_OR_NEWER
+-define:UNITY_5_6_OR_NEWER
+-define:UNITY_2017_1_OR_NEWER
+-define:UNITY_2017_2_OR_NEWER
+-define:UNITY_2017_3_OR_NEWER
+-define:UNITY_2017_4_OR_NEWER
+-define:UNITY_2017_4_0
+-define:UNITY_2017_4
+-define:UNITY_2017
+-define:PLATFORM_ARCH_64
+-define:UNITY_64
+-define:ENABLE_AUDIO
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_GENERICS
+-define:ENABLE_PVR_GI
+-define:ENABLE_MICROPHONE
+-define:ENABLE_MULTIPLE_DISPLAYS
+-define:ENABLE_PHYSICS
+-define:ENABLE_SPRITERENDERER_FLIPPING
+-define:ENABLE_SPRITES
+-define:ENABLE_GRID
+-define:ENABLE_TILEMAP
+-define:ENABLE_TERRAIN
+-define:ENABLE_RAKNET
+-define:ENABLE_DIRECTOR
+-define:ENABLE_UNET
+-define:ENABLE_LZMA
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_WEBCAM
+-define:ENABLE_WWW
+-define:ENABLE_CLOUD_SERVICES_COLLAB
+-define:ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS
+-define:ENABLE_CLOUD_SERVICES_ADS
+-define:ENABLE_CLOUD_HUB
+-define:ENABLE_CLOUD_PROJECT_ID
+-define:ENABLE_CLOUD_SERVICES_USE_WEBREQUEST
+-define:ENABLE_CLOUD_SERVICES_UNET
+-define:ENABLE_CLOUD_SERVICES_BUILD
+-define:ENABLE_CLOUD_LICENSE
+-define:ENABLE_EDITOR_HUB
+-define:ENABLE_EDITOR_HUB_LICENSE
+-define:ENABLE_WEBSOCKET_CLIENT
+-define:ENABLE_DIRECTOR_AUDIO
+-define:ENABLE_DIRECTOR_TEXTURE
+-define:ENABLE_TIMELINE
+-define:ENABLE_EDITOR_METRICS
+-define:ENABLE_EDITOR_METRICS_CACHING
+-define:ENABLE_NATIVE_ARRAY
+-define:ENABLE_SPRITE_MASKING
+-define:INCLUDE_DYNAMIC_GI
+-define:INCLUDE_GI
+-define:ENABLE_MONO_BDWGC
+-define:PLATFORM_SUPPORTS_MONO
+-define:RENDER_SOFTWARE_CURSOR
+-define:INCLUDE_PUBNUB
+-define:ENABLE_PLAYMODE_TESTS_RUNNER
+-define:ENABLE_VIDEO
+-define:ENABLE_RMGUI
+-define:ENABLE_PACKMAN
+-define:ENABLE_CUSTOM_RENDER_TEXTURE
+-define:ENABLE_STYLE_SHEETS
+-define:ENABLE_LOCALIZATION
+-define:PLATFORM_STANDALONE_OSX
+-define:PLATFORM_STANDALONE
+-define:UNITY_STANDALONE_OSX
+-define:UNITY_STANDALONE
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_GAMECENTER
+-define:ENABLE_RUNTIME_GI
+-define:ENABLE_MOVIES
+-define:ENABLE_NETWORK
+-define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+-define:ENABLE_UNITYWEBREQUEST
+-define:ENABLE_CLOUD_SERVICES
+-define:ENABLE_CLOUD_SERVICES_ANALYTICS
+-define:ENABLE_CLOUD_SERVICES_PURCHASING
+-define:ENABLE_CLOUD_SERVICES_CRASH_REPORTING
+-define:ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING
+-define:ENABLE_CLUSTERINPUT
+-define:ENABLE_VR
+-define:ENABLE_AR
+-define:ENABLE_SPATIALTRACKING
+-define:ENABLE_WEBSOCKET_HOST
+-define:ENABLE_MONO
+-define:NET_2_0_SUBSET
+-define:UNITY_PRO_LICENSE
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineBlendListCamera.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineBrain.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineClearShot.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineCollider.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineConfiner.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineDollyCart.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineExternalCamera.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineFollowZoom.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineFreeLook.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineMixingCamera.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachinePath.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachinePipeline.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineSmoother.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineSmoothPath.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineStateDrivenCamera.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineTargetGroup.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineVirtualCamera.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Components/CinemachineBasicMultiChannelPerlin.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Components/CinemachineComposer.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Components/CinemachineFramingTransposer.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Components/CinemachineGroupComposer.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Components/CinemachineHardLockToTarget.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Components/CinemachineHardLookAt.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Components/CinemachineOrbitalTransposer.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Components/CinemachinePOV.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Components/CinemachineSameAsFollowObject.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Components/CinemachineTrackedDolly.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Components/CinemachineTransposer.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/AxisState.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/CameraState.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/CinemachineBlend.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/CinemachineBlenderSettings.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/CinemachineComponentBase.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/CinemachineCore.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/CinemachineDebugLogger.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/CinemachineExtension.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/CinemachinePathBase.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/CinemachinePropertyAttribute.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/CinemachineVirtualCameraBase.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/GaussianFilter.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/ICinemachineCamera.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/ICinemachineComponent.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/LensSettings.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/NoiseSettings.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/Predictor.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/ReflectionHelpers.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/SplineHelpers.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/UnityVectorExtensions.cs'
+'Assets/Toolkit/Cinemachine/PostFX/CinemachinePostFX.cs'
+'Assets/Toolkit/Cinemachine/PostFX/CinemachinePostProcessing.cs'
+'Assets/Toolkit/Cinemachine/Timeline/CinemachineMixer.cs'
+'Assets/Toolkit/Cinemachine/Timeline/CinemachineShot.cs'
+'Assets/Toolkit/Cinemachine/Timeline/CinemachineTrack.cs'
+'Assets/Toolkit/MeshBaker/Examples/BakeTexturesAtRuntime/BakeTexturesAtRuntime.cs'
+'Assets/Toolkit/MeshBaker/Examples/BatchPrepareObjectsForDynamicBatching/MB_BatchPrepareObjectsForDynamicBatchingDescription.cs'
+'Assets/Toolkit/MeshBaker/Examples/CharacterCustomization/MB_SwapShirts.cs'
+'Assets/Toolkit/MeshBaker/Examples/PrepareObjectsForDynamicBatching/MB_PrepareObjectsForDynamicBatchingDescription.cs'
+'Assets/Toolkit/MeshBaker/Examples/SceneDynamicAddDelete/MB_DynamicAddDeleteExample.cs'
+'Assets/Toolkit/MeshBaker/Examples/SceneRuntimeExample/MB_Example.cs'
+'Assets/Toolkit/MeshBaker/Examples/SceneRuntimeExample/MB_ExampleMover.cs'
+'Assets/Toolkit/MeshBaker/Examples/SceneRuntimeExample/MB_ExampleSkinnedMeshDescription.cs'
+'Assets/Toolkit/MeshBaker/Examples/SkinnedMeshRenderer/MB_SkinnedMeshSceneController.cs'
+'Assets/Toolkit/MeshBaker/scripts/_testing/MB2_TestShowHide.cs'
+'Assets/Toolkit/MeshBaker/scripts/_testing/MB2_TestUpdate.cs'
+'Assets/Toolkit/MeshBaker/scripts/_testing/MB3_TestAddingRemovingSkinnedMeshes.cs'
+'Assets/Toolkit/MeshBaker/scripts/_testing/MB3_TestBakeAllWithSameMaterial.cs'
+'Assets/Toolkit/MeshBaker/scripts/_testing/MB3_TestRenderTextureTestHarness.cs'
+'Assets/Toolkit/MeshBaker/scripts/_testing/MB3_TestTexturePacker.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB_TGAWriter.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB_Utility.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB2_Core.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB2_Log.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB2_MBVersion.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB2_TexturePacker.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB2_TexturePackerHorizontalVert.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB3_AgglomerativeClustering.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB3_AtlasPackerRenderTexture.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB3_CopyBoneWeights.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB3_GrouperCluster.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB3_MeshCombiner.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB3_MeshCombinerSimple.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB3_MultiMeshCombiner.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB3_PriorityQueue.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB3_UVTransform.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB2_TextureBakeResults.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB2_UpdateSkinnedMeshBoundsFromBones.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB2_UpdateSkinnedMeshBoundsFromBounds.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB3_BatchPrefabBaker.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB3_BoneWeightCopier.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB3_DisableHiddenAnimations.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB3_MBVersionConcrete.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB3_MeshBaker.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB3_MeshBakerCommon.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB3_MeshBakerGrouper.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB3_MeshBakerRoot.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB3_MultiMeshBaker.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB3_TextureBaker.cs'
+'Assets/Toolkit/MeshBaker/scripts/TextureBlenders/TextureBlender.cs'
+'Assets/Toolkit/MeshBaker/scripts/TextureBlenders/TextureBlenderFallback.cs'
+'Assets/Toolkit/MeshBaker/scripts/TextureBlenders/TextureBlenderLegacyBumpDiffuse.cs'
+'Assets/Toolkit/MeshBaker/scripts/TextureBlenders/TextureBlenderLegacyDiffuse.cs'
+'Assets/Toolkit/MeshBaker/scripts/TextureBlenders/TextureBlenderStandardMetallic.cs'
+'Assets/Toolkit/MeshBaker/scripts/TextureBlenders/TextureBlenderStandardSpecular.cs'
+'Assets/Toolkit/QHierarchy/Scripts/QObjectList.cs'
+-r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Xml.Linq.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/UnityScript.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/UnityScript.Lang.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/Boo.Lang.dll'
+-sdk:unity
+
+-----CompilerOutput:-stdout--exitcode: 0--compilationhadfailure: False--outfile: Temp/Assembly-CSharp.dll
+Compilation succeeded - 7 warning(s)
+-----CompilerOutput:-stderr----------
+Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs(2661,63): warning CS0618: `UnityEngine.ProceduralMaterial' is obsolete: `Built-in support for Substance Designer materials has been deprecated and will be removed in Unity 2018.1. To continue using Substance Designer materials in Unity 2018.1, you will need to install Allegorithmic's external importer from the Asset Store.'
+Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs(673,20): warning CS0618: `UnityEngine.ProceduralMaterial' is obsolete: `Built-in support for Substance Designer materials has been deprecated and will be removed in Unity 2018.1. To continue using Substance Designer materials in Unity 2018.1, you will need to install Allegorithmic's external importer from the Asset Store.'
+Assets/Toolkit/MeshBaker/scripts/_testing/MB3_TestTexturePacker.cs(93,25): warning CS0219: The variable `center' is assigned but its value is never used
+Assets/Toolkit/MeshBaker/scripts/_testing/MB3_TestTexturePacker.cs(94,25): warning CS0219: The variable `sz' is assigned but its value is never used
+Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs(1190,32): warning CS0618: `UnityEngine.ProceduralMaterial' is obsolete: `Built-in support for Substance Designer materials has been deprecated and will be removed in Unity 2018.1. To continue using Substance Designer materials in Unity 2018.1, you will need to install Allegorithmic's external importer from the Asset Store.'
+Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs(1192,49): warning CS0618: `UnityEngine.ProceduralMaterial' is obsolete: `Built-in support for Substance Designer materials has been deprecated and will be removed in Unity 2018.1. To continue using Substance Designer materials in Unity 2018.1, you will need to install Allegorithmic's external importer from the Asset Store.'
+Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs(1238,49): warning CS0618: `UnityEngine.ProceduralTexture' is obsolete: `Built-in support for Substance Designer materials has been deprecated and will be removed in Unity 2018.1. To continue using Substance Designer materials in Unity 2018.1, you will need to install Allegorithmic's external importer from the Asset Store.'
+-----EndCompilerOutput---------------
+- Finished compile Library/ScriptAssemblies/Assembly-CSharp.dll
+Symbols will be read from Temp/Assembly-CSharp.dll.mdb
+Script Module: Assembly-CSharp.dll
+Pass: 0 took 22 milliseconds
+Pass: 1 took 28 milliseconds
+Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs(2661,63): warning CS0618: `UnityEngine.ProceduralMaterial' is obsolete: `Built-in support for Substance Designer materials has been deprecated and will be removed in Unity 2018.1. To continue using Substance Designer materials in Unity 2018.1, you will need to install Allegorithmic's external importer from the Asset Store.'
+ 
+(Filename: Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs Line: 2661)
+
+Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs(673,20): warning CS0618: `UnityEngine.ProceduralMaterial' is obsolete: `Built-in support for Substance Designer materials has been deprecated and will be removed in Unity 2018.1. To continue using Substance Designer materials in Unity 2018.1, you will need to install Allegorithmic's external importer from the Asset Store.'
+ 
+(Filename: Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs Line: 673)
+
+Assets/Toolkit/MeshBaker/scripts/_testing/MB3_TestTexturePacker.cs(93,25): warning CS0219: The variable `center' is assigned but its value is never used
+ 
+(Filename: Assets/Toolkit/MeshBaker/scripts/_testing/MB3_TestTexturePacker.cs Line: 93)
+
+Assets/Toolkit/MeshBaker/scripts/_testing/MB3_TestTexturePacker.cs(94,25): warning CS0219: The variable `sz' is assigned but its value is never used
+ 
+(Filename: Assets/Toolkit/MeshBaker/scripts/_testing/MB3_TestTexturePacker.cs Line: 94)
+
+Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs(1190,32): warning CS0618: `UnityEngine.ProceduralMaterial' is obsolete: `Built-in support for Substance Designer materials has been deprecated and will be removed in Unity 2018.1. To continue using Substance Designer materials in Unity 2018.1, you will need to install Allegorithmic's external importer from the Asset Store.'
+ 
+(Filename: Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs Line: 1190)
+
+Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs(1192,49): warning CS0618: `UnityEngine.ProceduralMaterial' is obsolete: `Built-in support for Substance Designer materials has been deprecated and will be removed in Unity 2018.1. To continue using Substance Designer materials in Unity 2018.1, you will need to install Allegorithmic's external importer from the Asset Store.'
+ 
+(Filename: Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs Line: 1192)
+
+Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs(1238,49): warning CS0618: `UnityEngine.ProceduralTexture' is obsolete: `Built-in support for Substance Designer materials has been deprecated and will be removed in Unity 2018.1. To continue using Substance Designer materials in Unity 2018.1, you will need to install Allegorithmic's external importer from the Asset Store.'
+ 
+(Filename: Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs Line: 1238)
+
+DisplayProgressbar: Building Player
+
+Packing sprites:
+[     43 MB ]- Skipping packing - Sprite Packer (Legacy) is off.
+[     43 MB ]WARNING: Shader Unsupported: 'Hidden/BlitToDepth' - Pass '' has no vertex shader
+WARNING: Shader Unsupported: 'Hidden/BlitToDepth' - Setting to default shader.
+WARNING: Shader Unsupported: 'Hidden/BlitToDepth_MSAA' - Pass '' has no vertex shader
+WARNING: Shader Unsupported: 'Hidden/BlitToDepth_MSAA' - Setting to default shader.
+Opening scene 'Assets/Scene/test.unity'
+Load scene 'Assets/Scene/test.unity' time: 0.029157 ms 
+Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 278.0 MB.
+System memory in use after: 278.0 MB.
+
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 3793.
+Total: 25.030397 ms (FindLiveObjects: 1.294072 ms CreateObjectMapping: 0.144717 ms MarkObjects: 11.854343 ms  DeleteObjects: 11.735853 ms)
+
+[00:00:00] Enlighten: Precompute started.
+[PathTracer] Issuing atlassing job. Atlas hash: bc06a9703e5ae257241f86e6e5e9cb62, width: 1024, height: 1024
+Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
+[00:00:00] Enlighten: Finished 1 Layout Systems job (0.00s execute, 0.00s integrate, 0.08s wallclock)
+[00:00:00] Enlighten: Finished 1 Tetrahedralize Probes job (0.00s execute, 0.00s integrate, 0.05s wallclock)
+[00:00:00] Enlighten: Precompute took 0.135294 seconds.
+Enlighten scene contents:   0 geometries.   0 instances.   0 systems.   0 probe groups.   0 cube maps. Scene is up-to-date.
+[00:00:00] Enlighten: Bake started.
+[PathTracer][LP] Issuing deduplication and tetrahedralization job. Combined: 80257199cfa681a16be5e09b3c2208f4, tetrahedralized probes: 00000000000000000000000000000000, non-tetrahedralized probes: 00000000000000000000000000000000, dependencies: 00000000000000000000000000000000
+[00:00:00] Enlighten: Finished 1 Bake Runtime job (0.02s execute, 0.00s integrate, 0.05s wallclock)
+[00:00:00] Enlighten: Bake took 0.048618 seconds.
+[PathTracer][LP] Integrating deduplicated and tetrahedralized probes for hash 80257199cfa681a16be5e09b3c2208f4.
+[PathTracer] Common reset.
+[PathTracer] Lightmap reset.
+[PathTracer][LP] Light probes reset.
+[PathTracer] building lightmap data asset.
+[00:00:00] Enlighten: Reflection Probes started.
+[00:00:00] Enlighten: Finished 1 Ambient Probes job (0.00s execute, 0.00s integrate, 0.05s wallclock)
+WARNING: 306590624 format is not supported, decompressing texture
+[00:00:00] Enlighten: Finished 1 Reflection Probes job (0.00s execute, 0.01s integrate, 0.02s wallclock)
+WARNING: Shader Unsupported: 'Hidden/BlitToDepth' - Pass '' has no vertex shader
+WARNING: Shader Unsupported: 'Hidden/BlitToDepth' - Setting to default shader.
+WARNING: Shader Unsupported: 'Hidden/BlitToDepth_MSAA' - Pass '' has no vertex shader
+WARNING: Shader Unsupported: 'Hidden/BlitToDepth_MSAA' - Setting to default shader.
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 282.6 MB.
+System memory in use after: 282.6 MB.
+
+Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 3777.
+Total: 20.751440 ms (FindLiveObjects: 0.906082 ms CreateObjectMapping: 0.070448 ms MarkObjects: 10.171357 ms  DeleteObjects: 9.601922 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 282.3 MB.
+System memory in use after: 282.5 MB.
+
+Unloading 0 unused Assets to reduce memory usage. Loaded Objects now: 3789.
+Total: 11.203789 ms (FindLiveObjects: 1.181465 ms CreateObjectMapping: 0.146314 ms MarkObjects: 9.864592 ms  DeleteObjects: 0.009994 ms)
+
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 282.3 MB.
+System memory in use after: 282.5 MB.
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 3776.
+Total: 10.747903 ms (FindLiveObjects: 0.793877 ms CreateObjectMapping: 0.068374 ms MarkObjects: 9.855509 ms  DeleteObjects: 0.028818 ms)
+
+WARNING: Shader Unsupported: 'Hidden/BlitToDepth' - Pass '' has no vertex shader
+WARNING: Shader Unsupported: 'Hidden/BlitToDepth' - Setting to default shader.
+WARNING: Shader Unsupported: 'Hidden/BlitToDepth_MSAA' - Pass '' has no vertex shader
+WARNING: Shader Unsupported: 'Hidden/BlitToDepth_MSAA' - Setting to default shader.
+Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
+Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
+Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
+
+***Player size statistics***
+Level 0 'Assets/Scene/test.unity' uses 116.4 KB compressed / 318.7 KB uncompressed.
+Total compressed size 116.5 KB. Total uncompressed size 318.7 KB.
+
+-------------------------------------------------------------------------------
+Bundle Name: test.unity3d
+Compressed Size:116.5 kb
+Uncompressed usage by category:
+Textures      0.0 kb	 0.0% 
+Meshes        0.0 kb	 0.0% 
+Animations    0.0 kb	 0.0% 
+Sounds        0.0 kb	 0.0% 
+Shaders       130.4 kb	 40.9% 
+Other Assets  1.3 kb	 0.4% 
+Levels        149.8 kb	 47.0% 
+Scripts       0.0 kb	 0.0% 
+Included DLLs 0.0 kb	 0.0% 
+File headers  37.2 kb	 11.7% 
+Complete size 318.7 kb	 100.0% 
+
+Used Assets and files from the Resources folder, sorted by uncompressed size:
+ 130.7 kb	 41.0% Resources/unity_builtin_extra
+ 0.9 kb	 0.3% Assets/New Material.mat
+-------------------------------------------------------------------------------
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 282.6 MB.
+System memory in use after: 282.7 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 3790.
+Total: 22.212477 ms (FindLiveObjects: 0.800489 ms CreateObjectMapping: 0.071349 ms MarkObjects: 12.679537 ms  DeleteObjects: 8.659531 ms)
+
+Load scene 'Temp/__Backupscenes/0.backup' time: 0.041177 ms 
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 282.3 MB.
+System memory in use after: 282.6 MB.
+
+Unloading 0 unused Assets to reduce memory usage. Loaded Objects now: 3789.
+Total: 11.995886 ms (FindLiveObjects: 0.854328 ms CreateObjectMapping: 0.075133 ms MarkObjects: 11.054892 ms  DeleteObjects: 0.010214 ms)
+
+
+*** Completed 'Build.Player.MacStandaloneSupport' in 7 seconds (7440 ms)
+
+Refresh: detecting if any assets need to be imported or removed ... 
+Hashing assets ... 0.000 seconds
+  file open: 0.000 seconds (2 files)
+  file read: 0.000 seconds (0.114 MB)
+  hash: 0.000 seconds
+----- Compute hash(es) for 1 asset(s).
+----- Asset named Assets/StreamingAssets/Scene/StandaloneOSX/test.unity3d is skipped as no actual change.
+
+Refresh: elapses 0.141481 seconds
+Refreshing native plugins compatible for Editor in 1.55 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.90 ms.
+
+----- Total AssetImport time: 0.129566s, AssetImport time: 0.000000s, Asset hashing: 0.000375s [116.7 KB, 303.520813 mb/s]
+
+Cancelling DisplayDialog: Information Build success!
+This should not be called in batch mode.
+UnityEditor.EditorUtility:DisplayDialog(String, String, String, String)
+UnityEditor.EditorUtility:DisplayDialog(String, String, String) (at /Users/builduser/buildslave/unity/build/artifacts/generated/common/editor/EditorUtilityBindings.gen.cs:70)
+BundleManager:BuildScene() (at Assets/Toolkit/BundleManager/Editor/BundleManager.cs:60)
+BundleManager:Build() (at Assets/Toolkit/BundleManager/Editor/BundleManager.cs:20)
+AutoBuild:BuildPackage() (at Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs:24)
+
+[/Users/builduser/buildslave/unity/build/Editor/Platform/OSX/EditorUtility.mm line 297] 
+(Filename: /Users/builduser/buildslave/unity/build/artifacts/generated/common/editor/EditorUtilityBindings.gen.cs Line: 70)
+
+- Starting compile Library/ScriptAssemblies/Assembly-CSharp.dll
+
+-----Compiler Commandline Arguments:
+Filename: /Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono
+Arguments: '/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.5/mcs.exe'  @Temp/UnityTempFile-f9a1fb2c656874f12a17b7f4ae2effce
+index: 81
+Responsefile: Temp/UnityTempFile-f9a1fb2c656874f12a17b7f4ae2effce Contents: 
+-debug
+-target:library
+-nowarn:0169
+-langversion:4
+-out:'Temp/Assembly-CSharp.dll'
+-unsafe
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CoreModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.PhysicsModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VehiclesModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClothModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AnimationModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UIModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.IMGUIModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UNETModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.DirectorModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.WebModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ARModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VRModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UIElementsModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AudioModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.GameCenterModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.GridModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.InputModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ParticlesLegacyModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.Physics2DModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TerrainModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TilemapModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VideoModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.WindModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll'
+-r:'/Users/laohan/Library/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll'
+-r:'/Users/laohan/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll'
+-r:'/Users/laohan/Library/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll'
+-r:'/Users/laohan/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll'
+-r:'/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll'
+-r:'/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll'
+-define:UNITY_5_3_OR_NEWER
+-define:UNITY_5_4_OR_NEWER
+-define:UNITY_5_5_OR_NEWER
+-define:UNITY_5_6_OR_NEWER
+-define:UNITY_2017_1_OR_NEWER
+-define:UNITY_2017_2_OR_NEWER
+-define:UNITY_2017_3_OR_NEWER
+-define:UNITY_2017_4_OR_NEWER
+-define:UNITY_2017_4_0
+-define:UNITY_2017_4
+-define:UNITY_2017
+-define:PLATFORM_ARCH_64
+-define:UNITY_64
+-define:ENABLE_AUDIO
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_GENERICS
+-define:ENABLE_PVR_GI
+-define:ENABLE_MICROPHONE
+-define:ENABLE_MULTIPLE_DISPLAYS
+-define:ENABLE_PHYSICS
+-define:ENABLE_SPRITERENDERER_FLIPPING
+-define:ENABLE_SPRITES
+-define:ENABLE_GRID
+-define:ENABLE_TILEMAP
+-define:ENABLE_TERRAIN
+-define:ENABLE_RAKNET
+-define:ENABLE_DIRECTOR
+-define:ENABLE_UNET
+-define:ENABLE_LZMA
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_WEBCAM
+-define:ENABLE_WWW
+-define:ENABLE_CLOUD_SERVICES_COLLAB
+-define:ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS
+-define:ENABLE_CLOUD_SERVICES_ADS
+-define:ENABLE_CLOUD_HUB
+-define:ENABLE_CLOUD_PROJECT_ID
+-define:ENABLE_CLOUD_SERVICES_USE_WEBREQUEST
+-define:ENABLE_CLOUD_SERVICES_UNET
+-define:ENABLE_CLOUD_SERVICES_BUILD
+-define:ENABLE_CLOUD_LICENSE
+-define:ENABLE_EDITOR_HUB
+-define:ENABLE_EDITOR_HUB_LICENSE
+-define:ENABLE_WEBSOCKET_CLIENT
+-define:ENABLE_DIRECTOR_AUDIO
+-define:ENABLE_DIRECTOR_TEXTURE
+-define:ENABLE_TIMELINE
+-define:ENABLE_EDITOR_METRICS
+-define:ENABLE_EDITOR_METRICS_CACHING
+-define:ENABLE_NATIVE_ARRAY
+-define:ENABLE_SPRITE_MASKING
+-define:INCLUDE_DYNAMIC_GI
+-define:INCLUDE_GI
+-define:ENABLE_MONO_BDWGC
+-define:PLATFORM_SUPPORTS_MONO
+-define:RENDER_SOFTWARE_CURSOR
+-define:INCLUDE_PUBNUB
+-define:ENABLE_PLAYMODE_TESTS_RUNNER
+-define:ENABLE_VIDEO
+-define:ENABLE_RMGUI
+-define:ENABLE_PACKMAN
+-define:ENABLE_CUSTOM_RENDER_TEXTURE
+-define:ENABLE_STYLE_SHEETS
+-define:ENABLE_LOCALIZATION
+-define:PLATFORM_STANDALONE_OSX
+-define:PLATFORM_STANDALONE
+-define:UNITY_STANDALONE_OSX
+-define:UNITY_STANDALONE
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_GAMECENTER
+-define:ENABLE_RUNTIME_GI
+-define:ENABLE_MOVIES
+-define:ENABLE_NETWORK
+-define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+-define:ENABLE_UNITYWEBREQUEST
+-define:ENABLE_CLOUD_SERVICES
+-define:ENABLE_CLOUD_SERVICES_ANALYTICS
+-define:ENABLE_CLOUD_SERVICES_PURCHASING
+-define:ENABLE_CLOUD_SERVICES_CRASH_REPORTING
+-define:ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING
+-define:ENABLE_CLUSTERINPUT
+-define:ENABLE_VR
+-define:ENABLE_AR
+-define:ENABLE_SPATIALTRACKING
+-define:ENABLE_WEBSOCKET_HOST
+-define:ENABLE_MONO
+-define:NET_2_0_SUBSET
+-define:ENABLE_PROFILER
+-define:DEBUG
+-define:TRACE
+-define:UNITY_ASSERTIONS
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_64
+-define:UNITY_EDITOR_OSX
+-define:ENABLE_NATIVE_ARRAY_CHECKS
+-define:UNITY_TEAM_LICENSE
+-define:ENABLE_VSTU
+-define:UNITY_PRO_LICENSE
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineBlendListCamera.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineBrain.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineClearShot.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineCollider.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineConfiner.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineDollyCart.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineExternalCamera.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineFollowZoom.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineFreeLook.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineMixingCamera.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachinePath.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachinePipeline.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineSmoother.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineSmoothPath.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineStateDrivenCamera.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineTargetGroup.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Behaviours/CinemachineVirtualCamera.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Components/CinemachineBasicMultiChannelPerlin.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Components/CinemachineComposer.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Components/CinemachineFramingTransposer.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Components/CinemachineGroupComposer.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Components/CinemachineHardLockToTarget.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Components/CinemachineHardLookAt.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Components/CinemachineOrbitalTransposer.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Components/CinemachinePOV.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Components/CinemachineSameAsFollowObject.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Components/CinemachineTrackedDolly.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Components/CinemachineTransposer.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/AxisState.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/CameraState.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/CinemachineBlend.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/CinemachineBlenderSettings.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/CinemachineComponentBase.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/CinemachineCore.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/CinemachineDebugLogger.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/CinemachineExtension.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/CinemachinePathBase.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/CinemachinePropertyAttribute.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/CinemachineVirtualCameraBase.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/GaussianFilter.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/ICinemachineCamera.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/ICinemachineComponent.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/LensSettings.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/NoiseSettings.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/Predictor.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/ReflectionHelpers.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/SplineHelpers.cs'
+'Assets/Toolkit/Cinemachine/Base/Runtime/Core/UnityVectorExtensions.cs'
+'Assets/Toolkit/Cinemachine/PostFX/CinemachinePostFX.cs'
+'Assets/Toolkit/Cinemachine/PostFX/CinemachinePostProcessing.cs'
+'Assets/Toolkit/Cinemachine/Timeline/CinemachineMixer.cs'
+'Assets/Toolkit/Cinemachine/Timeline/CinemachineShot.cs'
+'Assets/Toolkit/Cinemachine/Timeline/CinemachineTrack.cs'
+'Assets/Toolkit/MeshBaker/Examples/BakeTexturesAtRuntime/BakeTexturesAtRuntime.cs'
+'Assets/Toolkit/MeshBaker/Examples/BatchPrepareObjectsForDynamicBatching/MB_BatchPrepareObjectsForDynamicBatchingDescription.cs'
+'Assets/Toolkit/MeshBaker/Examples/CharacterCustomization/MB_SwapShirts.cs'
+'Assets/Toolkit/MeshBaker/Examples/PrepareObjectsForDynamicBatching/MB_PrepareObjectsForDynamicBatchingDescription.cs'
+'Assets/Toolkit/MeshBaker/Examples/SceneDynamicAddDelete/MB_DynamicAddDeleteExample.cs'
+'Assets/Toolkit/MeshBaker/Examples/SceneRuntimeExample/MB_Example.cs'
+'Assets/Toolkit/MeshBaker/Examples/SceneRuntimeExample/MB_ExampleMover.cs'
+'Assets/Toolkit/MeshBaker/Examples/SceneRuntimeExample/MB_ExampleSkinnedMeshDescription.cs'
+'Assets/Toolkit/MeshBaker/Examples/SkinnedMeshRenderer/MB_SkinnedMeshSceneController.cs'
+'Assets/Toolkit/MeshBaker/scripts/_testing/MB2_TestShowHide.cs'
+'Assets/Toolkit/MeshBaker/scripts/_testing/MB2_TestUpdate.cs'
+'Assets/Toolkit/MeshBaker/scripts/_testing/MB3_TestAddingRemovingSkinnedMeshes.cs'
+'Assets/Toolkit/MeshBaker/scripts/_testing/MB3_TestBakeAllWithSameMaterial.cs'
+'Assets/Toolkit/MeshBaker/scripts/_testing/MB3_TestRenderTextureTestHarness.cs'
+'Assets/Toolkit/MeshBaker/scripts/_testing/MB3_TestTexturePacker.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB_TGAWriter.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB_Utility.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB2_Core.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB2_Log.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB2_MBVersion.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB2_TexturePacker.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB2_TexturePackerHorizontalVert.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB3_AgglomerativeClustering.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB3_AtlasPackerRenderTexture.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB3_CopyBoneWeights.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB3_GrouperCluster.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB3_MeshCombiner.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB3_MeshCombinerSimple.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB3_MultiMeshCombiner.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB3_PriorityQueue.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs'
+'Assets/Toolkit/MeshBaker/scripts/core/MB3_UVTransform.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB2_TextureBakeResults.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB2_UpdateSkinnedMeshBoundsFromBones.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB2_UpdateSkinnedMeshBoundsFromBounds.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB3_BatchPrefabBaker.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB3_BoneWeightCopier.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB3_DisableHiddenAnimations.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB3_MBVersionConcrete.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB3_MeshBaker.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB3_MeshBakerCommon.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB3_MeshBakerGrouper.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB3_MeshBakerRoot.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB3_MultiMeshBaker.cs'
+'Assets/Toolkit/MeshBaker/scripts/MB3_TextureBaker.cs'
+'Assets/Toolkit/MeshBaker/scripts/TextureBlenders/TextureBlender.cs'
+'Assets/Toolkit/MeshBaker/scripts/TextureBlenders/TextureBlenderFallback.cs'
+'Assets/Toolkit/MeshBaker/scripts/TextureBlenders/TextureBlenderLegacyBumpDiffuse.cs'
+'Assets/Toolkit/MeshBaker/scripts/TextureBlenders/TextureBlenderLegacyDiffuse.cs'
+'Assets/Toolkit/MeshBaker/scripts/TextureBlenders/TextureBlenderStandardMetallic.cs'
+'Assets/Toolkit/MeshBaker/scripts/TextureBlenders/TextureBlenderStandardSpecular.cs'
+'Assets/Toolkit/QHierarchy/Scripts/QObjectList.cs'
+-r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/System.Xml.Linq.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/UnityScript.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/UnityScript.Lang.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Mono/lib/mono/unity/Boo.Lang.dll'
+-sdk:unity
+
+-----CompilerOutput:-stdout--exitcode: 0--compilationhadfailure: False--outfile: Temp/Assembly-CSharp.dll
+Compilation succeeded - 7 warning(s)
+-----CompilerOutput:-stderr----------
+Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs(2661,63): warning CS0618: `UnityEngine.ProceduralMaterial' is obsolete: `Built-in support for Substance Designer materials has been deprecated and will be removed in Unity 2018.1. To continue using Substance Designer materials in Unity 2018.1, you will need to install Allegorithmic's external importer from the Asset Store.'
+Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs(673,20): warning CS0618: `UnityEngine.ProceduralMaterial' is obsolete: `Built-in support for Substance Designer materials has been deprecated and will be removed in Unity 2018.1. To continue using Substance Designer materials in Unity 2018.1, you will need to install Allegorithmic's external importer from the Asset Store.'
+Assets/Toolkit/MeshBaker/scripts/_testing/MB3_TestTexturePacker.cs(93,25): warning CS0219: The variable `center' is assigned but its value is never used
+Assets/Toolkit/MeshBaker/scripts/_testing/MB3_TestTexturePacker.cs(94,25): warning CS0219: The variable `sz' is assigned but its value is never used
+Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs(1190,32): warning CS0618: `UnityEngine.ProceduralMaterial' is obsolete: `Built-in support for Substance Designer materials has been deprecated and will be removed in Unity 2018.1. To continue using Substance Designer materials in Unity 2018.1, you will need to install Allegorithmic's external importer from the Asset Store.'
+Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs(1192,49): warning CS0618: `UnityEngine.ProceduralMaterial' is obsolete: `Built-in support for Substance Designer materials has been deprecated and will be removed in Unity 2018.1. To continue using Substance Designer materials in Unity 2018.1, you will need to install Allegorithmic's external importer from the Asset Store.'
+Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs(1238,49): warning CS0618: `UnityEngine.ProceduralTexture' is obsolete: `Built-in support for Substance Designer materials has been deprecated and will be removed in Unity 2018.1. To continue using Substance Designer materials in Unity 2018.1, you will need to install Allegorithmic's external importer from the Asset Store.'
+-----EndCompilerOutput---------------
+- Finished compile Library/ScriptAssemblies/Assembly-CSharp.dll
+Symbols will be read from Temp/Assembly-CSharp.dll.mdb
+Script Module: Assembly-CSharp.dll
+Pass: 0 took 20 milliseconds
+Pass: 1 took 23 milliseconds
+- Starting compile Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+
+-----Compiler Commandline Arguments:
+Filename: /Applications/Unity/Unity.app/Contents/MonoBleedingEdge/bin/mono
+Arguments: '/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.5/mcs.exe'  @Temp/UnityTempFile-7570ea102d961411dac00cca194c2052
+index: 81
+Responsefile: Temp/UnityTempFile-7570ea102d961411dac00cca194c2052 Contents: 
+-debug
+-target:library
+-nowarn:0169
+-langversion:4
+-out:'Temp/Assembly-CSharp-Editor.dll'
+-unsafe
+-r:'Library/ScriptAssemblies/Assembly-CSharp.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CoreModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.PhysicsModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VehiclesModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClothModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AnimationModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UIModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.IMGUIModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UNETModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.DirectorModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.WebModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ARModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VRModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UIElementsModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AudioModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.GameCenterModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.GridModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.InputModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ParticlesLegacyModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.Physics2DModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TerrainModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TilemapModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VideoModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.WindModule.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.Graphs.dll'
+-r:'/Applications/Unity/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll'
+-r:'/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll'
+-r:'/Applications/Unity/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll'
+-r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll'
+-r:'/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll'
+-r:'Assets/Toolkit/Haste/Editor/Haste.dll'
+-r:'/Users/laohan/Library/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll'
+-r:'/Users/laohan/Library/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/Editor/UnityEditor.Advertisements.dll'
+-r:'/Users/laohan/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll'
+-r:'/Users/laohan/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/Editor/UnityEditor.Analytics.dll'
+-r:'/Users/laohan/Library/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll'
+-r:'/Users/laohan/Library/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/Editor/UnityEditor.Purchasing.dll'
+-r:'/Users/laohan/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll'
+-r:'/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll'
+-r:'/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll'
+-define:UNITY_5_3_OR_NEWER
+-define:UNITY_5_4_OR_NEWER
+-define:UNITY_5_5_OR_NEWER
+-define:UNITY_5_6_OR_NEWER
+-define:UNITY_2017_1_OR_NEWER
+-define:UNITY_2017_2_OR_NEWER
+-define:UNITY_2017_3_OR_NEWER
+-define:UNITY_2017_4_OR_NEWER
+-define:UNITY_2017_4_0
+-define:UNITY_2017_4
+-define:UNITY_2017
+-define:PLATFORM_ARCH_64
+-define:UNITY_64
+-define:ENABLE_AUDIO
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_GENERICS
+-define:ENABLE_PVR_GI
+-define:ENABLE_MICROPHONE
+-define:ENABLE_MULTIPLE_DISPLAYS
+-define:ENABLE_PHYSICS
+-define:ENABLE_SPRITERENDERER_FLIPPING
+-define:ENABLE_SPRITES
+-define:ENABLE_GRID
+-define:ENABLE_TILEMAP
+-define:ENABLE_TERRAIN
+-define:ENABLE_RAKNET
+-define:ENABLE_DIRECTOR
+-define:ENABLE_UNET
+-define:ENABLE_LZMA
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_WEBCAM
+-define:ENABLE_WWW
+-define:ENABLE_CLOUD_SERVICES_COLLAB
+-define:ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS
+-define:ENABLE_CLOUD_SERVICES_ADS
+-define:ENABLE_CLOUD_HUB
+-define:ENABLE_CLOUD_PROJECT_ID
+-define:ENABLE_CLOUD_SERVICES_USE_WEBREQUEST
+-define:ENABLE_CLOUD_SERVICES_UNET
+-define:ENABLE_CLOUD_SERVICES_BUILD
+-define:ENABLE_CLOUD_LICENSE
+-define:ENABLE_EDITOR_HUB
+-define:ENABLE_EDITOR_HUB_LICENSE
+-define:ENABLE_WEBSOCKET_CLIENT
+-define:ENABLE_DIRECTOR_AUDIO
+-define:ENABLE_DIRECTOR_TEXTURE
+-define:ENABLE_TIMELINE
+-define:ENABLE_EDITOR_METRICS
+-define:ENABLE_EDITOR_METRICS_CACHING
+-define:ENABLE_NATIVE_ARRAY
+-define:ENABLE_SPRITE_MASKING
+-define:INCLUDE_DYNAMIC_GI
+-define:INCLUDE_GI
+-define:ENABLE_MONO_BDWGC
+-define:PLATFORM_SUPPORTS_MONO
+-define:RENDER_SOFTWARE_CURSOR
+-define:INCLUDE_PUBNUB
+-define:ENABLE_PLAYMODE_TESTS_RUNNER
+-define:ENABLE_VIDEO
+-define:ENABLE_RMGUI
+-define:ENABLE_PACKMAN
+-define:ENABLE_CUSTOM_RENDER_TEXTURE
+-define:ENABLE_STYLE_SHEETS
+-define:ENABLE_LOCALIZATION
+-define:PLATFORM_STANDALONE_OSX
+-define:PLATFORM_STANDALONE
+-define:UNITY_STANDALONE_OSX
+-define:UNITY_STANDALONE
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_GAMECENTER
+-define:ENABLE_RUNTIME_GI
+-define:ENABLE_MOVIES
+-define:ENABLE_NETWORK
+-define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+-define:ENABLE_UNITYWEBREQUEST
+-define:ENABLE_CLOUD_SERVICES
+-define:ENABLE_CLOUD_SERVICES_ANALYTICS
+-define:ENABLE_CLOUD_SERVICES_PURCHASING
+-define:ENABLE_CLOUD_SERVICES_CRASH_REPORTING
+-define:ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING
+-define:ENABLE_CLUSTERINPUT
+-define:ENABLE_VR
+-define:ENABLE_AR
+-define:ENABLE_SPATIALTRACKING
+-define:ENABLE_WEBSOCKET_HOST
+-define:ENABLE_MONO
+-define:NET_2_0_SUBSET
+-define:ENABLE_PROFILER
+-define:DEBUG
+-define:TRACE
+-define:UNITY_ASSERTIONS
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_64
+-define:UNITY_EDITOR_OSX
+-define:ENABLE_NATIVE_ARRAY_CHECKS
+-define:UNITY_TEAM_LICENSE
+-define:ENABLE_VSTU
+-define:UNITY_PRO_LICENSE
+'Assets/Toolkit/AssetHunter/Editor/AssetHunterBuildReport.cs'
+'Assets/Toolkit/AssetHunter/Editor/AssetHunterExtensions.cs'
+'Assets/Toolkit/AssetHunter/Editor/AssetHunterHelper.cs'
+'Assets/Toolkit/AssetHunter/Editor/AssetHunterMainWindow.cs'
+'Assets/Toolkit/AssetHunter/Editor/AssetHunterProjectFolderInfo.cs'
+'Assets/Toolkit/AssetHunter/Editor/AssetHunterReader.cs'
+'Assets/Toolkit/AssetHunter/Editor/AssetHunterSerializableSystemType.cs'
+'Assets/Toolkit/AssetHunter/Editor/AssetHunterSettings.cs'
+'Assets/Toolkit/AssetHunter/Editor/AssetHunterSettingsCreator.cs'
+'Assets/Toolkit/AssetHunter/Editor/AssetHunterSettingsWindow.cs'
+'Assets/Toolkit/AssetHunter/Editor/AsssetHunterSceneOverview.cs'
+'Assets/Toolkit/AssetImport/Editor/AssetImportCop.cs'
+'Assets/Toolkit/AssetImport/Editor/AssetImportCopMeshImportSettings.cs'
+'Assets/Toolkit/AssetImport/Editor/AssetRule.cs'
+'Assets/Toolkit/AssetImport/Editor/AssetRuleInspector.cs'
+'Assets/Toolkit/AssetImport/Editor/ImporterInspector.cs'
+'Assets/Toolkit/AutoBuild/Editor/AutoBuild.cs'
+'Assets/Toolkit/AutoSaveScene/Editor/AutoSaveScene.cs'
+'Assets/Toolkit/BundleManager/Editor/BundleManager.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachineBasicMultiChannelPerlinEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachineBlenderSettingsEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachineBlendListCameraEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachineBrainEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachineClearShotEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachineColliderEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachineComposerEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachineConfinerEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachineExternalCameraEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachineFramingTransposerEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachineFreeLookEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachineGroupComposerEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachineHardLockToTargetEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachineHardLookAtEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachineMixingCameraEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachineOrbitalTransposerEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachinePathEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachinePOVEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachineScreenComposerGuides.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachineSmoothPathEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachineStateDrivenCameraEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachineTargetGroupEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachineTrackedDollyEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachineTransposerEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Editors/CinemachineVirtualCameraEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Menus/CinemachineMenu.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/PropertyDrawers/CinemachineBlendDefinitionPropertyDrawer.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/PropertyDrawers/CinemachineTagFieldPropertyDrawer.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/PropertyDrawers/GetSetDrawer.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/PropertyDrawers/LensSettingsPropertyDrawer.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/PropertyDrawers/MinDrawer.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Utility/BaseEditor.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Utility/EmbeddedAssetHelpers.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Utility/SaveDuringPlay.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Utility/ScriptableObjectUtility.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Utility/SerializedPropertyHelper.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Windows/AboutWindow.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Windows/CinemachineColliderPrefs.cs'
+'Assets/Toolkit/Cinemachine/Base/Editor/Windows/CinemachineSettings.cs'
+'Assets/Toolkit/Cinemachine/PostFX/Editor/CinemachinePostProcessingEditor.cs'
+'Assets/Toolkit/Cinemachine/PostFX/Editor/PostFXAutoImport.cs'
+'Assets/Toolkit/Cinemachine/Timeline/Editor/CinemachineShotEditor.cs'
+'Assets/Toolkit/Haste/Editor/InternalResources/HasteShortcut.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/Maintainer.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/Modules/RecordsBased/Cleaner/ProjectCleaner.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/Modules/RecordsBased/Cleaner/Records/AssetRecord.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/Modules/RecordsBased/Cleaner/Records/CleanerRecord.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/Modules/RecordsBased/Cleaner/RecordType.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/Modules/RecordsBased/Common/Enums/RecordLocation.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/Modules/RecordsBased/Common/Enums/RecordSeverity.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/Modules/RecordsBased/Common/IShowableRecord.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/Modules/RecordsBased/Common/RecordBase.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/Modules/RecordsBased/Common/ReportsBuilder.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/Modules/RecordsBased/Common/SeverityColors.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/Modules/RecordsBased/Issues/IssuesFinder.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/Modules/RecordsBased/Issues/Records/BuildSettingsIssueRecord.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/Modules/RecordsBased/Issues/Records/GameObjectIssueRecord.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/Modules/RecordsBased/Issues/Records/IssueRecord.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/Modules/RecordsBased/Issues/Records/TagsAndLayersIssueRecord.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/Modules/RecordsBased/Issues/RecordType.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/SearchResultsStorage.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/Settings/IssuesFinderSettings.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/Settings/MaintainerSettings.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/Settings/ProjectCleanerSettings.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/Tools/CSArrayTools.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/Tools/CSEditorTools.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/Tools/CSObjectTools.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/Tools/CSSceneTools.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/UI/Ignores/CleanerIgnoresWindow.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/UI/Ignores/ComponentIgnoresTab.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/UI/Ignores/IgnoresWindow.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/UI/Ignores/IssuesIgnoresWindow.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/UI/Ignores/PathIgnoresTab.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/UI/Ignores/StringCollectionTab.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/UI/Ignores/TabBase.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/UI/MaintainerWindow.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/UI/Tabs/AboutTab.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/UI/Tabs/CleanerTab.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/UI/Tabs/IssuesTab.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/UI/Tabs/RecordsTab.cs'
+'Assets/Toolkit/Maintainer/Editor/Code/UI/UIHelpers.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/core/MB_EditorUtil.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/core/MB3_BakeInPlace.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/core/MB3_MBVersionEditor.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/core/MB3_MeshBakerEditorFunctions.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/core/MB3_TextureCombinerEditorFunctions.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/MB3_BatchPrefabBakerEditor.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/MB3_BoneWeightCopierEditor.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/MB3_DisableHiddenAnimationsEditor.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/MB3_GameObjectMaterialInfo.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/MB3_MBVersionConcreteEditor.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/MB3_MeshBakerEditor.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/MB3_MeshBakerEditorInternal.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/MB3_MeshBakerEditorWindow.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/MB3_MeshBakerGrouperEditor.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/MB3_MultiMeshBakerEditor.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/MB3_SearchFilters.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/MB3_ShaderTexturePropertyDrawer.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/MB3_TextureBakerEditor.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/MB3_TextureBakerEditorInternal.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/searchFilters/MB3_GroupByAlreadyAdded.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/searchFilters/MB3_GroupByEnabledDisabled.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/searchFilters/MB3_GroupByLightmapIndex.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/searchFilters/MB3_GroupByMaterial.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/searchFilters/MB3_GroupByOutOfBoundsUVs.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/searchFilters/MB3_GroupByRenderType.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/searchFilters/MB3_GroupByShader.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/searchFilters/MB3_GroupByStandardShaderType.cs'
+'Assets/Toolkit/MeshBaker/scripts/Editor/searchFilters/MB3_GroupByStatic.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/pcomponent/pbase/QBaseComponent.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/pcomponent/QChildrenCountComponent.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/pcomponent/QColorComponent.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/pcomponent/QComponentsComponent.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/pcomponent/QErrorComponent.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/pcomponent/QGameObjectIconComponent.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/pcomponent/QLayerIconComponent.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/pcomponent/QLockComponent.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/pcomponent/QMonoBehaviorIconComponent.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/pcomponent/QPrefabComponent.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/pcomponent/QRendererComponent.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/pcomponent/QSeparatorComponent.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/pcomponent/QStaticComponent.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/pcomponent/QTagIconComponent.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/pcomponent/QTagLayerComponent.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/pcomponent/QTreeMapComponent.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/pcomponent/QVerticesAndTrianglesCountComponent.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/pcomponent/QVisibilityComponent.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/pdata/QResources.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/pdata/QSettings.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/pdata/QSettingsObject.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/phelper/QColorPickerWindow.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/phelper/QColorUtils.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/phelper/QComponentsOrderList.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/phelper/QObjectListInspector.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/phelper/QObjectListManager.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/phierarchy/QHierarchy.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/phierarchy/QHierarchySettingsWindow.cs'
+'Assets/Toolkit/QHierarchy/Editor/Scripts/QHierarchyInitializer.cs'
+-r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll'
+-r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll'
+-r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/UnityScript.dll'
+-r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/UnityScript.Lang.dll'
+-r:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api/Boo.Lang.dll'
+-sdk:2.0
+
+-----CompilerOutput:-stdout--exitcode: 0--compilationhadfailure: False--outfile: Temp/Assembly-CSharp-Editor.dll
+Compilation succeeded - 13 warning(s)
+-----CompilerOutput:-stderr----------
+Assets/Toolkit/AssetImport/Editor/AssetRule.cs(164,17): warning CS0618: `UnityEditor.TextureImporterSettings.maxTextureSize' is obsolete: `Texture max size can only be overridden on a per platform basis. See [[TextureImporter.maxTextureSize]] for Default platform or [[TextureImporterPlatformSettings]]'
+Assets/Toolkit/AssetImport/Editor/AssetRule.cs(164,51): warning CS0618: `UnityEditor.TextureImporterSettings.maxTextureSize' is obsolete: `Texture max size can only be overridden on a per platform basis. See [[TextureImporter.maxTextureSize]] for Default platform or [[TextureImporterPlatformSettings]]'
+Assets/Toolkit/AssetImport/Editor/AssetRule.cs(166,50): warning CS0618: `UnityEditor.TextureImporterSettings.maxTextureSize' is obsolete: `Texture max size can only be overridden on a per platform basis. See [[TextureImporter.maxTextureSize]] for Default platform or [[TextureImporterPlatformSettings]]'
+Assets/Toolkit/AssetImport/Editor/AssetRule.cs(166,17): warning CS0618: `UnityEditor.TextureImporterSettings.maxTextureSize' is obsolete: `Texture max size can only be overridden on a per platform basis. See [[TextureImporter.maxTextureSize]] for Default platform or [[TextureImporterPlatformSettings]]'
+Assets/Toolkit/AssetImport/Editor/AssetRule.cs(233,25): warning CS0618: `UnityEditor.TextureImporterSettings.maxTextureSize' is obsolete: `Texture max size can only be overridden on a per platform basis. See [[TextureImporter.maxTextureSize]] for Default platform or [[TextureImporterPlatformSettings]]'
+Assets/Toolkit/AssetImport/Editor/AssetRuleInspector.cs(180,69): warning CS0618: `UnityEditor.TextureImporterSettings.maxTextureSize' is obsolete: `Texture max size can only be overridden on a per platform basis. See [[TextureImporter.maxTextureSize]] for Default platform or [[TextureImporterPlatformSettings]]'
+Assets/Toolkit/AssetImport/Editor/AssetRuleInspector.cs(179,44): warning CS0618: `UnityEditor.TextureImporterSettings.maxTextureSize' is obsolete: `Texture max size can only be overridden on a per platform basis. See [[TextureImporter.maxTextureSize]] for Default platform or [[TextureImporterPlatformSettings]]'
+Assets/Toolkit/MeshBaker/scripts/Editor/MB3_MBVersionConcreteEditor.cs(40,74): warning CS0618: `UnityEditor.BuildTarget.SamsungTV' is obsolete: `SamsungTV has been removed in 2017.3'
+Assets/Toolkit/MeshBaker/scripts/Editor/MB3_MBVersionConcreteEditor.cs(74,65): warning CS0618: `UnityEditor.BuildTarget.StandaloneOSXIntel' is obsolete: `StandaloneOSXIntel has been removed in 2017.3'
+Assets/Toolkit/MeshBaker/scripts/Editor/MB3_MBVersionConcreteEditor.cs(75,74): warning CS0618: `UnityEditor.BuildTarget.StandaloneOSXIntel64' is obsolete: `StandaloneOSXIntel64 has been removed in 2017.3'
+Assets/Toolkit/MeshBaker/scripts/Editor/MB3_TextureBakerEditorInternal.cs(488,26): warning CS0618: `UnityEditor.SerializedObject.UpdateIfDirtyOrScript()' is obsolete: `UpdateIfDirtyOrScript has been deprecated. Use UpdateIfRequiredOrScript instead.'
+Assets/Toolkit/MeshBaker/scripts/Editor/MB3_TextureBakerEditorInternal.cs(675,17): warning CS0618: `UnityEditor.SerializedObject.UpdateIfDirtyOrScript()' is obsolete: `UpdateIfDirtyOrScript has been deprecated. Use UpdateIfRequiredOrScript instead.'
+Assets/Toolkit/AssetImport/Editor/AssetRuleInspector.cs(10,23): warning CS0414: The private field `AssetRuleInspector.orig' is assigned but its value is never used
+-----EndCompilerOutput---------------
+- Finished compile Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs(2661,63): warning CS0618: `UnityEngine.ProceduralMaterial' is obsolete: `Built-in support for Substance Designer materials has been deprecated and will be removed in Unity 2018.1. To continue using Substance Designer materials in Unity 2018.1, you will need to install Allegorithmic's external importer from the Asset Store.'
+ 
+(Filename: Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs Line: 2661)
+
+Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs(673,20): warning CS0618: `UnityEngine.ProceduralMaterial' is obsolete: `Built-in support for Substance Designer materials has been deprecated and will be removed in Unity 2018.1. To continue using Substance Designer materials in Unity 2018.1, you will need to install Allegorithmic's external importer from the Asset Store.'
+ 
+(Filename: Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs Line: 673)
+
+Assets/Toolkit/MeshBaker/scripts/_testing/MB3_TestTexturePacker.cs(93,25): warning CS0219: The variable `center' is assigned but its value is never used
+ 
+(Filename: Assets/Toolkit/MeshBaker/scripts/_testing/MB3_TestTexturePacker.cs Line: 93)
+
+Assets/Toolkit/MeshBaker/scripts/_testing/MB3_TestTexturePacker.cs(94,25): warning CS0219: The variable `sz' is assigned but its value is never used
+ 
+(Filename: Assets/Toolkit/MeshBaker/scripts/_testing/MB3_TestTexturePacker.cs Line: 94)
+
+Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs(1190,32): warning CS0618: `UnityEngine.ProceduralMaterial' is obsolete: `Built-in support for Substance Designer materials has been deprecated and will be removed in Unity 2018.1. To continue using Substance Designer materials in Unity 2018.1, you will need to install Allegorithmic's external importer from the Asset Store.'
+ 
+(Filename: Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs Line: 1190)
+
+Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs(1192,49): warning CS0618: `UnityEngine.ProceduralMaterial' is obsolete: `Built-in support for Substance Designer materials has been deprecated and will be removed in Unity 2018.1. To continue using Substance Designer materials in Unity 2018.1, you will need to install Allegorithmic's external importer from the Asset Store.'
+ 
+(Filename: Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs Line: 1192)
+
+Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs(1238,49): warning CS0618: `UnityEngine.ProceduralTexture' is obsolete: `Built-in support for Substance Designer materials has been deprecated and will be removed in Unity 2018.1. To continue using Substance Designer materials in Unity 2018.1, you will need to install Allegorithmic's external importer from the Asset Store.'
+ 
+(Filename: Assets/Toolkit/MeshBaker/scripts/core/MB3_TextureCombiner.cs Line: 1238)
+
+Assets/Toolkit/AssetImport/Editor/AssetRule.cs(164,17): warning CS0618: `UnityEditor.TextureImporterSettings.maxTextureSize' is obsolete: `Texture max size can only be overridden on a per platform basis. See [[TextureImporter.maxTextureSize]] for Default platform or [[TextureImporterPlatformSettings]]'
+ 
+(Filename: Assets/Toolkit/AssetImport/Editor/AssetRule.cs Line: 164)
+
+Assets/Toolkit/AssetImport/Editor/AssetRule.cs(164,51): warning CS0618: `UnityEditor.TextureImporterSettings.maxTextureSize' is obsolete: `Texture max size can only be overridden on a per platform basis. See [[TextureImporter.maxTextureSize]] for Default platform or [[TextureImporterPlatformSettings]]'
+ 
+(Filename: Assets/Toolkit/AssetImport/Editor/AssetRule.cs Line: 164)
+
+Assets/Toolkit/AssetImport/Editor/AssetRule.cs(166,50): warning CS0618: `UnityEditor.TextureImporterSettings.maxTextureSize' is obsolete: `Texture max size can only be overridden on a per platform basis. See [[TextureImporter.maxTextureSize]] for Default platform or [[TextureImporterPlatformSettings]]'
+ 
+(Filename: Assets/Toolkit/AssetImport/Editor/AssetRule.cs Line: 166)
+
+Assets/Toolkit/AssetImport/Editor/AssetRule.cs(166,17): warning CS0618: `UnityEditor.TextureImporterSettings.maxTextureSize' is obsolete: `Texture max size can only be overridden on a per platform basis. See [[TextureImporter.maxTextureSize]] for Default platform or [[TextureImporterPlatformSettings]]'
+ 
+(Filename: Assets/Toolkit/AssetImport/Editor/AssetRule.cs Line: 166)
+
+Assets/Toolkit/AssetImport/Editor/AssetRule.cs(233,25): warning CS0618: `UnityEditor.TextureImporterSettings.maxTextureSize' is obsolete: `Texture max size can only be overridden on a per platform basis. See [[TextureImporter.maxTextureSize]] for Default platform or [[TextureImporterPlatformSettings]]'
+ 
+(Filename: Assets/Toolkit/AssetImport/Editor/AssetRule.cs Line: 233)
+
+Assets/Toolkit/AssetImport/Editor/AssetRuleInspector.cs(180,69): warning CS0618: `UnityEditor.TextureImporterSettings.maxTextureSize' is obsolete: `Texture max size can only be overridden on a per platform basis. See [[TextureImporter.maxTextureSize]] for Default platform or [[TextureImporterPlatformSettings]]'
+ 
+(Filename: Assets/Toolkit/AssetImport/Editor/AssetRuleInspector.cs Line: 180)
+
+Assets/Toolkit/AssetImport/Editor/AssetRuleInspector.cs(179,44): warning CS0618: `UnityEditor.TextureImporterSettings.maxTextureSize' is obsolete: `Texture max size can only be overridden on a per platform basis. See [[TextureImporter.maxTextureSize]] for Default platform or [[TextureImporterPlatformSettings]]'
+ 
+(Filename: Assets/Toolkit/AssetImport/Editor/AssetRuleInspector.cs Line: 179)
+
+Assets/Toolkit/MeshBaker/scripts/Editor/MB3_MBVersionConcreteEditor.cs(40,74): warning CS0618: `UnityEditor.BuildTarget.SamsungTV' is obsolete: `SamsungTV has been removed in 2017.3'
+ 
+(Filename: Assets/Toolkit/MeshBaker/scripts/Editor/MB3_MBVersionConcreteEditor.cs Line: 40)
+
+Assets/Toolkit/MeshBaker/scripts/Editor/MB3_MBVersionConcreteEditor.cs(74,65): warning CS0618: `UnityEditor.BuildTarget.StandaloneOSXIntel' is obsolete: `StandaloneOSXIntel has been removed in 2017.3'
+ 
+(Filename: Assets/Toolkit/MeshBaker/scripts/Editor/MB3_MBVersionConcreteEditor.cs Line: 74)
+
+Assets/Toolkit/MeshBaker/scripts/Editor/MB3_MBVersionConcreteEditor.cs(75,74): warning CS0618: `UnityEditor.BuildTarget.StandaloneOSXIntel64' is obsolete: `StandaloneOSXIntel64 has been removed in 2017.3'
+ 
+(Filename: Assets/Toolkit/MeshBaker/scripts/Editor/MB3_MBVersionConcreteEditor.cs Line: 75)
+
+Assets/Toolkit/MeshBaker/scripts/Editor/MB3_TextureBakerEditorInternal.cs(488,26): warning CS0618: `UnityEditor.SerializedObject.UpdateIfDirtyOrScript()' is obsolete: `UpdateIfDirtyOrScript has been deprecated. Use UpdateIfRequiredOrScript instead.'
+ 
+(Filename: Assets/Toolkit/MeshBaker/scripts/Editor/MB3_TextureBakerEditorInternal.cs Line: 488)
+
+Assets/Toolkit/MeshBaker/scripts/Editor/MB3_TextureBakerEditorInternal.cs(675,17): warning CS0618: `UnityEditor.SerializedObject.UpdateIfDirtyOrScript()' is obsolete: `UpdateIfDirtyOrScript has been deprecated. Use UpdateIfRequiredOrScript instead.'
+ 
+(Filename: Assets/Toolkit/MeshBaker/scripts/Editor/MB3_TextureBakerEditorInternal.cs Line: 675)
+
+Assets/Toolkit/AssetImport/Editor/AssetRuleInspector.cs(10,23): warning CS0414: The private field `AssetRuleInspector.orig' is assigned but its value is never used
+ 
+(Filename: Assets/Toolkit/AssetImport/Editor/AssetRuleInspector.cs Line: 10)
+
+Reloading assemblies after script compilation.
+Begin MonoManager ReloadAssembly
+Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.54 ms.
+Mono: successfully reloaded assembly
+Refreshing native plugins compatible for Editor in 1.04 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.82 ms.
+
+----- Total AssetImport time: 0.138820s, AssetImport time: 0.000000s, Asset hashing: 0.000000s [0 B, 0.000000 mb/s]
+
+- Completed reload, in  2.261 seconds
+Initializing Unity.PackageManager (PackageManager) v2017.4.0 for Unity v2017.4.0f1
+Registering platform support modules:
+Registered platform support modules in: 0.021361s.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Native extension for iOS target not found
+[XcodeApplications] RefreshListOfAvailableXcodeApplications in: 0.004724s.
+Native extension for Android target not found
+Batchmode quit successfully invoked - shutting down!
+Refresh: detecting if any assets need to be imported or removed ... Refresh: elapses 0.126063 seconds
+Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.50 ms.
+
+----- Total AssetImport time: 0.107635s, AssetImport time: 0.000000s, Asset hashing: 0.000000s [0 B, 0.000000 mb/s]
+
+Updating ProjectSettings/ProjectSettings.asset - GUID: 00000000000000004000000000000000...
+ done. [Time: 68.748405 ms] 
+Refreshing native plugins compatible for Editor in 0.45 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.46 ms.
+
+----- Total AssetImport time: 0.206087s, AssetImport time: 0.113890s, Asset hashing: 0.000000s [0 B, 0.000000 mb/s]
+
+Refresh: detecting if any assets need to be imported or removed ... Refresh: elapses 0.131852 seconds
+Refreshing native plugins compatible for Editor in 0.79 ms, found 3 plugins.
+Preloading 1 native plugins for Editor in 0.72 ms.
+
+----- Total AssetImport time: 0.123183s, AssetImport time: 0.000000s, Asset hashing: 0.000000s [0 B, 0.000000 mb/s]
+
+[Package Manager] Server::Kill -- Server was shutdown
+Cleanup mono
+Exiting batchmode successfully now!

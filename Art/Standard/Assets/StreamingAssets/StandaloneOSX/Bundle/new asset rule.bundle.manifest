@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 3040690607
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 302823f63b908508e94a6b1894885897
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: a9f4d70c25a33887c5d8497757c28ecc
+HashAppended: 0
+ClassTypes:
+- Class: 114
+  Script: {fileID: 11500000, guid: 5a8c5294fe72549db94128e739f74a65, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/New Asset Rule.asset
+Dependencies: []

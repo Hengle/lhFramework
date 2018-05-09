@@ -1,0 +1,160 @@
+////////////////////////////////////////////////////////////////////////////////
+// Issues Finder report
+// /Users/laohan/workSpace/Unity/lhFramework/Art/Android
+////////////////////////////////////////////////////////////////////////////////
+// Maintainer 1.2.0.3
+// Unity 2017.4.0f1 (b5bd171ee9ba) Professional
+//
+// Homepage: http://blog.codestage.ru/unity-plugins/maintainer
+// Contacts: http://blog.codestage.ru/contacts
+////////////////////////////////////////////////////////////////////////////////
+---
+Array with 1 empty item(s)
+Scene: Toolkit/MeshBaker/Examples/BatchPrepareObjectsForDynamicBatching
+Game Object: BatchPrefabBaker0
+Component: MB3_TextureBaker
+Property: On Combined Textures Coroutine Atlases And Rects[0] / Atlases
+---
+Array with 1 empty item(s)
+Scene: Toolkit/MeshBaker/Examples/CustomizeCharacterGame
+Game Object: MaterialBaker0
+Component: MB3_TextureBaker
+Property: On Combined Textures Coroutine Atlases And Rects[0] / Atlases
+---
+Array with 1 empty item(s)
+Scene: Toolkit/MeshBaker/Examples/PrepareObjectsForDynamicBatching
+Game Object: MaterialBaker0
+Component: MB3_TextureBaker
+Property: On Combined Textures Coroutine Atlases And Rects[0] / Atlases
+---
+Animation without any clips
+Scene: Toolkit/MeshBaker/Examples/Scene1
+Game Object: SourcePlatforms/floatingPlatform
+Component: Animation
+---
+Animation without any clips
+Scene: Toolkit/MeshBaker/Examples/Scene1
+Game Object: SourceTrees/tree
+Component: Animation
+---
+Animation without any clips
+Scene: Toolkit/MeshBaker/Examples/Scene1
+Game Object: SourcePlatforms/littleBridge
+Component: Animation
+---
+Animation without any clips
+Scene: Toolkit/MeshBaker/Examples/Scene1
+Game Object: SourcePlatforms/mediumPlatform
+Component: Animation
+---
+Animation without any clips
+Scene: Toolkit/MeshBaker/Examples/Scene1
+Game Object: SourceTrees/tree
+Component: Animation
+---
+Animation without any clips
+Scene: Toolkit/MeshBaker/Examples/Scene1
+Game Object: SourceTrees/tree
+Component: Animation
+---
+Array with 3 empty item(s)
+Scene: Toolkit/MeshBaker/Examples/Scene1
+Game Object: MaterialBaker-Platforms
+Component: MB3_TextureBaker
+Property: On Combined Textures Coroutine Atlases And Rects[0] / Atlases
+---
+Animation without any clips
+Scene: Toolkit/MeshBaker/Examples/Scene1
+Game Object: SourcePlatforms/bigBridge
+Component: Animation
+---
+Animation without any clips
+Scene: Toolkit/MeshBaker/Examples/Scene1
+Game Object: SourceTrees/tree
+Component: Animation
+---
+Animation without any clips
+Scene: Toolkit/MeshBaker/Examples/Scene1
+Game Object: SourceTrees/tree
+Component: Animation
+---
+Animation without any clips
+Scene: Toolkit/MeshBaker/Examples/Scene1
+Game Object: SourcePlatforms/floatingPlatform
+Component: Animation
+---
+Animation without any clips
+Scene: Toolkit/MeshBaker/Examples/Scene1
+Game Object: SourcePlatforms/lightPost
+Component: Animation
+---
+Animation without any clips
+Scene: Toolkit/MeshBaker/Examples/Scene1
+Game Object: SourceTrees/tree
+Component: Animation
+---
+Animation without any clips
+Scene: Toolkit/MeshBaker/Examples/Scene1
+Game Object: SourcePlatforms/floatingPlatform
+Component: Animation
+---
+Animation without any clips
+Scene: Toolkit/MeshBaker/Examples/Scene1
+Game Object: SourceTrees/tree
+Component: Animation
+---
+Animation without any clips
+Scene: Toolkit/MeshBaker/Examples/Scene1
+Game Object: SourcePlatforms/stepPlatform
+Component: Animation
+---
+Animation without any clips
+Scene: Toolkit/MeshBaker/Examples/Scene1
+Game Object: SourcePlatforms/mediumPlatform
+Component: Animation
+---
+Array with 1 empty item(s)
+Scene: Toolkit/MeshBaker/Examples/SceneBakeTexturesAtRuntime
+Game Object: MaterialBaker0
+Component: MB3_TextureBaker
+Property: On Combined Textures Coroutine Atlases And Rects[0] / Atlases
+---
+Array with 1 empty item(s)
+Scene: Toolkit/MeshBaker/Examples/SceneBasic
+Game Object: MaterialBaker1
+Component: MB3_TextureBaker
+Property: On Combined Textures Coroutine Atlases And Rects[0] / Atlases
+---
+Disconnected prefab instance
+Scene: Toolkit/MeshBaker/Examples/SceneMultipleMaterials
+Game Object: Source
+---
+Array with 1 empty item(s)
+Scene: Toolkit/MeshBaker/Examples/SceneMultipleMaterials
+Game Object: TextureBaker (0)
+Component: MB3_TextureBaker
+Property: On Combined Textures Coroutine Atlases And Rects[0] / Atlases
+---
+Array with 1 empty item(s)
+Scene: Toolkit/MeshBaker/Examples/SceneMultipleMaterials
+Game Object: TextureBaker (0)
+Component: MB3_TextureBaker
+Property: On Combined Textures Coroutine Atlases And Rects[1] / Atlases
+---
+Array with 1 empty item(s)
+Scene: Toolkit/MeshBaker/Examples/SceneMultipleMaterials
+Game Object: TextureBaker (0)
+Component: MB3_TextureBaker
+Property: On Combined Textures Coroutine Atlases And Rects[2] / Atlases
+---
+Array with 1 empty item(s)
+Scene: Toolkit/MeshBaker/Examples/SceneMultipleMaterials
+Game Object: TextureBaker (0)
+Component: MB3_TextureBaker
+Property: On Combined Textures Coroutine Atlases And Rects[3] / Atlases
+---
+Array with 2 empty item(s)
+Scene: Toolkit/MeshBaker/Examples/SceneMultipleMaterials
+Game Object: TextureBaker (0)
+Component: MB3_TextureBaker
+Property: On Combined Textures Coroutine Atlases And Rects[4] / Atlases

@@ -1,0 +1,98 @@
+﻿Please always remove previous version of plugin before updating!
+
+1.2.0.3
+- fixed project won't build in Unity < 5.2 (thx mwgray)
+
+1.2.0.2
+- Issues Finder:
+  - ignoring empty AudioSources on objects with standard FirstPersonController
+  - indication of the initial scene opening added to the progress
+  - fixed exception when trying to show removed object (thx toxic2k)
+  - fixed progress bar not showed the Tags and Layers scan phase
+- minor changes in code to improve readability
+  
+1.2.0.1
+- Issues Finder internal ignores:
+  - added Fabric components to the ignores for duplicates detection
+  - improved detection of the TextMeshPro component
+
+1.2.0.0
+- Issues Finder:
+  - new search option: Inconsistent Terrain Data
+  - new search option: Sprite Renderer without sprite
+  - new search option: Terrain Collider without Terrain Data
+  - new search option: Audio Source without Audio Clip
+  - new search option: Object with huge world position
+  - new search option: Duplicate scenes in build
+  - new search option: Duplicates in Tags and Layers settings
+  - ignores system introduced:
+    * path ignores (you may ignore assets by full or partial path)
+    * components ignores (you may ignore specified components)
+    * 3 ways to add to ignores: drag & drop, manual, from the results list
+  - added option for duplicate components search to ignore component values
+  - added hide button to each issue to let you remove it from the list
+  - Component's Local Identifier in file shown if necessary
+  - added a button to clear search results
+  - SceneManager APIs (introduced in Unity 5.3) are fully supported now
+  - moved search results storage to the temporary location
+  - improved output for missing \ empty array items
+  - nicer assets paths output
+  - more details in the final console log after scan
+  - more details in the progress bar window
+  - prefabs instances scan performance improved
+  - simplified clipboard-management code
+  - TextMeshPro* components added to ignores for empty array items search
+  - TextMeshPro component added to ignores for empty MeshFilter search
+  - 2D Toolkit components (tk2d*) added to ignores for empty MeshFilter search
+  - fixed not all nested items of prefab assets were checked (thx Onur Er)
+  - fixed incorrect behavior in few cases related to the multi scene editing
+  - fixed possible data loss when performing search in new unsaved scene
+  - fixed extra issue record for SpriteRenderers when they have no material
+  - fixed duplicate Empty Layer issue when looking in both scenes and prefabs
+- new module: Project Cleaner!
+  - allows to find and clean selected items
+  - finds empty folders
+    * can find and clean empty folders automatically on each script reload
+  - finds empty scenes
+  - optional delete to trash bin
+  - has path ignores
+  - preview version of module, will be improved a lot in future updates
+- settings file moved to the ProjectSettings
+- all files moved to the Assets/Plugins folder
+- all menu items moved to the Tools > Code Stage > Maintainer
+- public settings API changed
+- minor improvements in reports
+- significant refactorings for additional flexibility and future updates
+- significant code cleanup
+- minimum window height increased to 500 px
+- spelling fixes in comments and docs
+
+1.1.0.1
+- Issues Finder:
+  - fixed scenes paths comparison leading to unnecessary scene save prompt
+
+1.1.0
+- Issues Finder: 
+  - new scene filtering mode: current scene only
+  - new search option: Duplicate components
+  - new Reset button added to let you quickly reset settings to defaults
+  - new standard prefab icon added to the prefab assets records
+  - now after search you return to the scene which was opened before search
+  - now scene file is highlighted when you press "show" button
+  - now all buttons for found issues are placed below issue description to avoid unnecessary scrolling
+  - now all deep nested objects (level 2 and more) in instantiated prefabs are scanned as well
+  - report header was re-worked a bit and now includes unity version
+  - now Issues Finder may be called from user scripts, see "Using Maintainer from code" readme section
+  - lot of tooltips added
+  - attempt to fix rare Maintainer leakage
+  - increased Unity 5 compatibility (deprecated API replaced)
+  - scenes in build filtration optimizations
+  - minor fixes and improvements
+  - minor optimizations
+  - minor refactorings
+- Settings file is now re-created in case it was damaged and couldn't be read
+- Troubleshooting readme section was supplemented by new item about Debug Inspector mode
+- additions and fixes in readme
+
+1.0.0
+- first public release with initial Issues Finder module
