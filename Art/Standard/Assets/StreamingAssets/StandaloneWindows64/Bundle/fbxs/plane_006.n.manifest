@@ -1,0 +1,28 @@
+ManifestFileVersion: 0
+CRC: 3018040449
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9c3c4032fc3bcfd2be109f4a0b5ea32b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 1934caf3a71876248b5bb0b38c1db33a
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Fbxs/Plane_006.FBX
+Dependencies: []

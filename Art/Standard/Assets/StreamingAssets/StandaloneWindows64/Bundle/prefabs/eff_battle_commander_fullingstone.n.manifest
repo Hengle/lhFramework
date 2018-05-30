@@ -1,0 +1,36 @@
+ManifestFileVersion: 0
+CRC: 3824173136
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6e7ce8ffbabc25048e6d28b91bfc21a4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 94d96c8b6cc57df06db9154a83d30da8
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Prefabs/eff_battle_commander_fullingstone.prefab
+Dependencies:
+- E:/Personal/GitHub/lhFramework/Art/Standard/Assets/StreamingAssets/StandaloneWindows64/Bundle/textures/smoke_001.n
+- E:/Personal/GitHub/lhFramework/Art/Standard/Assets/StreamingAssets/StandaloneWindows64/Bundle/textures/smoke_003.n
+- E:/Personal/GitHub/lhFramework/Art/Standard/Assets/StreamingAssets/StandaloneWindows64/Bundle/fbxs/plane_002.n
+- E:/Personal/GitHub/lhFramework/Art/Standard/Assets/StreamingAssets/StandaloneWindows64/Bundle/materials/crack_001.n
+- E:/Personal/GitHub/lhFramework/Art/Standard/Assets/StreamingAssets/StandaloneWindows64/Bundle/materials/crack_002_blend.n
+- E:/Personal/GitHub/lhFramework/Art/Standard/Assets/StreamingAssets/StandaloneWindows64/Bundle/materials/smoke_002.n

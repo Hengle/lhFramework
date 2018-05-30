@@ -1,0 +1,27 @@
+ManifestFileVersion: 0
+CRC: 1194339228
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6254256c40b20e4cc01ec6a0db818717
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ff68f38490d3fa0b79fd635db4147ce6
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Prefabs/eff_inner_temple_model_001.prefab
+Dependencies:
+- E:/Personal/GitHub/lhFramework/Art/Standard/Assets/StreamingAssets/StandaloneWindows64/Bundle/materials/glow_001.n
+- E:/Personal/GitHub/lhFramework/Art/Standard/Assets/StreamingAssets/StandaloneWindows64/Bundle/materials/glow_003.n
+- E:/Personal/GitHub/lhFramework/Art/Standard/Assets/StreamingAssets/StandaloneWindows64/Bundle/materials/line_001.n

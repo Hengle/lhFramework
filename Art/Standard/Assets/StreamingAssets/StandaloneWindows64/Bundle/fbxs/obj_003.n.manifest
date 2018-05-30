@@ -1,0 +1,28 @@
+ManifestFileVersion: 0
+CRC: 54471030
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 61b32927647fc47c29c3f767a7fc67bc
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 1934caf3a71876248b5bb0b38c1db33a
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Fbxs/Obj_003.FBX
+Dependencies: []

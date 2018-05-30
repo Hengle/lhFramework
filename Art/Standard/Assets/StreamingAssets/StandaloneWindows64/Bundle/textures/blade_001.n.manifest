@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1433559298
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b686958671a1092fb807790e0b2f4c6c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4cd0a5558493b0679e071c141fc729a3
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/Blade_001.tga
+Dependencies: []

@@ -2,9 +2,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
+//#if UNITY_EDITOR
+//using UnityEditor;
+//#endif
 
 namespace qtools.qhierarchy
 {	
@@ -43,9 +43,9 @@ namespace qtools.qhierarchy
 			if (!instances.Contains(this)) instances.Add(this);
 		}
 
-		public void OnEnable() 
-		{  
-			if (!instances.Contains(this)) instances.Add(this);
+		public void OnEnable()
+        {
+            if (!instances.Contains(this)) instances.Add(this);
 
 			#if UNITY_EDITOR
 			foreach (GameObject wireframeGameObject in wireframeHiddenObjects)
@@ -54,7 +54,7 @@ namespace qtools.qhierarchy
 				if (renderer != null) 
                 {
                     #if UNITY_5_5_OR_NEWER
-                    EditorUtility.SetSelectedRenderState(renderer, EditorSelectedRenderState.Hidden);
+                    UnityEditor.EditorUtility.SetSelectedRenderState(renderer, UnityEditor.EditorSelectedRenderState.Hidden);
                     #else
                     EditorUtility.SetSelectedWireframeHidden(renderer, true);
                     #endif

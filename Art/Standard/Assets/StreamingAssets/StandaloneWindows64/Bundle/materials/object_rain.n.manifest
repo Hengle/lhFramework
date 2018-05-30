@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 4153150287
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1624e21a3b193e3b3445ef002b7f6e7f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: cc983a3149e5fb03ce027e70c7a1a559
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Materials/object_rain.mat
+Dependencies:
+- E:/Personal/GitHub/lhFramework/Art/Standard/Assets/StreamingAssets/StandaloneWindows64/Bundle/textures/object_rain.n

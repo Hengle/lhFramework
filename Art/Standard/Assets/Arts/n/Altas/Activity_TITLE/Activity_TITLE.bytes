@@ -1,0 +1,9 @@
+package.xml|474|<packageDescription id="qh3w87gs" name="Activity_TITLE">
+  <resources>
+    <image id="fyn30" name="1st_bg" path="/" size="326,56" exported="true"/>
+    <image id="fyn31" name="2nd_bg" path="/" size="326,56" exported="true"/>
+    <image id="fyn32" name="3rd_bg" path="/" size="326,56" exported="true"/>
+    <image id="fyn33" name="4---_bg" path="/" size="335,48" exported="true"/>
+    <atlas id="atlas0" size="512,256" file="atlas0.png"/>
+  </resources>
+</packageDescription>
