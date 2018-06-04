@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Managers
 {
+    using Core;
     public class ResourcesManager
     {
         public static ISource source { get; private set; }
@@ -46,6 +47,18 @@ namespace Framework.Infrastructure
         public static void Load(int assetId, DataHandler<UnityEngine.Object[]> onLoadOver, EVariantType variant = EVariantType.n)
         {
             source.Load(assetId, onLoadOver, variant);
+        }
+        public static void Destroy(int assetId,EVariantType variant=EVariantType.n)
+        {
+            source.Destroy(assetId);
+        }
+        public static void Unload(int assetId,EVariantType variant = EVariantType.n)
+        {
+            source.UnLoad(assetId, variant);
+        }
+        public static void UnloadUnusedAsset()
+        {
+            source.UnloadUnusedAsset();
         }
     }
 }

@@ -1,0 +1,28 @@
+ManifestFileVersion: 0
+CRC: 526704703
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3f97d5e126c8e7107d650110fe98d01d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 1934caf3a71876248b5bb0b38c1db33a
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Fbxs/sea_waves_01.FBX
+Dependencies: []

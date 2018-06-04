@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Managers
 {
     public enum ETimelineBindType
     {

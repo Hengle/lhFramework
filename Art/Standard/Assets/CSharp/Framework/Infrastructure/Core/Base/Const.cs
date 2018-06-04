@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Core
 {
     public class Const
     {

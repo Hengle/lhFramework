@@ -2,8 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Managers
 {
+    using Core;
     public interface ISource
     {
         /// <summary>

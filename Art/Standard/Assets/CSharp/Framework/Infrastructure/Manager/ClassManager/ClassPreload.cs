@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Managers
 {
     public class ClassPreload
     {

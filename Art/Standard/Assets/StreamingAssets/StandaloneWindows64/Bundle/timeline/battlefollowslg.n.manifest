@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 1046232669
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8b4de115cb32505a537f0d612241b738
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 53d722b44527b0e5d4ca85e60e2f94c5
+HashAppended: 0
+ClassTypes:
+- Class: 114
+  Script: {fileID: 337831424, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 05acc715f855ced458d76ee6f8ac6c61, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 90fb794a295e73545af71bcdb7375791, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Timeline/BattleFollowSLG.playable
+Dependencies: []

@@ -1,6 +1,6 @@
 ﻿
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Managers
 {
     public enum ETimelineCycleType
     {

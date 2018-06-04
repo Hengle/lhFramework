@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Managers
 {
     public class TimeManager
     {
@@ -18,7 +18,7 @@ namespace Framework.Infrastructure
         }
         TimeManager()
         {
-
+            SetDeltaTime(30);
         }
         ~TimeManager()
         {

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Components
 {
+    using Managers;
     public class Interval:DecoratorTask
     {
-        public override EClassType classType { get { return EClassType.Core_Interval; } set { } }
         private int m_time;
         private int m_curTime;
         public override ETaskResult Execute(ETaskResult result,bool last)

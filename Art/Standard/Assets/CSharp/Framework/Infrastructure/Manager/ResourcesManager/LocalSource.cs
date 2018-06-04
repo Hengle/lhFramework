@@ -7,8 +7,9 @@ using UnityEditor;
 #endif
 using UnityEngine;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Managers
 {
+    using Core;
     public class LocalSource : ISource
     {
         private Dictionary<int, int[]> m_dependenciesChain = new Dictionary<int, int[]>();
@@ -132,8 +133,10 @@ namespace Framework.Infrastructure
                                         {
                                             int variantId = variant[m];
                                             int g = assetId * Const.variantMaxLength + variantId;
-                                            string path =Define.sourceUrl + ((EVariantType)variantId).ToString()+  assetPath ;
-                                            path = path+ GetExtension(path);
+                                            string path = Define.localSourceUrl + ((EVariantType)variantId).ToString() + "/" + assetPath;
+                                            path = path + GetExtension(path);
+                                            path = path.Replace(Application.dataPath, "");
+                                            path = "Assets" + path;
                                             m_guidPath.Add(g, path);
                                         }
                                     }
@@ -220,6 +223,10 @@ namespace Framework.Infrastructure
             else if (File.Exists(path + ".exr")) return ".exr";
             else if (File.Exists(path + ".tga")) return ".tga";
             else if (File.Exists(path + ".txt")) return ".txt";
+            else if (File.Exists(path + ".mesh")) return ".mesh";
+            else if (File.Exists(path + ".anim")) return ".anim";
+            else if (File.Exists(path + ".asset")) return ".asset";
+            else if (File.Exists(path + ".shader")) return ".shader";
             else
             {
                 Debug.Log.i(Debug.ELogType.Error, "GetExtension  Dont has this path:" + path);

@@ -3,142 +3,180 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Managers
 {
     #pragma warning disable 0649,0067
     using Debug;
-    public class ModelManager
+    using Core;
+    public class ModelPool
     {
-        public delegate void StoreHandler();
-        public static Transform parent;
-        class ModelPool
-        {
-            public int index;
-            public string path;
-            public int storeCount;
-            public GameObject obj;
-#if UNITY_EDITOR && LOG
-            public int getCount;
-            public int freeCount;
-#endif
-            private List<IModel> m_freeList;
-            public List<IModel> allList;
-            private List<IModel> m_usingList;
-            public void Initialize(StoreHandler onStoreHandler)
-            {
-                m_freeList = new List<IModel>(storeCount);
-                allList = new List<IModel>(storeCount);
-                m_usingList = new List<IModel>(storeCount);
-                //External.ExternalManager.LoadAsset(External.EAssetType.Prefab, path, (o) =>
-                //{
-                //    obj = o as GameObject;
-                //    if (obj == null)
-                //    {
-                //        //storeHandler();
-                //        //storeHandler = null;
-                //        Log.i(ELogType.Model, path + " not found !");
-                //        //return;
-                //        obj = new GameObject(path);
-                //    }
-                //    obj.transform.SetParent(parent);
-                //    for (int i = 0; i < storeCount; i++)
-                //    {
-                //        var ob = CreateObj();
-                //        ob.OnFree();
-                //        m_freeList.Add(ob);
-                //    }
-                //    onStoreHandler();
-                //    onStoreHandler = null;
-                //});
-            }
-            public IModel Get()
-            {
-#if UNITY_EDITOR && LOG
-                getCount++;
-#endif
-                if (m_freeList.Count>0)
-                {
-                    var f = m_freeList[0];
-                    m_freeList.RemoveAt(0);
-                    f.OnUse();
-                    m_usingList.Add(f);
-                    return f;
-                }
-                else
-                {
-                    var mod= CreateObj();
-                    mod.OnUse();
-                    m_usingList.Add(mod);
-                    allList.Add(mod);
-                    return mod;
-                }
-            }
-            public void Update()
-            {
-                for (int i = 0; i < m_usingList.Count; i++)
-                {
-                    m_usingList[i].OnUpdate();
-                }
-            }
-            public void Free(IModel obj)
-            {
+        public int index;
+        public int storeCount;
+        public EModelGroup group;
+        public GameObject obj;
+        public List<IModel> usingList=new List<IModel>();
+        public List<IModel> freeList=new List<IModel>();
+        public LoadHandler loadHandler;
+
 #if UNITY_EDITOR
-                if (m_freeList.Contains(obj))
-                {
-                    Log.i(ELogType.Model, "model has this obj free mulity  =>" + obj.index);
-                    return;
-                }
+        public int getCount;
+        public int freeCount;
+        public List<IModel> allList=new List<IModel>();
 #endif
-                obj.OnFree();
-                m_freeList.Add(obj);
-                m_usingList.Remove(obj);
-#if UNITY_EDITOR && LOG
-                freeCount++;
+        public ModelPool()
+        {
+
+        }
+        public void Initialize(EventHandler onStoreHandler)
+        {
+            freeList = new List<IModel>(storeCount);
+#if UNITY_EDITOR
+            allList = new List<IModel>(storeCount);
 #endif
-            }
-            public bool HasObj(int id)
+            usingList = new List<IModel>(storeCount);
+            loadHandler(index, delegate (UnityEngine.Object o)
             {
-                for (int i = 0; i < allList.Count; i++)
+                obj = o as GameObject;
+                if (obj == null)
                 {
-                    if (allList[i].InstanceID() == id)
-                    {
-                        return true;
-                    }
+                    Log.i(ELogType.Model, index+ " not found !");
+                    obj = new GameObject(index.ToString());
                 }
-                return false;
-            }
-            public void Clear()
+                obj.transform.SetParent(ModelManager.parent);
+                for (int i = 0; i < storeCount; i++)
+                {
+                    var ob = CreateObj();
+                    freeList.Add(ob);
+                }
+                onStoreHandler();
+                onStoreHandler = null;
+            });
+        }
+        public void Add(int count)
+        {
+            for (int i = 0; i < count; i++)
             {
-                for (int i = 0; i < allList.Count; i++)
-                {
-                    UnityEngine.Object.Destroy(allList[i].gameObject);
-                }
-                UnityEngine.Object.Destroy(obj);
+                var ob = CreateObj();
+                freeList.Add(ob);
             }
-            private IModel CreateObj()
+        }
+        public IModel Get()
+        {
+#if UNITY_EDITOR
+            getCount++;
+#endif
+            if (freeList.Count > 0)
             {
-                var o = UnityEngine.Object.Instantiate(obj);
-                IModel mod=null;
-                var con = o.GetComponent<MonoBehaviour>();
-                if (con is IModel)
-                {
-                    mod = con as IModel;
-                    ((IModel)con).OnCreate();
-                }
-                else {
-                    Log.i(ELogType.Model, "model must addComponent of ModelControl or ModelManual or ModelData=>"+ obj.name);
-                }
-                o.transform.SetParent(parent);
-                mod.index = index;
+                var f = freeList[0];
+                freeList.RemoveAt(0);
+                f.OnUse();
+                usingList.Add(f);
+                return f;
+            }
+            else
+            {
+                var mod = CreateObj();
+                mod.OnUse();
+                usingList.Add(mod);
+#if UNITY_EDITOR
                 allList.Add(mod);
+#endif
                 return mod;
             }
         }
+        public void Update()
+        {
+            for (int i = 0; i < usingList.Count; i++)
+            {
+                usingList[i].OnUpdate();
+            }
+        }
+        public void Free(IModel obj)
+        {
+#if UNITY_EDITOR
+            if (freeList.Contains(obj))
+            {
+                Log.i(ELogType.Model, "model has this obj free mulity  =>" + obj.index);
+                return;
+            }
+#endif
+            obj.OnFree();
+            freeList.Add(obj);
+            usingList.Remove(obj);
+#if UNITY_EDITOR
+            freeCount++;
+#endif
+        }
+        public void Clear()
+        {
+            for (int i = 0; i < usingList.Count; i++)
+            {
+                UnityEngine.Object.Destroy(usingList[i].gameObject);
+            }
+            for (int i = 0; i < freeList.Count; i++)
+            {
+                UnityEngine.Object.Destroy(freeList[i].gameObject);
+            }
+            UnityEngine.Object.Destroy(obj);
+        }
+        public void OnReset()
+        {
+            index = 0;
+            storeCount = 0;
+#if UNITY_EDITOR
+            allList.Clear();
+            getCount = 0;
+            freeCount = 0;
+#endif
+            freeList.Clear();
+            usingList.Clear();
+            loadHandler = null;
+            obj = null;
+        }
+        private IModel CreateObj()
+        {
+            var o = UnityEngine.Object.Instantiate(obj);
+            IModel mod = null;
+            var arr = o.GetComponents<MonoBehaviour>();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if(arr[i] is IModel)
+                {
+                    mod = arr[i] as IModel;
+                    break;
+                }
+            }
+            if (mod == null)
+            {
+                mod = o.AddComponent<ModelControl>() as IModel;
+                Log.i(ELogType.Model, "model must addComponent of ModelControl or ModelManual or ModelData=>" + obj.name);
+            }
+            mod.OnCreate();
+            o.transform.SetParent(ModelManager.parent);
+            mod.index = index;
+            mod.group = group;
+#if UNITY_EDITOR
+            allList.Add(mod);
+#endif
+            return mod;
+        }
+    }
+    public class ModelManager
+    {
+        public static DataHandler<int> getHandler;
+        public static DataHandler<int> freeHandler;
+        public static DataHandler<int> storeHandler;
+        public static DataHandler<int> clearHandler;
+        public LoadHandler loadHandler;
+        public DestroyHandler destroyHandler;
+        public static Transform parent;
+        public static Dictionary<int, ModelPool>[] source { get{ return m_instance.m_dic; } }
         class WaitFree
         {
             public IModel waitFree;
             public int freeTime;
-            public Action freeHandler;
+            public EModelGroup group;
+            public EventHandler freeHandler;
             public void Clear()
             {
                 waitFree = null;
@@ -146,14 +184,9 @@ namespace Framework.Infrastructure
                 freeHandler = null;
             }
         }
-        private Dictionary<int, ModelPool> m_dic = new Dictionary<int, ModelPool>();
+        private Dictionary<int, ModelPool>[] m_dic;
         private List<WaitFree> m_freeWaitList = new List<WaitFree>();
         private List<WaitFree> m_usingWaitList = new List<WaitFree>(20);
-#if LOG
-        private List<int> m_dontPreloadList = new List<int>();
-        private List<int> m_dontConfigList = new List<int>();
-        private string m_directory;
-#endif
         private static ModelManager m_instance;
         public static ModelManager GetInstance()
         {
@@ -162,23 +195,16 @@ namespace Framework.Infrastructure
         }
         ModelManager()
         {
-#if LOG
-            if (string.IsNullOrEmpty(m_directory))
+            var a = Enum.GetValues(typeof(EModelGroup));
+            m_dic = new Dictionary<int, ModelPool>[a.Length];
+            for (int i = 0; i < a.Length; i++)
             {
-                m_directory = Application.persistentDataPath + "/Profile"+ "_" + Macro.storeTime + "/";
-                if (!System.IO.Directory.Exists(m_directory))
-                {
-                    System.IO.Directory.CreateDirectory(m_directory);
-                }
+                m_dic[i] = new Dictionary<int, ModelPool>();
             }
-#endif
             var obj = new GameObject("[ModelManager]");
             parent = obj.transform;
             parent.transform.position = new Vector3(-10, -10, -10);
-#if UNITY_EDITOR && !HIDEHIERA
-            //obj.hideFlags = HideFlags.HideInHierarchy;
-#endif
-            //parent.gameObject.SetActive(false);
+            obj.SetActive(false);
         }
         ~ModelManager()
         {
@@ -186,20 +212,24 @@ namespace Framework.Infrastructure
         }
         public void Dispose()
         {
-#if LOG && UNITY_EDITOR
-            PrintModel();
-            PrintDontPreload();
-            PrintDontConfig();
-#endif
-            foreach (var item in m_dic)
+            for (int i = 0; i < m_dic.Length; i++)
             {
-                item.Value.Clear();
+                var dic = m_dic[i];
+                foreach (var item in dic)
+                {
+                    item.Value.Update();
+                    destroyHandler(item.Key);
+                }
             }
             if (parent!=null)
             {
                 UnityEngine.Object.Destroy(parent.gameObject);
             }
             parent = null;
+            getHandler = null;
+            freeHandler = null;
+            clearHandler = null;
+            storeHandler = null;
             m_instance = null;
         }
         public void Update()
@@ -216,22 +246,26 @@ namespace Framework.Infrastructure
                         wait.freeHandler = null;
                     }
                     m_freeWaitList.Remove(wait);
-                    Free(wait.waitFree);
+                    Free(wait.waitFree,-1,wait.group);
                     wait.Clear();
                     m_usingWaitList.Add(wait);
                     i--;
                 }
             }
-            foreach (var item in m_dic)
+            for (int i = 0; i < m_dic.Length; i++)
             {
-                item.Value.Update();
+                var dic = m_dic[i];
+                foreach (var item in dic)
+                {
+                    item.Value.Update();
+                }
             }
         }
         public void SetParent(bool show)
         {
             parent.gameObject.SetActive(show);
         }
-        public static void Store(ModelStoreData[] list,Action onStoreOver)
+        public static void Store(ModelStoreData[] list, EventHandler onStoreOver)
         {
             int count = list.Length;
             if (count <= 0)
@@ -239,7 +273,7 @@ namespace Framework.Infrastructure
                 onStoreOver();
                 return;
             }
-            StoreHandler StoreHandler = () =>
+            EventHandler StoreHandler = () =>
             {
                 count--;
                 if (count <= 0)
@@ -251,21 +285,31 @@ namespace Framework.Infrastructure
             for (int i = 0; i < list.Length; i++)
             {
                 var l = list[i];
-                Store(l, StoreHandler);
+                Store(l.index,l.count,l.group, StoreHandler);
             }
         }
-        public static void Store(ModelStoreData data,StoreHandler onStoreHandler)
+        public static void Store(int id,int count,EModelGroup group, EventHandler onStoreHandler)
         {
-            var pool = new ModelPool();
-            pool.index = data.index;
-            pool.path = data.path;
-            pool.storeCount = data.count;
-            m_instance.m_dic.Add(data.index, pool);
-            pool.Initialize(onStoreHandler);
+            var g = m_instance.m_dic[(int)group];
+            if (g.ContainsKey(id))
+            {
+                g[id].Add(count);
+                onStoreHandler();
+            }
+            else
+            {
+                var pool = new ModelPool();
+                pool.index = id;
+                pool.storeCount = count;
+                pool.group = group;
+                g.Add(id, pool);
+                pool.loadHandler = m_instance.loadHandler;
+                pool.Initialize(onStoreHandler);
+            }
         }
-        public static IModel Get(int index,Transform parent,Vector3 position,Quaternion rotation)
+        public static IModel Get(int index,Transform parent,Vector3 position,Quaternion rotation,EModelGroup group=EModelGroup.Base)
         {
-            var obj = Get(index);
+            var obj = Get(index,group);
             if (obj!=null)
             {
                 obj.transform.SetParent(parent);
@@ -275,9 +319,9 @@ namespace Framework.Infrastructure
             }
             return obj;
         }
-        public static IModel Get(int index, Vector3 position, Quaternion rotation, Transform parent)
+        public static IModel Get(int index, Vector3 position, Quaternion rotation, Transform parent, EModelGroup group=EModelGroup.Base)
         {
-            var obj = Get(index);
+            var obj = Get(index,group);
             if (obj != null)
             {
                 obj.transform.position = position;
@@ -287,42 +331,36 @@ namespace Framework.Infrastructure
             }
             return obj;
         }
-        public static IModel Get(int index)
+        public static IModel Get(int index, EModelGroup group = EModelGroup.Base)
         {
+            IModel mod;
 #if UNITY_EDITOR
-            if (m_instance.m_dic.ContainsKey(index))
+            if (m_instance.m_dic[(int)group].ContainsKey(index))
             {
-                return m_instance.m_dic[index].Get();
+                mod= m_instance.m_dic[(int)group][index].Get();
             }
             else
             {
                 Log.i(ELogType.Model, "LaoHan:ModelManager dont has this index;" + index);
-//                if (Macro.isDebug)
-//                {
-//                    if (index > 0)
-//                    {
-//#if UNITY_EDITOR && LOG
-//                        m_instance.m_dontPreloadList.Add(index);
-//#endif
-//                        var pool = new ModelPool();
-//                        pool.index = index;
-//                        pool.path = External.ExternalManager.GetSourcePath(index);
-//                        pool.storeCount = 1;
-//                        m_instance.m_dic.Add(index, pool);
-//                        pool.Initialize(() => { });
-//                        return Get(index);
-//                    }
-//                }
-                return null;
+                var pool = new ModelPool();
+                pool.index = index;
+                pool.storeCount = 1;
+                m_instance.m_dic[(int)group].Add(index, pool);
+                pool.loadHandler = m_instance.loadHandler;
+                pool.Initialize(() => { });
+                mod= Get(index,group);
             }
 #else
-            return m_instance.m_dic[index].Get();
+            mod= m_instance.m_dic[index].Get();
 #endif
+            if (getHandler != null)
+                getHandler(index);
+            return mod;
         }
-        public static void Free(IModel obj,int freeTime=-1,Action onFreeHandler=null)
+        public static void Free(IModel obj,int freeTime=-1,EModelGroup group=EModelGroup.Base, EventHandler onFreeHandler=null)
         {
 #if UNITY_EDITOR
-            if (!m_instance.m_dic.ContainsKey(obj.index))
+            if (!m_instance.m_dic[(int)group].ContainsKey(obj.index))
             {
                 Log.i(ELogType.Model, "dont has this index=>"+obj.index);
                 if (onFreeHandler != null)
@@ -353,6 +391,7 @@ namespace Framework.Infrastructure
                 wait.waitFree = obj;
                 wait.freeHandler = onFreeHandler;
                 wait.freeTime = freeTime;
+                wait.group = group;
                 m_instance.m_freeWaitList.Add(wait);
             }
             else
@@ -361,63 +400,42 @@ namespace Framework.Infrastructure
                 {
                     onFreeHandler();
                 }
-                m_instance.m_dic[obj.index].Free(obj);
+                m_instance.m_dic[(int)group][obj.index].Free(obj);
                 obj.transform.SetParent(parent);
+                if (freeHandler != null)
+                    freeHandler(obj.index);
             }
         }
-#if UNITY_EDITOR && LOG
-        private void PrintModel()
+        public static void Clear(int index,EModelGroup group=EModelGroup.Base)
         {
-            var builder = new System.Text.StringBuilder();
-
-            builder.AppendLine(",Modelid,Total,Get,Free,Store");
-            int i = 1;
-            foreach (var item in m_instance.m_dic)
+#if UNITY_EDITOR
+            if (m_instance.m_dic[(int)group].ContainsKey(index))
             {
-                builder.AppendLine(i + "," + item.Key +","+item.Value.allList.Count+ "," + item.Value.getCount + "," + item.Value.freeCount+","+item.Value.storeCount);
-                i++;
+                if (clearHandler != null)
+                    clearHandler(index);
+                m_instance.m_dic[(int)group][index].Clear();
+                m_instance.destroyHandler(index);
             }
-            builder.AppendLine("waitUsingCount:,"+m_usingWaitList.Count+",freeWaitingCount:,"+m_freeWaitList.Count);
-
-            string filePath = m_directory + "/ModelProfile.csv";
-            byte[] bytes = System.Text.Encoding.UTF8.GetBytes(builder.ToString());
-            using (System.IO.FileStream stream = new System.IO.FileStream(filePath, System.IO.FileMode.Append))
+            else
             {
-                stream.Write(bytes, 0, bytes.Length);
+                Debug.Log.i(ELogType.Model, "Clear dont has this id:" + index);
             }
-        }
-        private void PrintDontPreload()
-        {
-            var builder = new System.Text.StringBuilder();
-
-            builder.AppendLine(",Modelid");
-            for (int i = 0; i < m_dontPreloadList.Count; i++)
-            {
-                builder.AppendLine(i + "," + m_dontPreloadList[i]);
-            }
-            string filePath = m_directory + "/ModelDontPreload.csv";
-            byte[] bytes = System.Text.Encoding.UTF8.GetBytes(builder.ToString());
-            using (System.IO.FileStream stream = new System.IO.FileStream(filePath, System.IO.FileMode.Append))
-            {
-                stream.Write(bytes, 0, bytes.Length);
-            }
-        }
-        private void PrintDontConfig()
-        {
-            var builder = new System.Text.StringBuilder();
-
-            builder.AppendLine(",Modelid");
-            for (int i = 0; i < m_dontConfigList.Count; i++)
-            {
-                builder.AppendLine(i + "," + m_dontConfigList[i]);
-            }
-            string filePath = m_directory + "/ModelDontConfig.csv";
-            byte[] bytes = System.Text.Encoding.UTF8.GetBytes(builder.ToString());
-            using (System.IO.FileStream stream = new System.IO.FileStream(filePath, System.IO.FileMode.Append))
-            {
-                stream.Write(bytes, 0, bytes.Length);
-            }
-        }
+#else
+            m_instance.m_dic[(int)group][index].Clear();
+            m_instance.destroyHandler(index);
 #endif
+
+        }
+        public static void Clear(EModelGroup group)
+        {
+            var g = m_instance.m_dic[(int)group];
+            foreach (var item in g)
+            {
+                if (clearHandler != null)
+                    clearHandler(item.Key);
+                item.Value.Clear();
+                m_instance.destroyHandler(item.Key);
+            }
+        }
     }
 }

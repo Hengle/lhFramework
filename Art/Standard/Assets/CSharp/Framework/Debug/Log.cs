@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Framework.Debug
+namespace lhFramework.Debug
 {
     public class Log
     {

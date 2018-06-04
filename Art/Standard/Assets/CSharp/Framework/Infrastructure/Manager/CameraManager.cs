@@ -2,8 +2,9 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Managers
 {
+    using Core;
     public class CameraManager
     {
         public static Camera mainCamera

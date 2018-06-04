@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Managers
 {
     public enum EEffectDirection
     {
         None,
         /// <summary>
-        /// 特效命中前方
+        /// 特效前方
         /// </summary>
         forward,
         /// <summary>
-        /// 特效命中反方向
+        /// 特效反方向
         /// </summary>
         backward
     }

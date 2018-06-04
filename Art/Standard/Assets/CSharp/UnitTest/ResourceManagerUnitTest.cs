@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Framework.UnitTest
+namespace lhFramework.UnitTest
 {
-    using Infrastructure;
+    using lhFramework.Infrastructure.Managers;
     public class ResourceManagerUnitTest:MonoBehaviour
     {
         public int bundleCount;
@@ -29,6 +29,13 @@ namespace Framework.UnitTest
         }
         void LoadAll()
         {
+            //int[] assetIds = new int[] { 120000, 100000 , 100001 , 100002 , 100003 };
+            //for (int i = 0; i < assetIds.Length; i++)
+            //{
+            //    ResourcesManager.Load(assetIds[i], delegate(UnityEngine.Object o){
+            //        UnityEngine.Debug.Log(o.name);
+            //    });
+            //}
             ((BundleSource)ResourcesManager.source).LoadAll(bundleCount);
         }
     }

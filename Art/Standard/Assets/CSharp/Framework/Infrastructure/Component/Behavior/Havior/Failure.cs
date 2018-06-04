@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Components
 {
+    using Managers;
     [Task(ETaskType.Leaf,"Failure")]
     public class Failure : Havior
     {
-        public override EClassType classType { get { return EClassType.Core_Failure; } set { } }
         public override ETaskResult Execute(ETaskResult result, bool last)
         {
             return ETaskResult.Failed;

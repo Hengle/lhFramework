@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure
 {
+    using Managers;
     public class Infrastructure : MonoBehaviour
     {
         private ResourcesManager m_resourcesManager;

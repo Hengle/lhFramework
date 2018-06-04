@@ -2,13 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Framework.UnitTest
+namespace lhFramework.UnitTest
 {
     public class TempUnitTest:MonoBehaviour
     {
-        public string path;
+        public enum ETest
+        {
+            None,
+            A,
+            B
+        }
         void Start()
         {
+            //var e = Enum.GetValues(typeof(ETest));
+            //e.Length
+            //int a = 0;
         }
         void Update()
         {
@@ -16,13 +24,6 @@ namespace Framework.UnitTest
         }
         void OnGUI()
         {
-            if (GUILayout.Button("Load"))
-            {
-#if UNITY_EDITOR
-                var s = UnityEditor.AssetDatabase.LoadAllAssetRepresentationsAtPath("Assets/"+ path);
-                UnityEngine.Debug.Log(s.Length);
-#endif
-            }
         }
     }
 }

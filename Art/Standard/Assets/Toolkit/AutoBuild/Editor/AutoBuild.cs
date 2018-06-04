@@ -26,7 +26,7 @@ public static class AutoBuild  {
                 sr.Write(ReportsBuilder.GenerateReport(IssuesFinder.MODULE_NAME, records));
             }
         }
-        Framework.Tools.Bundle.BundleBuildManager bundleManager = new Framework.Tools.Bundle.BundleBuildManager();
+        lhFramework.Tools.Bundle.BundleBuildManager bundleManager = new lhFramework.Tools.Bundle.BundleBuildManager();
         bundleManager.BuildPackage();
         bundleManager = null;
     }
@@ -38,7 +38,7 @@ public static class AutoBuild  {
             Debug.Log(args[i] + "   " + i);
         }
         string version = args[9];
-        Framework.Tools.Bundle.BundleBuildManager bundleManager = new Framework.Tools.Bundle.BundleBuildManager();
+        lhFramework.Tools.Bundle.BundleBuildManager bundleManager = new lhFramework.Tools.Bundle.BundleBuildManager();
         bundleManager.BuildPackage();
         bundleManager = null;
     }

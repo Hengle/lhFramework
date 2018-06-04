@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Managers
 {
     public class EffectStoreData
     {
         public int index;
-        public string path;
         public int count;
-        public int type;
+        public EEffectGroup group;
     }
 }

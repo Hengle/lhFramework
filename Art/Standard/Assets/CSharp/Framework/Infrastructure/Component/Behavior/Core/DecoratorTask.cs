@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Components
 {
+    using Managers;
     public abstract class DecoratorTask : ITask
     {
         public Action<int> inValidateTaskHanlder;
@@ -11,7 +12,6 @@ namespace Framework.Infrastructure
         int ITask.parentIndex { get; set; }
         int ITask.childIndex { get; set; }
         public abstract ETaskResult Execute(ETaskResult result, bool last);
-        public abstract EClassType classType { get; set; }
         ETaskType ITask.taskType { get { return ETaskType.Decorator; } set { } }
         public abstract void Parse(Dictionary<string, object> data);
         public abstract void SharedVariableChanged(string key, object value);

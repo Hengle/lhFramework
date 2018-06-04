@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Components
 {
+    using Managers;
     public abstract class CompositeTask : ITask
     {
-        public abstract EClassType classType { get; set; }
         public int[] tasks;
         int ITask.id { get; set; }
         int ITask.parentIndex { get; set; }

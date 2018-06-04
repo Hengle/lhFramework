@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Components
 {
+    using Managers;
     public abstract class LeafTask : ITask
     {
         int ITask.id { get; set; }
@@ -10,7 +11,6 @@ namespace Framework.Infrastructure
         int ITask.childIndex { get; set; }
         public abstract ETaskResult Execute(ETaskResult result, bool last);
         ETaskType ITask.taskType { get { return ETaskType.Leaf; } set { } }
-        public abstract EClassType classType { get; set; }
         public abstract void Parse(Dictionary<string, object> data);
         public abstract void SharedVariableChanged(string key, object value);
         public abstract void Ready();

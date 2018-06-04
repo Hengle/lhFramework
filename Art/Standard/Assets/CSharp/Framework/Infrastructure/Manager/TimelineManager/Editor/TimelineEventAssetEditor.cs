@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Managers
 {
     [CustomEditor(typeof(TimelineEventAsset))]
     internal sealed class TimelineEventAssetEditor : UnityEditor.Editor

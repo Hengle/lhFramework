@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Components
 {
+    using Managers;
     public class BehaviorManager
     {
         private Dictionary<int, BehaviorData> m_dic = new Dictionary<int, BehaviorData>();
@@ -87,7 +88,7 @@ namespace Framework.Infrastructure
         {
             if (m_instance.m_dic.ContainsKey(index))
             {
-                var tree = ClassManager.Get<BehaviorTree>(EClassType.Core_BehaviorTree);
+                var tree = ClassManager.Get<BehaviorTree>();
                 tree.Initialize(m_instance.m_dic[index]);
                 m_instance.m_usingTree.Add(tree);
                 return tree;

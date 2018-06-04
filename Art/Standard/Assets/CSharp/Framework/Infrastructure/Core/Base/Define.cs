@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Core
 {
 
     public class Define
@@ -48,7 +48,14 @@ namespace Framework.Infrastructure
 #else
         streamingAssetUrl+ platform + "/"+Const.bundleFolder+"/";
 #endif
-        public static readonly string sourceTableUrl = sourceUrl+ Const.souceTableName;
+        public static readonly string sourceTableUrl =
+
+#if DEVELOPMENT
+            streamingAssetUrl + platform + "/" + Const.bundleFolder + "/"
+#else
+            sourceUrl
+#endif
+            + Const.souceTableName;
 
 
     }

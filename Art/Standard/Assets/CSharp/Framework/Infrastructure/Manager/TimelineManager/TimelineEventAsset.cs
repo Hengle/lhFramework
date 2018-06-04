@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.Timeline;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Managers
 {
     [System.Serializable]
     public class TimelineEventAsset : PlayableAsset, IPropertyPreview

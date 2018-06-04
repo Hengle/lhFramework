@@ -1,0 +1,629 @@
+9kww10.xml|5461|<component size="1334,750">
+  <controller name="c1" pages="0,盟友贡献榜,1,联盟排行榜" selected="0"/>
+  <controller name="c2" pages="0,,1," selected="0"/>
+  <displayList>
+    <image id="n0_lkxn" name="n0" src="qtlg3" pkg="znyyxfqb" xy="0,0" size="1334,750">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n4_lkxn" name="n4" src="lkxnh" xy="1231,558" size="102,145">
+      <relation target="n1_lkxn" sidePair="leftext-right,bottom-bottom"/>
+      <relation target="" sidePair="rightext-right"/>
+    </image>
+    <image id="n2_lkxn" name="n2" src="lkxn7" xy="57,250" size="54,250">
+      <relation target="n1_lkxn" sidePair="right-left,top-top"/>
+    </image>
+    <component id="n1_lkxn" name="n1" src="oql94lk" pkg="9leh0eyf" xy="101,110" size="1131,614">
+      <Label title="活动"/>
+    </component>
+    <image id="n3_lkxn" name="n3" src="lkxn9" xy="442,105">
+      <relation target="n1_lkxn" sidePair="center-center,top-top"/>
+    </image>
+    <image id="n75_9kww" name="n75" src="lkxnl" xy="109,173" size="1115,151" alpha="0.65"/>
+    <graph id="n20_lkxn" name="n20" xy="109,324" size="1113,1" type="rect" lineSize="0" fillColor="#ff81704c"/>
+    <text id="n22_lkxn" name="n22" xy="518,109" size="297,46" fontSize="30" color="#e9dfbd" align="center" vAlign="middle" leading="0" autoSize="none" shadowColor="#000000" shadowOffset="2,3" text="盟友贡献榜">
+      <gearText controller="c1" pages="0,1" values="盟友贡献榜|联盟排行榜 "/>
+    </text>
+    <graph id="n23_lkxn" name="n23" xy="109,324" size="1113,50" alpha="0.2" type="rect" lineSize="0" fillColor="#ff6c5c4f">
+      <relation target="n1_lkxn" sidePair="width-width,middle-middle"/>
+    </graph>
+    <text id="n40_lkxn" name="n40" xy="1075,331" size="53,37" fontSize="24" color="#fef4be" leading="0" shadowColor="#000000" shadowOffset="1,1" text="贡献"/>
+    <text id="n54_9kww" name="n54" xy="134,332" size="53,37" fontSize="24" color="#fef4be" leading="0" shadowColor="#000000" shadowOffset="1,1" text="排名"/>
+    <image id="n76_9kww" name="n76" src="vrpdji" pkg="9leh0eyf" xy="518,201">
+      <gearDisplay controller="c1" pages="0"/>
+    </image>
+    <text id="n77_9kww" name="n77" xy="629,211" size="107,37" fontSize="24" color="#fef4be" align="center" vAlign="middle" leading="0" shadowColor="#000000" shadowOffset="2,2" text="我的排名:">
+      <gearXY controller="c1" pages="1" values="629,231" default="629,211"/>
+      <gearText controller="c1" pages="1" values="本联盟的排名:" default="我的排名:"/>
+    </text>
+    <text id="n78_9kww" name="n78" xy="629,253" size="59,37" fontSize="24" color="#fef4be" align="center" vAlign="middle" leading="0" shadowColor="#000000" shadowOffset="2,2" text="积分:">
+      <gearDisplay controller="c1" pages="0"/>
+      <relation target="" sidePair="left-left,middle-middle"/>
+    </text>
+    <text id="n79_9kww" name="rankTxt" xy="743,209" size="19,37" fontSize="24" color="#ffffff" align="center" vAlign="middle" leading="0" shadowColor="#000000" shadowOffset="2,2" text="9">
+      <gearXY controller="c1" pages="1" values="793,228" default="743,209"/>
+    </text>
+    <text id="n80_9kww" name="scoreTxt" xy="693,253" size="75,37" fontSize="24" color="#ffffff" align="center" vAlign="middle" leading="0" shadowColor="#000000" shadowOffset="2,2" text="12312">
+      <gearDisplay controller="c1" pages="0"/>
+      <relation target="n78_9kww" sidePair="left-right,middle-middle"/>
+    </text>
+    <text id="n81_9kww" name="n81" xy="389,334" size="101,37" fontSize="24" color="#fef4be" leading="0" shadowColor="#000000" shadowOffset="1,1" text="玩家名称">
+      <gearXY controller="c1" pages="1" values="247,334" default="389,334"/>
+      <gearText controller="c1" pages="1" values="变动" default="玩家名称"/>
+    </text>
+    <text id="n82_9kww" name="n82" xy="813,334" size="53,37" fontSize="24" color="#fef4be" leading="0" shadowColor="#000000" shadowOffset="1,1" text="积分">
+      <gearXY controller="c1" pages="1" values="593,334" default="813,334"/>
+      <gearText controller="c1" pages="1" values="联盟名称" default="积分"/>
+    </text>
+    <image id="n84_9kww" name="n84" src="rj73kx" pkg="9leh0eyf" xy="212,325" size="50,2" rotation="90"/>
+    <image id="n85_9kww" name="n85" src="rj73kx" pkg="9leh0eyf" xy="694,325" size="50,2" rotation="90">
+      <gearXY controller="c1" pages="1" values="333,325" default="694,325"/>
+    </image>
+    <image id="n86_9kww" name="n86" src="rj73kx" pkg="9leh0eyf" xy="981,325" size="50,2" rotation="90"/>
+    <list id="n106_9kww" name="rankList" xy="108,379" size="1116,315" overflow="scroll" defaultItem="ui://dpxq19rj9kww13"/>
+    <loader id="n108_9kww" name="headLer" xy="526,207" size="82,82" align="center" vAlign="middle" fill="scale">
+      <gearDisplay controller="c1" pages="0"/>
+      <relation target="n76_9kww" sidePair="center-center,middle-middle"/>
+    </loader>
+    <loader id="n109_9kww" name="n109" xy="524,158" size="102,102" url="ui://dpxq19rjlkxnc" align="center" vAlign="middle" fill="scale">
+      <gearDisplay controller="c1" pages="1"/>
+      <relation target="n77_9kww" sidePair="right-left,middle-middle"/>
+    </loader>
+    <component id="n110_9kww" name="rankPrizeBtn" src="ngf0ou4tg" pkg="9leh0eyf" xy="1145,269" controller="c1,0">
+      <gearDisplay controller="c1" pages="1"/>
+      <Button icon="ui://9leh0eyfikvwhb"/>
+    </component>
+    <component id="n112_9kww" name="effectRoot" src="ubgs1b" xy="-52,202">
+      <gearDisplay controller="c2" pages="1"/>
+    </component>
+  </displayList>
+</component>9kww13.xml|3752|<component size="1115,48" extention="Button">
+  <controller name="c1" pages="0,,1," selected="1"/>
+  <controller name="c2" pages="0,,1," selected="0"/>
+  <controller name="button" pages="2,up,3,down,4,over,5,selectedOver" selected="2"/>
+  <controller name="c4" pages="0,,1,,2," selected="1"/>
+  <displayList>
+    <graph id="n96_9kww" name="grp3" xy="871,2" size="242,46" alpha="0.5" type="rect" lineColor="#ff4f7373" fillColor="#ff2e3b38">
+      <gearSize controller="c1" default="242,46,1,1"/>
+      <gearColor controller="c2" pages="1" values="#535353" default="#2e3b38"/>
+    </graph>
+    <graph id="n97_9kww" name="grp1" xy="102,2" size="119,46" alpha="0.5" type="rect" lineColor="#ff4f7373" fillColor="#ff2e3b38">
+      <gearXY controller="c1" default="102,2"/>
+      <gearSize controller="c1" pages="1" values="119,46,1,1" default="480,46,1,1"/>
+      <gearColor controller="c2" pages="1" values="#535353" default="#2e3b38"/>
+    </graph>
+    <graph id="n98_9kww" name="grp2" xy="223,2" size="645,46" alpha="0.5" type="rect" lineColor="#ff4f7373" fillColor="#ff2e3b38">
+      <gearXY controller="c1" pages="0" values="584,2" default="223,2"/>
+      <gearSize controller="c1" pages="1" values="645,46,1,1" default="285,46,1,1"/>
+      <gearColor controller="c2" pages="1" values="#535353" default="#2e3b38"/>
+    </graph>
+    <text id="n99_9kww" name="nameTxt" xy="109,12" size="466,32" fontSize="20" color="#ffffff" align="center" vAlign="middle" leading="0" autoSize="none" shadowColor="#000000" shadowOffset="1,1" text="">
+      <gearDisplay controller="c1" pages="0"/>
+      <gearXY controller="c1" pages="0" values="109,9" default="109,12"/>
+    </text>
+    <text id="n100_9kww" name="scoreTxt" xy="235,9" size="623,32" fontSize="20" color="#ffffff" align="center" vAlign="middle" leading="0" autoSize="none" shadowColor="#000000" shadowOffset="1,1" text="">
+      <gearXY controller="c1" pages="0,1" values="593,9|235,9"/>
+      <gearSize controller="c1" pages="1" values="623,27,1,1" default="266,27,1,1"/>
+    </text>
+    <text id="n101_9kww" name="contributeTxt" xy="881,9" size="192,32" fontSize="20" color="#ffffff" align="center" vAlign="middle" leading="0" autoSize="none" shadowColor="#000000" shadowOffset="1,1" text="">
+      <gearSize controller="c1" pages="0" values="225,32,1,1" default="192,32,1,1"/>
+    </text>
+    <graph id="n102_9kww" name="n102" xy="0,2" size="100,46" alpha="0.5" type="rect" lineColor="#ff4f7373" fillColor="#ff2e3b38">
+      <gearColor controller="c2" pages="1" values="#535353" default="#2e3b38"/>
+    </graph>
+    <text id="n103_9kww" name="rankTxt" xy="6,9" size="87,32" fontSize="20" color="#ffffff" align="center" vAlign="middle" leading="0" autoSize="none" shadowColor="#000000" shadowOffset="1,1" text=""/>
+    <image id="n104_9kww" name="n104" src="vrlyou4y6" pkg="9leh0eyf" xy="0,0" size="1114,47">
+      <gearDisplay controller="button" pages="3,5"/>
+    </image>
+    <image id="n105_9kww" name="n105" src="lkxna" xy="141,-3" size="42,54" color="#66ff00">
+      <gearDisplay controller="c4" pages="1,2"/>
+      <gearXY controller="c4" pages="2" values="141,51" default="141,-3"/>
+      <gearSize controller="c4" pages="2" values="42,54,1,-1" default="42,54,1,1"/>
+      <gearColor controller="c4" pages="1,2" values="#66ff00|#cc3300" default="#ffffff"/>
+    </image>
+    <text id="n106_9kww" name="rankAddTxt" xy="154,14" size="16,29" fontSize="18" color="#ffffff" leading="0" shadowColor="#000000" shadowOffset="1,1" text="1">
+      <gearDisplay controller="c4" pages="1,2"/>
+    </text>
+    <component id="n107_9whi" name="jumpBtn" src="v3nhf8" pkg="9leh0eyf" xy="1067,0">
+      <gearDisplay controller="c1" pages="1"/>
+    </component>
+  </displayList>
+  <Button mode="Radio"/>
+</component>9kww14.xml|2798|<component size="1334,750">
+  <displayList>
+    <image id="n0_9kww" name="n0" src="qtlg3" pkg="znyyxfqb" xy="0,0" size="1334,750">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_9kww" name="n1" src="lkxnh" xy="1231,511" size="100,180">
+      <relation target="n3_9kww" sidePair="leftext-right,bottom-bottom"/>
+      <relation target="" sidePair="rightext-right"/>
+    </image>
+    <image id="n2_9kww" name="n2" src="lkxn7" xy="57,173" size="54,279">
+      <relation target="n3_9kww" sidePair="right-left,top-top"/>
+    </image>
+    <component id="n3_9kww" name="n3" src="oql94lk" pkg="9leh0eyf" xy="101,22" size="1131,704"/>
+    <image id="n4_9kww" name="n4" src="lkxn9" xy="442,17">
+      <relation target="n3_9kww" sidePair="center-center,top-top"/>
+    </image>
+    <graph id="n7_9kww" name="n7" xy="103,89" size="1122,113" alpha="0.24" type="rect" lineSize="0" fillColor="#ff000000"/>
+    <image id="n6_9kww" name="n6" src="lkxn8" xy="108,88" size="1113,114"/>
+    <graph id="n5_9kww" name="n5" xy="109,203" size="1113,1" type="rect" lineSize="0" fillColor="#ff81704c"/>
+    <image id="n8_9kww" name="n8" src="lkxni" xy="109,94" size="236,107"/>
+    <image id="n9_9kww" name="n9" src="lkxnj" xy="967,93" size="256,107"/>
+    <image id="n13_9kww" name="n13" src="hbd7ou4n0" pkg="9leh0eyf" xy="1226,88" size="33,1122" alpha="0.43" rotation="90"/>
+    <loader id="n10_9kww" name="levelLer" xy="527,108" size="89,89" url="ui://dpxq19rjlkxnc" align="center" vAlign="middle" fill="scale">
+      <relation target="n11_9kww" sidePair="right-left,middle-middle"/>
+    </loader>
+    <text id="n11_9kww" name="n11" xy="621,130" size="185,34" fontSize="30" color="#e9dfbd" vAlign="middle" shadowColor="#000000" shadowOffset="2,2" text="各阶奖励3选1">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <list id="n26_9kww" name="prizeLst" xy="110,204" size="1117,397" overflow="scroll" defaultItem="ui://dpxq19rj9kww15">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <image id="n12_9kww" name="n12" src="hbd7ou4n0" pkg="9leh0eyf" xy="1225,207" size="57,1122" alpha="0.5" rotation="90"/>
+    <image id="n27_9kww" name="n27" src="hbd7ou4n0" pkg="9leh0eyf" xy="1226,600" size="57,1122" scale="-1,1" rotation="90"/>
+    <graph id="n28_9kww" name="n28" xy="108,600" size="1113,1" type="rect" lineSize="0" fillColor="#ff81704c"/>
+    <component id="n29_9kww" name="receiveBtn" src="qi6kou4r6" pkg="9leh0eyf" xy="517,625" size="300,76" controller="c1,0">
+      <Button title="确认"/>
+    </component>
+    <text id="n30_9kww" name="nameTxt" xy="509,22" size="315,46" fontSize="30" color="#e9dfbd" align="center" vAlign="middle" autoSize="none" shadowColor="#000000" shadowOffset="2,3" text="联盟总动员"/>
+  </displayList>
+</component>9kww15.xml|1689|<component size="1110,113">
+  <controller name="c1" pages="3,,0,,1,,2," selected="0"/>
+  <displayList>
+    <graph id="n21_9kww" name="n21" xy="0,23" size="1109,68" alpha="0.15" type="rect" lineSize="0" lineColor="#ff42403c" fillColor="#ff42403c"/>
+    <image id="n19_9kww" name="n19" src="lkxnk" xy="107,0" scale="-1,1"/>
+    <image id="n20_9kww" name="n20" src="lkxnk" xy="1002,0"/>
+    <loader id="n15_9kww" name="atyLelLcer" xy="42,28" size="61,61" url="ui://dpxq19rjlkxnc" align="center" vAlign="middle" fill="scale"/>
+    <text id="n16_9kww" name="levelTxt" xy="59,43" size="27,29" fontSize="18" color="#ffffff" strokeColor="#000000" text="15"/>
+    <component id="n17_9kww" name="prizeBtn1" src="mz35h" pkg="iwirkaym" xy="225,8">
+      <Button controller="c1" page="0"/>
+    </component>
+    <text id="n18_9kww" name="prizeTxt1" xy="328,82" size="49,29" fontSize="18" color="#ffffff" leading="0" shadowColor="#000000" shadowOffset="1,1" text="×555"/>
+    <component id="n22_9kww" name="prizeBtn2" src="mz35h" pkg="iwirkaym" xy="560,7">
+      <Button controller="c1" page="1"/>
+    </component>
+    <text id="n23_9kww" name="prizeTxt2" xy="666,84" size="49,29" fontSize="18" color="#ffffff" leading="0" shadowColor="#000000" shadowOffset="1,1" text="×555"/>
+    <component id="n24_9kww" name="prizeBtn3" src="mz35h" pkg="iwirkaym" xy="891,7">
+      <Button controller="c1" page="2"/>
+    </component>
+    <text id="n25_9kww" name="prizeTxt3" xy="997,83" size="49,29" fontSize="18" color="#ffffff" leading="0" shadowColor="#000000" shadowOffset="1,1" text="×555"/>
+    <image id="n26_9kww" name="n26" src="rj73kx" pkg="9leh0eyf" xy="0,112" size="1110,2"/>
+  </displayList>
+</component>9kwwx.xml|7916|<component size="1334,750">
+  <controller name="c1" pages="0,,1,,2,,3,,4," selected="0"/>
+  <controller name="c2" pages="0,,1," selected="0"/>
+  <displayList>
+    <image id="n0_lkxn" name="n0" src="qtlg3" pkg="znyyxfqb" xy="0,0" size="1334,750">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n4_lkxn" name="n4" src="lkxnh" xy="1230,558" size="102,145">
+      <relation target="n1_lkxn" sidePair="leftext-right,bottom-bottom"/>
+      <relation target="" sidePair="rightext-right"/>
+    </image>
+    <image id="n2_lkxn" name="n2" src="lkxn7" xy="58,251" size="54,250">
+      <relation target="n1_lkxn" sidePair="right-left,top-top"/>
+    </image>
+    <component id="n1_lkxn" name="n1" src="oql94lk" pkg="9leh0eyf" xy="101,110" size="1131,614" group="n61_klft">
+      <relation target="" sidePair="middle-middle,center-center"/>
+      <Label title="活动"/>
+    </component>
+    <image id="n3_lkxn" name="n3" src="lkxn9" xy="442,105" group="n61_klft">
+      <relation target="n1_lkxn" sidePair="center-center,top-top"/>
+    </image>
+    <image id="n19_lkxn" name="n19" src="lkxnm" xy="109,164" size="1114,160" group="n61_klft">
+      <relation target="n1_lkxn" sidePair="width-width,top-top"/>
+    </image>
+    <graph id="n20_lkxn" name="n20" xy="109,324" size="1113,1" group="n61_klft" type="rect" lineSize="0" fillColor="#ff81704c"/>
+    <component id="n6_lkxn" name="n6" src="jkp1s" pkg="w71sb8uz" xy="106,176" group="n61_klft"/>
+    <text id="n7_lkxn" name="timeMsgTxt" xy="119,182" size="107,37" group="n61_klft" fontSize="24" color="#fae898" vAlign="middle" leading="0" shadowColor="#000000" shadowOffset="1,1" text="剩余时间:">
+      <gearText controller="c1" pages="4" values="准备时间:" default="剩余时间:"/>
+    </text>
+    <text id="n8_lkxn" name="lastTimeTxt" xy="224,182" size="10,37" group="n61_klft" fontSize="24" color="#ffffff" vAlign="middle" leading="0" shadowColor="#000000" shadowOffset="1,1" text="">
+      <relation target="n7_lkxn" sidePair="left-right,middle-middle"/>
+    </text>
+    <image id="n9_lkxn" name="n9" src="hbd7ou4n0" pkg="9leh0eyf" xy="110,254" size="348,28" group="n61_klft"/>
+    <image id="n10_lkxn" name="n10" src="hbd7ou4n0" pkg="9leh0eyf" xy="110,287" size="348,28" group="n61_klft"/>
+    <text id="n11_lkxn" name="n11" xy="118,253" size="105,32" group="n61_klft" fontSize="20" color="#d5bf99" vAlign="middle" leading="0" shadowColor="#000000" shadowOffset="1,1" text="当前积分：">
+      <relation target="n9_lkxn" sidePair="left-left,middle-middle"/>
+    </text>
+    <text id="n12_lkxn" name="n12" xy="118,287" size="130,32" group="n61_klft" fontSize="20" color="#d5bf99" vAlign="middle" leading="0" shadowColor="#000000" shadowOffset="1,1" text="距离下阶段差:">
+      <relation target="n10_lkxn" sidePair="left-left,middle-middle"/>
+    </text>
+    <text id="n13_lkxn" name="curIntegralTxt" xy="311,253" size="73,32" group="n61_klft" fontSize="20" color="#ffffff" align="right" vAlign="middle" leading="0" shadowColor="#000000" shadowOffset="1,1" text="33；33">
+      <relation target="n9_lkxn" sidePair="right-right,middle-middle"/>
+    </text>
+    <text id="n14_lkxn" name="differIntergralTxt" xy="351,287" size="29,32" group="n61_klft" fontSize="20" color="#ff0000" align="right" vAlign="middle" leading="0" shadowColor="#000000" shadowOffset="1,1" text="23">
+      <relation target="n10_lkxn" sidePair="right-right,middle-middle"/>
+    </text>
+    <component id="n15_lkxn" name="proBar" src="lkxnq" xy="854,262" size="321,20" group="n61_klft" controller="c1,1">
+      <ProgressBar value="111" max="1000"/>
+    </component>
+    <text id="n54_a6kd" name="joinNumTxt" xy="638,280" size="57,37" group="n56_a6kd" fontSize="24" color="#ffffff" leading="0" shadowColor="#000000" shadowOffset="2,2" text="30人">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <image id="n55_a6kd" name="n55" src="uk9lou56n" pkg="9leh0eyf" xy="644,240" group="n56_a6kd"/>
+    <group id="n56_a6kd" name="n56" xy="638,240" size="57,77" group="n61_klft" advanced="true"/>
+    <loader id="n17_lkxn" name="activityLevelLcer" xy="776,229" size="89,89" group="n61_klft" url="ui://dpxq19rjlkxnc" align="center" vAlign="middle" fill="scale"/>
+    <text id="n18_lkxn" name="prizeLevelTxt" xy="802,244" size="40,46" group="n61_klft" fontSize="30" color="#ffffff" align="center" vAlign="middle" leading="0" autoSize="none" shadowColor="#000000" shadowOffset="1,1" text="23"/>
+    <text id="n22_lkxn" name="nameTxt" xy="554,112" size="226,46" group="n61_klft" fontSize="30" color="#e9dfbd" align="center" vAlign="middle" leading="0" autoSize="none" shadowColor="#000000" shadowOffset="2,3" text="联盟总动员"/>
+    <graph id="n23_lkxn" name="n23" xy="109,325" size="1113,50" group="n61_klft" alpha="0.2" type="rect" lineSize="0" fillColor="#ff6c5c4f">
+      <relation target="n1_lkxn" sidePair="width-width,middle-middle"/>
+    </graph>
+    <image id="n24_lkxn" name="n24" src="rj73kx" pkg="9leh0eyf" xy="872,325" size="395,2" group="n61_klft" rotation="90"/>
+    <component id="n25_lkxn" name="rankBtn" src="ngf0ou4tg" pkg="9leh0eyf" xy="792,324" group="n61_klft" controller="c1,0">
+      <gearDisplay controller="c1" pages="0"/>
+      <Button icon="ui://dpxq19rjlkxne"/>
+    </component>
+    <component id="n26_lkxn" name="contriBtn" src="ngf0ou4tg" pkg="9leh0eyf" xy="108,324" group="n61_klft" controller="c1,0">
+      <gearDisplay controller="c1" pages="0"/>
+      <Button icon="ui://9leh0eyfuk9lou56n"/>
+    </component>
+    <list id="n39_lkxn" name="taskLst" xy="111,381" size="763,329" group="n61_klft" layout="flow_hz" overflow="scroll" defaultItem="ui://dpxq19rjlkxnu">
+      <gearDisplay controller="c1" pages="0"/>
+      <item url="ui://dpxq19rjlkxnt"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n52_lkxn" name="n52" src="k4aykj" pkg="9leh0eyf" xy="1134,114" group="n61_klft"/>
+    <component id="n42_lkxn" name="taskInfoCnt" src="ooj919" xy="883,396" group="n61_klft" controller="c1,1">
+      <gearDisplay controller="c1" pages="0"/>
+    </component>
+    <text id="n40_lkxn" name="n40" xy="883,333" size="109,37" group="n57_te9m" fontSize="24" color="#fef4be" vAlign="middle" leading="0" shadowColor="#000000" shadowOffset="1,1" text="可接次数:">
+      <relation target="" sidePair="left-left,middle-middle"/>
+    </text>
+    <text id="n41_lkxn" name="canReceiveTxt" xy="994,333" size="20,37" group="n57_te9m" fontSize="24" color="#ffffff" vAlign="middle" leading="0" shadowColor="#000000" shadowOffset="1,1" text="1">
+      <relation target="n40_lkxn" sidePair="left-right,middle-middle"/>
+    </text>
+    <component id="n63_9mtm" name="addBtn" src="ikvwh2" pkg="9leh0eyf" xy="1030,327" group="n57_te9m">
+      <relation target="n41_lkxn" sidePair="left-right,middle-middle"/>
+    </component>
+    <group id="n57_te9m" name="n57" xy="883,327" size="201,54" group="n61_klft" advanced="true">
+      <gearDisplay controller="c1" pages="0"/>
+    </group>
+    <text id="n58_te9m" name="n58" xy="137,488" size="707,76" group="n61_klft" fontSize="30" color="#ff0000" align="center" vAlign="middle" autoSize="none" shadowColor="#000000" shadowOffset="2,2" text="您只能参加自己联盟的联盟总动员">
+      <gearDisplay controller="c1" pages="1,2,3,4"/>
+      <gearText controller="c1" pages="2,3,4" values="您的联盟人数不足，无法参加联盟总动员|城堡LV.15以上才可参加联盟总动员|联盟总动员即将开始，挑战你与盟友的团结合作" default="您只能参加自己联盟的联盟总动员"/>
+    </text>
+    <image id="n59_te9m" name="n59" src="lkxn6" xy="842,386" size="388,335" group="n61_klft" alpha="0.09">
+      <gearDisplay controller="c1" pages="1,2,3"/>
+    </image>
+    <component id="n60_k71g" name="n60" src="k71g1a" xy="1129,197" size="92,66" group="n61_klft">
+      <gearDisplay controller="c2" pages="1"/>
+    </component>
+    <group id="n61_klft" name="n61" xy="101,105" size="1166,619" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>9kwwz.xml|1763|<component size="606,302">
+  <controller name="c1" pages="0,,1,,2,,3," selected="0"/>
+  <displayList>
+    <image id="n57_9kww" name="n57" src="hbd7ou4n0" pkg="9leh0eyf" xy="305,10" size="137,51"/>
+    <image id="n58_9kww" name="n58" src="hbd7ou4n0" pkg="9leh0eyf" xy="305,10" size="137,51" scale="-1,1"/>
+    <image id="n59_9kww" name="n59" src="hbd7ou4n0" pkg="9leh0eyf" xy="306,96" size="182,51"/>
+    <image id="n60_9kww" name="n60" src="hbd7ou4n0" pkg="9leh0eyf" xy="306,96" size="182,51" scale="-1,1"/>
+    <image id="n61_9kww" name="n61" src="hbd7ou4n0" pkg="9leh0eyf" xy="305,173" size="243,51"/>
+    <image id="n62_9kww" name="n62" src="hbd7ou4n0" pkg="9leh0eyf" xy="305,173" size="243,51" scale="-1,1"/>
+    <image id="n63_9kww" name="n63" src="hbd7ou4n0" pkg="9leh0eyf" xy="304,250" size="302,51"/>
+    <image id="n64_9kww" name="n64" src="hbd7ou4n0" pkg="9leh0eyf" xy="304,250" size="302,51" scale="-1,1"/>
+    <image id="n65_9kww" name="n65" src="lkxnc" xy="270,89" size="72,75"/>
+    <image id="n66_9kww" name="n66" src="lkxnc" xy="262,0" size="87,91" filter="color" filterData="0.00,0.00,0.40,0.31"/>
+    <image id="n67_9kww" name="n67" src="lkxnc" xy="275,169" size="58,61" filter="color" filterData="0.00,0.00,0.00,-0.64"/>
+    <image id="n68_9kww" name="n68" src="lkxnc" xy="278,247" size="49,51" filter="color" filterData="0.00,0.00,-1.00,0.00"/>
+    <image id="n69_9kww" name="n69" src="lkxng" xy="177,256">
+      <gearXY controller="c1" pages="1,2,3" values="177,176|177,102|177,15" default="177,256"/>
+    </image>
+    <image id="n70_9kww" name="n70" src="lkxna" xy="176,299">
+      <gearDisplay controller="c1" pages="1,2,3"/>
+      <relation target="n69_9kww" sidePair="center-center,top-bottom"/>
+    </image>
+  </displayList>
+</component>k71g1a.xml|1387|<component size="190,190">
+  <displayList>
+    <image id="n44_j2j0" name="n44" src="j2j0ou4v0" pkg="9leh0eyf" xy="12,0" pivot="0.5,0.5">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+  </displayList>
+  <transition name="t0" autoPlay="true" autoPlayRepeat="-1">
+    <item time="0" type="Rotation" target="n44_j2j0" tween="true" startValue="0" endValue="10" duration="3" ease="Linear"/>
+    <item time="3" type="Rotation" target="n44_j2j0" tween="true" startValue="10" endValue="0" duration="3" ease="Linear"/>
+    <item time="6" type="Rotation" target="n44_j2j0" tween="true" startValue="0" endValue="-10" duration="3" ease="Linear"/>
+    <item time="9" type="Rotation" target="n44_j2j0" tween="true" startValue="-10" endValue="0" duration="3" ease="Linear"/>
+    <item time="24" type="Rotation" target="n44_j2j0" tween="true" startValue="0" endValue="10" duration="3" ease="Linear"/>
+    <item time="27" type="Rotation" target="n44_j2j0" tween="true" startValue="10" endValue="0" duration="3" ease="Linear"/>
+    <item time="30" type="Rotation" target="n44_j2j0" tween="true" startValue="0" endValue="-10" duration="3" ease="Linear"/>
+    <item time="33" type="Rotation" target="n44_j2j0" tween="true" startValue="-10" endValue="0" duration="3" ease="Linear"/>
+    <item time="48" type="Rotation" target="n44_j2j0" value="0"/>
+  </transition>
+</component>lkxnp.xml|3931|<component size="1334,750">
+  <controller name="c1" pages="0,,2,,1," selected="0"/>
+  <displayList>
+    <image id="n0_lkxn" name="n0" src="qtlg3" pkg="znyyxfqb" xy="0,0" size="1334,750">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n4_lkxn" name="n4" src="lkxnh" xy="1231,558" size="102,145">
+      <relation target="n1_lkxn" sidePair="leftext-right,bottom-bottom"/>
+      <relation target="" sidePair="rightext-right"/>
+    </image>
+    <image id="n2_lkxn" name="n2" src="lkxn7" xy="58,251" size="54,250">
+      <relation target="n1_lkxn" sidePair="right-left,top-top"/>
+    </image>
+    <component id="n1_lkxn" name="n1" src="oql94lk" pkg="9leh0eyf" xy="101,110" size="1131,614">
+      <Label title="活动"/>
+    </component>
+    <graph id="n56_9kww" name="n56" xy="105,172" size="1122,152" alpha="0.24" type="rect" lineSize="0" fillColor="#ff000000"/>
+    <image id="n55_9kww" name="n55" src="lkxn8" xy="110,175" size="1113,146"/>
+    <image id="n3_lkxn" name="n3" src="lkxn9" xy="442,105">
+      <relation target="n1_lkxn" sidePair="center-center,top-top"/>
+    </image>
+    <graph id="n20_lkxn" name="n20" xy="109,324" size="1113,1" type="rect" lineSize="0" fillColor="#ff81704c"/>
+    <text id="n7_lkxn" name="timeMsgTxt" xy="616,195" size="101,37" fontSize="24" color="#fae898" vAlign="middle" leading="0" shadowColor="#000000" shadowOffset="1,1" text="联盟奖励"/>
+    <text id="n22_lkxn" name="nameTxt" xy="555,109" size="226,46" fontSize="30" color="#e9dfbd" align="center" vAlign="middle" leading="0" autoSize="none" shadowColor="#000000" shadowOffset="2,3" text="联盟总动员"/>
+    <image id="n73_9kww" name="n73" src="lkxnb" xy="125,216" size="716,515" alpha="0.39" blend="add">
+      <relation target="n1_lkxn" sidePair="center-center,middle-middle"/>
+    </image>
+    <graph id="n23_lkxn" name="n23" xy="109,325" size="1113,50" alpha="0.2" type="rect" lineSize="0" fillColor="#ff6c5c4f">
+      <relation target="n1_lkxn" sidePair="width-width,middle-middle"/>
+    </graph>
+    <image id="n24_lkxn" name="n24" src="rj73kx" pkg="9leh0eyf" xy="872,325" size="395,2" rotation="90"/>
+    <component id="n25_lkxn" name="rankBtn" src="ngf0ou4tg" pkg="9leh0eyf" xy="791,323" controller="c1,0">
+      <Button icon="ui://dpxq19rjlkxne"/>
+    </component>
+    <component id="n26_lkxn" name="aliesBtn" src="ngf0ou4tg" pkg="9leh0eyf" xy="108,324" controller="c1,0">
+      <Button icon="ui://9leh0eyfuk9lou56n"/>
+    </component>
+    <text id="n40_lkxn" name="n40" xy="1019,331" size="53,37" fontSize="24" color="#fef4be" leading="0" shadowColor="#000000" shadowOffset="1,1" text="奖项"/>
+    <component id="n52_lkxn" name="n52" src="k4aykj" pkg="9leh0eyf" xy="1157,113"/>
+    <text id="n54_9kww" name="n54" xy="438,332" size="101,37" fontSize="24" color="#fef4be" leading="0" shadowColor="#000000" shadowOffset="1,1" text="联赛成果"/>
+    <component id="n57_9kww" name="n57" src="9kwwz" xy="185,400" controller="c1,1"/>
+    <image id="n70_9kww" name="n70" src="lkxn6" xy="827,360" size="404,349"/>
+    <text id="n71_9kww" name="n71" xy="1034,656" size="78,37" fontSize="24" color="#fae898" autoSize="none" strokeColor="#000000" text="已领取">
+      <gearDisplay controller="c1" pages="1"/>
+    </text>
+    <image id="n72_9kww" name="n72" src="secs4mo" pkg="9leh0eyf" xy="989,659">
+      <gearDisplay controller="c1" pages="1"/>
+      <relation target="n71_9kww" sidePair="left-right,middle-middle"/>
+    </image>
+    <text id="n74_9kww" name="atyRltDescTxt" xy="136,228" size="1040,75" fontSize="30" color="#fef4be" align="center" vAlign="middle" leading="0" ubb="true" autoSize="none" shadowColor="#000000" shadowOffset="2,2" text="你的联盟赢得11个奖励！  晋级到新秀联赛"/>
+    <component id="n75_9kww" name="receiveBtn" src="qi6kou4r6" pkg="9leh0eyf" xy="923,638" size="260,76" controller="c1,0">
+      <gearDisplay controller="c1" pages="2"/>
+      <Button title="领取奖励"/>
+    </component>
+  </displayList>
+</component>lkxnq.xml|1147|<component size="50,11" extention="ProgressBar">
+  <controller name="c1" pages="0,,1," selected="0"/>
+  <displayList>
+    <image id="n1" name="n1" src="dqjxou57x" pkg="9leh0eyf" xy="1,1" size="48,9">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n3_jkp1" name="n3" src="lkxnr" xy="32,-23">
+      <relation target="n4_lkxn" sidePair="right-right"/>
+    </image>
+    <image id="n4_lkxn" name="bar" src="d0w9ou4u3" pkg="9leh0eyf" xy="-5,-5" size="60,22">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n5_lkxn" name="n5" src="lkxns" xy="26,3" grayed="true">
+      <gearLook controller="c1" pages="0" values="1,0,1,1" default="1,0,0,1"/>
+      <relation target="n1" sidePair="right-right,top-bottom"/>
+    </image>
+    <text id="n6_lkxn" name="title" xy="-9,14" size="93,29" fontSize="18" color="#ffffff" leading="0" shadowColor="#000000" shadowOffset="1,1" text="23213123">
+      <relation target="n5_lkxn" sidePair="center-center,top-bottom"/>
+    </text>
+  </displayList>
+  <ProgressBar titleType="max"/>
+  <relation target="n1" sidePair=""/>
+</component>lkxnt.xml|1440|<component size="189,217" extention="Button">
+  <controller name="button" pages="2,up,3,down,4,over,5,selectedOver" selected="0"/>
+  <controller name="c1" pages="0,,1," selected="0"/>
+  <displayList>
+    <image id="n27_lkxn" name="n27" src="lkxnn" xy="0,0"/>
+    <loader id="n30_lkxn" name="taskPicLer" xy="61,65" size="69,69" align="center" vAlign="middle" fill="scale">
+      <gearDisplay controller="c1" pages="0"/>
+    </loader>
+    <loader id="n31_lkxn" name="atyLelLcer" xy="49,149" size="32,32" url="ui://dpxq19rjlkxnc" align="center" vAlign="middle" fill="scale">
+      <gearDisplay controller="c1" pages="0"/>
+    </loader>
+    <text id="n32_lkxn" name="scoreTxt" xy="82,150" size="60,29" fontSize="18" color="#ffffff" vAlign="middle" leading="0" shadowColor="#000000" shadowOffset="1,1" text="+2323">
+      <gearDisplay controller="c1" pages="0"/>
+    </text>
+    <image id="n33_lkxn" name="n33" src="lkxnd" xy="114,-41"/>
+    <image id="n34_lkxn" name="n34" src="lkxnd" xy="-53,-41"/>
+    <component id="n35_ooj9" name="n35" src="ooj918" xy="1,23">
+      <gearDisplay controller="button" pages="3,5"/>
+    </component>
+    <text id="n36_gw0y" name="n36" xy="44,146" size="105,37" fontSize="24" color="#ffffff" align="center" autoSize="none" strokeColor="#000000" shadowColor="#000000" shadowOffset="1,1" text="未接取">
+      <gearDisplay controller="c1" pages="1"/>
+    </text>
+  </displayList>
+  <Button mode="Radio"/>
+</component>lkxnu.xml|2193|<component size="189,217" extention="Button">
+  <controller name="c1" pages="0,,1,,2," selected="0"/>
+  <controller name="button" pages="0,up,2,down,3,over,1,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n33_lkxn" name="n33" src="lkxno" xy="18,11"/>
+    <component id="n45_ooj9" name="n45" src="ooj916" xy="10,2">
+      <gearDisplay controller="button" pages="2,1"/>
+    </component>
+    <graph id="n34_lkxn" name="n34" xy="57,50" size="75,75" type="rect" lineColor="#ff676554" fillColor="#ff272727">
+      <gearDisplay controller="c1" pages="0,1"/>
+      <relation target="n33_lkxn" sidePair="center-center,middle-middle"/>
+    </graph>
+    <loader id="n35_lkxn" name="atyLelLcer" xy="47,140" size="32,32" url="ui://dpxq19rjlkxnc" align="center" vAlign="middle" fill="scale">
+      <gearDisplay controller="c1" pages="0,1"/>
+      <relation target="n36_lkxn" sidePair="right-left,middle-middle"/>
+    </loader>
+    <text id="n36_lkxn" name="scoreTxt" xy="80,142" size="59,29" fontSize="18" color="#ffffff" vAlign="middle" leading="0" shadowColor="#000000" shadowOffset="1,1" text="+2323">
+      <gearDisplay controller="c1" pages="0,1"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <component id="n40_lkxn" name="deleteBtn" src="lkxnv" xy="116,11">
+      <gearDisplay controller="c1" pages="1"/>
+    </component>
+    <image id="n41_lkxn" name="n41" src="lkxno" xy="19,11" alpha="0.5" color="#000000">
+      <gearDisplay controller="c1" pages="2"/>
+    </image>
+    <image id="n42_lkxn" name="n42" src="8b1bou56r" pkg="9leh0eyf" xy="59,94">
+      <gearDisplay controller="c1" pages="2"/>
+      <relation target="n43_lkxn" sidePair="middle-middle,right-left"/>
+    </image>
+    <text id="n43_lkxn" name="timeTxt" xy="92,96" size="38,29" fontSize="18" color="#ffffff" shadowColor="#000000" shadowOffset="2,2" text="233">
+      <gearDisplay controller="c1" pages="2"/>
+      <relation target="n41_lkxn" sidePair="center-center%,middle-middle"/>
+    </text>
+    <loader id="n46_g653" name="taskPicLer" xy="58,61" size="74,74">
+      <gearDisplay controller="c1" pages="0,1"/>
+    </loader>
+  </displayList>
+  <Button mode="Radio"/>
+</component>lkxnv.xml|816|<component size="58,58" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n4_lkxn" name="n4" src="brn4ou4xa" pkg="9leh0eyf" xy="1,2" size="58,58" color="#000000">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1" name="n1" src="brn4ou4xa" pkg="9leh0eyf" xy="0,0" size="58,58">
+      <gearColor controller="button" pages="1" values="#969696" default="#ffffff"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <loader id="n3_lkxn" name="n3" xy="7,8" size="43,43" url="ui://dpxq19rjlkxnw" align="center" vAlign="middle" fill="scale">
+      <gearColor controller="button" pages="1" values="#969696" default="#ffffff"/>
+    </loader>
+  </displayList>
+  <Button/>
+</component>ooj916.xml|510|<component size="171,213">
+  <displayList>
+    <image id="n45_ooj9" name="n45" src="k07deou5ak" pkg="9leh0eyf" xy="0,0" size="171,212"/>
+  </displayList>
+  <transition name="t0" autoPlay="true" autoPlayRepeat="-1">
+    <item time="0" type="Alpha" target="n45_ooj9" tween="true" startValue="0" endValue="1" duration="24" ease="Linear"/>
+    <item time="24" type="Alpha" target="n45_ooj9" tween="true" startValue="1" endValue="0" duration="24" ease="Linear" repeat="-1" yoyo="true"/>
+  </transition>
+</component>ooj918.xml|491|<component size="186,202">
+  <displayList>
+    <image id="n35_ooj9" name="n35" src="ooj917" xy="0,0" size="186,202"/>
+  </displayList>
+  <transition name="t0" autoPlay="true" autoPlayRepeat="-1">
+    <item time="0" type="Alpha" target="n35_ooj9" tween="true" startValue="0" endValue="1" duration="24" ease="Linear"/>
+    <item time="24" type="Alpha" target="n35_ooj9" tween="true" startValue="1" endValue="0" duration="24" ease="Linear" repeat="-1" yoyo="true"/>
+  </transition>
+</component>ooj919.xml|3953|<component size="327,307">
+  <controller name="c1" pages="0,,1,,2,,3,,4," selected="0"/>
+  <displayList>
+    <graph id="n42_lkxn" name="n42" xy="4,4" size="75,75" type="rect" lineColor="#ff676554" fillColor="#ff272727">
+      <gearDisplay controller="c1" pages="0,1"/>
+    </graph>
+    <text id="n43_lkxn" name="taskTxt" xy="83,0" size="244,44" fontSize="20" color="#fff0a8" vAlign="middle" leading="0" autoSize="none" shadowColor="#000000" shadowOffset="1,1" text="开启神秘宝箱次数">
+      <gearDisplay controller="c1" pages="0,1,4"/>
+    </text>
+    <loader id="n44_lkxn" name="taskAtyLelLer" xy="80,45" size="37,37" url="ui://dpxq19rjlkxnc" align="center" vAlign="middle" fill="scale">
+      <gearDisplay controller="c1" pages="0,1,4"/>
+    </loader>
+    <text id="n45_lkxn" name="taskSoreTxt" xy="120,50" size="62,37" fontSize="24" color="#ffffff" leading="0" shadowColor="#000000" shadowOffset="1,1" text="+123">
+      <gearDisplay controller="c1" pages="0,1,4"/>
+      <relation target="n44_lkxn" sidePair="left-right,middle-middle"/>
+    </text>
+    <loader id="n46_lkxn" name="taskIonLer" xy="8,118" size="37,37" url="ui://dpxq19rjlkxnf" align="center" vAlign="middle" fill="scale">
+      <gearDisplay controller="c1" pages="0,1,4"/>
+    </loader>
+    <text id="n48_lkxn" name="taskPssTxt" xy="50,122" size="87,37" fontSize="24" color="#ffffff" leading="0" shadowColor="#000000" shadowOffset="1,1" text="29/234">
+      <gearDisplay controller="c1" pages="0,1,4"/>
+    </text>
+    <component id="n49_lkxn" name="taskTimePar" src="e1ysou4sw" pkg="9leh0eyf" xy="0,200" size="322,14" controller="c1,0">
+      <gearDisplay controller="c1" pages="0"/>
+      <relation target="" sidePair="width-width,bottom-bottom"/>
+      <ProgressBar value="39" max="100"/>
+    </component>
+    <text id="n50_lkxn" name="taskTimeTxt" xy="31,192" size="260,29" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="none" shadowColor="#000000" shadowOffset="1,1" text="23">
+      <gearDisplay controller="c1" pages="0"/>
+      <relation target="n49_lkxn" sidePair="center-center%,middle-middle"/>
+    </text>
+    <component id="n51_lkxn" name="taskBtn" src="qi6kou4r6" pkg="9leh0eyf" xy="61,235" size="204,72" controller="c1,2">
+      <gearDisplay controller="c1" pages="0,1,4"/>
+      <gearText controller="c1" pages="1,4" values="接取|回报" default="放弃"/>
+      <Button title="放弃"/>
+    </component>
+    <loader id="n60_q7u2" name="taskLer" xy="5,2" size="74,74" fill="scale">
+      <gearDisplay controller="c1" pages="0,1,4"/>
+    </loader>
+    <image id="n61_ooj9" name="n61" src="8b1bou56r" pkg="9leh0eyf" xy="-52,191">
+      <gearDisplay controller="c1" pages="1,2"/>
+      <gearXY controller="c1" pages="0,1,2,3" values="-52,191|8,194|10,194|-52,191" default="-52,191"/>
+      <relation target="n63_ooj9" sidePair="right-left,middle-middle"/>
+    </image>
+    <text id="n63_ooj9" name="taskAllTimeTxt" xy="48,192" size="137,37" fontSize="24" color="#ffffff" strokeColor="#000000" text="1d 00:00:00">
+      <gearDisplay controller="c1" pages="1,2"/>
+      <gearXY controller="c1" pages="1,2" values="50,192|110,192" default="48,192"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n64_ooj9" name="n64" xy="101,96" size="125,37" fontSize="24" color="#fae898" align="center" vAlign="middle" shadowColor="#000000" shadowOffset="2,2" text="任务准备中">
+      <gearDisplay controller="c1" pages="2"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+    <text id="n65_dgmc" name="n65" xy="108,174" size="78,37" fontSize="24" color="#fae898" autoSize="none" strokeColor="#000000" text="已完成">
+      <gearDisplay controller="c1" pages="4"/>
+    </text>
+    <image id="n66_dgmc" name="n66" src="secs4mo" pkg="9leh0eyf" xy="191,176">
+      <gearDisplay controller="c1" pages="4"/>
+      <relation target="n65_dgmc" sidePair="left-right,middle-middle"/>
+    </image>
+  </displayList>
+</component>package.xml|3184|<packageDescription id="dpxq19rj" name="Activity_LM">
+  <resources>
+    <component id="9kww13" name="rankInform_item" path="/Componet/" size="1115,48"/>
+    <component id="9kww15" name="Component3" path="/Componet/" size="1110,113"/>
+    <component id="9kwwz" name="Component2" path="/Componet/" size="606,302"/>
+    <component id="k71g1a" name="anim_reward" path="/Componet/" size="190,190"/>
+    <component id="lkxnq" name="ProgressBar1" path="/Componet/" size="50,11"/>
+    <component id="lkxnv" name="Button1" path="/Componet/" size="58,58"/>
+    <component id="ooj916" name="anim1" path="/Componet/" size="171,213"/>
+    <component id="ooj918" name="anim2" path="/Componet/" size="186,202"/>
+    <component id="ooj919" name="Component4" path="/Componet/" size="327,307"/>
+    <component id="ubgs1b" name="Component5" path="/Componet/" size="1438,270"/>
+    <image id="lkxn6" name="image5" path="/Image/" size="184,159"/>
+    <image id="lkxn7" name="image_dec2" path="/Image/" size="54,221"/>
+    <image id="lkxn8" name="bg1" path="/Image/" size="434,58" scale="9grid" scale9grid="38,14,358,25"/>
+    <image id="lkxn9" name="image_dec3" path="/Image/" size="448,77"/>
+    <image id="lkxna" name="image_arrow" path="/Image/" size="42,72" scale="9grid" scale9grid="0,30,42,41"/>
+    <image id="lkxnb" name="image6" path="/Image/" size="250,180"/>
+    <image id="lkxnd" name="image_effect" path="/Image/" size="124,119"/>
+    <image id="lkxne" name="icon_rank" path="/Image/" size="30,36"/>
+    <image id="lkxnf" name="icon_test2" path="/Image/" size="37,35"/>
+    <image id="lkxng" name="icon_locate" path="/Image/" size="81,46"/>
+    <image id="lkxnh" name="image_dec1" path="/Image/" size="100,145"/>
+    <image id="lkxni" name="image2" path="/Image/" size="236,106"/>
+    <image id="lkxnj" name="image1" path="/Image/" size="256,106"/>
+    <image id="lkxnk" name="image_effect2" path="/Image/" size="108,113"/>
+    <image id="lkxnl" name="image3" path="/Image/" size="449,61"/>
+    <image id="lkxnm" name="image4" path="/Image/" size="1116,160"/>
+    <image id="lkxnn" name="image_MyMission" path="/Image/" size="189,217"/>
+    <image id="lkxno" name="image_mission" path="/Image/" size="153,194"/>
+    <image id="lkxnr" name="img_arrow" path="/image/" size="28,25"/>
+    <image id="lkxns" name="img_arrow2" path="/image/" size="12,10"/>
+    <image id="lkxnw" name="icon_delete" path="/Image/" size="40,62"/>
+    <image id="ooj917" name="anim_frame" path="/Image/" size="118,126"/>
+    <component id="9kww10" name="rank" path="/" size="1334,750" exported="true"/>
+    <component id="9kww14" name="reward" path="/" size="1334,750" exported="true"/>
+    <component id="9kwwx" name="main" path="/" size="1334,750" exported="true"/>
+    <component id="lkxnp" name="result" path="/" size="1334,750" exported="true"/>
+    <component id="lkxnt" name="my_mission" path="/Componet/" size="189,217" exported="true"/>
+    <component id="lkxnu" name="mission" path="/Componet/" size="189,217" exported="true"/>
+    <image id="lkxnc" name="icon_test" path="/Image/" size="85,89" exported="true"/>
+    <atlas id="atlas0" size="2048,512" file="atlas0.png"/>
+  </resources>
+</packageDescription>ubgs1b.xml|1155|<component size="1438,270">
+  <displayList>
+    <graph id="n112_9kww" name="n112" xy="0,0" size="1438,270" alpha="0.88" type="rect" lineSize="0" fillColor="#ff080702"/>
+    <text id="n113_9kww" name="nameTxt" xy="52,26" pivot="0.5,0.5" size="1334,86" fontSize="47" color="#0099ff" align="center" vAlign="middle" leading="0" autoSize="none" text="联盟名称"/>
+    <text id="n114_9kww" name="numtxt" xy="52,113" pivot="0.5,0.5" size="1334,145" fontSize="101" color="#996100" align="center" vAlign="middle" autoSize="none" strokeColor="#5e0000" text="12,324,124"/>
+  </displayList>
+  <transition name="t0" autoPlay="true">
+    <item time="0" type="Scale" target="n112_9kww" tween="true" startValue="0,1" endValue="1,1" duration="12" ease="Expo.Out"/>
+    <item time="0" type="Scale" target="n113_9kww" value="0,0"/>
+    <item time="0" type="Scale" target="n114_9kww" value="0,0"/>
+    <item time="6" type="Scale" target="n113_9kww" tween="true" startValue="0,0" endValue="1,1" duration="6" ease="Expo.Out"/>
+    <item time="6" type="Scale" target="n114_9kww" tween="true" startValue="0,0" endValue="1,1" duration="6" ease="Expo.Out"/>
+  </transition>
+</component>

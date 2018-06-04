@@ -1,0 +1,111 @@
+99eeo.xml|488|<component size="615,294" overflow="hidden">
+  <controller name="c1" pages="0,开启中,1,可领取" selected="0"/>
+  <displayList>
+    <component id="n21_99ee" name="n21" src="k054ou4yf" pkg="9leh0eyf" xy="0,0" size="615,294"/>
+    <image id="n22_99ee" name="n22" src="99eei" xy="169,10">
+      <gearDisplay controller="c1" pages="0"/>
+    </image>
+    <image id="n24_99ee" name="n24" src="99eej" xy="7,-135">
+      <gearDisplay controller="c1" pages="1"/>
+    </image>
+  </displayList>
+</component>gloq0.xml|637|<component size="1334,750" opaque="false">
+  <displayList>
+    <image id="n59_pcdc" name="n59" src="qtlg3" pkg="znyyxfqb" xy="0,0" size="1334,750">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n82_gsz0" name="n82" src="k4aykm" pkg="9leh0eyf" xy="0,0"/>
+    <component id="n85_99ee" name="pos1" src="gloq3" xy="-126,-3"/>
+    <component id="n86_99ee" name="pos2" src="gloq3" xy="300,-2"/>
+    <component id="n87_99ee" name="pos3" src="gloq3" xy="725,1"/>
+    <component id="n67_gloq" name="n67" src="k4aykj" pkg="9leh0eyf" xy="1245,129" controller="c1,0"/>
+  </displayList>
+</component>gloq3.xml|1377|<component size="750,650" extention="Button">
+  <controller name="c1" pages="2,无,0,待开启,4,开启中,3,待领取" selected="1"/>
+  <displayList>
+    <component id="n51_gloq" name="n51" src="gloq9" xy="262,116" visible="false">
+      <gearDisplay controller="c1" pages="3"/>
+    </component>
+    <image id="n52_99ee" name="n52" src="99eeh" xy="214,526"/>
+    <image id="n56_99ee" name="n56" src="99eej" xy="93,6">
+      <gearDisplay controller="c1" pages="3"/>
+    </image>
+    <image id="n55_99ee" name="n55" src="99eei" xy="245,233">
+      <gearDisplay controller="c1" pages="0,4"/>
+    </image>
+    <component id="n57_q7bq" name="n57" src="k054ou4yf" pkg="9leh0eyf" xy="320,640" size="166,31" group="n60_q7bq"/>
+    <image id="n58_q7bq" name="IconTime" src="depxeou59r" pkg="9leh0eyf" xy="293,637" group="n60_q7bq">
+      <relation target="n59_q7bq" sidePair="right-left,middle-middle"/>
+    </image>
+    <text id="n59_q7bq" name="timeText" xy="347,638" size="139,37" group="n60_q7bq" font="苹方 中等" fontSize="24" color="#25e067" vAlign="middle" leading="0" autoSize="none" shadowColor="#000000" shadowOffset="1,1" text="24:25:23">
+      <relation target="" sidePair="right-right,middle-middle"/>
+    </text>
+    <group id="n60_q7bq" name="Time" xy="293,637" size="193,40" advanced="true">
+      <gearDisplay controller="c1" pages="4"/>
+    </group>
+  </displayList>
+  <Button/>
+</component>gloq7.xml|1793|<component size="756,608">
+  <controller name="c1" pages="" selected="-1"/>
+  <displayList>
+    <component id="n0_hmog" name="n1" src="oql94lk" pkg="9leh0eyf" xy="0,0" size="756,608"/>
+    <text id="n5_hmog" name="nameTxt" xy="303,19" size="139,29" font="苹方 中等" fontSize="22" color="#e9dfbd" align="center" vAlign="middle" text="Lv.2 黑暗元素">
+      <relation target="n0_hmog" sidePair="center-center,top-top"/>
+    </text>
+    <component id="n21_99ee" name="n21" src="99eeo" xy="70,94">
+      <gearDisplay controller="c1" pages=""/>
+    </component>
+    <component id="n26_99ee" name="n26" src="k054ou4yf" pkg="9leh0eyf" xy="306,438" size="167,31" group="n25_99ee"/>
+    <image id="n23_99ee" name="IconTime" src="depxeou59r" pkg="9leh0eyf" xy="280,434" group="n25_99ee">
+      <relation target="n24_99ee" sidePair="right-left,middle-middle"/>
+    </image>
+    <text id="n24_99ee" name="TimeText" xy="334,435" size="139,37" group="n25_99ee" font="苹方 中等" fontSize="24" color="#25e067" vAlign="middle" leading="0" autoSize="none" shadowColor="#000000" shadowOffset="1,1" text="24:25:23">
+      <relation target="" sidePair="right-right,middle-middle"/>
+    </text>
+    <group id="n25_99ee" name="Time" xy="280,434" size="193,40" advanced="true"/>
+    <component id="n35_q7bq" name="deleteBtn" src="q7bqr" xy="622,325" group="n31_99ee"/>
+    <group id="n31_99ee" name="element_del" xy="622,325" size="60,60" advanced="true"/>
+    <component id="n33_q7bq" name="openBtn" src="qi6kou4r6" pkg="9leh0eyf" xy="275,494" controller="c1,0">
+      <Button title="打开"/>
+    </component>
+    <component id="n34_q7bq" name="sureBtn" src="qi6kou4r6" pkg="9leh0eyf" xy="275,493" controller="c1,0">
+      <Button title="确定"/>
+    </component>
+  </displayList>
+  <transition name="t3" autoPlay="true"/>
+</component>gloq9.xml|778|<component size="226,226">
+  <displayList>
+    <image id="n51_gloq" name="n51" src="gloq8" xy="0,0" pivot="0.5,0.5" size="226,226" group="n49_gloq" color="#33ffff"/>
+    <image id="n47_gloq" name="n47" src="ntuzou4z6" pkg="9leh0eyf" xy="68,60" size="90,90" group="n49_gloq"/>
+    <component id="n48_gloq" name="n48" src="tkgsd" pkg="iwirkaym" xy="65,59" group="n49_gloq" controller="c2,0">
+      <relation target="n48_gloq" sidePair="center-center,top-top"/>
+    </component>
+    <group id="n49_gloq" name="n49" xy="0,0" size="226,226" advanced="true"/>
+  </displayList>
+  <transition name="t0" autoPlay="true">
+    <item time="0" type="Rotation" target="n51_gloq" tween="true" startValue="0" endValue="354" duration="72" ease="Linear" repeat="-1"/>
+  </transition>
+</component>package.xml|1075|<packageDescription id="obl06er5" name="Alchemist">
+  <resources>
+    <component id="99eeo" name="Com_alch" path="/Component/" size="615,294"/>
+    <component id="gloq9" name="Comitem" path="/Component/" size="226,226"/>
+    <component id="q7bqr" name="btn" path="/Component/" size="60,60"/>
+    <image id="99eeh" name="Alchemist_bg" path="/Images/" size="332,124"/>
+    <image id="99eei" name="Alchemist_element" path="/Images/" size="287,353"/>
+    <image id="99eej" name="Alchemist_element2" path="/Images/" size="601,580"/>
+    <component id="gloq0" name="AlchemistMain" path="/" size="1334,750" exported="true"/>
+    <component id="gloq3" name="ComAlchemist" path="/Component/" size="750,650" exported="true"/>
+    <component id="gloq7" name="Element" path="/" size="756,608" exported="true"/>
+    <image id="gloq5" name="img_alchemist" path="/Images/" size="150,203" exported="true"/>
+    <image id="gloq8" name="img_light01" path="/Images/" size="98,98" exported="true"/>
+    <atlas id="atlas0" size="1024,1024" file="atlas0.png"/>
+  </resources>
+</packageDescription>q7bqr.xml|430|<component size="60,60">
+  <displayList>
+    <image id="n28_99ee" name="deleteBtn" src="qu6jou57z" pkg="9leh0eyf" xy="0,0" pivot="0.5,0.5" size="60,60" rotation="180" flip="vt">
+      <relation target="" sidePair="width-width,height-height"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </image>
+    <image id="n30_99ee" name="n30" src="nc0hou4nx" pkg="9leh0eyf" xy="6,7"/>
+  </displayList>
+</component>

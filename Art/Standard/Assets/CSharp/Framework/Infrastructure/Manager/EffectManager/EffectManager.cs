@@ -2,185 +2,194 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Managers
 {
 #pragma warning disable 0649, 0067
     using Debug;
-    public class EffectManager
+    using Core;
+    public class EffectPool
     {
-        public delegate void StoreHandler();
-        public delegate void EffectHandler();
-        public static Transform parent { get; private set; }
-        class EffectPool
+        public EEffectGroup group;
+        public int index;
+        public int storeCount;
+        public GameObject obj;
+        private EventHandler pauseHandler;
+        private EventHandler resumeHandler;
+        public List<IEffect> freeList=new List<IEffect>();
+        public List<IEffect> usingList=new List<IEffect>();
+#if UNITY_EDITOR
+        public int getCount;
+        public int freeCount;
+        public List<IEffect> allList = new List<IEffect>(100);
+#endif
+        public LoadHandler loadHandler;
+        public EffectPool()
         {
-            public int index;
-            public string path;
-            public int storeCount;
-            public EEffectType type;
-            public GameObject obj;
-            private event EffectHandler pauseHandler;
-            private event EffectHandler resumeHandler;
-            private List<IEffect> m_freeList;
-            private List<IEffect> m_usingList;
-#if UNITY_EDITOR && LOG
-            public int getCount;
-            public int freeCount;
-            public List<IEffect> allList = new List<IEffect>(100);
-#endif
-            public void Initialize(StoreHandler onStoreHandler)
+
+        }
+        public void Initialize(EventHandler onStoreHandler)
+        {
+            freeList = new List<IEffect>(storeCount);
+            usingList = new List<IEffect>(storeCount);
+            loadHandler(index, delegate (UnityEngine.Object o)
             {
-                m_freeList = new List<IEffect>(storeCount);
-                m_usingList = new List<IEffect>(storeCount);
-                //External.ExternalManager.LoadAsset(External.EAssetType.Prefab, path, (o) =>
-                //{
-                //    obj = o as GameObject;
-                //    if (obj == null)
-                //    {
-                //        //storeHandler();
-                //        //storeHandler = null;
-                //        Log.i(ELogType.Effect,path + " not found !");
-                //        //return;
-                //        obj = new GameObject(path);
-                //        obj.AddComponent<ParticleSystem>();
-                //    }
-                //    obj.transform.SetParent(parent);
-                //    for (int i = 0; i < storeCount; i++)
-                //    {
-                //        var  ob=CreateObj();
-                //        m_freeList.Add(ob);
-                //    }
-                //    onStoreHandler();
-                //    onStoreHandler = null;
-                //});
-            }
-            public IEffect Get()
-            {
-                if (m_freeList.Count>0)
+                obj = o as GameObject;
+                if (obj == null)
                 {
-                    var f = m_freeList[0];
-                    m_freeList.RemoveAt(0);
-#if UNITY_EDITOR && LOG
-                    getCount++;
-#endif
-                    m_usingList.Add(f);
-                    return f;
+                    Log.i(ELogType.Effect, index+ " not found !");
+                    obj = new GameObject(index.ToString());
+                    obj.AddComponent<ParticleSystem>();
                 }
-                else
+                obj.transform.SetParent(EffectManager.parent);
+                for (int i = 0; i < storeCount; i++)
                 {
-                    var a=CreateObj();
-                    m_usingList.Add(a);
-                    return a;
+                    var ob = CreateObj();
+                    freeList.Add(ob);
                 }
-            }
-            public void Free(IEffect obj)
+                if(onStoreHandler!=null)
+                    onStoreHandler();
+                onStoreHandler = null;
+            });
+        }
+        public void Add(int count)
+        {
+            for (int i = 0; i < count; i++)
             {
-                if (m_freeList.Contains(obj)) return;
-                m_usingList.Remove(obj);
-                m_freeList.Add(obj);
-#if UNITY_EDITOR && LOG
-                freeCount++;
-#endif
-            }
-            public void Update()
-            {
-                for (int i = 0; i < m_usingList.Count; i++)
-                {
-                    m_usingList[i].OnUpdate();
-                }
-            }
-            public bool HasObj(int id)
-            {
-                for (int i = 0; i < m_usingList.Count; i++)
-                {
-                    var index=m_usingList[i].gameObject.GetInstanceID();
-                    if (index == id)
-                    {
-                        return true;
-                    }
-                }
-                return false;
-            }
-            public void Clear()
-            {
-                for (int i = 0; i < m_usingList.Count; i++)
-                {
-                    UnityEngine.Object.Destroy(m_usingList[i].gameObject);
-                }
-                for (int i = 0; i < m_freeList.Count; i++)
-                {
-                    UnityEngine.Object.Destroy(m_freeList[i].gameObject);
-                }
-                UnityEngine.Object.Destroy(obj);
-            }
-            public void Pause()
-            {
-                if (pauseHandler!=null)
-                    pauseHandler();
-            }
-            public void Resume()
-            {
-                if (resumeHandler != null)
-                    resumeHandler();
-            }
-            private IEffect CreateObj()
-            {
-                var o = GameObject.Instantiate(obj);
-                o.transform.SetParent(parent);
-                IEffect i;
-                if (type==EEffectType.Sub)
-                {
-#if UNITY_EDITOR
-                    var x = o.GetComponent<EffectControl>();
-                    if (x != null)
-                    {
-                        Log.i(ELogType.Error, "特效表中配为Sub(1)方阵特效，prefab上却是普通特效===>" + path + "     " + index);
-                    }
-#endif
-                    SubEffectControl a;
-                    a = o.GetComponent<SubEffectControl>();
-                    if (a == null)
-                    {
-                        a = o.AddComponent<SubEffectControl>();
-                        Log.i(ELogType.Error, "特效需要挂载  [SubEffectControl]  " + path + "     " + index);
-                    }
-                    pauseHandler += a.OnPause;
-                    resumeHandler += a.OnResume;
-                    i = a as IEffect;
-                }
-                else
-                {
-#if UNITY_EDITOR
-                    var x = o.GetComponent<SubEffectControl>();
-                    if (x != null)
-                    {
-                        Log.i(ELogType.Error, "特效表中配为General(0)普通特效，prefab上却是方阵特效===>" + path + "     " + index);
-                    }
-#endif
-                    EffectControl a;
-                    a = o.GetComponent<EffectControl>();
-                    if (a == null)
-                    {
-                        a = o.AddComponent<EffectControl>();
-                        Log.i(ELogType.Error, "特效需要挂载  [EffectControl]  " + path + "     " + index);
-                    }
-                    pauseHandler += a.OnPause;
-                    resumeHandler += a.OnResume;
-                    i = a as IEffect;
-                }
-                i.index = index;
-                i.effectType = type;
-                i.Create();
-#if UNITY_EDITOR && LOG
-                allList.Add(i);
-#endif
-                return i;
+                var ob = CreateObj();
+                freeList.Add(ob);
             }
         }
+        public IEffect Get()
+        {
+            if (freeList.Count>0)
+            {
+                var f = freeList[0];
+                freeList.RemoveAt(0);
+#if UNITY_EDITOR
+                getCount++;
+#endif
+                usingList.Add(f);
+                return f;
+            }
+            else
+            {
+                var a=CreateObj();
+                usingList.Add(a);
+                return a;
+            }
+        }
+        public void Free(IEffect obj)
+        {
+            if (freeList.Contains(obj)) return;
+            usingList.Remove(obj);
+            freeList.Add(obj);
+#if UNITY_EDITOR
+            freeCount++;
+#endif
+        }
+        public void Update()
+        {
+            for (int i = 0; i < usingList.Count; i++)
+            {
+                usingList[i].OnUpdate();
+            }
+        }
+        public bool HasObj(int id)
+        {
+            for (int i = 0; i < usingList.Count; i++)
+            {
+                var index=usingList[i].gameObject.GetInstanceID();
+                if (index == id)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public void Clear()
+        {
+            for (int i = 0; i < usingList.Count; i++)
+            {
+                UnityEngine.Object.Destroy(usingList[i].gameObject);
+            }
+            for (int i = 0; i < freeList.Count; i++)
+            {
+                UnityEngine.Object.Destroy(freeList[i].gameObject);
+            }
+            UnityEngine.Object.Destroy(obj);
+        }
+        public void Pause()
+        {
+            if (pauseHandler!=null)
+                pauseHandler();
+        }
+        public void Resume()
+        {
+            if (resumeHandler != null)
+                resumeHandler();
+        }
+        public void OnReset()
+        {
+            index = 0;
+            storeCount = 0;
+            obj = null;
+            pauseHandler = null;
+            resumeHandler = null;
+            freeList.Clear();
+            usingList.Clear();
+#if UNITY_EDITOR
+            allList.Clear();
+            getCount = 0;
+            freeCount = 0;
+#endif
+            loadHandler = null;
+        }
+        private IEffect CreateObj()
+        {
+            var o = GameObject.Instantiate(obj);
+            o.transform.SetParent(EffectManager.parent);
+            IEffect i=null;
+            var arr = o.GetComponents<MonoBehaviour>();
+            for (int a = 0; a < arr.Length; a++)
+            {
+                if (arr[a] is IEffect)
+                {
+                    i = arr[a] as IEffect;
+                    break;
+                }
+            }
+            if (i == null)
+            {
+                i = o.AddComponent<EffectControl>() as IEffect;
+                Log.i(ELogType.Error, "特效表中配为Sub(1)方阵特效，prefab上却是普通特效===>  " + index);
+            }
+            pauseHandler = i.OnPause;
+            resumeHandler = i.OnResume;
+            i.index = index;
+            i.group = group;
+            i.Create();
+#if UNITY_EDITOR
+            allList.Add(i);
+#endif
+            return i;
+        }
+    }
+    public class EffectManager
+    {
+        public static DataHandler<int> getHandler;
+        public static DataHandler<int> freeHandler;
+        public static DataHandler<int> storeHandler;
+        public static DataHandler<int> clearHandler;
+        public static Dictionary<int,EffectPool>[] source { get{ return m_instance.m_dic; } }
+        public static Transform parent { get; private set; }
+        public LoadHandler loadHandler;
+        public DestroyHandler destroyHandler;
         class WaitFree
         {
             public IEffect waitFree;
             public int freeTime;
-            public Action freeHandler;
+            public EEffectGroup group;
+            public EventHandler freeHandler;
             public void Clear()
             {
                 waitFree = null;
@@ -188,16 +197,11 @@ namespace Framework.Infrastructure
                 freeHandler = null;
             }
         }
-        private Dictionary<int, EffectPool> m_dic = new Dictionary<int, EffectPool>();
+        private Dictionary<int, EffectPool>[] m_dic;
         private List<WaitFree> m_freeWaitList = new List<WaitFree>(20);
         private List<WaitFree> m_pausingWaitList = new List<WaitFree>();
         private List<WaitFree> m_usingWaitList = new List<WaitFree>(20);
         private bool m_pause;
-#if LOG
-        private List<int> m_dontPreloadList = new List<int>();
-        private List<int> m_dontConfigList = new List<int>();
-        private string m_directory;
-#endif
         private static EffectManager m_instance;
         public static EffectManager GetInstance()
         {
@@ -206,21 +210,14 @@ namespace Framework.Infrastructure
         }
         EffectManager()
         {
-#if LOG
-            if (string.IsNullOrEmpty(m_directory))
+            var a=Enum.GetValues(typeof(EEffectGroup));
+            m_dic = new Dictionary<int, EffectPool>[a.Length];
+            for (int i = 0; i < a.Length; i++)
             {
-                m_directory = Application.persistentDataPath + "/Profile" + "_" + Macro.storeTime + "/";
-                if (!System.IO.Directory.Exists(m_directory))
-                {
-                    System.IO.Directory.CreateDirectory(m_directory);
-                }
+                m_dic[i] = new Dictionary<int, EffectPool>();
             }
-#endif
             var obj = new GameObject("[EffectManager]");
             parent = obj.transform;
-#if UNITY_EDITOR && !HIDEHIERA
-            //obj.hideFlags = HideFlags.HideInHierarchy;
-#endif
             parent.gameObject.SetActive(false);
         }
         ~EffectManager()
@@ -229,19 +226,23 @@ namespace Framework.Infrastructure
         }
         public void Dispose()
         {
-#if LOG && UNITY_EDITOR
-            PrintModel();
-            PrintDontPreload();
-            PrintDontConfig();
-#endif
-            foreach (var item in m_dic)
+            for (int i = 0; i < m_instance.m_dic.Length; i++)
             {
-                item.Value.Clear();
+                var group = m_instance.m_dic[i];
+                foreach (var dic in group)
+                {
+                    dic.Value.Clear();
+                    destroyHandler(dic.Key);
+                }
             }
             if (parent!=null)
                 UnityEngine.Object.Destroy(parent.gameObject);
             parent = null;
             m_instance = null;
+            getHandler = null;
+            freeHandler = null;
+            clearHandler = null;
+            storeHandler = null;
         }
         public void Update()
         {
@@ -257,7 +258,7 @@ namespace Framework.Infrastructure
                         wait.freeHandler = null;
                     }
                     m_pausingWaitList.Remove(wait);
-                    Free(wait.waitFree);
+                    Free(wait.waitFree,-1,wait.group);
                     wait.Clear();
                     m_usingWaitList.Add(wait);
                     i--;
@@ -277,24 +278,27 @@ namespace Framework.Infrastructure
                             wait.freeHandler = null;
                         }
                         m_freeWaitList.Remove(wait);
-                        Free(wait.waitFree);
+                        Free(wait.waitFree,-1,wait.group);
                         wait.Clear();
                         m_usingWaitList.Add(wait);
                         i--;
                     }
                 }
-                var enumer = m_dic.GetEnumerator();
-                while (enumer.MoveNext())
+                for (int i = 0; i < m_instance.m_dic.Length; i++)
                 {
-                    enumer.Current.Value.Update();
+                    var group = m_instance.m_dic[i];
+                    foreach (var dic in group)
+                    {
+                        dic.Value.Update();
+                    }
                 }
             }
         }
         public void SetParent(bool show)
         {
-            //parent.gameObject.SetActive(show);
+            parent.gameObject.SetActive(show);
         }
-        public static void Store(EffectStoreData[] list,Action onStoreOver)
+        public static void Store(EffectStoreData[] list, EventHandler onStoreOver)
         {
             int count = list.Length;
             if (count <= 0)
@@ -302,7 +306,7 @@ namespace Framework.Infrastructure
                 onStoreOver();
                 return;
             }
-            StoreHandler StoreHandler = () =>
+            EventHandler StoreHandler = () =>
             {
                 count--;
                 if (count <= 0)
@@ -317,19 +321,35 @@ namespace Framework.Infrastructure
                 Store(l, StoreHandler);
             }
         }
-        public static void Store(EffectStoreData data,StoreHandler onStoreHandler)
+        public static void Store(int index,int count,EEffectGroup group, EventHandler onStoreHandler =null)
         {
-            var pool = new EffectPool();
-            pool.index = data.index;
-            pool.path = data.path;
-            pool.storeCount = data.count;
-            pool.type = (EEffectType)data.type;
-            m_instance.m_dic.Add(data.index, pool);
-            pool.Initialize(onStoreHandler);
+            var g = m_instance.m_dic[(int)group];
+            if (g.ContainsKey(index))
+            {
+                g[index].Add(count);
+                if (onStoreHandler != null)
+                    onStoreHandler();
+            }
+            else
+            {
+                var pool = new EffectPool();
+                pool.index = index;
+                pool.storeCount = count;
+                g.Add(index, pool);
+                pool.loadHandler = m_instance.loadHandler;
+                pool.group = group;
+                pool.Initialize(onStoreHandler);
+            }
+            if (storeHandler != null)
+                storeHandler(index);
         }
-        public static IEffect Get(int index, Transform parent, Vector3 position, Quaternion rotation)
+        public static void Store(EffectStoreData data, EventHandler onStoreHandler =null)
         {
-            var obj = Get(index);
+            Store(data.index, data.count,data.group, onStoreHandler);
+        }
+        public static IEffect Get(int index, Transform parent, Vector3 position, Quaternion rotation, EEffectGroup group = EEffectGroup.Base)
+        {
+            var obj = Get(index, group);
             if (obj!=null)
             {
                 obj.transform.SetParent(parent);
@@ -338,9 +358,9 @@ namespace Framework.Infrastructure
             }
             return obj;
         }
-        public static IEffect Get(int index, Vector3 position, Quaternion rotation, Transform parent)
+        public static IEffect Get(int index, Vector3 position, Quaternion rotation, Transform parent, EEffectGroup group = EEffectGroup.Base)
         {
-            var obj = Get(index);
+            var obj = Get(index, group);
             if (obj != null)
             {
                 obj.transform.localPosition = position;
@@ -349,44 +369,39 @@ namespace Framework.Infrastructure
             }
             return obj;
         }
-        public static IEffect Get(int mainKey)
+        public static IEffect Get(int index,EEffectGroup group=EEffectGroup.Base)
         {
-            int index = mainKey;
+            IEffect ef;
 #if UNITY_EDITOR
-            if (m_instance.m_dic.ContainsKey(index))
+            if (m_instance.m_dic[(int)group].ContainsKey(index))
             {
-                return m_instance.m_dic[index].Get();
+                ef= m_instance.m_dic[(int)group][index].Get();
             }
             else
             {
-                Debug.Log.i(ELogType.Effect, "LaoHan:EffectManager dont has this index;" + index);
-//                if (Macro.isDebug)
-//                {
-//                    if (index > 0)
-//                    {
-//#if UNITY_EDITOR && LOG
-//                        m_instance.m_dontPreloadList.Add(index);
-//#endif
-//                        var pool = new EffectPool();
-//                        pool.index = index;
-//                        pool.path = External.ExternalManager.GetSourcePath(index);
-//                        pool.storeCount = 1;
-//                        m_instance.m_dic.Add(index, pool);
-//                        pool.Initialize(() => { });
-//                    }
-//                }
-                return null;
+                Debug.Log.i(ELogType.Effect, "LaoHan:EffectManager dont has this index;" + index + "    " + group);
+                var pool = new EffectPool();
+                pool.index = index;
+                pool.storeCount = 1;
+                m_instance.m_dic[(int)group].Add(index, pool);
+                pool.loadHandler = m_instance.loadHandler;
+                pool.group = group;
+                pool.Initialize(() => { });
+                ef = m_instance.m_dic[(int)group][index].Get();
             }
 #else
-            return m_instance.m_dic[index].Get();
+            ef= m_instance.m_dic[(int)group][index].Get();
 #endif
+            if (getHandler != null)
+                getHandler(index);
+            return ef;
         }
-        public static void Free(IEffect obj, int freeTime = -1, Action onFreeHandler = null)
+        public static void Free(IEffect obj, int freeTime = -1, EEffectGroup group=EEffectGroup.Base, EventHandler onFreeHandler = null)
         {
 #if UNITY_EDITOR
-            if (!m_instance.m_dic.ContainsKey(obj.index))
+            if (!m_instance.m_dic[(int)group].ContainsKey(obj.index))
             {
-                Log.i(ELogType.Effect, "dont has this index=>" + obj.index);
+                Log.i(ELogType.Effect, "dont has this index=>" + obj.index + "    " + group);
                 if (onFreeHandler != null)
                 {
                     onFreeHandler();
@@ -415,6 +430,7 @@ namespace Framework.Infrastructure
                 wait.waitFree = obj;
                 wait.freeHandler = onFreeHandler;
                 wait.freeTime = freeTime;
+                wait.group = group;
                 if (m_instance.m_pause)
                     m_instance.m_pausingWaitList.Add(wait);
                 else
@@ -426,26 +442,65 @@ namespace Framework.Infrastructure
                 {
                     onFreeHandler();
                 }
-                m_instance.m_dic[obj.index].Free(obj);
+                m_instance.m_dic[(int)group][obj.index].Free(obj);
                 obj.transform.SetParent(parent);
+                if (freeHandler != null)
+                    freeHandler(obj.index);
+            }
+        }
+        public static void Clear(int index,EEffectGroup group=EEffectGroup.Base)
+        {
+#if UNITY_EDITOR
+            if (m_instance.m_dic[(int)group].ContainsKey(index))
+            {
+                if (clearHandler != null)
+                    clearHandler(index);
+                m_instance.m_dic[index].Clear();
+                m_instance.destroyHandler(index);
+            }
+            else
+            {
+                Debug.Log.i(ELogType.Model, "Clear dont has this id:" + index + "    " + group);
+            }
+#else
+            m_instance.m_dic[(int)group][index].Clear();
+            m_instance.destroyHandler(index);
+#endif
+
+        }
+        public static void Clear(EEffectGroup group)
+        {
+            var g = m_instance.m_dic[(int)group];
+            foreach (var item in g)
+            {
+                if (clearHandler != null)
+                    clearHandler(item.Key);
+                item.Value.Clear();
+                m_instance.destroyHandler(item.Key);
             }
         }
         public static void Pause()
         {
             m_instance.m_pause = true;
-            var enumer = m_instance.m_dic.GetEnumerator();
-            while (enumer.MoveNext())
+            for (int i = 0; i < m_instance.m_dic.Length; i++)
             {
-                enumer.Current.Value.Pause();
+                var group = m_instance.m_dic[i];
+                foreach (var dic in group)
+                {
+                    dic.Value.Pause();
+                }
             }
         }
         public static void Resume()
         {
             m_instance.m_pause = false;
-            var enumer = m_instance.m_dic.GetEnumerator();
-            while (enumer.MoveNext())
+            for (int i = 0; i < m_instance.m_dic.Length; i++)
             {
-                enumer.Current.Value.Resume();
+                var group = m_instance.m_dic[i];
+                foreach (var dic in group)
+                {
+                    dic.Value.Resume();
+                }
             }
             for (int i = 0; i < m_instance.m_pausingWaitList.Count; i++)
             {
@@ -455,59 +510,5 @@ namespace Framework.Infrastructure
             }
             m_instance.m_pausingWaitList.Clear();
         }
-#if UNITY_EDITOR && LOG
-        private void PrintModel()
-        {
-            var builder = new System.Text.StringBuilder();
-
-            builder.AppendLine(",Effectid,Total,Get,Free,Store");
-            int i = 1;
-            foreach (var item in m_instance.m_dic)
-            {
-                builder.AppendLine(i + "," + item.Key + "," + item.Value.allList.Count + "," + item.Value.getCount + "," + item.Value.freeCount + "," + item.Value.storeCount);
-                i++;
-            }
-            builder.AppendLine("waitUsingCount:," + m_usingWaitList.Count + ",freeWaitingCount:," + m_freeWaitList.Count);
-
-            string filePath = m_directory + "/EffectProfile.csv";
-            byte[] bytes = System.Text.Encoding.UTF8.GetBytes(builder.ToString());
-            using (System.IO.FileStream stream = new System.IO.FileStream(filePath, System.IO.FileMode.Append))
-            {
-                stream.Write(bytes, 0, bytes.Length);
-            }
-        }
-        private void PrintDontPreload()
-        {
-            var builder = new System.Text.StringBuilder();
-
-            builder.AppendLine(",Effectid");
-            for (int i = 0; i < m_dontPreloadList.Count; i++)
-            {
-                builder.AppendLine(i + "," + m_dontPreloadList[i]);
-            }
-            string filePath = m_directory + "/EffectDontPreload.csv";
-            byte[] bytes = System.Text.Encoding.UTF8.GetBytes(builder.ToString());
-            using (System.IO.FileStream stream = new System.IO.FileStream(filePath, System.IO.FileMode.Append))
-            {
-                stream.Write(bytes, 0, bytes.Length);
-            }
-        }
-        private void PrintDontConfig()
-        {
-            var builder = new System.Text.StringBuilder();
-
-            builder.AppendLine(",Effectid");
-            for (int i = 0; i < m_dontConfigList.Count; i++)
-            {
-                builder.AppendLine(i + "," + m_dontConfigList[i]);
-            }
-            string filePath = m_directory + "/EffectDontConfig.csv";
-            byte[] bytes = System.Text.Encoding.UTF8.GetBytes(builder.ToString());
-            using (System.IO.FileStream stream = new System.IO.FileStream(filePath, System.IO.FileMode.Append))
-            {
-                stream.Write(bytes, 0, bytes.Length);
-            }
-        }
-#endif
     }
 }

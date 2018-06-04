@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 1744526572
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 5970611bfc656bd5348b565a6a4d9a5b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ff68f38490d3fa0b79fd635db4147ce6
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Prefabs/eff_inner_upgradesmoke_001.prefab
+Dependencies:
+- E:/Personal/GitHub/lhFramework/Art/Standard/Assets/StreamingAssets/StandaloneWindows64/Bundle/materials/smoke_003_blend.n

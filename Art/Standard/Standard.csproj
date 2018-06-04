@@ -12,12 +12,15 @@
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
-    <TargetFrameworkProfile></TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.2.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>6</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -253,32 +256,34 @@
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Core\Base\Layer.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Core\Base\Macro.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Core\Enum\EProjectType.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Core\Enum\EVariantType.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Core\StaticExternal.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Infrastructure.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\CameraManager.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ClassManager\ClassManager.cs" />
+    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ClassManager\ClassPool.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ClassManager\ClassPreload.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ClassManager\EClassType.cs" />
+    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ClassManager\EClassGroup.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ClassManager\IClass.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\EffectManager\EEffectDirection.cs" />
+    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\EffectManager\EEffectGroup.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\EffectManager\EEffectType.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\EffectManager\EffectControl.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\EffectManager\EffectManager.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\EffectManager\EffectStoreData.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\EffectManager\IEffect.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\EffectManager\SubEffectControl.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\EffectManager\SubEffectTarget.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\EffectManager\SubParticleTrace.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\MaterialManager\EMaterialType.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\MaterialManager\MaterialManager.cs" />
+    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ModelManager\EModelGroup.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ModelManager\IModel.cs" />
+    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ModelManager\ModelControl.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ModelManager\ModelManager.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ModelManager\ModelStoreData.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ResourcesManager\BundleSource.cs" />
+    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ResourcesManager\EVariantType.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ResourcesManager\ISource.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ResourcesManager\LocalSource.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ResourcesManager\ResourcesManager.cs" />
+    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ShaderManager.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ShellManager.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\TimelineManager\CTimelineEventValue.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\TimelineManager\Delegate.cs" />
@@ -292,6 +297,9 @@
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\TimelineManager\TimelineManager.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\TimelineManager\TimelineStoreData.cs" />
     <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\TimeManager.cs" />
+    <Compile Include="Assets\CSharp\UnitTest\ModelPoolUnitTest.cs" />
+    <Compile Include="Assets\CSharp\UnitTest\EffectPoolUnitTest.cs" />
+    <Compile Include="Assets\CSharp\UnitTest\ClassPoolUnitTest.cs" />
     <Compile Include="Assets\CSharp\UnitTest\ResourceManagerUnitTest.cs" />
     <Compile Include="Assets\CSharp\UnitTest\TempUnitTest.cs" />
     <Compile Include="Assets\Toolkit\Cinemachine\Base\Runtime\Behaviours\CinemachineBlendListCamera.cs" />

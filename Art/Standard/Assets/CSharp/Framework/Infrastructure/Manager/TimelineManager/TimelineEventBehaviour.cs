@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 using System;
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Managers
 {
     // A behaviour that is attached to a playable
     [Serializable]

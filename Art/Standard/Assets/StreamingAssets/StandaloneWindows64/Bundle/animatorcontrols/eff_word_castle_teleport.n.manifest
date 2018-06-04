@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 425683440
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 2399b0dd38513680564a4c13c35cd9c4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b4c5a82347ebdfc04693c9733c20268d
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/AnimatorControls/eff_word_castle_teleport.controller
+Dependencies:
+- E:/Personal/GitHub/lhFramework/Art/Standard/Assets/StreamingAssets/StandaloneWindows64/Bundle/animations/eff_word_castle_teleport.n

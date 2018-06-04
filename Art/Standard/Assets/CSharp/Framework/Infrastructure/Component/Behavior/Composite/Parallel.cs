@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Components
 {
+    using Managers;
     [Task(ETaskType.Composite, "Parallel")]
     public class Parallel : CompositeTask
     {
-        public override EClassType classType { get { return EClassType.Core_Parallel; } set { } }
         public override ETaskResult Execute(ETaskResult result, bool last)
         {
             return last ? ETaskResult.Successed : ETaskResult.Running;

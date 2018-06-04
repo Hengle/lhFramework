@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Components
 {
+    using Managers;
     public class Inverter : DecoratorTask
     {
-        public override EClassType classType { get { return EClassType.Core_Inverter; } set { } }
         public override ETaskResult Execute(ETaskResult result, bool last)
         {
             return result == ETaskResult.Successed ? ETaskResult.Failed: ETaskResult.Successed;

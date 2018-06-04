@@ -5,8 +5,9 @@ using System.IO;
 using System.Text;
 using System.Collections;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Managers
 {
+    using Core;
     public enum ESourceState
     {
         None,
@@ -22,7 +23,7 @@ namespace Framework.Infrastructure
         public string assetPath;
         public ESourceState state;
         public List<int> dependencieds = new List<int>();
-        private AssetBundle m_bundle;
+        public AssetBundle bundle;
         private List<DataHandler<UnityEngine.Object>> m_mainCompleteEventHandlers = new List<DataHandler<UnityEngine.Object>>();
         private List<DataHandler<UnityEngine.Object[]>> m_allCompleteEventHandlers = new List<DataHandler<UnityEngine.Object[]>>();
         public void Load()
@@ -45,7 +46,7 @@ namespace Framework.Infrastructure
 #else
             dependencieds.Remove(guid);
 #endif
-            if (dependencieds.Count<=0)
+            if (dependencieds.Count <= 0)
             {
                 return true;
             }
@@ -53,16 +54,18 @@ namespace Framework.Infrastructure
         }
         public void UnloadUnused()
         {
-            if (dependencieds.Count<=0)
+            if (dependencieds.Count <= 0)
             {
-                m_bundle.Unload(false);
+                bundle.Unload(true);
+                bundle = null;
             }
         }
         public void Destroy(int guid)
         {
-            if (m_bundle != null)
+            if (bundle != null)
             {
-                m_bundle.Unload(false);
+                bundle.Unload(true);
+                bundle = null;
             }
             if (allAssets != null)
             {
@@ -70,10 +73,12 @@ namespace Framework.Infrastructure
                 {
                     UnityEngine.Object.Destroy(allAssets[i]);
                 }
+                allAssets = null;
             }
             if (mainAsset != null)
             {
                 UnityEngine.Object.Destroy(mainAsset);
+                mainAsset = null;
             }
         }
         public void AddCompleteHandler(DataHandler<UnityEngine.Object> handler)
@@ -93,8 +98,8 @@ namespace Framework.Infrastructure
         private void OnCreateReuqest(AsyncOperation async)
         {
             var request = (AssetBundleCreateRequest)async;
-            m_bundle = request.assetBundle;
-            var bundleRequest= m_bundle.LoadAllAssetsAsync();
+            bundle = request.assetBundle;
+            var bundleRequest = bundle.LoadAllAssetsAsync();
             bundleRequest.completed += OnBundleRequest;
         }
         private void OnBundleRequest(AsyncOperation async)
@@ -133,7 +138,7 @@ namespace Framework.Infrastructure
         public Dictionary<int, SourceData> usedSources = new Dictionary<int, SourceData>();
 
         private List<int> m_loadingWaitDeleteSources = new List<int>();
-        private Dictionary<int,int> m_waitLoadSourcesIndex = new Dictionary<int, int>();
+        private Dictionary<int, int> m_waitLoadSourcesIndex = new Dictionary<int, int>();
 
         /// <summary>
         /// 初始化
@@ -147,7 +152,7 @@ namespace Framework.Infrastructure
         /// </summary>
         /// <param name="assetId"></param>
         /// <param name="loadHandler"></param>
-        void ISource.Load(int assetId, DataHandler<UnityEngine.Object> loadHandler,EVariantType variant)
+        void ISource.Load(int assetId, DataHandler<UnityEngine.Object> loadHandler, EVariantType variant)
         {
             int guid = assetId * Const.variantMaxLength + (int)variant;
             var chainId = m_guidDepend[guid];
@@ -440,7 +445,7 @@ namespace Framework.Infrastructure
 #if UNITY_EDITOR
             if (!usedSources.ContainsKey(guid))
             {
-                Debug.Log.i(Debug.ELogType.Error,"BundleSource.Unload dont has this assetId:"+assetId);
+                Debug.Log.i(Debug.ELogType.Error, "BundleSource.Unload dont has this assetId:" + assetId);
                 return;
             }
 #endif
@@ -448,8 +453,10 @@ namespace Framework.Infrastructure
             var chain = m_dependenciesChain[chainId];
             for (int i = 0; i < chain.Length; i++)
             {
-                var source = usedSources[chain[i]];
-                source.Unload(guid);
+                var lDep = chain[i];
+                int dep = lDep / Const.dependLayerDigit;
+                var source = usedSources[dep];
+                source.Unload(dep);
             }
             if (unLoadEventHandler != null)
             {
@@ -460,24 +467,26 @@ namespace Framework.Infrastructure
         /// 销毁bundle
         /// </summary>
         /// <param name="assetId"></param>
-        void ISource.Destroy(int assetId, EVariantType variant )
+        void ISource.Destroy(int assetId, EVariantType variant)
         {
             int guid = assetId * Const.variantMaxLength + (int)variant;
 #if UNITY_EDITOR
             if (!usedSources.ContainsKey(guid))
             {
-                UnityEngine.Debug.LogError("BundleSource.Unload dont has this assetId:" +assetId);
+                UnityEngine.Debug.LogError("BundleSource.Unload dont has this assetId:" + assetId);
             }
 #endif
             var chainId = m_guidDepend[guid];
             var chain = m_dependenciesChain[chainId];
             for (int i = 0; i < chain.Length; i++)
             {
-                var source = usedSources[chain[i]];
-                if (source.Unload(guid))
+                var lDep = chain[i];
+                int dep = lDep / Const.dependLayerDigit;
+                var source = usedSources[dep];
+                if (source.Unload(dep))
                 {
-                    source.Destroy(guid);
-                    usedSources.Remove(chain[i]);
+                    source.Destroy(dep);
+                    usedSources.Remove(dep);
                 }
             }
             if (destroyEventHandler != null)
@@ -504,7 +513,7 @@ namespace Framework.Infrastructure
             string tablePath = Define.sourceTableUrl;
             if (!File.Exists(tablePath))
             {
-                Debug.Log.i(Debug.ELogType.Error,"dont has sourceTable: " + tablePath);
+                Debug.Log.i(Debug.ELogType.Error, "dont has sourceTable: " + tablePath);
             }
             using (FileStream fileStream = new FileStream(tablePath, FileMode.Open))
             {
@@ -528,12 +537,12 @@ namespace Framework.Infrastructure
                         for (int i = 0, j = 0; i < s.Length; i++)
                         {
                             char c = s[i];
-                            if (i==0 && c=='&')
+                            if (i == 0 && c == '&')
                             {
                                 k++;
                                 break;
                             }
-                            if (k==0)//资源路径
+                            if (k == 0)//资源路径
                             {
                                 if (c == ',' || i == s.Length - 1)
                                 {
@@ -560,8 +569,8 @@ namespace Framework.Infrastructure
                                         for (int m = 0; m < variant.Count; m++)
                                         {
                                             int variantId = variant[m];
-                                            int g= assetId * Const.variantMaxLength + variantId;
-                                            string path = assetPath + "." +((EVariantType)variantId).ToString();
+                                            int g = assetId * Const.variantMaxLength + variantId;
+                                            string path = assetPath + "." + ((EVariantType)variantId).ToString();
                                             m_guidPath.Add(g, path);
                                         }
                                     }
@@ -571,7 +580,7 @@ namespace Framework.Infrastructure
                                     str.Append(c);
                                 }
                             }
-                            else if (k==1)//依赖链
+                            else if (k == 1)//依赖链
                             {
                                 if (c == ',' || i == s.Length - 1)
                                 {
@@ -588,7 +597,7 @@ namespace Framework.Infrastructure
                                         var split = str.ToString().Split('-');
                                         for (int m = 0; m < split.Length; m++)
                                         {
-                                            int g = Convert.ToInt32(split[m]) * Const.dependLayerDigit + (j-1);
+                                            int g = Convert.ToInt32(split[m]) * Const.dependLayerDigit + (j - 1);
                                             deps.Add(g);
                                         }
                                     }
@@ -596,7 +605,7 @@ namespace Framework.Infrastructure
                                     j++;
                                     if (i == s.Length - 1)
                                     {
-                                        m_dependenciesChain.Add(chainId,deps.ToArray() );
+                                        m_dependenciesChain.Add(chainId, deps.ToArray());
                                     }
                                 }
                                 else
@@ -604,7 +613,7 @@ namespace Framework.Infrastructure
                                     str.Append(c);
                                 }
                             }
-                            else if (k==2)//变体数据
+                            else if (k == 2)//变体数据
                             {
                                 if (c == ',' || i == s.Length - 1)
                                 {
@@ -652,7 +661,7 @@ namespace Framework.Infrastructure
                 var data = loadingSources[id];
                 usedSources.Add(id, data);
                 loadingSources.Remove(id);
-                if (loadedEventHandler!=null)
+                if (loadedEventHandler != null)
                 {
                     loadedEventHandler(id);
                 }
@@ -666,7 +675,7 @@ namespace Framework.Infrastructure
             {
                 foreach (var item in m_waitLoadSourcesIndex)
                 {
-                    if (minLayer==-1)
+                    if (minLayer == -1)
                     {
                         minLayer = item.Value;
                     }
@@ -674,7 +683,7 @@ namespace Framework.Infrastructure
                 }
                 foreach (var item in m_waitLoadSourcesIndex)
                 {
-                    if (item.Value==minLayer)
+                    if (item.Value == minLayer)
                     {
                         if (loadingSources.Count < Const.maxBundleLoading)
                         {
@@ -684,7 +693,7 @@ namespace Framework.Infrastructure
                             s.Load();
                             waitLoadSources.Remove(guid);
                             m_loadingWaitDeleteSources.Add(guid);
-                            if (addToLoadEventHandler!=null)
+                            if (addToLoadEventHandler != null)
                             {
                                 addToLoadEventHandler(guid);
                             }
@@ -705,12 +714,12 @@ namespace Framework.Infrastructure
             DataHandler<UnityEngine.Object> loadHandler = (o) =>
             {
                 //cou++;
-                UnityEngine.Debug.Log( o.name);
+                UnityEngine.Debug.Log(o.name);
             };
             int a = 0;
             foreach (var item in m_guidPath)
             {
-                if (a> count)
+                if (a > count)
                 {
                     return;
                 }

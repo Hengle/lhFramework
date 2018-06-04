@@ -1,0 +1,600 @@
+fileFormatVersion: 2
+guid: a0faa43eec3c0014fb5fb593ef8468fe
+timeCreated: 1517990693
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Bip001
+    100002: Bip001 Footsteps
+    100004: Bip001 Head
+    100006: Bip001 HeadNub
+    100008: Bip001 L Calf
+    100010: Bip001 L Clavicle
+    100012: Bip001 L Finger0
+    100014: Bip001 L Finger0Nub
+    100016: Bip001 L Foot
+    100018: Bip001 L Forearm
+    100020: Bip001 L Hand
+    100022: Bip001 L Thigh
+    100024: Bip001 L Toe0
+    100026: Bip001 L Toe0Nub
+    100028: Bip001 L UpperArm
+    100030: Bip001 Neck
+    100032: Bip001 Pelvis
+    100034: Bip001 Prop1
+    100036: Bip001 R Calf
+    100038: Bip001 R Clavicle
+    100040: Bip001 R Finger0
+    100042: Bip001 R Finger0Nub
+    100044: Bip001 R Foot
+    100046: Bip001 R Forearm
+    100048: Bip001 R Hand
+    100050: Bip001 R Thigh
+    100052: Bip001 R Toe0
+    100054: Bip001 R Toe0Nub
+    100056: Bip001 R UpperArm
+    100058: Bip001 Spine
+    100060: Bip001 Spine1
+    100062: Bip002
+    100064: Bip002 Footsteps
+    100066: Bip002 Head
+    100068: Bip002 HeadNub
+    100070: Bip002 L Calf
+    100072: Bip002 L Clavicle
+    100074: Bip002 L Foot
+    100076: Bip002 L Forearm
+    100078: Bip002 L Hand
+    100080: Bip002 L HorseLink
+    100082: Bip002 L Thigh
+    100084: Bip002 L Toe0
+    100086: Bip002 L Toe0Nub
+    100088: Bip002 L UpperArm
+    100090: Bip002 Neck
+    100092: Bip002 Neck1
+    100094: Bip002 Pelvis
+    100096: Bip002 R Calf
+    100098: Bip002 R Clavicle
+    100100: Bip002 R Foot
+    100102: Bip002 R Forearm
+    100104: Bip002 R Hand
+    100106: Bip002 R HorseLink
+    100108: Bip002 R Thigh
+    100110: Bip002 R Toe0
+    100112: Bip002 R Toe0Nub
+    100114: Bip002 R UpperArm
+    100116: Bip002 Spine
+    100118: Bone001
+    100120: Bone050
+    100122: //RootNode
+    100124: Object004
+    100126: Bip001 L Finger01
+    100128: Bip001 L Finger1
+    100130: Bip001 L Finger11
+    100132: Bip001 L Finger1Nub
+    100134: Bip001 Prop2
+    100136: Bip001 R Finger01
+    100138: Bip001 R Finger1
+    100140: Bip001 R Finger11
+    100142: Bip001 R Finger1Nub
+    100144: Bip002 Spine1
+    100146: Bone002
+    100148: Bone003
+    100150: Bone004
+    100152: Bone051
+    100154: Bone052
+    100156: Bone053
+    100158: Bone054
+    100160: Bone056
+    100162: Bone057
+    100164: Bone058
+    100166: Bone059
+    100168: Bone060
+    100170: Bone061
+    100172: commander11_clegane_h
+    100174: Bone005
+    100176: Bone006
+    100178: Bone007
+    100180: Bone008
+    100182: Bone009
+    100184: Bone010
+    100186: Bone011
+    100188: Bone012
+    100190: Bone013
+    100192: Bone014
+    100194: Bone015
+    100196: Bone016
+    100198: Bone017
+    100200: Bone018
+    100202: Bone019
+    100204: Bone020
+    100206: Bone021
+    100208: Bone022
+    100210: Bone023
+    100212: Bone024
+    100214: Bone025
+    100216: Bone026
+    100218: Bone027
+    100220: Bone028
+    100222: Bone029
+    100224: commander6_robb_h
+    400000: Bip001
+    400002: Bip001 Footsteps
+    400004: Bip001 Head
+    400006: Bip001 HeadNub
+    400008: Bip001 L Calf
+    400010: Bip001 L Clavicle
+    400012: Bip001 L Finger0
+    400014: Bip001 L Finger0Nub
+    400016: Bip001 L Foot
+    400018: Bip001 L Forearm
+    400020: Bip001 L Hand
+    400022: Bip001 L Thigh
+    400024: Bip001 L Toe0
+    400026: Bip001 L Toe0Nub
+    400028: Bip001 L UpperArm
+    400030: Bip001 Neck
+    400032: Bip001 Pelvis
+    400034: Bip001 Prop1
+    400036: Bip001 R Calf
+    400038: Bip001 R Clavicle
+    400040: Bip001 R Finger0
+    400042: Bip001 R Finger0Nub
+    400044: Bip001 R Foot
+    400046: Bip001 R Forearm
+    400048: Bip001 R Hand
+    400050: Bip001 R Thigh
+    400052: Bip001 R Toe0
+    400054: Bip001 R Toe0Nub
+    400056: Bip001 R UpperArm
+    400058: Bip001 Spine
+    400060: Bip001 Spine1
+    400062: Bip002
+    400064: Bip002 Footsteps
+    400066: Bip002 Head
+    400068: Bip002 HeadNub
+    400070: Bip002 L Calf
+    400072: Bip002 L Clavicle
+    400074: Bip002 L Foot
+    400076: Bip002 L Forearm
+    400078: Bip002 L Hand
+    400080: Bip002 L HorseLink
+    400082: Bip002 L Thigh
+    400084: Bip002 L Toe0
+    400086: Bip002 L Toe0Nub
+    400088: Bip002 L UpperArm
+    400090: Bip002 Neck
+    400092: Bip002 Neck1
+    400094: Bip002 Pelvis
+    400096: Bip002 R Calf
+    400098: Bip002 R Clavicle
+    400100: Bip002 R Foot
+    400102: Bip002 R Forearm
+    400104: Bip002 R Hand
+    400106: Bip002 R HorseLink
+    400108: Bip002 R Thigh
+    400110: Bip002 R Toe0
+    400112: Bip002 R Toe0Nub
+    400114: Bip002 R UpperArm
+    400116: Bip002 Spine
+    400118: Bone001
+    400120: Bone050
+    400122: //RootNode
+    400124: Object004
+    400126: Bip001 L Finger01
+    400128: Bip001 L Finger1
+    400130: Bip001 L Finger11
+    400132: Bip001 L Finger1Nub
+    400134: Bip001 Prop2
+    400136: Bip001 R Finger01
+    400138: Bip001 R Finger1
+    400140: Bip001 R Finger11
+    400142: Bip001 R Finger1Nub
+    400144: Bip002 Spine1
+    400146: Bone002
+    400148: Bone003
+    400150: Bone004
+    400152: Bone051
+    400154: Bone052
+    400156: Bone053
+    400158: Bone054
+    400160: Bone056
+    400162: Bone057
+    400164: Bone058
+    400166: Bone059
+    400168: Bone060
+    400170: Bone061
+    400172: commander11_clegane_h
+    400174: Bone005
+    400176: Bone006
+    400178: Bone007
+    400180: Bone008
+    400182: Bone009
+    400184: Bone010
+    400186: Bone011
+    400188: Bone012
+    400190: Bone013
+    400192: Bone014
+    400194: Bone015
+    400196: Bone016
+    400198: Bone017
+    400200: Bone018
+    400202: Bone019
+    400204: Bone020
+    400206: Bone021
+    400208: Bone022
+    400210: Bone023
+    400212: Bone024
+    400214: Bone025
+    400216: Bone026
+    400218: Bone027
+    400220: Bone028
+    400222: Bone029
+    400224: commander6_robb_h
+    4300000: Object004
+    4300002: commander11_clegane_h
+    4300004: commander6_robb_h
+    7400000: Commander_Jaime_3D_Test_Low_new2017_11_27
+    7400002: Idle
+    7400004: Run
+    7400006: Walk
+    7400008: Attack
+    7400010: Cheer
+    7400012: Stun
+    7400014: Dead
+    7400016: Storage
+    7400018: Skill
+    9500000: //RootNode
+    13700000: Object004
+    13700002: commander11_clegane_h
+    13700004: commander6_robb_h
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #0'
+    second: {fileID: 2100000, guid: 3d84923f409360848afb51e87ed09484, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #1977'
+    second: {fileID: 2100000, guid: 622842c83758ad6418be210e00022735, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #2'
+    second: {fileID: 2100000, guid: 4df6b32230fb07148a010e7e74e309c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #26'
+    second: {fileID: 2100000, guid: 3d84923f409360848afb51e87ed09484, type: 2}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.01
+    animationPositionError: 0.01
+    animationScaleError: 0.01
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: commander11_clegane_all_20180207
+      firstFrame: 71
+      lastFrame: 131
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Run
+      takeName: commander11_clegane_all_20180207
+      firstFrame: 50
+      lastFrame: 66
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk
+      takeName: commander11_clegane_all_20180207
+      firstFrame: 15
+      lastFrame: 45
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Attack
+      takeName: commander11_clegane_all_20180207
+      firstFrame: 400
+      lastFrame: 425
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Cheer
+      takeName: commander11_clegane_all_20180207
+      firstFrame: 171
+      lastFrame: 201
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Stun
+      takeName: commander11_clegane_all_20180207
+      firstFrame: 700
+      lastFrame: 760
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Dead
+      takeName: commander11_clegane_all_20180207
+      firstFrame: 430
+      lastFrame: 480
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Storage
+      takeName: commander11_clegane_all_20180207
+      firstFrame: 765
+      lastFrame: 800
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Skill
+      takeName: commander6_robb_all_20180307
+      firstFrame: 801
+      lastFrame: 823
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 2
+    tangentImportMode: 2
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

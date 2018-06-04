@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Managers
 {
     public interface IModel
     {
         int index { get; set; }
+        EModelGroup group { get; set; }
         GameObject gameObject { get; set; }
         Transform transform { get; set; }
-        Transform[] pendants { get; set; }
-        Mesh mesh { get; set; }
         void OnCreate();
         void OnUpdate();
         void OnUse();
@@ -18,7 +17,5 @@ namespace Framework.Infrastructure
         T Get<T>() where T:Component;
         void Gets<T>(ref List<T> list) where T : Component;
         void SetLayer(int layer);
-        void Mirror(IModel model);
-        int InstanceID();
     }
 }

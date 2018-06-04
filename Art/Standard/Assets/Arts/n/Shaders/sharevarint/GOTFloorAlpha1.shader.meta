@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: a1f8f600650eb524db651946a5ff3c14
+timeCreated: 1513851305
+licenseType: Pro
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  userData: 
+  assetBundleName: shaders/sharevarint
+  assetBundleVariant: n

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Managers
 {
 #pragma warning disable 0618
     [ExecuteInEditMode]
@@ -10,29 +10,19 @@ namespace Framework.Infrastructure
     {
         public Vector3 stageOriginPosition;
         public EEffectDirection direction;
-        EEffectType IEffect.effectType { get; set; }
         private int m_layer;
         int IEffect.index { get; set; }
-        GameObject IEffect.gameObject
-        {
-            get
-            {
-                return base.gameObject;
-            }
-            set { value = base.gameObject; }
-        }
-        Transform IEffect.transform
-        {
-            get
-            {
-                return base.transform;
-            }
-            set { value = base.transform; }
-        }
+        EEffectGroup IEffect.group { get; set; }
+        GameObject IEffect.gameObject { get { return m_gameObject; } set { } }
+        Transform IEffect.transform { get { return m_transform; } set { } }
 
+        private Transform m_transform;
+        private GameObject m_gameObject;
         public ParticleSystem[] particleSystemArr;
         void IEffect.Create()
         {
+            m_transform = transform;
+            m_gameObject = gameObject;
             if (particleSystemArr==null)
             {
                 particleSystemArr = gameObject.GetComponentsInChildren<ParticleSystem>();
@@ -92,7 +82,7 @@ namespace Framework.Infrastructure
             {
                 this.transform.rotation = Quaternion.LookRotation(normal*-1, trans.up);
             }
-            EffectManager.Free(this, time, OnFree);
+            EffectManager.Free(this, time,((IEffect)this).group, OnFree);
 
         }
         void IEffect.UnBind(int id)
@@ -108,32 +98,38 @@ namespace Framework.Infrastructure
                 particleSystemArr = gameObject.GetComponentsInChildren<ParticleSystem>();
             }
 #endif
-            if (particleSystemArr!=null)
+            if (Application.isPlaying)
             {
-                for (int i = 0; i < particleSystemArr.Length; i++)
+                if (particleSystemArr != null)
                 {
-                    var item = particleSystemArr[i];
-                    ParticleSystem.EmissionModule psemit = item.emission;
-                    psemit.enabled = true;
-                    item.Simulate(0.0f, true, true);
-                    item.Clear();
-                    item.Play();
-                    item.enableEmission = true;
+                    for (int i = 0; i < particleSystemArr.Length; i++)
+                    {
+                        var item = particleSystemArr[i];
+                        ParticleSystem.EmissionModule psemit = item.emission;
+                        psemit.enabled = true;
+                        item.Simulate(0.0f, true, true);
+                        item.Clear();
+                        item.Play();
+                        item.enableEmission = true;
+                    }
                 }
             }
 
         }
         void OnDisable()
         {
-            if (particleSystemArr != null)
+            if (Application.isPlaying)
             {
-                for (int i = 0; i < particleSystemArr.Length; i++)
+                if (particleSystemArr != null)
                 {
-                    var item = particleSystemArr[i];
-                    ParticleSystem.EmissionModule psemit = item.emission;
-                    psemit.enabled = false;
-                    item.time = 0;
-                    item.Stop();
+                    for (int i = 0; i < particleSystemArr.Length; i++)
+                    {
+                        var item = particleSystemArr[i];
+                        ParticleSystem.EmissionModule psemit = item.emission;
+                        psemit.enabled = false;
+                        item.time = 0;
+                        item.Stop();
+                    }
                 }
             }
         }
@@ -160,7 +156,7 @@ namespace Framework.Infrastructure
         }
         int IEffect.InstanceID()
         {
-            return gameObject.GetInstanceID();
+            return ((IEffect)this).gameObject.GetInstanceID();
         }
         void OnFree()
         {

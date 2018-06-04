@@ -1,0 +1,32 @@
+ManifestFileVersion: 0
+CRC: 974523902
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 7501cf5a554c1e8f67672c97c0aad28c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 0257dd431ced7d560a06566213c80fa7
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Prefabs/show_prop01.prefab
+Dependencies:
+- E:/Personal/GitHub/lhFramework/Art/Standard/Assets/StreamingAssets/StandaloneWindows64/Bundle/fbxs/show_prop01.n
+- E:/Personal/GitHub/lhFramework/Art/Standard/Assets/StreamingAssets/StandaloneWindows64/Bundle/materials/show_prop01.n

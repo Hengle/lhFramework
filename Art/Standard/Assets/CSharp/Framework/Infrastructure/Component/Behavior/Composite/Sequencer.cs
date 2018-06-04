@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Components
 {
+    using Managers;
     [Task(ETaskType.Composite, "Sequencer")]
     public class Sequencer : CompositeTask
     {
-        public override EClassType classType { get { return EClassType.Core_Sequence; } set { } }
         public override ETaskResult Execute(ETaskResult result, bool last)
         {
             if (last)

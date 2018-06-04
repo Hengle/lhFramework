@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Framework.Infrastructure
+namespace lhFramework.Infrastructure.Components
 {
+    using Managers;
+    using Core;
 #pragma warning disable 0414
     public class BehaviorTree : IClass
     {
         public int mark=0;
-        EClassType IClass.classType { get { return EClassType.Core_BehaviorTree; } set { } }
         private int[] m_taskKeys;
         private ITask[] m_taskValues;
         private ITask m_runningTask;

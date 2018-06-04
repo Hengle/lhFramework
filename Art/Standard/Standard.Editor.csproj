@@ -12,15 +12,12 @@
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.2.0f3</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>6</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -308,11 +305,18 @@
     <Compile Include="Assets\Toolkit\AssetImport\Editor\ImporterInspector.cs" />
     <Compile Include="Assets\Toolkit\AutoBuild\Editor\AutoBuild.cs" />
     <Compile Include="Assets\Toolkit\AutoSaveScene\Editor\AutoSaveScene.cs" />
-    <Compile Include="Assets\Toolkit\BundleWindow\Editor\BuildWindow\BundleBuildManager.cs" />
-    <Compile Include="Assets\Toolkit\BundleWindow\Editor\BuildWindow\BundleBuildWindow.cs" />
-    <Compile Include="Assets\Toolkit\BundleWindow\Editor\BuildWindow\BundlePack.cs" />
-    <Compile Include="Assets\Toolkit\BundleWindow\Editor\BuildWindow\EVariantType.cs" />
-    <Compile Include="Assets\Toolkit\BundleWindow\Editor\RuntimeWindow\BundleRuntimeWindow.cs" />
+    <Compile Include="Assets\Toolkit\BundleChain\Editor\BuildWindow\BaseSource.cs" />
+    <Compile Include="Assets\Toolkit\BundleChain\Editor\BuildWindow\BundleBuildManager.cs" />
+    <Compile Include="Assets\Toolkit\BundleChain\Editor\BuildWindow\BundleBuildWindow.cs" />
+    <Compile Include="Assets\Toolkit\BundleChain\Editor\BuildWindow\BundlePack.cs" />
+    <Compile Include="Assets\Toolkit\BundleChain\Editor\BuildWindow\CategoryData.cs" />
+    <Compile Include="Assets\Toolkit\BundleChain\Editor\BuildWindow\ESearchType.cs" />
+    <Compile Include="Assets\Toolkit\BundleChain\Editor\BuildWindow\ESourceState.cs" />
+    <Compile Include="Assets\Toolkit\BundleChain\Editor\BuildWindow\EVariantType.cs" />
+    <Compile Include="Assets\Toolkit\BundleChain\Editor\BuildWindow\SourceDirectory.cs" />
+    <Compile Include="Assets\Toolkit\BundleChain\Editor\BuildWindow\SourceFile.cs" />
+    <Compile Include="Assets\Toolkit\BundleChain\Editor\BuildWindow\VariantData.cs" />
+    <Compile Include="Assets\Toolkit\BundleChain\Editor\RuntimeWindow\BundleRuntimeWindow.cs" />
     <Compile Include="Assets\Toolkit\Cinemachine\Base\Editor\Editors\CinemachineBasicMultiChannelPerlinEditor.cs" />
     <Compile Include="Assets\Toolkit\Cinemachine\Base\Editor\Editors\CinemachineBlenderSettingsEditor.cs" />
     <Compile Include="Assets\Toolkit\Cinemachine\Base\Editor\Editors\CinemachineBlendListCameraEditor.cs" />
@@ -356,6 +360,9 @@
     <Compile Include="Assets\Toolkit\Cinemachine\PostFX\Editor\CinemachinePostProcessingEditor.cs" />
     <Compile Include="Assets\Toolkit\Cinemachine\PostFX\Editor\PostFXAutoImport.cs" />
     <Compile Include="Assets\Toolkit\Cinemachine\Timeline\Editor\CinemachineShotEditor.cs" />
+    <Compile Include="Assets\Toolkit\FastifyPool\Editor\ClassRuntimeWindow.cs" />
+    <Compile Include="Assets\Toolkit\FastifyPool\Editor\EffectRuntimeWindow.cs" />
+    <Compile Include="Assets\Toolkit\FastifyPool\Editor\ModelRuntimeWindow.cs" />
     <Compile Include="Assets\Toolkit\Haste\Editor\InternalResources\HasteShortcut.cs" />
     <Compile Include="Assets\Toolkit\Maintainer\Editor\Code\Maintainer.cs" />
     <Compile Include="Assets\Toolkit\Maintainer\Editor\Code\Modules\RecordsBased\Cleaner\ProjectCleaner.cs" />

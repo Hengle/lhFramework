@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 3927761324
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8783516b858fe1527cc36dac122e1bef
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: cc983a3149e5fb03ce027e70c7a1a559
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Materials/Mask_Dark.mat
+Dependencies: []

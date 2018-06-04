@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1976876244
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f24a568b57e217d63d2a56a3b7ecbd3c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4cd0a5558493b0679e071c141fc729a3
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/Mask_003.tga
+Dependencies: []

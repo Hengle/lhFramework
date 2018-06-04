@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 3188338918
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d43db6e93163694296a8a7e23e9085a5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Materials/UI_003_Red.mat
+Dependencies:
+- E:/Personal/GitHub/lhFramework/Art/Standard/Assets/StreamingAssets/StandaloneWindows64/Bundle/textures/ui_002_r.n

@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 511696192
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e1d9faff9f09f5a02dc4124e525ddce2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4cd0a5558493b0679e071c141fc729a3
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/battle_tree01_d.png
+Dependencies: []
