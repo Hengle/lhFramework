@@ -44,15 +44,24 @@ public static class AutoBuild
                 fileInfo.Directory.Create();
             BuildPipeline.BuildPlayer(sceneList.ToArray(), filepath, BuildTarget.iOS, BuildOptions.None);
         }
-        //else if (platform.ToLower()=="standard")
-        //{
-        //    EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneWindows64);
-        //    string filepath = outputPath + ".exe";
-        //    FileInfo fileInfo = new FileInfo(filepath);
-        //    if (!fileInfo.Directory.Exists)
-        //        fileInfo.Directory.Create();
-        //    BuildPipeline.BuildPlayer(sceneList.ToArray(), filepath, BuildTarget.StandaloneWindows64, BuildOptions.None);
-        //}
+        else if (platform.ToLower() == "standard_win")
+        {
+            EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneWindows64);
+            string filepath = outputPath + ".exe";
+            FileInfo fileInfo = new FileInfo(filepath);
+            if (!fileInfo.Directory.Exists)
+                fileInfo.Directory.Create();
+            BuildPipeline.BuildPlayer(sceneList.ToArray(), filepath, BuildTarget.StandaloneWindows64, BuildOptions.None);
+        }
+        else if (platform.ToLower() == "standard_mac")
+        {
+            EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneOSXIntel64);
+            string filepath = outputPath + ".exe";
+            FileInfo fileInfo = new FileInfo(filepath);
+            if (!fileInfo.Directory.Exists)
+                fileInfo.Directory.Create();
+            BuildPipeline.BuildPlayer(sceneList.ToArray(), filepath, BuildTarget.StandaloneOSXIntel64, BuildOptions.None);
+        }
     }
     [MenuItem("Tools/AudoBuild/BuildSource")]
     public static void BuildSources(){
