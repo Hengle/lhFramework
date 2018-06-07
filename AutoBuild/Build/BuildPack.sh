@@ -51,3 +51,5 @@ echo "package-------------------->  program"
 $unity -quit -batchmode -projectPath $programPath -logFile "$absoluteOutputPath/proj_program.log"  -executeMethod AutoBuild.BuildPackage "$version" "$platform" "$relateOutputPath/package" "$mode"
 
 echo "end"
+
+read flag

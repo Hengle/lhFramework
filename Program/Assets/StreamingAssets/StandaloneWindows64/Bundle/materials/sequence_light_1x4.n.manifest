@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 1173699411
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ec0961b73dd72fd2e6de4f9dd64a451b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: cc983a3149e5fb03ce027e70c7a1a559
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Materials/Sequence_light_1x4.mat
+Dependencies: []

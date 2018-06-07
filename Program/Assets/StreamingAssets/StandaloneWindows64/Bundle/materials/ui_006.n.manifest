@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1531971841
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 639f1ec9fbbb6ffb5e23cde467d2ebf9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Materials/UI_006.mat
+Dependencies: []

@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3608663454
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 110d2d5430f94b11a8f20b9b6e1ef940
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4cd0a5558493b0679e071c141fc729a3
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/show_build03_d.png
+Dependencies: []

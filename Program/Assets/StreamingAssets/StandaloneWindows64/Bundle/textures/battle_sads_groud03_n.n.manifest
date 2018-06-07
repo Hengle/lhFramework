@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 72382020
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e002979f43a9741269870b305cc9af4b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4cd0a5558493b0679e071c141fc729a3
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/battle_sads_groud03_n.png
+Dependencies: []

@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio for Mac
+# Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "Program.csproj", "{B873CEF2-B895-32AD-C0A0-F4B3222ABF6C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program.Editor", "Program.Editor.csproj", "{5CEA92E9-F96D-ECD4-F6F6-68D272DB8732}"

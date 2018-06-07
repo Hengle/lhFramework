@@ -12,15 +12,12 @@
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.2.0f3</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>6</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -226,82 +223,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CSharp\Framework\Debug\ELogType.cs" />
-    <Compile Include="Assets\CSharp\Framework\Debug\Log.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Component\Behavior\BehaviorManager.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Component\Behavior\BehaviorTree.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Component\Behavior\Composite\Parallel.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Component\Behavior\Composite\Selector.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Component\Behavior\Composite\Sequencer.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Component\Behavior\Core\BehaviorData.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Component\Behavior\Core\CompositeTask.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Component\Behavior\Core\DecoratorTask.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Component\Behavior\Core\ESharedVariablesType.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Component\Behavior\Core\ETaskResult.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Component\Behavior\Core\ETaskType.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Component\Behavior\Core\Havior.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Component\Behavior\Core\ITask.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Component\Behavior\Core\LeafCondition.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Component\Behavior\Core\LeafTask.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Component\Behavior\Core\TaskAttribute.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Component\Behavior\Decorator\Interval.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Component\Behavior\Decorator\Inverter.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Component\Behavior\Havior\Failure.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Component\Behavior\Havior\Success.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Component\Coroutine\Coroutine.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Component\Coroutine\YieldInstruction.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Core\Base\Const.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Core\Base\Define.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Core\Base\Delegate.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Core\Base\Layer.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Core\Base\Macro.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Core\Enum\EProjectType.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Core\StaticExternal.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Infrastructure.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\CameraManager.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ClassManager\ClassManager.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ClassManager\ClassPool.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ClassManager\ClassPreload.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ClassManager\EClassGroup.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ClassManager\IClass.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\EffectManager\EEffectDirection.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\EffectManager\EEffectGroup.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\EffectManager\EEffectType.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\EffectManager\EffectControl.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\EffectManager\EffectManager.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\EffectManager\EffectStoreData.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\EffectManager\IEffect.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\MaterialManager\EMaterialType.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\MaterialManager\MaterialManager.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ModelManager\EModelGroup.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ModelManager\IModel.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ModelManager\ModelControl.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ModelManager\ModelManager.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ModelManager\ModelStoreData.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ResourcesManager\BundleSource.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ResourcesManager\EVariantType.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ResourcesManager\ISource.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ResourcesManager\LocalSource.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ResourcesManager\ResourcesManager.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ShaderManager.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\ShellManager.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\TimelineManager\CTimelineEventValue.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\TimelineManager\Delegate.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\TimelineManager\ETimelineCycleType.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\TimelineManager\ETimelineEventType.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\TimelineManager\ETimelineType.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\TimelineManager\ITimeline.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\TimelineManager\TimelineControl.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\TimelineManager\TimelineEventAsset.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\TimelineManager\TimelineEventBehaviour.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\TimelineManager\TimelineManager.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\TimelineManager\TimelineStoreData.cs" />
-    <Compile Include="Assets\CSharp\Framework\Infrastructure\Manager\TimeManager.cs" />
-    <Compile Include="Assets\CSharp\UnitTest\ModelPoolUnitTest.cs" />
-    <Compile Include="Assets\CSharp\UnitTest\EffectPoolUnitTest.cs" />
-    <Compile Include="Assets\CSharp\UnitTest\ClassPoolUnitTest.cs" />
-    <Compile Include="Assets\CSharp\UnitTest\ResourceManagerUnitTest.cs" />
-    <Compile Include="Assets\CSharp\UnitTest\TempUnitTest.cs" />
     <Compile Include="Assets\Toolkit\Cinemachine\Base\Runtime\Behaviours\CinemachineBlendListCamera.cs" />
     <Compile Include="Assets\Toolkit\Cinemachine\Base\Runtime\Behaviours\CinemachineBrain.cs" />
     <Compile Include="Assets\Toolkit\Cinemachine\Base\Runtime\Behaviours\CinemachineClearShot.cs" />

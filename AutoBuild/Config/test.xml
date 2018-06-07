@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="test" default="main">
+	<property environment="env"/>
+  <property name="RAW_BUILD_NUMBER" value="${env.BUILD_NUMBER}"/>
+	<target name="main">
+		<echo message="hello world basedir:${basedir}"/>
+		<echo message="os.name=${os.name}"/>
+		<echo message="properties = ${System.getProperties()}"/>
+		<echo message="properties = ${env.JAVA_HOME}"/>
+		<echo message="properties = ${env.ANT_HOME}"/>
+	</target>
+</project>

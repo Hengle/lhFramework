@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 2297123444
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: fd86a4429d3ce0f4ec0833519c9ff179
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4cd0a5558493b0679e071c141fc729a3
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/battle_sads_tree01_d.png
+Dependencies: []

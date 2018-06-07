@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 3118903139
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: fb6ab7dc021bf7625c312bd77fdae9d9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ff68f38490d3fa0b79fd635db4147ce6
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Prefabs/eff_inner_hearttree_001.prefab
+Dependencies: []

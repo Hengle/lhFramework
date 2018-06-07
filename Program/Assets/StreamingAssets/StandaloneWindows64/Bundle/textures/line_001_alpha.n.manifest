@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1467006848
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b2e222dcb4f520d7fb4ca86a7246d7a9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4cd0a5558493b0679e071c141fc729a3
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/Line_001_Alpha.tga
+Dependencies: []

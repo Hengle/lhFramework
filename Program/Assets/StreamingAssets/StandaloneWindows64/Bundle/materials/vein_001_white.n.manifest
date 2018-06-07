@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 2242575748
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ea36b5be9884eab92334d741c4ae2339
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Materials/Vein_001_white.mat
+Dependencies:
+- E:/Personal/GitHub/lhFramework/Art/Standard/Assets/StreamingAssets/StandaloneWindows64/Bundle/textures/mask_003.n
+- E:/Personal/GitHub/lhFramework/Art/Standard/Assets/StreamingAssets/StandaloneWindows64/Bundle/textures/vein_001.n
+- E:/Personal/GitHub/lhFramework/Art/Standard/Assets/StreamingAssets/StandaloneWindows64/Bundle/textures/vein_001_2.n
