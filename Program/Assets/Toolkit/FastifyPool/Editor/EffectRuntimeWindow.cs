@@ -166,6 +166,7 @@ namespace lhFramework.Tools.Pools
                         {
                             var data = m_runtimeData[m_selectedCommand][m_selectedData];
                             GUILayout.Label("Guid:  " + data.index);
+                            GUILayout.Label("Capacity   " + data.capacity);
                             GUILayout.Label("Grouop:  " + data.group);
                             EditorGUILayout.ObjectField("Obj" , data.obj,typeof(GameObject),true, GUILayout.Width(280));
                             GUILayout.Label("StoreCount:  " + data.storeCount);
@@ -265,6 +266,7 @@ namespace lhFramework.Tools.Pools
                 {
                     var cls = GetPool();
                     cls.index = source.Value.index;
+                    cls.capacity = source.Value.capacity;
                     cls.obj = source.Value.obj;
                     cls.freeCount = source.Value.freeCount;
                     cls.group = source.Value.group;

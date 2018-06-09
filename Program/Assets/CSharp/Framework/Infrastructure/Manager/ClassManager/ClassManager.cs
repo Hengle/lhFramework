@@ -131,7 +131,7 @@ namespace lhFramework.Infrastructure.Managers
                 Log.i(ELogType.Class, "LaoHan: freeObject dont has this type =>" + obj.GetType());
             }
 #else
-            g[index].FreeObject(obj);
+            m_instance.m_dic[(int)group][index].FreeObject(obj);
 #endif
             if (freeHandler != null)
                 freeHandler(obj.GetType());

@@ -107,10 +107,12 @@ namespace lhFramework.Infrastructure.Managers
             {
                 freeList.Clear();
             }
+#if UNITY_EDITOR
             if (allList!=null)
             {
                 allList.Clear();
             }
+#endif
         }
     }
 }

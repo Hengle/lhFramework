@@ -351,7 +351,7 @@ namespace lhFramework.Infrastructure.Managers
                 mod= Get(index,group);
             }
 #else
-            mod= m_instance.m_dic[index].Get();
+            mod= m_instance.m_dic[(int)group][index].Get();
 #endif
             if (getHandler != null)
                 getHandler(index);

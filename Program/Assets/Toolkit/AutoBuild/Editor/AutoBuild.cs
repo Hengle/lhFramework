@@ -24,7 +24,11 @@ public static class AutoBuild
         List<string> sceneList = new List<string>();
         EditorBuildSettingsScene[] temp = EditorBuildSettings.scenes;
         for (int i = 0, iMax = temp.Length; i < iMax; ++i)
-            sceneList.Add(temp[i].path);
+        {
+            var t = temp[i];
+            if (t == null || t.enabled == false) continue;
+            sceneList.Add(t.path);
+        }
         string curTime = System.DateTime.Now.ToString("yyyy_MM_dd_hh_mm");
         if (platform.ToLower()=="android")
         {

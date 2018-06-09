@@ -1,4 +1,4 @@
-﻿using System;
+﻿//using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +12,7 @@ namespace lhFramework.Infrastructure.Managers
         public EEffectGroup group;
         public int index;
         public int storeCount;
+        public int capacity;
         public GameObject obj;
         private EventHandler pauseHandler;
         private EventHandler resumeHandler;
@@ -70,6 +71,10 @@ namespace lhFramework.Infrastructure.Managers
 #endif
                 usingList.Add(f);
                 return f;
+            }
+            else if (capacity>0 && usingList.Count> capacity)
+            {
+                return null;
             }
             else
             {
@@ -210,7 +215,7 @@ namespace lhFramework.Infrastructure.Managers
         }
         EffectManager()
         {
-            var a=Enum.GetValues(typeof(EEffectGroup));
+            var a=System.Enum.GetValues(typeof(EEffectGroup));
             m_dic = new Dictionary<int, EffectPool>[a.Length];
             for (int i = 0; i < a.Length; i++)
             {
@@ -321,7 +326,7 @@ namespace lhFramework.Infrastructure.Managers
                 Store(l, StoreHandler);
             }
         }
-        public static void Store(int index,int count,EEffectGroup group, EventHandler onStoreHandler =null)
+        public static void Store(int index, int count, EEffectGroup group, int capacity = -1, EventHandler onStoreHandler =null)
         {
             var g = m_instance.m_dic[(int)group];
             if (g.ContainsKey(index))
@@ -334,6 +339,7 @@ namespace lhFramework.Infrastructure.Managers
             {
                 var pool = new EffectPool();
                 pool.index = index;
+                pool.capacity = capacity;
                 pool.storeCount = count;
                 g.Add(index, pool);
                 pool.loadHandler = m_instance.loadHandler;
@@ -345,7 +351,7 @@ namespace lhFramework.Infrastructure.Managers
         }
         public static void Store(EffectStoreData data, EventHandler onStoreHandler =null)
         {
-            Store(data.index, data.count,data.group, onStoreHandler);
+            Store(data.index, data.count,data.group,data.capacity, onStoreHandler);
         }
         public static IEffect Get(int index, Transform parent, Vector3 position, Quaternion rotation, EEffectGroup group = EEffectGroup.Base)
         {

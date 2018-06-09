@@ -8,5 +8,6 @@ namespace lhFramework.Infrastructure.Managers
         public int index;
         public int count;
         public EEffectGroup group;
+        public int capacity;
     }
 }
