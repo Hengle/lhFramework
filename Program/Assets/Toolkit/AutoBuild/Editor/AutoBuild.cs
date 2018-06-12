@@ -24,7 +24,39 @@ public static class AutoBuild
             if (t == null || t.enabled == false) continue;
             sceneList.Add(t.path);
         }
-        string curTime = System.DateTime.Now.ToString("yyyy_MM_dd_hh_mm");
+        if (dic.ContainsKey("currentLevel"))
+            QualitySettings.SetQualityLevel(System.Convert.ToInt32(dic["currentLevel"]));
+        if (dic.ContainsKey("development"))
+            EditorUserBuildSettings.development = System.Convert.ToBoolean(dic["development"]);
+        if (dic.ContainsKey("connectProfiler"))
+            EditorUserBuildSettings.connectProfiler = System.Convert.ToBoolean(dic["connectProfiler"]);
+        if (dic.ContainsKey("buildScriptsOnly"))
+            EditorUserBuildSettings.buildScriptsOnly = System.Convert.ToBoolean(dic["buildScriptsOnly"]);
+        if (dic.ContainsKey("allowDebugging"))
+            EditorUserBuildSettings.allowDebugging = System.Convert.ToBoolean(dic["allowDebugging"]);
+        if (dic.ContainsKey("compressFilesInPackage"))
+            EditorUserBuildSettings.compressFilesInPackage = System.Convert.ToBoolean(dic["compressFilesInPackage"]);
+        if (dic.ContainsKey("compressWithPsArc"))
+            EditorUserBuildSettings.compressWithPsArc = System.Convert.ToBoolean(dic["compressWithPsArc"]);
+        if (dic.ContainsKey("enableHeadlessMode"))
+            EditorUserBuildSettings.enableHeadlessMode = System.Convert.ToBoolean(dic["enableHeadlessMode"]);
+        if (dic.ContainsKey("explicitDivideByZeroChecks"))
+            EditorUserBuildSettings.explicitDivideByZeroChecks = System.Convert.ToBoolean(dic["explicitDivideByZeroChecks"]);
+        if (dic.ContainsKey("explicitNullChecks"))
+            EditorUserBuildSettings.explicitNullChecks = System.Convert.ToBoolean(dic["explicitNullChecks"]);
+        if (dic.ContainsKey("androidBuildSystem"))
+            EditorUserBuildSettings.androidBuildSystem = (AndroidBuildSystem)System.Convert.ToInt32(dic["androidBuildSystem"]);
+        if (dic.ContainsKey("androidBuildSubtarget"))
+            EditorUserBuildSettings.androidBuildSubtarget = (MobileTextureSubtarget)System.Convert.ToInt32(dic["androidBuildSubtarget"]);
+        if (dic.ContainsKey("androidDebugMinification"))
+            EditorUserBuildSettings.androidDebugMinification = (AndroidMinification)System.Convert.ToInt32(dic["androidDebugMinification"]);
+        if (dic.ContainsKey("androidReleaseMinification"))
+            EditorUserBuildSettings.androidReleaseMinification = (AndroidMinification)System.Convert.ToInt32(dic["androidReleaseMinification"]);
+        if (dic.ContainsKey("androidDeviceSocketAddress"))
+            EditorUserBuildSettings.androidDeviceSocketAddress = dic["androidDeviceSocketAddress"];
+        if (dic.ContainsKey("iOSBuildConfigType"))
+            EditorUserBuildSettings.iOSBuildConfigType = (iOSBuildType)System.Convert.ToInt32(dic["iOSBuildConfigType"]);
+
         if (dic.ContainsKey("companyName"))
             PlayerSettings.companyName = dic["companyName"];
         if (dic.ContainsKey("productName"))

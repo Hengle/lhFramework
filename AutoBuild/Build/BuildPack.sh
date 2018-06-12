@@ -1,6 +1,7 @@
 #!/bin/sh
 echo "start"
 #这里就可以拿到jenkins传递进来的参数了
+#platform====>13:Android  9:iOS  19:StandaloneWindows64  24:StandaloneLinux64
 #把所有=后面的参数取出来
 if test svn
 then
@@ -15,20 +16,25 @@ done
 
 if [[ -z $platform || -z $version || -z $mode ]];
 then
-echo "error:must has platform version mode"
+echo -e "error:must has platform version mode\nplatform====>13:Android  9:iOS  19:StandaloneWindows64  24:StandaloneLinux64\nmode===>debug  release"
 exit 0
 fi
 
 . ./read_ini.sh
 read_ini properties.ini
-
+if [ $mode == "debug" ];then
+	read_ini properties_debug.ini
+elif [ $mode == "release" ]
+	read_ini properties_release.ini
+else
+	echo "dont has this mode:"$mode
+fi
 dirname="pack-$platform-"$(date +%Y_%m_%d_%H_%M)
 absoluteOutputPath=$INI__executePath__rootPath/AutoBuild/Output/$platform/$dirname
-relateOutputPath=../AutoBuild/Output/$platform/$dirname
 #运行时程序项目路径
 programPath=$INI__executePath__rootPath/Program
 #编辑器资源项目路径
-artPath=$INI__executePath__rootPath/Art/$platform
+artPath=$INI__executePath__rootPath/Art
 #uiPath=$rootPath/UI
 #audioPath=$rootPath/Audio
 
@@ -48,7 +54,7 @@ echo "mode = $mode"
 echo "programPath = $programPath"
 echo "artPath = $artPath"
 echo "absoluteOutputPath = $absoluteOutputPath"
-echo "relateOutputPath = $relateOutputPath"
+echo "packageRelateOutputPath = $packageRelateOutputPath/$platform/$dirname/package"
 echo "dirname = $dirname"
 echo "package-------------------->  art"
 #美术资源监测。  打开unity3d  执行AutoBuild.Build 方法。
@@ -56,12 +62,17 @@ $INI__executePath__unityPath \
 -quit -batchmode \
 -projectPath $artPath \
 -logFile "$absoluteOutputPath/proj_art.log" \
--executeMethod AutoBuild.BuildPackage "$editor_maintainer_filepath" "$mode"
+-executeMethod AutoBuild.BuildSource \
+"maintainer_filePath=$editor_maintainer_filepath" \
+"mode=$mode" \
+"platform=$platform" \
+"currentLevel=$INI__qualitySettings__currentLevel"
+
 echo "package-------------------->  ui"
 
 echo "package-------------------->  program"
 #程序打包  unity产生log就写在tmp/1.log里面，比如Debug.Log和Unity编辑器产生的。
-if [ $platform == "Android" ]; then
+if [ $platform == 13 ]; then
 $INI__executePath__unityPath \
 -quit -batchmode \
 -projectPath $programPath \
@@ -69,38 +80,54 @@ $INI__executePath__unityPath \
 -executeMethod AutoBuild.BuildPackage \
 "version=$version" \
 "platform=$platform" \
-"outputPath=$relateOutputPath/package" \
+"outputPath=$packageRelateOutputPath/$platform/$dirname/package" \
 "mode=$mode" \
-"companyName=$INI_playerSettings__companyName" \
-"productName=$INI_playerSettings__productName" \
-"applicationIdentifier=$INI_playerSettings__applicationIdentifier" \
-"colorSpace=$INI_playerSettings__colorSpace" \
-"gpuSkinning=$INI_playerSettings__gpuSkinning" \
-"graphicsJobs=$INI_playerSettings__graphicsJobs" \
-"muteOtherAudioSources=$INI_playerSettings__muteOtherAudioSources" \
-"runInBackground=$INI_playerSettings__runInBackground" \
-"stripEngineCode=$INI_playerSettings__stripEngineCode" \
-"strippingLevel=$INI_playerSettings__strippingLevel" \
-"androidIsGame=$INI_playerSettings__android_androidIsGame" \
-"androidTVCompatibility=$INI_playerSettings__android_androidTVCompatibility" \
-"blitType=$INI_playerSettings__android_blitType" \
-"bundleVersionCode=$INI_playerSettings__android_bundleVersionCode" \
-"disableDepthAndStencilBuffers=$INI_playerSettings__android_disableDepthAndStencilBuffers" \
-"forceInternetPermission=$INI_playerSettings__android_forceInternetPermission" \
-"forceSDCardPermission=$INI_playerSettings__android_forceSDCardPermission" \
-"keystoreName=$INI_playerSettings__android_keystoreName" \
-"keyaliasPass=$INI_playerSettings__android_keyaliasPass" \
-"keyaliasName=$INI_playerSettings__android_keyaliasName" \
-"keystorePass=$INI_playerSettings__android_keystorePass" \
-"maxAspectRatio=$INI_playerSettings__android_maxAspectRatio" \
-"minSdkVersion=$INI_playerSettings__android_minSdkVersion" \
-"preferredInstallLocation=$INI_playerSettings__android_preferredInstallLocation" \
-"showActivityIndicatorOnLoading=$INI_playerSettings__android_showActivityIndicatorOnLoading" \
-"splashScreenScale=$INI_playerSettings__android_splashScreenScale" \
-"targetDevice=$INI_playerSettings__android_targetDevice" \
-"targetSdkVersion=$INI_playerSettings__android_targetSdkVersion" \
-"useAPKExpansionFiles=$INI_playerSettings__android_useAPKExpansionFiles"
-elif [ $platform == 'IOS']; then
+"companyName=$INI__playerSettings__companyName" \
+"productName=$INI__playerSettings__productName" \
+"applicationIdentifier=$INI__playerSettings__applicationIdentifier" \
+"colorSpace=$INI__playerSettings__colorSpace" \
+"gpuSkinning=$INI__playerSettings__gpuSkinning" \
+"graphicsJobs=$INI__playerSettings__graphicsJobs" \
+"muteOtherAudioSources=$INI__playerSettings__muteOtherAudioSources" \
+"runInBackground=$INI__playerSettings__runInBackground" \
+"stripEngineCode=$INI__playerSettings__stripEngineCode" \
+"strippingLevel=$INI__playerSettings__strippingLevel" \
+"androidIsGame=$INI__playerSettings__android_androidIsGame" \
+"androidTVCompatibility=$INI__playerSettings__android_androidTVCompatibility" \
+"blitType=$INI__playerSettings__android_blitType" \
+"bundleVersionCode=$INI__playerSettings__android_bundleVersionCode" \
+"disableDepthAndStencilBuffers=$INI__playerSettings__android_disableDepthAndStencilBuffers" \
+"forceInternetPermission=$INI__playerSettings__android_forceInternetPermission" \
+"forceSDCardPermission=$INI__playerSettings__android_forceSDCardPermission" \
+"keystoreName=$INI__playerSettings__android_keystoreName" \
+"keyaliasPass=$INI__playerSettings__android_keyaliasPass" \
+"keyaliasName=$INI__playerSettings__android_keyaliasName" \
+"keystorePass=$INI__playerSettings__android_keystorePass" \
+"maxAspectRatio=$INI__playerSettings__android_maxAspectRatio" \
+"minSdkVersion=$INI__playerSettings__android_minSdkVersion" \
+"preferredInstallLocation=$INI__playerSettings__android_preferredInstallLocation" \
+"showActivityIndicatorOnLoading=$INI__playerSettings__android_showActivityIndicatorOnLoading" \
+"splashScreenScale=$INI__playerSettings__android_splashScreenScale" \
+"targetDevice=$INI__playerSettings__android_targetDevice" \
+"targetSdkVersion=$INI__playerSettings__android_targetSdkVersion" \
+"useAPKExpansionFiles=$INI__playerSettings__android_useAPKExpansionFiles" \
+"development=$INI__buildSettings__development" \
+"connectProfiler=$INI__buildSettings__connectProfiler" \
+"buildScriptsOnly=$INI__buildSettings__buildScriptsOnly" \
+"allowDebugging=$INI__buildSettings__allowDebugging" \
+"compressFilesInPackage=$INI__buildSettings__compressFilesInPackage" \
+"compressWithPsArc=$INI__buildSettings__compressWithPsArc" \
+"enableHeadlessMode=$INI__buildSettings__enableHeadlessMode" \
+"explicitDivideByZeroChecks=$INI__buildSettings__explicitDivideByZeroChecks" \
+"explicitNullChecks=$INI__buildSettings__explicitNullChecks" \
+"androidBuildSystem=$INI__buildSettings__android_androidBuildSystem" \
+"androidBuildSubtarget=$INI__buildSettings__android_androidBuildSubtarget" \
+"androidDebugMinification=$INI__buildSettings__android_androidDebugMinification" \
+"androidReleaseMinification=$INI__buildSettings__android_androidReleaseMinification" \
+"androidDeviceSocketAddress=$INI__buildSettings__android_androidDeviceSocketAddress" \
+"iOSBuildConfigType=$INI__buildSettings__ios_iOSBuildConfigType" \
+"currentLevel=$INI__qualitySettings__currentLevel"
+elif [ $platform == 9 ]; then
 $INI__executePath__unityPath \
 -quit -batchmode \
 -projectPath $programPath \
@@ -108,39 +135,55 @@ $INI__executePath__unityPath \
 -executeMethod AutoBuild.BuildPackage \
 "version=$version" \
 "platform=$platform" \
-"outputPath=$relateOutputPath/package" \
+"outputPath=$packageRelateOutputPath/$platform/$dirname/package" \
 "mode=$mode" \
-"companyName=$INI_playerSettings__companyName" \
-"productName=$INI_playerSettings__productName" \
-"applicationIdentifier=$INI_playerSettings__applicationIdentifier" \
-"colorSpace=$INI_playerSettings__colorSpace" \
-"gpuSkinning=$INI_playerSettings__gpuSkinning" \
-"graphicsJobs=$INI_playerSettings__graphicsJobs" \
-"muteOtherAudioSources=$INI_playerSettings__muteOtherAudioSources" \
-"runInBackground=$INI_playerSettings__runInBackground" \
-"stripEngineCode=$INI_playerSettings__stripEngineCode" \
-"strippingLevel=$INI_playerSettings__strippingLevel" \
-"allowHTTPDownload=$INI_playerSettings__ios_allowHTTPDownload" \
-"appInBackgroundBehavior=$INI_playerSettings__ios_appInBackgroundBehavior" \
-"appleDeveloperTeamID=$INI_playerSettings__ios_appleDeveloperTeamID" \
-"appleEnableAutomaticSigning=$INI_playerSettings__ios_appleEnableAutomaticSigning" \
-"applicationDisplayName=$INI_playerSettings__ios_applicationDisplayName" \
-"backgroundModes=$INI_playerSettings__ios_backgroundModes" \
-"buildNumber=$INI_playerSettings__ios_buildNumber" \
-"cameraUsageDescription=$INI_playerSettings__ios_cameraUsageDescription" \
-"forceHardShadowsOnMetal=$INI_playerSettings__ios_forceHardShadowsOnMetal" \
-"iOSManualProvisioningProfileID=$INI_playerSettings__ios_iOSManualProvisioningProfileID" \
-"locationUsageDescription=$INI_playerSettings__ios_locationUsageDescription" \
-"microphoneUsageDescription=$INI_playerSettings__ios_microphoneUsageDescription" \
-"prerenderedIcon=$INI_playerSettings__ios_prerenderedIcon" \
-"requiresFullScreen=$INI_playerSettings__ios_requiresFullScreen" \
-"requiresPersistentWiFi=$INI_playerSettings__ios_requiresPersistentWiFi" \
-"scriptCallOptimization=$INI_playerSettings__ios_scriptCallOptimization" \
-"sdkVersion=$INI_playerSettings__ios_sdkVersion" \
-"showActivityIndicatorOnLoading=$INI_playerSettings__ios_showActivityIndicatorOnLoading" \
-"statusBarStyle=$INI_playerSettings__ios_statusBarStyle" \
-"targetDevice=$INI_playerSettings__ios_targetDevice" \
-"targetOSVersionString=$INI_playerSettings__ios_targetOSVersionString"
+"companyName=$INI__playerSettings__companyName" \
+"productName=$INI__playerSettings__productName" \
+"applicationIdentifier=$INI__playerSettings__applicationIdentifier" \
+"colorSpace=$INI__playerSettings__colorSpace" \
+"gpuSkinning=$INI__playerSettings__gpuSkinning" \
+"graphicsJobs=$INI__playerSettings__graphicsJobs" \
+"muteOtherAudioSources=$INI__playerSettings__muteOtherAudioSources" \
+"runInBackground=$INI__playerSettings__runInBackground" \
+"stripEngineCode=$INI__playerSettings__stripEngineCode" \
+"strippingLevel=$INI__playerSettings__strippingLevel" \
+"allowHTTPDownload=$INI__playerSettings__ios_allowHTTPDownload" \
+"appInBackgroundBehavior=$INI__playerSettings__ios_appInBackgroundBehavior" \
+"appleDeveloperTeamID=$INI__playerSettings__ios_appleDeveloperTeamID" \
+"appleEnableAutomaticSigning=$INI__playerSettings__ios_appleEnableAutomaticSigning" \
+"applicationDisplayName=$INI__playerSettings__ios_applicationDisplayName" \
+"backgroundModes=$INI__playerSettings__ios_backgroundModes" \
+"buildNumber=$INI__playerSettings__ios_buildNumber" \
+"cameraUsageDescription=$INI__playerSettings__ios_cameraUsageDescription" \
+"forceHardShadowsOnMetal=$INI__playerSettings__ios_forceHardShadowsOnMetal" \
+"iOSManualProvisioningProfileID=$INI__playerSettings__ios_iOSManualProvisioningProfileID" \
+"locationUsageDescription=$INI__playerSettings__ios_locationUsageDescription" \
+"microphoneUsageDescription=$INI__playerSettings__ios_microphoneUsageDescription" \
+"prerenderedIcon=$INI__playerSettings__ios_prerenderedIcon" \
+"requiresFullScreen=$INI__playerSettings__ios_requiresFullScreen" \
+"requiresPersistentWiFi=$INI__playerSettings__ios_requiresPersistentWiFi" \
+"scriptCallOptimization=$INI__playerSettings__ios_scriptCallOptimization" \
+"sdkVersion=$INI__playerSettings__ios_sdkVersion" \
+"showActivityIndicatorOnLoading=$INI__playerSettings__ios_showActivityIndicatorOnLoading" \
+"statusBarStyle=$INI__playerSettings__ios_statusBarStyle" \
+"targetDevice=$INI__playerSettings__ios_targetDevice" \
+"targetOSVersionString=$INI__playerSettings__ios_targetOSVersionString" \
+"development=$INI__buildSettings__development" \
+"connectProfiler=$INI__buildSettings__connectProfiler" \
+"buildScriptsOnly=$INI__buildSettings__buildScriptsOnly" \
+"allowDebugging=$INI__buildSettings__allowDebugging" \
+"compressFilesInPackage=$INI__buildSettings__compressFilesInPackage" \
+"compressWithPsArc=$INI__buildSettings__compressWithPsArc" \
+"enableHeadlessMode=$INI__buildSettings__enableHeadlessMode" \
+"explicitDivideByZeroChecks=$INI__buildSettings__explicitDivideByZeroChecks" \
+"explicitNullChecks=$INI__buildSettings__explicitNullChecks" \
+"androidBuildSystem=$INI__buildSettings__android_androidBuildSystem" \
+"androidBuildSubtarget=$INI__buildSettings__android_androidBuildSubtarget" \
+"androidDebugMinification=$INI__buildSettings__android_androidDebugMinification" \
+"androidReleaseMinification=$INI__buildSettings__android_androidReleaseMinification" \
+"androidDeviceSocketAddress=$INI__buildSettings__android_androidDeviceSocketAddress" \
+"iOSBuildConfigType=$INI__buildSettings__ios_iOSBuildConfigType" \
+"currentLevel=$INI__qualitySettings__currentLevel"
 
 else
 	echo "dont has this $platform only support Android and IOS"

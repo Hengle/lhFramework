@@ -660,7 +660,7 @@ namespace lhFramework.Tools.Bundle
         }
         private void PackBundle(string folderPaths)
         {
-            string outPath = Path.Combine(Path.Combine(bundleOutputFolder, ((BuildTarget)buildTarget).ToString()), bundleFolder);
+            string outPath = Path.Combine(Path.Combine(bundleOutputFolder, ((BuildTarget)(buildTarget)).ToString()), bundleFolder);
             outPath = outPath.Replace("\\", "/");
             foreach (var category in categoryData)
             {

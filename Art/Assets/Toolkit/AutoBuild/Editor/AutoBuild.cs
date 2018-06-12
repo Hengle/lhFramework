@@ -8,38 +8,42 @@ using CodeStage.Maintainer.Issues;
 
 public static class AutoBuild  {
 
-    [MenuItem("Tools/AutoBuild/BuildPackage")]
-    public static void BuildPackage(){
+    [MenuItem("Tools/AutoBuild/BuildSource")]
+    public static void BuildSource(){
 
-        string[] args = System.Environment.GetCommandLineArgs();
-        for (int i = 0; i < args.Length; i++)
-        {
-            Debug.Log(args[i] +"   "+i);
-        }
-        string filePath = args[9];
-        string mode = args[10];
+        var dic = GetCommandArgs();
+        string mode = dic["mode"];
+        string platform = dic["platform"];
         if (mode.ToLower()=="debug")
         {
-            var records = IssuesFinder.StartSearch(false);
-            using (StreamWriter sr = File.CreateText(filePath))
+            if (dic.ContainsKey("maintainer_filePath"))
             {
-                sr.Write(ReportsBuilder.GenerateReport(IssuesFinder.MODULE_NAME, records));
+                var records = IssuesFinder.StartSearch(false);
+                using (StreamWriter sr = File.CreateText(dic["maintainer_filePath"]))
+                {
+                    sr.Write(ReportsBuilder.GenerateReport(IssuesFinder.MODULE_NAME, records));
+                }
             }
         }
+        if (dic.ContainsKey("currentLevel"))
+            QualitySettings.SetQualityLevel(System.Convert.ToInt32(dic["currentLevel"]));
         lhFramework.Tools.Bundle.BundleBuildManager bundleManager = new lhFramework.Tools.Bundle.BundleBuildManager();
+        bundleManager.buildTarget = System.Convert.ToInt32(platform);
         bundleManager.BuildPackage();
         bundleManager = null;
     }
-    [MenuItem("Tools/AutoBuild/BuildSources")]
-    public static void BuildSources(){
+    private static Dictionary<string, string> GetCommandArgs()
+    {
+        Dictionary<string, string> dic = new Dictionary<string, string>();
         string[] args = System.Environment.GetCommandLineArgs();
         for (int i = 0; i < args.Length; i++)
         {
-            Debug.Log(args[i] + "   " + i);
+            if (args[i].Contains("="))
+            {
+                var split = args[i].Split('=');
+                dic.Add(split[0], split[1]);
+            }
         }
-        string version = args[9];
-        lhFramework.Tools.Bundle.BundleBuildManager bundleManager = new lhFramework.Tools.Bundle.BundleBuildManager();
-        bundleManager.BuildPackage();
-        bundleManager = null;
+        return dic;
     }
 }
