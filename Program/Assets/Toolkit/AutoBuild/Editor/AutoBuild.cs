@@ -24,10 +24,6 @@ public static class AutoBuild
             if (t == null || t.enabled == false) continue;
             sceneList.Add(t.path);
         }
-        foreach (var item in dic)
-        {
-            UnityEngine.Debug.Log(item.Key+"    "+item.Value);
-        }
         if (dic.ContainsKey("currentLevel") && !string.IsNullOrEmpty(dic["currentLevel"]))
             QualitySettings.SetQualityLevel(System.Convert.ToInt32(dic["currentLevel"]));
         if (dic.ContainsKey("development") && !string.IsNullOrEmpty(dic["development"]))
