@@ -24,26 +24,30 @@ public static class AutoBuild
             if (t == null || t.enabled == false) continue;
             sceneList.Add(t.path);
         }
+        foreach (var item in dic)
+        {
+            UnityEngine.Debug.Log(item.Key+"    "+item.Value);
+        }
         if (dic.ContainsKey("currentLevel") && !string.IsNullOrEmpty(dic["currentLevel"]))
             QualitySettings.SetQualityLevel(System.Convert.ToInt32(dic["currentLevel"]));
         if (dic.ContainsKey("development") && !string.IsNullOrEmpty(dic["development"]))
-            EditorUserBuildSettings.development = System.Convert.ToBoolean(dic["development"]);
+            EditorUserBuildSettings.development = System.Convert.ToBoolean(System.Convert.ToInt32(dic["development"]));
         if (dic.ContainsKey("connectProfiler") && !string.IsNullOrEmpty(dic["connectProfiler"]))
-            EditorUserBuildSettings.connectProfiler = System.Convert.ToBoolean(dic["connectProfiler"]);
+            EditorUserBuildSettings.connectProfiler = System.Convert.ToBoolean(System.Convert.ToInt32(dic["connectProfiler"]));
         if (dic.ContainsKey("buildScriptsOnly") && !string.IsNullOrEmpty(dic["buildScriptsOnly"]))
-            EditorUserBuildSettings.buildScriptsOnly = System.Convert.ToBoolean(dic["buildScriptsOnly"]);
+            EditorUserBuildSettings.buildScriptsOnly = System.Convert.ToBoolean(System.Convert.ToInt32(dic["buildScriptsOnly"]));
         if (dic.ContainsKey("allowDebugging") && !string.IsNullOrEmpty(dic["allowDebugging"]))
-            EditorUserBuildSettings.allowDebugging = System.Convert.ToBoolean(dic["allowDebugging"]);
+            EditorUserBuildSettings.allowDebugging = System.Convert.ToBoolean(System.Convert.ToInt32(dic["allowDebugging"]));
         if (dic.ContainsKey("compressFilesInPackage") && !string.IsNullOrEmpty(dic["compressFilesInPackage"]))
-            EditorUserBuildSettings.compressFilesInPackage = System.Convert.ToBoolean(dic["compressFilesInPackage"]);
+            EditorUserBuildSettings.compressFilesInPackage = System.Convert.ToBoolean(System.Convert.ToInt32(dic["compressFilesInPackage"]));
         if (dic.ContainsKey("compressWithPsArc") && !string.IsNullOrEmpty(dic["compressWithPsArc"]))
-            EditorUserBuildSettings.compressWithPsArc = System.Convert.ToBoolean(dic["compressWithPsArc"]);
+            EditorUserBuildSettings.compressWithPsArc = System.Convert.ToBoolean(System.Convert.ToInt32(dic["compressWithPsArc"]));
         if (dic.ContainsKey("enableHeadlessMode") && !string.IsNullOrEmpty(dic["enableHeadlessMode"]))
-            EditorUserBuildSettings.enableHeadlessMode = System.Convert.ToBoolean(dic["enableHeadlessMode"]);
+            EditorUserBuildSettings.enableHeadlessMode = System.Convert.ToBoolean(System.Convert.ToInt32(dic["enableHeadlessMode"]));
         if (dic.ContainsKey("explicitDivideByZeroChecks") && !string.IsNullOrEmpty(dic["explicitDivideByZeroChecks"]))
-            EditorUserBuildSettings.explicitDivideByZeroChecks = System.Convert.ToBoolean(dic["explicitDivideByZeroChecks"]);
+            EditorUserBuildSettings.explicitDivideByZeroChecks = System.Convert.ToBoolean(System.Convert.ToInt32(dic["explicitDivideByZeroChecks"]));
         if (dic.ContainsKey("explicitNullChecks") && !string.IsNullOrEmpty(dic["explicitNullChecks"]))
-            EditorUserBuildSettings.explicitNullChecks = System.Convert.ToBoolean(dic["explicitNullChecks"]);
+            EditorUserBuildSettings.explicitNullChecks = System.Convert.ToBoolean(System.Convert.ToInt32(dic["explicitNullChecks"]));
         if (dic.ContainsKey("androidBuildSystem") && !string.IsNullOrEmpty(dic["androidBuildSystem"]))
             EditorUserBuildSettings.androidBuildSystem = (AndroidBuildSystem)System.Convert.ToInt32(dic["androidBuildSystem"]);
         if (dic.ContainsKey("androidBuildSubtarget") && !string.IsNullOrEmpty(dic["androidBuildSubtarget"]))
@@ -66,34 +70,34 @@ public static class AutoBuild
         if (dic.ContainsKey("colorSpace") && !string.IsNullOrEmpty(dic["colorSpace"]))
             PlayerSettings.colorSpace = (ColorSpace)System.Convert.ToInt32(dic["colorSpace"]);
         if (dic.ContainsKey("gpuSkinning") && !string.IsNullOrEmpty(dic["gpuSkinning"]))
-            PlayerSettings.gpuSkinning = System.Convert.ToBoolean(dic["gpuSkinning"]);
+            PlayerSettings.gpuSkinning = System.Convert.ToBoolean(System.Convert.ToInt32(dic["gpuSkinning"]));
         if (dic.ContainsKey("graphicsJobs") && !string.IsNullOrEmpty(dic["graphicsJobs"]))
-            PlayerSettings.graphicsJobs = System.Convert.ToBoolean(dic["graphicsJobs"]);
+            PlayerSettings.graphicsJobs = System.Convert.ToBoolean(System.Convert.ToInt32(dic["graphicsJobs"]));
         if (dic.ContainsKey("muteOtherAudioSources") && !string.IsNullOrEmpty(dic["muteOtherAudioSources"]))
-            PlayerSettings.muteOtherAudioSources = System.Convert.ToBoolean(dic["muteOtherAudioSources"]);
+            PlayerSettings.muteOtherAudioSources = System.Convert.ToBoolean(System.Convert.ToInt32(dic["muteOtherAudioSources"]));
         if (dic.ContainsKey("runInBackground") && !string.IsNullOrEmpty(dic["runInBackground"]))
-            PlayerSettings.runInBackground = System.Convert.ToBoolean(dic["runInBackground"]);
+            PlayerSettings.runInBackground = System.Convert.ToBoolean(System.Convert.ToInt32(dic["runInBackground"]));
         if (dic.ContainsKey("stripEngineCode") && !string.IsNullOrEmpty(dic["stripEngineCode"]))
-            PlayerSettings.stripEngineCode = System.Convert.ToBoolean(dic["stripEngineCode"]);
+            PlayerSettings.stripEngineCode = System.Convert.ToBoolean(System.Convert.ToInt32(dic["stripEngineCode"]));
         if (dic.ContainsKey("strippingLevel") && !string.IsNullOrEmpty(dic["strippingLevel"]))
             PlayerSettings.strippingLevel = (StrippingLevel)System.Convert.ToInt32(dic["strippingLevel"]);
         if (platform==(int)BuildTarget.Android)
         {
             EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Android, BuildTarget.Android);
             if (dic.ContainsKey("androidIsGame") && !string.IsNullOrEmpty(dic["androidIsGame"]))
-                PlayerSettings.Android.androidIsGame = System.Convert.ToBoolean(dic["androidIsGame"]);
+                PlayerSettings.Android.androidIsGame = System.Convert.ToBoolean(System.Convert.ToInt32(dic["androidIsGame"]));
             if (dic.ContainsKey("androidTVCompatibility") && !string.IsNullOrEmpty(dic["androidTVCompatibility"]))
-                PlayerSettings.Android.androidTVCompatibility = System.Convert.ToBoolean(dic["androidTVCompatibility"]);
+                PlayerSettings.Android.androidTVCompatibility = System.Convert.ToBoolean(System.Convert.ToInt32(dic["androidTVCompatibility"]));
             if (dic.ContainsKey("blitType") && !string.IsNullOrEmpty(dic["blitType"]))
                 PlayerSettings.Android.blitType = (AndroidBlitType)System.Convert.ToInt32(dic["blitType"]);
             if (dic.ContainsKey("bundleVersionCode") && !string.IsNullOrEmpty(dic["bundleVersionCode"]))
                 PlayerSettings.Android.bundleVersionCode = System.Convert.ToInt32(dic["bundleVersionCode"]);
             if (dic.ContainsKey("disableDepthAndStencilBuffers") && !string.IsNullOrEmpty(dic["disableDepthAndStencilBuffers"]))
-                PlayerSettings.Android.disableDepthAndStencilBuffers = System.Convert.ToBoolean(dic["disableDepthAndStencilBuffers"]);
+                PlayerSettings.Android.disableDepthAndStencilBuffers = System.Convert.ToBoolean(System.Convert.ToInt32(dic["disableDepthAndStencilBuffers"]));
             if (dic.ContainsKey("forceInternetPermission") && !string.IsNullOrEmpty(dic["forceInternetPermission"]))
-                PlayerSettings.Android.forceInternetPermission = System.Convert.ToBoolean(dic["forceInternetPermission"]);
+                PlayerSettings.Android.forceInternetPermission = System.Convert.ToBoolean(System.Convert.ToInt32(dic["forceInternetPermission"]));
             if (dic.ContainsKey("forceSDCardPermission") && !string.IsNullOrEmpty(dic["forceSDCardPermission"]))
-                PlayerSettings.Android.forceSDCardPermission = System.Convert.ToBoolean(dic["forceSDCardPermission"]);
+                PlayerSettings.Android.forceSDCardPermission = System.Convert.ToBoolean(System.Convert.ToInt32(dic["forceSDCardPermission"]));
             if (dic.ContainsKey("keystoreName") && !string.IsNullOrEmpty(dic["keystoreName"]))
                 PlayerSettings.Android.keystoreName = Application.dataPath + dic["keystoreName"];
             if (dic.ContainsKey("keystorePass") && !string.IsNullOrEmpty(dic["keystorePass"]))
@@ -117,7 +121,7 @@ public static class AutoBuild
             if (dic.ContainsKey("targetSdkVersion") && !string.IsNullOrEmpty(dic["targetSdkVersion"]))
                 PlayerSettings.Android.targetSdkVersion = (AndroidSdkVersions)System.Convert.ToInt32(dic["targetSdkVersion"]);
             if (dic.ContainsKey("useAPKExpansionFiles") && !string.IsNullOrEmpty(dic["useAPKExpansionFiles"]))
-                PlayerSettings.Android.useAPKExpansionFiles = System.Convert.ToBoolean(dic["useAPKExpansionFiles"]);
+                PlayerSettings.Android.useAPKExpansionFiles = System.Convert.ToBoolean(System.Convert.ToInt32(dic["useAPKExpansionFiles"]));
 
             string filepath = outputPath +".apk";
             FileInfo fileInfo = new FileInfo(filepath);
@@ -130,13 +134,13 @@ public static class AutoBuild
             EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.iOS, BuildTarget.iOS);
 
             if (dic.ContainsKey("allowHTTPDownload") && !string.IsNullOrEmpty(dic["allowHTTPDownload"]))
-                PlayerSettings.iOS.allowHTTPDownload = System.Convert.ToBoolean(dic["allowHTTPDownload"]);
+                PlayerSettings.iOS.allowHTTPDownload = System.Convert.ToBoolean(System.Convert.ToInt32(dic["allowHTTPDownload"]));
             if (dic.ContainsKey("appInBackgroundBehavior") && !string.IsNullOrEmpty(dic["appInBackgroundBehavior"]))
                 PlayerSettings.iOS.appInBackgroundBehavior = (iOSAppInBackgroundBehavior)System.Convert.ToInt32(dic["appInBackgroundBehavior"]);
             if (dic.ContainsKey("appleDeveloperTeamID") && !string.IsNullOrEmpty(dic["appleDeveloperTeamID"]))
                 PlayerSettings.iOS.appleDeveloperTeamID = dic["appleDeveloperTeamID"];
             if (dic.ContainsKey("appleEnableAutomaticSigning") && !string.IsNullOrEmpty(dic["appleEnableAutomaticSigning"]))
-                PlayerSettings.iOS.appleEnableAutomaticSigning = System.Convert.ToBoolean(dic["appleEnableAutomaticSigning"]);
+                PlayerSettings.iOS.appleEnableAutomaticSigning = System.Convert.ToBoolean(System.Convert.ToInt32(dic["appleEnableAutomaticSigning"]));
             if (dic.ContainsKey("applicationDisplayName") && !string.IsNullOrEmpty(dic["applicationDisplayName"]))
                 PlayerSettings.iOS.applicationDisplayName = dic["applicationDisplayName"];
             if (dic.ContainsKey("backgroundModes") && !string.IsNullOrEmpty(dic["backgroundModes"]))
@@ -146,7 +150,7 @@ public static class AutoBuild
             if (dic.ContainsKey("cameraUsageDescription") && !string.IsNullOrEmpty(dic["cameraUsageDescription"]))
                 PlayerSettings.iOS.cameraUsageDescription = dic["cameraUsageDescription"];
             if (dic.ContainsKey("forceHardShadowsOnMetal") && !string.IsNullOrEmpty(dic["forceHardShadowsOnMetal"]))
-                PlayerSettings.iOS.forceHardShadowsOnMetal = System.Convert.ToBoolean(dic["forceHardShadowsOnMetal"]);
+                PlayerSettings.iOS.forceHardShadowsOnMetal = System.Convert.ToBoolean(System.Convert.ToInt32(dic["forceHardShadowsOnMetal"]));
             if (dic.ContainsKey("iOSManualProvisioningProfileID") && !string.IsNullOrEmpty(dic["iOSManualProvisioningProfileID"]))
                 PlayerSettings.iOS.iOSManualProvisioningProfileID = dic["iOSManualProvisioningProfileID"];
             if (dic.ContainsKey("locationUsageDescription") && !string.IsNullOrEmpty(dic["locationUsageDescription"]))
@@ -154,11 +158,11 @@ public static class AutoBuild
             if (dic.ContainsKey("microphoneUsageDescription") && !string.IsNullOrEmpty(dic["microphoneUsageDescription"]))
                 PlayerSettings.iOS.microphoneUsageDescription = dic["microphoneUsageDescription"];
             if (dic.ContainsKey("prerenderedIcon") && !string.IsNullOrEmpty(dic["prerenderedIcon"]))
-                PlayerSettings.iOS.prerenderedIcon = System.Convert.ToBoolean(dic["prerenderedIcon"]);
+                PlayerSettings.iOS.prerenderedIcon = System.Convert.ToBoolean(System.Convert.ToInt32(dic["prerenderedIcon"]));
             if (dic.ContainsKey("requiresFullScreen") && !string.IsNullOrEmpty(dic["requiresFullScreen"]))
-                PlayerSettings.iOS.requiresFullScreen = System.Convert.ToBoolean(dic["requiresFullScreen"]);
+                PlayerSettings.iOS.requiresFullScreen = System.Convert.ToBoolean(System.Convert.ToInt32(dic["requiresFullScreen"]));
             if (dic.ContainsKey("requiresPersistentWiFi") && !string.IsNullOrEmpty(dic["requiresPersistentWiFi"]))
-                PlayerSettings.iOS.requiresPersistentWiFi = System.Convert.ToBoolean(dic["requiresPersistentWiFi"]);
+                PlayerSettings.iOS.requiresPersistentWiFi = System.Convert.ToBoolean(System.Convert.ToInt32(dic["requiresPersistentWiFi"]));
             if (dic.ContainsKey("scriptCallOptimization") && !string.IsNullOrEmpty(dic["scriptCallOptimization"]))
                 PlayerSettings.iOS.scriptCallOptimization =(ScriptCallOptimizationLevel)System.Convert.ToInt32(dic["scriptCallOptimization"]);
             if (dic.ContainsKey("sdkVersion") && !string.IsNullOrEmpty(dic["sdkVersion"]))

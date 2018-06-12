@@ -25,7 +25,7 @@ public static class AutoBuild  {
                 }
             }
         }
-        if (dic.ContainsKey("currentLevel"))
+        if (dic.ContainsKey("currentLevel") && !string.IsNullOrEmpty(dic["currentLevel"]))
             QualitySettings.SetQualityLevel(System.Convert.ToInt32(dic["currentLevel"]));
         lhFramework.Tools.Bundle.BundleBuildManager bundleManager = new lhFramework.Tools.Bundle.BundleBuildManager();
         bundleManager.buildTarget = System.Convert.ToInt32(platform);
