@@ -70,17 +70,80 @@ $INI__executePath__unityPath \
 "version=$version" \
 "platform=$platform" \
 "outputPath=$relateOutputPath/package" \
-"mode=$mode"
-
+"mode=$mode" \
+"companyName=$INI_playerSettings__companyName" \
+"productName=$INI_playerSettings__productName" \
+"applicationIdentifier=$INI_playerSettings__applicationIdentifier" \
+"colorSpace=$INI_playerSettings__colorSpace" \
+"gpuSkinning=$INI_playerSettings__gpuSkinning" \
+"graphicsJobs=$INI_playerSettings__graphicsJobs" \
+"muteOtherAudioSources=$INI_playerSettings__muteOtherAudioSources" \
+"runInBackground=$INI_playerSettings__runInBackground" \
+"stripEngineCode=$INI_playerSettings__stripEngineCode" \
+"strippingLevel=$INI_playerSettings__strippingLevel" \
+"androidIsGame=$INI_playerSettings__android_androidIsGame" \
+"androidTVCompatibility=$INI_playerSettings__android_androidTVCompatibility" \
+"blitType=$INI_playerSettings__android_blitType" \
+"bundleVersionCode=$INI_playerSettings__android_bundleVersionCode" \
+"disableDepthAndStencilBuffers=$INI_playerSettings__android_disableDepthAndStencilBuffers" \
+"forceInternetPermission=$INI_playerSettings__android_forceInternetPermission" \
+"forceSDCardPermission=$INI_playerSettings__android_forceSDCardPermission" \
+"keystoreName=$INI_playerSettings__android_keystoreName" \
+"keyaliasPass=$INI_playerSettings__android_keyaliasPass" \
+"keyaliasName=$INI_playerSettings__android_keyaliasName" \
+"keystorePass=$INI_playerSettings__android_keystorePass" \
+"maxAspectRatio=$INI_playerSettings__android_maxAspectRatio" \
+"minSdkVersion=$INI_playerSettings__android_minSdkVersion" \
+"preferredInstallLocation=$INI_playerSettings__android_preferredInstallLocation" \
+"showActivityIndicatorOnLoading=$INI_playerSettings__android_showActivityIndicatorOnLoading" \
+"splashScreenScale=$INI_playerSettings__android_splashScreenScale" \
+"targetDevice=$INI_playerSettings__android_targetDevice" \
+"targetSdkVersion=$INI_playerSettings__android_targetSdkVersion" \
+"useAPKExpansionFiles=$INI_playerSettings__android_useAPKExpansionFiles"
 elif [ $platform == 'IOS']; then
 $INI__executePath__unityPath \
 -quit -batchmode \
 -projectPath $programPath \
 -logFile "$absoluteOutputPath/proj_program.log" \
--executeMethod AutoBuild.BuildPackage "$version" "$platform" "$relateOutputPath/package" "$mode"
+-executeMethod AutoBuild.BuildPackage \
+"version=$version" \
+"platform=$platform" \
+"outputPath=$relateOutputPath/package" \
+"mode=$mode" \
+"companyName=$INI_playerSettings__companyName" \
+"productName=$INI_playerSettings__productName" \
+"applicationIdentifier=$INI_playerSettings__applicationIdentifier" \
+"colorSpace=$INI_playerSettings__colorSpace" \
+"gpuSkinning=$INI_playerSettings__gpuSkinning" \
+"graphicsJobs=$INI_playerSettings__graphicsJobs" \
+"muteOtherAudioSources=$INI_playerSettings__muteOtherAudioSources" \
+"runInBackground=$INI_playerSettings__runInBackground" \
+"stripEngineCode=$INI_playerSettings__stripEngineCode" \
+"strippingLevel=$INI_playerSettings__strippingLevel" \
+"allowHTTPDownload=$INI_playerSettings__ios_allowHTTPDownload" \
+"appInBackgroundBehavior=$INI_playerSettings__ios_appInBackgroundBehavior" \
+"appleDeveloperTeamID=$INI_playerSettings__ios_appleDeveloperTeamID" \
+"appleEnableAutomaticSigning=$INI_playerSettings__ios_appleEnableAutomaticSigning" \
+"applicationDisplayName=$INI_playerSettings__ios_applicationDisplayName" \
+"backgroundModes=$INI_playerSettings__ios_backgroundModes" \
+"buildNumber=$INI_playerSettings__ios_buildNumber" \
+"cameraUsageDescription=$INI_playerSettings__ios_cameraUsageDescription" \
+"forceHardShadowsOnMetal=$INI_playerSettings__ios_forceHardShadowsOnMetal" \
+"iOSManualProvisioningProfileID=$INI_playerSettings__ios_iOSManualProvisioningProfileID" \
+"locationUsageDescription=$INI_playerSettings__ios_locationUsageDescription" \
+"microphoneUsageDescription=$INI_playerSettings__ios_microphoneUsageDescription" \
+"prerenderedIcon=$INI_playerSettings__ios_prerenderedIcon" \
+"requiresFullScreen=$INI_playerSettings__ios_requiresFullScreen" \
+"requiresPersistentWiFi=$INI_playerSettings__ios_requiresPersistentWiFi" \
+"scriptCallOptimization=$INI_playerSettings__ios_scriptCallOptimization" \
+"sdkVersion=$INI_playerSettings__ios_sdkVersion" \
+"showActivityIndicatorOnLoading=$INI_playerSettings__ios_showActivityIndicatorOnLoading" \
+"statusBarStyle=$INI_playerSettings__ios_statusBarStyle" \
+"targetDevice=$INI_playerSettings__ios_targetDevice" \
+"targetOSVersionString=$INI_playerSettings__ios_targetOSVersionString"
 
 else
-echo "dont has this $platform"
+	echo "dont has this $platform only support Android and IOS"
 fi
 echo "end"
 
