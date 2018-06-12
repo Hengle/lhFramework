@@ -47,6 +47,7 @@ namespace lhFramework.Tools.Bundle
                 return;
             }
             BundleBuildManager manager = new BundleBuildManager();
+            manager.Initialize();
             manager.BuildTable();
             manager = null;
             EditorUtility.DisplayDialog("Info", "Bundle table success!", "Ok");
@@ -60,6 +61,7 @@ namespace lhFramework.Tools.Bundle
                 return;
             }
             BundleBuildManager manager = new BundleBuildManager();
+            manager.Initialize();
             manager.BuildPackage();
             manager = null;
             EditorUtility.DisplayDialog("Info", "Bundle Package success!", "Ok");
@@ -68,6 +70,7 @@ namespace lhFramework.Tools.Bundle
         {
             EditorUtility.DisplayProgressBar("build table", "building", 0.8f);
             m_bundleBuildManager = new BundleBuildManager();
+            m_bundleBuildManager.Initialize();
             if (m_bundleBuildManager.categoryData.Count <= 0)
             {
                 m_selectedCategory = "";

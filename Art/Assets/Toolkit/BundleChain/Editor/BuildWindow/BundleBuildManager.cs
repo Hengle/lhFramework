@@ -404,6 +404,9 @@ namespace lhFramework.Tools.Bundle
         private Dictionary<string, BaseSource> m_allSourcesPath = new Dictionary<string, BaseSource>();
         public BundleBuildManager()
         {
+        }
+        public void Initialize()
+        {
             if (buildTarget == (int)BuildTarget.NoTarget)
             {
                 buildTarget = (int)EditorUserBuildSettings.activeBuildTarget;
