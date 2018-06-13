@@ -1,6 +1,15 @@
 
-Art/Art.csproj
-Art/Art.csproj
-*.csproj
-Art/Art.sln
-Program/.vs/Program/v14/.suo
+*/*.csproj
+*/*.sln
+*/*.vs
+.DS_Store
+Program/Temp
+Program/Library
+Program/UnityPackageManager
+Program/etc
+Program/uyt.app
+Art/Temp
+ARt/Library
+Art/UnityPackageManager
+Art/et
+Art/uyt.app

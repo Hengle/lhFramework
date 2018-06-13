@@ -24,7 +24,7 @@ fi
 read_ini properties.ini
 if [ $mode == "debug" ];then
 	read_ini properties_debug.ini
-elif [ $mode == "release" ]
+elif [ $mode == "release" ];then
 	read_ini properties_release.ini
 else
 	echo "dont has this mode:"$mode
@@ -54,7 +54,7 @@ echo "mode = $mode"
 echo "programPath = $programPath"
 echo "artPath = $artPath"
 echo "absoluteOutputPath = $absoluteOutputPath"
-echo "packageRelateOutputPath = $packageRelateOutputPath/$platform/$dirname/package"
+echo "packageRelateOutputPath = $INI__executePath__packageRelateOutputPath/$platform/$dirname/package"
 echo "dirname = $dirname"
 echo "package-------------------->  art"
 #美术资源监测。  打开unity3d  执行AutoBuild.Build 方法。
@@ -80,7 +80,7 @@ $INI__executePath__unityPath \
 -executeMethod AutoBuild.BuildPackage \
 "version=$version" \
 "platform=$platform" \
-"outputPath=$packageRelateOutputPath/$platform/$dirname/package" \
+"outputPath=$INI__executePath__packageRelateOutputPath/$platform/$dirname/package" \
 "mode=$mode" \
 "companyName=$INI__playerSettings__companyName" \
 "productName=$INI__playerSettings__productName" \
@@ -135,7 +135,7 @@ $INI__executePath__unityPath \
 -executeMethod AutoBuild.BuildPackage \
 "version=$version" \
 "platform=$platform" \
-"outputPath=$packageRelateOutputPath/$platform/$dirname/package" \
+"outputPath=$INI__executePath__packageRelateOutputPath/$platform/$dirname/package" \
 "mode=$mode" \
 "companyName=$INI__playerSettings__companyName" \
 "productName=$INI__playerSettings__productName" \

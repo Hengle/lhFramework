@@ -1,7 +1,0 @@
-Library/
-obj/
-UnityPackageManager/
-Assets/StreamingAssets/
-*.csproj
-*.sln
-.vs
