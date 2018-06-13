@@ -36,29 +36,29 @@ public class AssetImportCop : AssetPostprocessor
         return null;
     }
 
-    private void OnPreprocessTexture()
-    {
-        AssetRule rule = FindRuleForAsset(assetImporter.assetPath);
+    //private void OnPreprocessTexture()
+    //{
+    //    AssetRule rule = FindRuleForAsset(assetImporter.assetPath);
 
-        if (rule == null)
-        {
-            Debug.Log("No asset rules found for asset");
-            return;
-        }
+    //    if (rule == null)
+    //    {
+    //        Debug.Log("No asset rules found for asset");
+    //        return;
+    //    }
 
-        Debug.Log("Modifying Texture settings");
-        rule.ApplySettings(assetImporter);
-    }
+    //    Debug.Log("Modifying Texture settings");
+    //    rule.ApplySettings(assetImporter);
+    //}
 
-    private void OnPreprocessModel()
-    {
-        AssetRule rule = FindRuleForAsset(assetImporter.assetPath);
+    //private void OnPreprocessModel()
+    //{
+    //    AssetRule rule = FindRuleForAsset(assetImporter.assetPath);
 
-        if (rule == null)
-        {
-            Debug.Log("No asset rules found for asset");
-            return;
-        }
-        rule.ApplySettings(assetImporter);
-    }
+    //    if (rule == null)
+    //    {
+    //        Debug.Log("No asset rules found for asset");
+    //        return;
+    //    }
+    //    rule.ApplySettings(assetImporter);
+    //}
 }
