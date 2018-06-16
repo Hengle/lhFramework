@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 2898127071
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: eae8f13949078146bed77855cb79f27a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5b62dbee4ae69b8da0410460c069917c
+HashAppended: 0
+ClassTypes:
+- Class: 43
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Meshs/commander6_robb_low_0_mesh.asset
+Dependencies: []

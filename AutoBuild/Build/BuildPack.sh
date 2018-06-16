@@ -7,6 +7,7 @@ if test svn
 then
 echo "has svn"
 svn update
+svn revert
 fi
 for a in $*
 do
@@ -14,23 +15,44 @@ r=`echo $a | sed "s/--//g"`
 eval $r
 done
 
-if [[ -z $platform || -z $version || -z $mode ]];
+if [[ -z $platform || -z $versionType || -z $versionMode || -z $mode ]];
 then
-echo -e "error:must has platform version mode\nplatform====>13:Android  9:iOS  19:StandaloneWindows64  24:StandaloneLinux64\nmode===>debug  release"
+echo -e "error:must has platform versionType versionMode mode\nplatform====>13:Android  9:iOS  19:StandaloneWindows64  24:StandaloneLinux64\nmode===>debug  release\nversionType====>base,alpha,beta,RC,release\nversionMode=====>1: major  2:minor  3:revised"
 exit 0
 fi
 
 . ./read_ini.sh
-read_ini properties.ini
+
+read_ini ../Config/properties.ini
 if [ $mode == "debug" ];then
-	read_ini properties_debug.ini
+	read_ini ../Config/properties_debug.ini
 elif [ $mode == "release" ];then
-	read_ini properties_release.ini
+	read_ini ../Config/properties_release.ini
 else
 	echo "dont has this mode:"$mode
 fi
+
+read_ini ../Config/version.ini
+major=$INI__version__major
+minor=$INI__version__minor
+revised=$INI__version__revised
+if [ $versionType == 'major' ]; then
+major=$(($major+1))
+minor=0
+revised=0
+elif [ $versionType == 'minor' ];then
+minor=$(($minor+1))
+revised=0
+elif [ $versionType == 'revised' ];then
+revised=$(($revised+1))
+else
+echo "dont has this versionType:"$versionType
+fi
+
 dirname="pack-$platform-"$(date +%Y_%m_%d_%H_%M)
-absoluteOutputPath=$INI__executePath__rootPath/AutoBuild/Output/$platform/$dirname
+date=$(date +%Y%m%d)
+version=$major.$minor.$revised.$date.$versionMode
+absoluteOutputPath=$INI__executePath__pacageAbsoluteOutput/$platform/$dirname
 #运行时程序项目路径
 programPath=$INI__executePath__rootPath/Program
 #编辑器资源项目路径
@@ -48,6 +70,7 @@ rm -r $absoluteOutputPath;
 mkdir -p $absoluteOutputPath;
 fi
 
+echo "output -------------------->  all variables"
 echo "version = $version"
 echo "platform = $platform"
 echo "mode = $mode"
@@ -56,6 +79,7 @@ echo "artPath = $artPath"
 echo "absoluteOutputPath = $absoluteOutputPath"
 echo "packageRelateOutputPath = $INI__executePath__packageRelateOutputPath/$platform/$dirname/package"
 echo "dirname = $dirname"
+
 echo "package-------------------->  art"
 #美术资源监测。  打开unity3d  执行AutoBuild.Build 方法。
 $INI__executePath__unityPath \
@@ -70,6 +94,39 @@ $INI__executePath__unityPath \
 
 echo "package-------------------->  ui"
 
+echo "svn------------------------> commit to bundle "
+if test svn
+then
+echo "has svn"
+svn commit -m "commit bundle sources for art"
+fi
+
+echo "copy-----------------------> to target folder"
+cp -p $artPath/Assets/StreamingAssets/$platform/* $INI__executePath__sourcePath/dirname/
+if test svn
+then
+echo "has svn"
+svn add *
+svn commit -m "commit bundle sources for art"
+fi
+echo "save-----------------------> version to local"
+(
+cat <<EOF
+[version]
+; 主版本号
+major=$major
+; 次版本号
+minor=$minor
+; 修订版本号
+revised=$revised
+EOF
+) > ../Config/version.ini
+
+(
+cat <<EOF
+$version
+EOF
+) > $artPath/Assets/StreamingAssets/$platform/version
 echo "package-------------------->  program"
 #程序打包  unity产生log就写在tmp/1.log里面，比如Debug.Log和Unity编辑器产生的。
 if [ $platform == 13 ]; then
@@ -184,6 +241,25 @@ $INI__executePath__unityPath \
 "androidDeviceSocketAddress=$INI__buildSettings__android_androidDeviceSocketAddress" \
 "iOSBuildConfigType=$INI__buildSettings__ios_iOSBuildConfigType" \
 "currentLevel=$INI__qualitySettings__currentLevel"
+
+xcodebuild \
+clean build \
+-quiet \
+-version \
+-project $absoluteOutputPath/package/Unity-iPhone.xcodeproj \
+-scheme Unity-iPhone \
+-configuration $mode \
+archive -archivePath $absoluteOutputPath/package/app.xcarchive
+
+
+xcodebuild \
+-quiet \
+-version \
+-exportArchive \
+-archivePath $absoluteOutputPath/package.xcarchive \
+-exportPath $absoluteOutputPath/package/build/$mode-iphoneos/ \
+-allowProvisioningUpdates
+# -exportOptionsPlist $plist
 
 else
 	echo "dont has this $platform only support Android and IOS"

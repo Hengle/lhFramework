@@ -1,0 +1,29 @@
+ManifestFileVersion: 0
+CRC: 3000975152
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9d4c6c2dffe3a1a3b71fcc383df45bff
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4bb96948b47ad6ca1df035de75994dde
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Prefabs/eff_inner_waterwave_002.prefab
+Dependencies:
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/iOS/Bundle/textures/mask_003.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/iOS/Bundle/textures/water_003.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/iOS/Bundle/textures/mask_004.n

@@ -1,0 +1,31 @@
+ManifestFileVersion: 0
+CRC: 3714136996
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 2992644b2236449e03eec789a6ed6b29
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ec52db577b9a327c3f473871268fd48e
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Fbxs/show_build04.FBX
+Dependencies:
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/iOS/Bundle/materials/show_build02_d.n

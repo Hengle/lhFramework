@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 234103028
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4ac195790b311145d82ebe44815b15b4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Materials/battle_dirty_d01.mat
+Dependencies: []

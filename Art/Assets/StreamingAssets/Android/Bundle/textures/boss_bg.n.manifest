@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 801665586
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0145c7239b92552b85694f0446aff6d2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/boss_bg.png
+Dependencies: []

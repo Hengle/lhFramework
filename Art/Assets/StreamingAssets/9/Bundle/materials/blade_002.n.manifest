@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 1182157156
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 14b10f8aeba348fd8dc17ef2eb354492
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Materials/Blade_002.mat
+Dependencies:
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/9/Bundle/textures/blade_002.n

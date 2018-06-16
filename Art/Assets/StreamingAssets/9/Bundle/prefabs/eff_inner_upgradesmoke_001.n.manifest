@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 187861137
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3173b7011126b30a3b919b515de037ab
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ab0283cdc76d68aa778fae1a8f59f763
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Prefabs/eff_inner_upgradesmoke_001.prefab
+Dependencies:
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/9/Bundle/materials/smoke_003_blend.n

@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 3602394718
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: fca35ab493b382e131e74a11c4172034
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 0a4381b8d24d7546af2f9b5d2b1de238
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/AnimatorControls/PositionMove_001.controller
+Dependencies: []

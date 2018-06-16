@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1196859167
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ecb0f15628356628a0160665678d88ae
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 57cc261e7722b8429fae0fb29649ddb8
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Animations/eff_word_castle_teleport.anim
+Dependencies: []

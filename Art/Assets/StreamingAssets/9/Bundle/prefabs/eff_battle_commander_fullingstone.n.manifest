@@ -1,0 +1,36 @@
+ManifestFileVersion: 0
+CRC: 949960620
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 59bec4c0cd9bc4a18ac4c44baed42f11
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: bfb44ca415e6ea42952d66ef1c3a0f2e
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Prefabs/eff_battle_commander_fullingstone.prefab
+Dependencies:
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/9/Bundle/textures/smoke_003.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/9/Bundle/textures/smoke_001.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/9/Bundle/materials/crack_002_blend.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/9/Bundle/materials/smoke_002.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/9/Bundle/materials/crack_001.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/9/Bundle/fbxs/plane_002.n

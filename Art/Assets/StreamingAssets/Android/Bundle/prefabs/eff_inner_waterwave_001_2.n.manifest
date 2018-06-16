@@ -1,0 +1,35 @@
+ManifestFileVersion: 0
+CRC: 3676843794
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 39970d46ddcc34039c0963d900d1aba5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9aaac0f4ab4727a763e31ad4a8494ab6
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Prefabs/eff_inner_waterwave_001_2.prefab
+Dependencies:
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/Android/Bundle/textures/vein_001.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/Android/Bundle/textures/water_003.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/Android/Bundle/textures/mask_004.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/Android/Bundle/fbxs/waterplane_001.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/Android/Bundle/animatorcontrols/uv_001_waterwave.n

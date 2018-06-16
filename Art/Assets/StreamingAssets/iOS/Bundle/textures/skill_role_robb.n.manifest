@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3969025699
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 29bcc8e2db791012be462603917f2536
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/skill_role_Robb.png
+Dependencies: []

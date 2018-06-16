@@ -1,0 +1,33 @@
+ManifestFileVersion: 0
+CRC: 696152240
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: dd419a5bae94d0f7574f049ceb736352
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5e3ddb43ce30c8fb96097ed63e727fd9
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Prefabs/battle_soldier_huner_model_001.prefab
+Dependencies:
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/Android/Bundle/materials/hunter_d.n

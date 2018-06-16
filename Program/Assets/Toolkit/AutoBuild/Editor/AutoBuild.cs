@@ -95,7 +95,7 @@ public static class AutoBuild
             if (dic.ContainsKey("forceSDCardPermission") && !string.IsNullOrEmpty(dic["forceSDCardPermission"]))
                 PlayerSettings.Android.forceSDCardPermission = System.Convert.ToBoolean(System.Convert.ToInt32(dic["forceSDCardPermission"]));
             if (dic.ContainsKey("keystoreName") && !string.IsNullOrEmpty(dic["keystoreName"]))
-                PlayerSettings.Android.keystoreName = Application.dataPath + dic["keystoreName"];
+                PlayerSettings.Android.keystoreName =dic["keystoreName"];
             if (dic.ContainsKey("keystorePass") && !string.IsNullOrEmpty(dic["keystorePass"]))
                 PlayerSettings.Android.keystorePass = dic["keystorePass"];
             if (dic.ContainsKey("keyaliasName") && !string.IsNullOrEmpty(dic["keyaliasName"]))
@@ -172,7 +172,7 @@ public static class AutoBuild
             if (dic.ContainsKey("targetOSVersionString") && !string.IsNullOrEmpty(dic["targetOSVersionString"]))
                 PlayerSettings.iOS.targetOSVersionString = dic["targetOSVersionString"];
 
-            string filepath = outputPath + ".ipa";
+            string filepath = outputPath;
             FileInfo fileInfo = new FileInfo(filepath);
             if (!fileInfo.Directory.Exists)
                 fileInfo.Directory.Create();

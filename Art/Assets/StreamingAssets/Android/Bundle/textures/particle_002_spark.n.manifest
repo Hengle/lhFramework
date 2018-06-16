@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1679834754
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1a004145266c04c6901a428ce812a3d5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/Particle_002_Spark.tga
+Dependencies: []

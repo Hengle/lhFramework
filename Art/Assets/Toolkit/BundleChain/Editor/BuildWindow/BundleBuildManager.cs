@@ -412,7 +412,7 @@ namespace lhFramework.Tools.Bundle
                 buildTarget = (int)EditorUserBuildSettings.activeBuildTarget;
             }
             m_rootPath = Application.dataPath + "/" + rootName + "/";
-            m_bundleRootPath = Application.streamingAssetsPath + "/" + ((BuildTarget)buildTarget).ToString() + "/" + bundleFolder + "/";
+            m_bundleRootPath = Application.streamingAssetsPath + "/" + buildTarget.ToString() + "/" + bundleFolder + "/";
             m_manifestPath = m_bundleRootPath + bundleFolder;
             categoryData = new Dictionary<string, CategoryData>();
             searchedDirectories = new Dictionary<string, List<SourceDirectory>>();
@@ -458,7 +458,7 @@ namespace lhFramework.Tools.Bundle
         }
         public void DeletePackge()
         {
-            string outPath = Path.Combine(Path.Combine(bundleOutputFolder, ((BuildTarget)buildTarget).ToString()), bundleFolder);
+            string outPath = Path.Combine(Path.Combine(bundleOutputFolder, buildTarget.ToString()), bundleFolder);
             outPath = outPath.Replace("\\", "/");
             AssetDatabase.DeleteAsset(outPath);
         }
@@ -663,7 +663,7 @@ namespace lhFramework.Tools.Bundle
         }
         private void PackBundle(string folderPaths)
         {
-            string outPath = Path.Combine(Path.Combine(bundleOutputFolder, ((BuildTarget)(buildTarget)).ToString()), bundleFolder);
+            string outPath = Path.Combine(Path.Combine(bundleOutputFolder, buildTarget.ToString()), bundleFolder);
             outPath = outPath.Replace("\\", "/");
             foreach (var category in categoryData)
             {

@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 2460847246
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a5921a49440d808a4e42e70b2aca6d86
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/battle_desert_ground03_n.png
+Dependencies: []

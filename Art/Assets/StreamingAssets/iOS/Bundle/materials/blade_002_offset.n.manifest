@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 208579970
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 305c410ce4b37ae4e08b7ca181159f96
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Materials/Blade_002_Offset.mat
+Dependencies:
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/iOS/Bundle/textures/blade_002.n

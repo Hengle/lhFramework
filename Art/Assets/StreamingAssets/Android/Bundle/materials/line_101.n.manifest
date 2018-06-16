@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 1092098047
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e1629922ac87268e4ee0d1c5ded647f5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Materials/Line_101.mat
+Dependencies:
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/Android/Bundle/textures/line_101.n

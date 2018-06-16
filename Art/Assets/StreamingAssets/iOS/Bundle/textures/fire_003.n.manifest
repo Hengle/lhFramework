@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 590364376
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4c5331dea3a2c6861c445816b4a4d7a8
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/Fire_003.tga
+Dependencies: []

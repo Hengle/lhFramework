@@ -1,0 +1,30 @@
+ManifestFileVersion: 0
+CRC: 407423584
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0b3d84096cf857b3f82edcbc4c7afca1
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 49c318d97990f2f843929a8bd7947255
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Prefabs/eff_common_lightshafts2.prefab
+Dependencies:
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/Android/Bundle/materials/line_006.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/Android/Bundle/materials/glow_003.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/Android/Bundle/materials/glow_005.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/Android/Bundle/fbxs/plane_003.n

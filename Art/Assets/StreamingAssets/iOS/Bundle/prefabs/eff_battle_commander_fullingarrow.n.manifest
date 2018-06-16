@@ -1,0 +1,34 @@
+ManifestFileVersion: 0
+CRC: 1603390649
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 27ed5965a11792098c2e0beaf0e75630
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: bfb44ca415e6ea42952d66ef1c3a0f2e
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Prefabs/eff_battle_commander_fullingarrow.prefab
+Dependencies:
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/iOS/Bundle/materials/hunter_d.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/iOS/Bundle/materials/line_005.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/iOS/Bundle/fbxs/missile_001.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/iOS/Bundle/fbxs/plane_002.n

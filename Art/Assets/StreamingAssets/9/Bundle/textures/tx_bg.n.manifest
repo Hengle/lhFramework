@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3994153494
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 349cc50c365499be95c4cff9b9c1db56
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/TX_bg.png
+Dependencies: []

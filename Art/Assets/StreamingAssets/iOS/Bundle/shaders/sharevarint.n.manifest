@@ -1,0 +1,28 @@
+ManifestFileVersion: 0
+CRC: 3350957758
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 61ce49ab3bd35b0293061d122ccb84a0
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 6370d3f9de9eca57f523bce048404a46
+HashAppended: 0
+ClassTypes:
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Shaders/sharevarint/GOTFloorAlpha1.shader
+- Assets/Arts/n/Shaders/sharevarint/Unlit_AlphaMobile.shader
+- Assets/Arts/n/Shaders/sharevarint/GOTClothMobile.shader
+- Assets/Arts/n/Shaders/sharevarint/battle_RadialBlurEffects.shader
+- Assets/Arts/n/Shaders/sharevarint/GOTSkinMobile.shader
+- Assets/Arts/n/Shaders/sharevarint/battle_BlackScreen.shader
+- Assets/Arts/n/Shaders/sharevarint/Alpha_Diffuse.shader
+- Assets/Arts/n/Shaders/sharevarint/battle_swing.shader
+- Assets/Arts/n/Shaders/sharevarint/battle_VertSwing.shader
+- Assets/Arts/n/Shaders/sharevarint/battle_ShadowMap.shader
+- Assets/Arts/n/Shaders/sharevarint/battle_T4M_4_TexturesBumpedNormalSpec.shader
+- Assets/Arts/n/Shaders/sharevarint/battle_MobileBloom.shader
+- Assets/Arts/n/Shaders/sharevarint/battle_SimpleWater.shader
+Dependencies: []

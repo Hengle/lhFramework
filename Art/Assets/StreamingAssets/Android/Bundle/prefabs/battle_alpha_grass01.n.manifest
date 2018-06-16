@@ -1,0 +1,27 @@
+ManifestFileVersion: 0
+CRC: 1968419742
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 832115d3093aa761928335a65960f563
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: e0b467e2650feb1cc1fce563692e2d86
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Prefabs/battle_alpha_grass01.prefab
+Dependencies:
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/Android/Bundle/materials/tx_pve_background_model_01.n

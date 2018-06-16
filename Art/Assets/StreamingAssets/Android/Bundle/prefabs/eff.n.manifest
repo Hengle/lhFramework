@@ -1,0 +1,30 @@
+ManifestFileVersion: 0
+CRC: 590067000
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3e8a049f8003f3b44d29904aaeff8862
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 49c318d97990f2f843929a8bd7947255
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Prefabs/Eff.prefab
+Dependencies:
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/Android/Bundle/materials/line_001.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/Android/Bundle/materials/glow_003.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/Android/Bundle/materials/line_005.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/Android/Bundle/materials/glow_001.n

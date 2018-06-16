@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 904750182
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0f60c450cddcd9668b4955d052e9e307
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/tx_PVE_background_model_01.png
+Dependencies: []

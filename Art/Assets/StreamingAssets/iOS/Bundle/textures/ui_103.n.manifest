@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3073797686
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: fbe6c8ea6fbee93ca02e698f5a4e51c2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/UI_103.png
+Dependencies: []
