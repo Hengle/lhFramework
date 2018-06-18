@@ -128,6 +128,12 @@ $version
 EOF
 ) > $artPath/Assets/StreamingAssets/$platform/version
 echo "package-------------------->  program"
+if test svn
+then
+echo "has svn"
+svn update
+svn revert
+fi
 #程序打包  unity产生log就写在tmp/1.log里面，比如Debug.Log和Unity编辑器产生的。
 if [ $platform == 13 ]; then
 $INI__executePath__unityPath \
