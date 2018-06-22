@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 4074161967
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: adf0934c7fd0987cbc4f7be19b9f99ec
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/UI_104.png
+Dependencies: []

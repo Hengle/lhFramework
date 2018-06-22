@@ -1,0 +1,33 @@
+ManifestFileVersion: 0
+CRC: 2535674273
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 70c41b883210cefd8ce3d03f46b85be9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c51367943af01ede2ca0cd4946c31bcd
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Fbxs/Show_plant01.FBX
+Dependencies:
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/show_plant01_d.n

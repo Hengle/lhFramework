@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 4225694078
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 90a6dc29ac61d112c34ae33c1ed14283
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/battle_srpg_sups_prop01.png
+Dependencies: []

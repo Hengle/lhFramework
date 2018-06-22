@@ -1,0 +1,26 @@
+ManifestFileVersion: 0
+CRC: 4185827524
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9bf635692a13896febbaba0b813eeb87
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ab0283cdc76d68aa778fae1a8f59f763
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Prefabs/eff_inner_hearttree_model_001.prefab
+Dependencies:
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/glow_003.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/glow_001.n

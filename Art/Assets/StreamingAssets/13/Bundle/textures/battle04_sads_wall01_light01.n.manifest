@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 121039526
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d0da133c429f45ba84404b986cd821b0
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/battle04_sads_wall01_light01.exr
+Dependencies: []

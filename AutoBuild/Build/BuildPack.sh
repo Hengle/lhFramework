@@ -21,6 +21,14 @@ echo -e "error:must has platform versionType versionMode mode\nplatform====>13:A
 exit 0
 fi
 
+if [ $platform == 'Android' ];then
+platform=13
+elif [ $platform == "iOS"];then
+platform=9
+else
+echo "dont support this platform:"$platform
+fi
+cd `dirname $0`
 . ./read_ini.sh
 
 read_ini ../Config/properties.ini
@@ -70,7 +78,7 @@ rm -r $absoluteOutputPath;
 mkdir -p $absoluteOutputPath;
 fi
 
-echo "output -------------------->  all variables"
+echo "output ------------------------------------------------------------>  all variables"
 echo "version = $version"
 echo "platform = $platform"
 echo "mode = $mode"
@@ -80,7 +88,7 @@ echo "absoluteOutputPath = $absoluteOutputPath"
 echo "packageRelateOutputPath = $INI__executePath__packageRelateOutputPath/$platform/$dirname/package"
 echo "dirname = $dirname"
 
-echo "package-------------------->  art"
+echo "package------------------------------------------------------------>  art"
 #美术资源监测。  打开unity3d  执行AutoBuild.Build 方法。
 $INI__executePath__unityPath \
 -quit -batchmode \
@@ -90,18 +98,19 @@ $INI__executePath__unityPath \
 "maintainer_filePath=$editor_maintainer_filepath" \
 "mode=$mode" \
 "platform=$platform" \
+"rootName=$INI__art__rootName" \
 "currentLevel=$INI__qualitySettings__currentLevel"
+echo outputLog=="file://$absoluteOutputPath/proj_art.log"
+echo "package------------------------------------------------------------>  ui"
 
-echo "package-------------------->  ui"
-
-echo "svn------------------------> commit to bundle "
+echo "svn----------------------------------------------------------------> commit to bundle "
 if test svn
 then
 echo "has svn"
 svn commit -m "commit bundle sources for art"
 fi
 
-echo "copy-----------------------> to target folder"
+echo "copy---------------------------------------------------------------> to target folder"
 cp -p $artPath/Assets/StreamingAssets/$platform/* $INI__executePath__sourcePath/dirname/
 if test svn
 then
@@ -109,7 +118,7 @@ echo "has svn"
 svn add *
 svn commit -m "commit bundle sources for art"
 fi
-echo "save-----------------------> version to local"
+echo "save---------------------------------------------------------------> version to local"
 (
 cat <<EOF
 [version]
@@ -127,7 +136,7 @@ cat <<EOF
 $version
 EOF
 ) > $artPath/Assets/StreamingAssets/$platform/version
-echo "package-------------------->  program"
+echo "package------------------------------------------------------------>  program"
 if test svn
 then
 echo "has svn"
@@ -270,6 +279,7 @@ xcodebuild \
 else
 	echo "dont has this $platform only support Android and IOS"
 fi
+echo outputLog="file://$absoluteOutputPath/proj_program.log"
 echo "end"
 
 

@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 839295370
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 622ddbb9fe5e03b9d9ad74ec39904b6f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/battle_ground02_n.png
+Dependencies: []

@@ -1,0 +1,32 @@
+ManifestFileVersion: 0
+CRC: 3866843710
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6b388f8197ac41a99211525373510a5d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ec52db577b9a327c3f473871268fd48e
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Prefabs/show_build03.prefab
+Dependencies:
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/show_build03_d.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/show_build03.n
