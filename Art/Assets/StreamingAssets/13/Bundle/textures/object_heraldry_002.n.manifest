@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1140634009
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b81c1a90492bec70c0fe5d4f06fdffdd
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/Object_Heraldry_002.tga
+Dependencies: []

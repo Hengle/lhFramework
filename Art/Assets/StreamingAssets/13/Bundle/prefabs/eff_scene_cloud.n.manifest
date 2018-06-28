@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 333471605
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 883d8ec76e2a4f2052ed17fb4af128eb
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ab0283cdc76d68aa778fae1a8f59f763
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Prefabs/eff_scene_cloud.prefab
+Dependencies: []

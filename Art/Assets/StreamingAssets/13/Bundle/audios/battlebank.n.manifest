@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 681401219
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a6eb0f868ec3f917e516d10d9b3b88f9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/audios/battleBank.bytes
+Dependencies: []

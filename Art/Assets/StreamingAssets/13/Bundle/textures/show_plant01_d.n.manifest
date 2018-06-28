@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 2351319663
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 06bfac10b27479af209a2c617fbd15de
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/show_plant01_d.png
+Dependencies: []

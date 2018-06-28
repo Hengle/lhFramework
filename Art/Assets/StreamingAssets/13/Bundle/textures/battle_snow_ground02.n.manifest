@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3404564732
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0d1d3f888dda9b5f0befefe672d02657
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/battle_snow_ground02.png
+Dependencies: []

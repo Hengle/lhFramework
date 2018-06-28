@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 622382045
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8365529e08507b321acfbafe07378681
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 448cd8a5b05d9af5bbce574e22f7a169
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 1ce61f2b910728a469609e3a45c53dc4, type: 3}
+Assets:
+- Assets/Arts/n/Prefabs/ZEffectM.prefab
+Dependencies: []

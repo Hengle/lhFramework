@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 4037708339
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: eccbee2798bb0226bad5539b910b770f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 15ca5806f45970a5abafcdbfe171dcdc
+HashAppended: 0
+ClassTypes:
+- Class: 114
+  Script: {fileID: 337831424, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 05acc715f855ced458d76ee6f8ac6c61, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 90fb794a295e73545af71bcdb7375791, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Timeline/SkillShow.playable
+Dependencies: []

@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3363681820
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: fdb798fb44d83a798d5226e75e2592e9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/object_rain.png
+Dependencies: []

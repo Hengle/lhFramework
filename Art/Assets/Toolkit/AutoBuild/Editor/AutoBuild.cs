@@ -29,6 +29,10 @@ public static class AutoBuild  {
             QualitySettings.SetQualityLevel(System.Convert.ToInt32(dic["currentLevel"]));
         lhFramework.Tools.Bundle.BundleBuildManager bundleManager = new lhFramework.Tools.Bundle.BundleBuildManager();
         bundleManager.buildTarget = System.Convert.ToInt32(platform);
+        if (dic.ContainsKey("rootName"))
+        {
+            bundleManager.rootName = dic["rootName"];
+        }
         bundleManager.Initialize();
         bundleManager.BuildPackage();
         bundleManager = null;

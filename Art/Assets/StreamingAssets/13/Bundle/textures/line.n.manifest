@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 2637136013
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: dbd6f321af0d7a0947d358ed4fd80a72
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/line/Line_006.png
+- Assets/Arts/n/Textures/line/Line_007.png
+Dependencies: []

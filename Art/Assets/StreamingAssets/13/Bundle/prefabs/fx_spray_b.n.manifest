@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 1087723177
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 412f7c3def42ca1f3feb4034899c0f97
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 3f70a70f4f7271efccc3567fa3366203
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Prefabs/FX_Spray_B.prefab
+Dependencies: []
