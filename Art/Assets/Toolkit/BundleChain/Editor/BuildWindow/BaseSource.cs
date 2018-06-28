@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace lhFramework.Tools.Bundle
 {
@@ -16,6 +17,8 @@ namespace lhFramework.Tools.Bundle
         public string category;
         public string bundleName;
         public float bundleSize;
+        public Hash128 hash;
+        public Hash128 newHash;
         public ESourceState fileState;
         public bool dontDamage;
         public List<int> dependenciedChainList = new List<int>();

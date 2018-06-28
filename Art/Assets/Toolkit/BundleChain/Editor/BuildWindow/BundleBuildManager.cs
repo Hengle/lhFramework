@@ -394,16 +394,20 @@ namespace lhFramework.Tools.Bundle
         private string m_tableFileName = "SourceTable.txt";
         private string m_editorTableFileName = "EditorSourceTable.txt";
         private int m_idBase;
+        private Dictionary<int, BaseSource> m_infoTemp=new Dictionary<int, BaseSource>();
         private UnityEngine.AssetBundleManifest m_manifest;
         public Dictionary<string, CategoryData> categoryData { get; private set; }
         public Dictionary<string, List<SourceDirectory>> searchedDirectories { get; private set; }
         public Dictionary<string, List<SourceFile>> searchedFiles { get; private set; }
+        //private System.Security.Cryptography.SHA1Managed m_sha1;
 
         public List<List<List<int>>> dependChains = new List<List<List<int>>>();
         public Dictionary<int, BaseSource> allSourcesGuid = new Dictionary<int, BaseSource>();
         private Dictionary<string, BaseSource> m_allSourcesPath = new Dictionary<string, BaseSource>();
         public BundleBuildManager()
         {
+            //m_sha1 = new System.Security.Cryptography.SHA1Managed();
+            
         }
         public void Initialize()
         {
@@ -439,6 +443,7 @@ namespace lhFramework.Tools.Bundle
         {
             m_bundlePack.StartBuild();
             PackBundle(m_rootPath);
+            PackInfo();
             PackSourceTable();
             PackEditorSourceTable();
             m_bundlePack.BuildOver();
@@ -861,6 +866,195 @@ namespace lhFramework.Tools.Bundle
                 }
             }
         }
+        private void PackInfo()
+        {
+            if (!File.Exists(m_manifestPath)) return;
+            string rootInfoPath = m_bundleRootPath + "info";
+            Dictionary<string, int> newRootInfo = new Dictionary<string, int>();
+            var manifestBundle = AssetBundle.LoadFromFile(m_manifestPath);
+            var manifest = (AssetBundleManifest)manifestBundle.LoadAsset("AssetBundleManifest");
+            manifestBundle.Unload(false);
+            string outPath = Path.Combine(Path.Combine(bundleOutputFolder, buildTarget.ToString()), bundleFolder);
+            outPath = outPath.Replace("\\", "/");
+            if (!Directory.Exists(outPath)) return;
+            Dictionary<string, List<BaseSource>> changeDic = new Dictionary<string, List<BaseSource>>();
+            foreach (var sources in allSourcesGuid)
+            {
+                if (sources.Value.fileState==ESourceState.MainBundle || sources.Value.fileState==ESourceState.SharedBundle)
+                {
+                    if (!string.IsNullOrEmpty(sources.Value.bundleName))
+                    {
+                        var newHash = manifest.GetAssetBundleHash(sources.Value.bundleName + "." + sources.Value.variantName);
+                        if (newHash != sources.Value.hash)
+                        {
+                            sources.Value.newHash = newHash;
+                            if (changeDic.ContainsKey(sources.Value.category.ToLower()))
+                            {
+                                changeDic[sources.Value.category.ToLower()].Add(sources.Value);
+                            }
+                            else
+                            {
+                                List<BaseSource> l = new List<BaseSource>();
+                                sources.Value.newHash = newHash;
+                                l.Add(sources.Value);
+                                changeDic.Add(sources.Value.category.ToLower(), l);
+                            }
+                        }
+                    }
+                }
+            }
+            foreach (var category in changeDic)
+            {
+                string infoPath = m_bundleRootPath + category.Key.ToLower() + "/info";
+                if (File.Exists(infoPath))
+                {
+                    ReadCategoryInfo( infoPath);
+                    //--------------------------------------------delete bundle
+                    List<int> needDel = new List<int>();
+                    foreach (var info in m_infoTemp)
+                    {
+                        if (!allSourcesGuid.ContainsKey(info.Key) || (allSourcesGuid.ContainsKey(info.Key) && allSourcesGuid[info.Key].bundleName != info.Value.bundleName))
+                        {
+                            needDel.Add(info.Key);
+                        }
+                    }
+                    for (int i = 0; i < needDel.Count; i++)
+                    {
+                        m_infoTemp.Remove(needDel[i]);
+                    }
+                    //--------------------------------------------changed or add bundle
+                    foreach (var sources in category.Value)
+                    {
+                        if (m_infoTemp.ContainsKey(sources.guid))
+                        {
+                            m_infoTemp[sources.guid].newHash = sources.newHash;
+                        }
+                        else
+                        {
+                            m_infoTemp.Add(sources.guid, sources);
+                        }
+                    }
+                    using (FileStream fileStream = new FileStream(infoPath, FileMode.Create, FileAccess.Write))
+                    {
+                        using (StreamWriter sw = new StreamWriter(fileStream))
+                        {
+                            foreach (var info in m_infoTemp)
+                            {
+                                sw.WriteLine(info.Value.guid + "," + info.Value.bundleName + "." + info.Value.variantName + "," + info.Value.newHash);
+                            }
+                            sw.Flush();
+                        }
+                    }
+                    if (!newRootInfo.ContainsKey(category.Key.ToLower()))
+                    {
+                        newRootInfo.Add(category.Key.ToLower(), 0);
+                    }
+                    else {
+                        newRootInfo[category.Key.ToLower()]++;
+                    }
+                }
+                else
+                {
+                    m_infoTemp.Clear();
+                    foreach (var sources in allSourcesGuid)
+                    {
+                        if (sources.Value.fileState == ESourceState.MainBundle || sources.Value.fileState == ESourceState.SharedBundle)
+                        {
+                            if (sources.Value.category.ToLower() == category.Key.ToLower())
+                            {
+                                if (sources.Value is SourceDirectory)
+                                {
+                                    var dir = sources.Value as SourceDirectory;
+                                    if (dir.filesDic.Count <= 0) continue;
+                                }
+                                var newHash = manifest.GetAssetBundleHash(sources.Value.bundleName + "." + sources.Value.variantName);
+                                sources.Value.newHash = newHash;
+                                m_infoTemp.Add(sources.Key, sources.Value);
+                            }
+                        }
+                    }
+                    using (FileStream fileStream = new FileStream(infoPath, FileMode.Create, FileAccess.Write))
+                    {
+                        using (StreamWriter sw = new StreamWriter(fileStream))
+                        {
+                            foreach (var info in m_infoTemp)
+                            {
+                                sw.WriteLine(info.Value.guid + "," + info.Value.bundleName+"."+info.Value.variantName + "," + info.Value.newHash);
+                            }
+                            sw.Flush();
+                        }
+                    }
+                    if (!newRootInfo.ContainsKey(category.Key.ToLower()))
+                    {
+                        newRootInfo.Add(category.Key.ToLower(), 0);
+                    }
+                }
+            }
+            if (File.Exists(rootInfoPath))
+            {
+                var dic = ReadRootInfo(rootInfoPath);
+                foreach (var item in dic)
+                {
+                    if (!newRootInfo.ContainsKey(item.Key))
+                    {
+                        newRootInfo.Add(item.Key,item.Value);
+                    }
+                    else
+                    {
+                        int v = item.Value+1;
+                        newRootInfo[item.Key] = v;
+                    }
+                }
+                List<string> del = new List<string>();
+                foreach (var item in newRootInfo)
+                {
+                    bool has = false;
+                    foreach (var category in categoryData)
+                    {
+                        if (category.Value.category==item.Key)
+                        {
+                            has = true;
+                        }
+                    }
+                    if (!has)
+                    {
+                        del.Add(item.Key);
+                    }
+                }
+                for (int i = 0; i < del.Count; i++)
+                {
+                    newRootInfo.Remove(del[i]);
+                }
+            }
+            else
+            {
+                foreach (var category in categoryData)
+                {
+                    if (!newRootInfo.ContainsKey(category.Value.category))
+                    {
+                        newRootInfo.Add(category.Value.category, 0);
+                    }
+                }
+            }
+            if (newRootInfo.Count>0)
+            {
+                if (File.Exists(rootInfoPath))
+                {
+                    File.Delete(rootInfoPath);
+                }
+                using (FileStream fileStream = new FileStream(rootInfoPath, FileMode.Create, FileAccess.Write))
+                {
+                    using (StreamWriter sw = new StreamWriter(fileStream))
+                    {
+                        foreach (var info in newRootInfo)
+                        {
+                            sw.WriteLine(info.Key + "," + info.Value);
+                        }
+                        sw.Flush();
+                    }
+                }
+            }
+        }
         private void AnalizeBundle(string bundlePath)
         {
             string path = m_bundleRootPath + bundlePath;
@@ -893,6 +1087,7 @@ namespace lhFramework.Tools.Bundle
                     sourDir.category = category;
                     sourDir.bundleSize = fileSize;
                     sourDir.dontDamage = true;
+                    sourDir.hash = m_manifest.GetAssetBundleHash(categoryLower + "/" + dirLowerName+"."+ variantName);
 
                     categoryData[categoryLower].category = category;
                     var variant = categoryData[categoryLower].variantDic[variantName];
@@ -949,6 +1144,7 @@ namespace lhFramework.Tools.Bundle
                     sourceFile.bundleName = categoryLower + "/" + fileName;
                     sourceFile.variantName = variantName;
                     sourceFile.category = category;
+                    sourceFile.hash = m_manifest.GetAssetBundleHash(categoryLower + "/" + fileName + "." + variantName);
                 }
                 b.Unload(true);
             }
@@ -1582,6 +1778,96 @@ namespace lhFramework.Tools.Bundle
         {
             return (int)Enum.Parse(typeof(EVariantType), variantName);
         }
+        private void ReadCategoryInfo(string path)
+        {
+            m_infoTemp.Clear();
+            using (FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read))
+            {
+                using (StreamReader sr = new StreamReader(path))
+                {
+                    string s;
+                    StringBuilder str = new StringBuilder();
+                    while ((s = sr.ReadLine()) != null)
+                    {
+                        int guid=0;
+                        string name=null;
+                        string hash=null;
+                        for (int i = 0, j = 0; i < s.Length; i++)
+                        {
+                            char c = s[i];
+                            if (c == ',' || i == s.Length - 1)
+                            {
+                                if (j == 0)
+                                {
+                                    guid =Convert.ToInt32(str.ToString());
+                                }
+                                else if (j==1)
+                                {
+                                    name = str.ToString();
+                                }
+                                else if (j==2)
+                                {
+                                    str.Append(c);
+                                    hash = str.ToString();
+                                }
+                                str.Clear();
+                                j++;
+                            }
+                            else
+                            {
+                                str.Append(c);
+                            }
+                        }
+                        m_infoTemp.Add(guid,new BaseSource()
+                        {
+                            guid = guid,
+                            bundleName = name,
+                            hash=Hash128.Parse(hash)
+                        });
+                    }
+                }
+            }
+        }
+        private Dictionary<string,int> ReadRootInfo(string path)
+        {
+            Dictionary<string, int> dic = new Dictionary<string, int>(); 
+            using (FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read))
+            {
+                using (StreamReader sr = new StreamReader(path))
+                {
+                    string s;
+                    StringBuilder str = new StringBuilder();
+                    while ((s = sr.ReadLine()) != null)
+                    {
+                        string category = null;
+                        int id = 0;
+                        for (int i = 0, j = 0; i < s.Length; i++)
+                        {
+                            char c = s[i];
+                            if (c == ',' || i == s.Length - 1)
+                            {
+                                if (j==0)
+                                {
+                                    category = str.ToString();
+                                }
+                                else if (j == 1)
+                                {
+                                    str.Append(c);
+                                    id = Convert.ToInt32(str.ToString());
+                                }
+                                str.Clear();
+                                j++;
+                            }
+                            else
+                            {
+                                str.Append(c);
+                            }
+                        }
+                        dic.Add(category, id);
+                    }
+                }
+            }
+            return dic;
+        }
     }
-
 }
