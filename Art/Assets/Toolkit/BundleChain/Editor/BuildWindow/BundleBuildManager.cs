@@ -1087,7 +1087,11 @@ namespace lhFramework.Tools.Bundle
                     sourDir.category = category;
                     sourDir.bundleSize = fileSize;
                     sourDir.dontDamage = true;
-                    sourDir.hash = m_manifest.GetAssetBundleHash(categoryLower + "/" + dirLowerName+"."+ variantName);
+                    try
+                    {
+                        sourDir.hash = m_manifest.GetAssetBundleHash(categoryLower + "/" + dirLowerName + "." + variantName);
+                    }
+                    catch { }
 
                     categoryData[categoryLower].category = category;
                     var variant = categoryData[categoryLower].variantDic[variantName];
@@ -1144,7 +1148,11 @@ namespace lhFramework.Tools.Bundle
                     sourceFile.bundleName = categoryLower + "/" + fileName;
                     sourceFile.variantName = variantName;
                     sourceFile.category = category;
-                    sourceFile.hash = m_manifest.GetAssetBundleHash(categoryLower + "/" + fileName + "." + variantName);
+                    try
+                    {
+                        sourceFile.hash = m_manifest.GetAssetBundleHash(categoryLower + "/" + fileName + "." + variantName);
+                    }
+                    catch { }
                 }
                 b.Unload(true);
             }
