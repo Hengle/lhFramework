@@ -64,7 +64,7 @@ fi
 dirname="pack-$platform-"$(date +%Y_%m_%d_%H_%M)
 date=$(date +%Y%m%d)
 version=$major.$minor.$revised.$date.$versionType
-absoluteOutputPath=$INI__executePath__pacageAbsoluteOutput/$platform/$dirname
+absoluteOutputPath=$INI__executePath__packageAbsoluteOutput/$platform/$dirname
 #运行时程序项目路径
 programPath=$INI__executePath__rootPath/Program
 #编辑器资源项目路径
@@ -137,9 +137,14 @@ sourcePlatformFolder=$INI__executePath__sourcePath/$platform
 if [ ! -d $sourcePlatformFolder ];then
 mkdir $sourcePlatformFolder
 fi
-sourcePath=$sourcePlatformFolder/${major}_${minor}_${revised}_$versionType
+majorFolder=$sourcePlatformFolder/${major}
+if [ ! -d $majorFolder ];then
+mkdir $majorFolder
+fi
+sourcePath=$majorFolder/${major}_${minor}_${revised}_$versionType
 mkdir $sourcePath
 rsync -avP --exclude=*.meta --exclude=*.manifest --exclude=EditorSourceTable.txt $artPath/Assets/StreamingAssets/$platform/ $sourcePath >/dev/null
+cp -a $artPath/Assets/StreamingAssets/$platform/version $majorFolder/version
 if test svn
 then
 echo "has svn"
