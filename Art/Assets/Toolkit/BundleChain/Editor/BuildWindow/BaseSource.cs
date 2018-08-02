@@ -16,7 +16,7 @@ namespace lhFramework.Tools.Bundle
         public string mainAssetName;
         public string category;
         public string bundleName;
-        public float bundleSize;
+        public long bundleSize;
         public Hash128 hash;
         public Hash128 newHash;
         public ESourceState fileState;

@@ -5,6 +5,7 @@ using System.IO;
 using UnityEditor;
 using System.Text;
 using System;
+using ProtoBuf;
 
 namespace lhFramework.Tools.Bundle
 {
@@ -887,6 +888,8 @@ namespace lhFramework.Tools.Bundle
                         var newHash = manifest.GetAssetBundleHash(sources.Value.bundleName + "." + sources.Value.variantName);
                         if (newHash != sources.Value.hash)
                         {
+                            var fileSize = new FileInfo(m_bundleRootPath + "/"+sources.Value.bundleName + "." + sources.Value.variantName).Length ;
+                            sources.Value.bundleSize = fileSize;
                             sources.Value.newHash = newHash;
                             if (changeDic.ContainsKey(sources.Value.category.ToLower()))
                             {
@@ -896,6 +899,7 @@ namespace lhFramework.Tools.Bundle
                             {
                                 List<BaseSource> l = new List<BaseSource>();
                                 sources.Value.newHash = newHash;
+                                sources.Value.bundleSize = fileSize;
                                 l.Add(sources.Value);
                                 changeDic.Add(sources.Value.category.ToLower(), l);
                             }
@@ -925,25 +929,34 @@ namespace lhFramework.Tools.Bundle
                     //--------------------------------------------changed or add bundle
                     foreach (var sources in category.Value)
                     {
+                        long fileSize = new FileInfo(m_bundleRootPath + "/" + sources.bundleName + "." + sources.variantName).Length;
                         if (m_infoTemp.ContainsKey(sources.guid))
                         {
                             m_infoTemp[sources.guid].newHash = sources.newHash;
+                            m_infoTemp[sources.guid].bundleSize = fileSize;
                         }
                         else
                         {
+                            sources.bundleSize = fileSize;
                             m_infoTemp.Add(sources.guid, sources);
                         }
                     }
+                    AssetInfos infos = new AssetInfos();
+                    foreach (var info in m_infoTemp)
+                    {
+                        infos.infos.Add(new AssetInfo()
+                        {
+                            guid = info.Value.guid,
+                            bundleName = info.Value.bundleName,
+                            variant = info.Value.variantName,
+                            hash = info.Value.newHash.ToString(),
+                            size = info.Value.bundleSize
+                        });
+                    }
+                    byte[] bytes = Serialize<AssetInfos>(infos);
                     using (FileStream fileStream = new FileStream(infoPath, FileMode.Create, FileAccess.Write))
                     {
-                        using (StreamWriter sw = new StreamWriter(fileStream))
-                        {
-                            foreach (var info in m_infoTemp)
-                            {
-                                sw.WriteLine(info.Value.guid + "," + info.Value.bundleName + "." + info.Value.variantName + "," + info.Value.newHash);
-                            }
-                            sw.Flush();
-                        }
+                        fileStream.Write(bytes, 0, bytes.Length);
                     }
                     if (!newRootInfo.ContainsKey(category.Key.ToLower()))
                     {
@@ -967,22 +980,30 @@ namespace lhFramework.Tools.Bundle
                                     var dir = sources.Value as SourceDirectory;
                                     if (dir.filesDic.Count <= 0) continue;
                                 }
+                                var fileSize = new FileInfo(m_bundleRootPath + "/" + sources.Value.bundleName + "." + sources.Value.variantName).Length;
                                 var newHash = manifest.GetAssetBundleHash(sources.Value.bundleName + "." + sources.Value.variantName);
                                 sources.Value.newHash = newHash;
+                                sources.Value.bundleSize = fileSize;
                                 m_infoTemp.Add(sources.Key, sources.Value);
                             }
                         }
                     }
+                    AssetInfos infos = new AssetInfos();
+                    foreach (var info in m_infoTemp)
+                    {
+                        infos.infos.Add(new AssetInfo()
+                        {
+                            guid = info.Value.guid,
+                            bundleName = info.Value.bundleName,
+                            variant = info.Value.variantName,
+                            hash = info.Value.newHash.ToString(),
+                            size = info.Value.bundleSize
+                        });
+                    }
+                    byte[] bytes = Serialize<AssetInfos>(infos);
                     using (FileStream fileStream = new FileStream(infoPath, FileMode.Create, FileAccess.Write))
                     {
-                        using (StreamWriter sw = new StreamWriter(fileStream))
-                        {
-                            foreach (var info in m_infoTemp)
-                            {
-                                sw.WriteLine(info.Value.guid + "," + info.Value.bundleName+"."+info.Value.variantName + "," + info.Value.newHash);
-                            }
-                            sw.Flush();
-                        }
+                        fileStream.Write(bytes, 0, bytes.Length);
                     }
                     if (!newRootInfo.ContainsKey(category.Key.ToLower()))
                     {
@@ -1061,7 +1082,7 @@ namespace lhFramework.Tools.Bundle
             var b = AssetBundle.LoadFromFile(path);
             if (b != null)
             {
-                int fileSize = Mathf.CeilToInt(new FileInfo(path).Length / 1024);
+                var fileSize = new FileInfo(path).Length ;
                 var assets = b.GetAllAssetNames();
                 if (assets.Length > 1)
                 {
@@ -1876,6 +1897,26 @@ namespace lhFramework.Tools.Bundle
                 }
             }
             return dic;
+        }
+        public byte[] Serialize<T>(T instance)
+        {
+            byte[] bytes;
+            using (var ms = new MemoryStream())
+            {
+                Serializer.Serialize(ms, instance);
+                bytes = new byte[ms.Position];
+                var fullBytes = ms.GetBuffer();
+                Array.Copy(fullBytes, bytes, bytes.Length);
+            }
+            return bytes;
+        }
+        public T Deserialize<T>(object obj)
+        {
+            byte[] bytes = (byte[])obj;
+            using (var ms = new MemoryStream(bytes))
+            {
+                return Serializer.Deserialize<T>(ms);
+            }
         }
     }
 }

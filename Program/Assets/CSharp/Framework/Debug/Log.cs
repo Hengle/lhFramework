@@ -11,7 +11,7 @@ namespace lhFramework.Debug
         }
         public static void i(ELogType type,string value)
         {
-
+            UnityEngine.Debug.Log(value);
         }
         public static void f(string value, int mark)
         {

@@ -7,15 +7,15 @@ namespace lhFramework.Infrastructure.Core
 
     public class Define
     {
-        public static readonly string platform =
+        public static readonly int platform =
 #if UNITY_STANDALONE_WIN
-        "StandaloneWindows64";
+        5;
 #elif UNITY_STANDALONE_OSX
-        "StandloneOSXIntel";
+        27;
 #elif UNITY_ANDROID
-            "Android";
+        13;
 #elif UNITY_IPHONE || UNITY_IOS
-        "iOS";
+        9;
 #endif
         public static readonly EProjectType projectType =
 #if RELEASE
@@ -42,6 +42,7 @@ namespace lhFramework.Infrastructure.Core
         public static readonly string localSourceUrl= Application.dataPath + "/Arts/";
         public static readonly string dataUrl = Application.dataPath + "/Resources/";
         public static readonly string tempUrl = Application.persistentDataPath + "/Temp/";
+        public static string host = "http://172.25.54.49/lhFramework";//"http://172.25.51.159:8585/HFS/lhFramework";
         public static readonly string sourceUrl =
 #if RELEASE
         persistentUrl+ platform + "/"+Const.bundleFolder+"/";

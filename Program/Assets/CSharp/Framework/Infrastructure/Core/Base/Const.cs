@@ -11,10 +11,6 @@ namespace lhFramework.Infrastructure.Core
         /// </summary>
         public const string bundleFolder = "Bundle";
         /// <summary>
-        /// bundle文件的后缀
-        /// </summary>
-        public const string bundleStuff = ".bundle";
-        /// <summary>
         /// 资源文件表的名字
         /// </summary>
         public const string souceTableName = "SourceTable.txt";

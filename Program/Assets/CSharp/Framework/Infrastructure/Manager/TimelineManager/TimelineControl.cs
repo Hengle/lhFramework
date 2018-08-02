@@ -42,7 +42,7 @@ namespace lhFramework.Infrastructure.Managers
         {
             get
             {
-                return this.gameObject;
+                return base.gameObject;
             }
             set { }
         }
