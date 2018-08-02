@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 2045926692
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d2048e6d0882081074d5979f400a8f59
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/battle_sads_ground_d.png
+Dependencies: []

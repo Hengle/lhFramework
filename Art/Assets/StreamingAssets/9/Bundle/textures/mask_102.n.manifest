@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 835544865
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1087a1e212bfa344d14e7f69e5ffbf3d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/Mask_102.png
+Dependencies: []

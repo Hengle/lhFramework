@@ -1,0 +1,30 @@
+ManifestFileVersion: 0
+CRC: 193604024
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8cc1ce631e1f83a4c7e1a4a78f975217
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: dd75b9401610cb5abcccea16a153f100
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 111
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Fbxs/Circle_002.FBX
+Dependencies: []

@@ -23,8 +23,12 @@ fi
 
 if [ $platform == 'Android' ];then
 platform=13
-elif [ $platform == "iOS"];then
+elif [ $platform == "iOS" ];then
 platform=9
+elif [ $platform == 'Windows' ];then
+platform=5
+elif [ $platform == 'MacOSX' ];then
+platform=27
 else
 echo "dont support this platform:"$platform
 fi
@@ -44,23 +48,23 @@ read_ini ../Config/version.ini
 major=$INI__version__major
 minor=$INI__version__minor
 revised=$INI__version__revised
-if [ $versionType == 'major' ]; then
+if [ $versionMode == 'major' ]; then
 major=$(($major+1))
 minor=0
 revised=0
-elif [ $versionType == 'minor' ];then
+elif [ $versionMode == 'minor' ];then
 minor=$(($minor+1))
 revised=0
-elif [ $versionType == 'revised' ];then
+elif [ $versionMode == 'revised' ];then
 revised=$(($revised+1))
 else
-echo "dont has this versionType:"$versionType
+echo "dont has this versionMode:"$versionMode
 fi
 
 dirname="pack-$platform-"$(date +%Y_%m_%d_%H_%M)
 date=$(date +%Y%m%d)
-version=$major.$minor.$revised.$date.$versionMode
-absoluteOutputPath=$INI__executePath__pacageAbsoluteOutput/$platform/$dirname
+version=$major.$minor.$revised.$date.$versionType
+absoluteOutputPath=$INI__executePath__packageAbsoluteOutput/$platform/$dirname
 #运行时程序项目路径
 programPath=$INI__executePath__rootPath/Program
 #编辑器资源项目路径
@@ -110,14 +114,6 @@ echo "has svn"
 svn commit -m "commit bundle sources for art"
 fi
 
-echo "copy---------------------------------------------------------------> to target folder"
-cp -p $artPath/Assets/StreamingAssets/$platform/* $INI__executePath__sourcePath/dirname/
-if test svn
-then
-echo "has svn"
-svn add *
-svn commit -m "commit bundle sources for art"
-fi
 echo "save---------------------------------------------------------------> version to local"
 (
 cat <<EOF
@@ -136,6 +132,25 @@ cat <<EOF
 $version
 EOF
 ) > $artPath/Assets/StreamingAssets/$platform/version
+echo "copy---------------------------------------------------------------> to target folder"
+sourcePlatformFolder=$INI__executePath__sourcePath/$platform
+if [ ! -d $sourcePlatformFolder ];then
+mkdir $sourcePlatformFolder
+fi
+majorFolder=$sourcePlatformFolder/${major}
+if [ ! -d $majorFolder ];then
+mkdir $majorFolder
+fi
+sourcePath=$majorFolder/${major}_${minor}_${revised}_$versionType
+mkdir $sourcePath
+rsync -avP --exclude=*.meta --exclude=*.manifest --exclude=EditorSourceTable.txt $artPath/Assets/StreamingAssets/$platform/ $sourcePath >/dev/null
+cp -a $artPath/Assets/StreamingAssets/$platform/version $majorFolder/version
+if test svn
+then
+echo "has svn"
+svn add *
+svn commit -m "commit bundle sources for art"
+fi
 echo "package------------------------------------------------------------>  program"
 if test svn
 then

@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 1679072923
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 26dba3ec3893fa6c99bf1b073576c779
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 0a4381b8d24d7546af2f9b5d2b1de238
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Animations/Obj_007.controller
+Dependencies: []
