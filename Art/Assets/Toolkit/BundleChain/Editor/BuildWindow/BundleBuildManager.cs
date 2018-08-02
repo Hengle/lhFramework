@@ -942,6 +942,7 @@ namespace lhFramework.Tools.Bundle
                         }
                     }
                     AssetInfos infos = new AssetInfos();
+                    infos.category = category.Key;
                     foreach (var info in m_infoTemp)
                     {
                         infos.infos.Add(new AssetInfo()
@@ -989,6 +990,7 @@ namespace lhFramework.Tools.Bundle
                         }
                     }
                     AssetInfos infos = new AssetInfos();
+                    infos.category = category.Key;
                     foreach (var info in m_infoTemp)
                     {
                         infos.infos.Add(new AssetInfo()
