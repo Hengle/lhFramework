@@ -1814,48 +1814,17 @@ namespace lhFramework.Tools.Bundle
             m_infoTemp.Clear();
             using (FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read))
             {
-                using (StreamReader sr = new StreamReader(path))
+                byte[] bytes = new byte[stream.Length];
+                stream.Read(bytes, 0, bytes.Length);
+                AssetInfos infos = Deserialize<AssetInfos>(bytes);
+                foreach (var info in infos.infos)
                 {
-                    string s;
-                    StringBuilder str = new StringBuilder();
-                    while ((s = sr.ReadLine()) != null)
+                    m_infoTemp.Add(info.guid, new BaseSource()
                     {
-                        int guid=0;
-                        string name=null;
-                        string hash=null;
-                        for (int i = 0, j = 0; i < s.Length; i++)
-                        {
-                            char c = s[i];
-                            if (c == ',' || i == s.Length - 1)
-                            {
-                                if (j == 0)
-                                {
-                                    guid =Convert.ToInt32(str.ToString());
-                                }
-                                else if (j==1)
-                                {
-                                    name = str.ToString();
-                                }
-                                else if (j==2)
-                                {
-                                    str.Append(c);
-                                    hash = str.ToString();
-                                }
-                                str.Clear();
-                                j++;
-                            }
-                            else
-                            {
-                                str.Append(c);
-                            }
-                        }
-                        m_infoTemp.Add(guid,new BaseSource()
-                        {
-                            guid = guid,
-                            bundleName = name,
-                            hash=Hash128.Parse(hash)
-                        });
-                    }
+                        guid = info.guid,
+                        bundleName = info.bundleName,
+                        hash = Hash128.Parse(info.hash)
+                    });
                 }
             }
         }
