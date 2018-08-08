@@ -1145,7 +1145,12 @@ namespace lhFramework.Tools.Bundle
                 else
                 {
                     FileInfo info = new FileInfo(path);
-                    string category = info.DirectoryName.Substring(info.DirectoryName.LastIndexOf('\\') + 1);
+                    int lastIndexOf = info.DirectoryName.LastIndexOf('/');
+                    if (lastIndexOf<=0)
+                    {
+                        lastIndexOf = info.DirectoryName.LastIndexOf("\\");
+                    }
+                    string category = info.DirectoryName.Substring(lastIndexOf + 1);
                     string categoryLower = category.ToLower();
                     string variantName = info.Name.Substring(info.Name.LastIndexOf('.') + 1);
                     string fileName = info.Name.Substring(0,info.Name.LastIndexOf('.')).ToLower();
