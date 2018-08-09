@@ -1826,6 +1826,8 @@ namespace lhFramework.Tools.Bundle
                 {
                     m_infoTemp.Add(info.guid, new BaseSource()
                     {
+                        variantName = info.variant,
+                        bundleSize = info.size,
                         guid = info.guid,
                         bundleName = info.bundleName,
                         hash = Hash128.Parse(info.hash)
