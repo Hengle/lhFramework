@@ -1204,6 +1204,7 @@ namespace lhFramework.Tools.Bundle
                     for (int j = 0; j < directoryInfoArr.Length; j++)
                     {
                         if (directoryInfoArr[j].Extension == ".meta") continue;
+                        if (directoryInfoArr[j].Extension == ".DS_Store") continue;
                         var dirInfo = directoryInfoArr[j];
                         string dirName = dirInfo.Name;
                         string dirLowerName = dirName.ToLower();
@@ -1265,6 +1266,7 @@ namespace lhFramework.Tools.Bundle
                         {
                             if (childFilesInfoArr[x].Extension == ".meta") continue;
                             if (childFilesInfoArr[x].Extension == ".cs") continue;
+                            if (childFilesInfoArr[x].Extension == ".DS_Store") continue;
                             string ext = childFilesInfoArr[x].Name.Substring(childFilesInfoArr[x].Name.LastIndexOf("."));
                             string fileName = childFilesInfoArr[x].Name.Substring(0, childFilesInfoArr[x].Name.LastIndexOf("."));
                             string fileLowerName = fileName.ToLower();
