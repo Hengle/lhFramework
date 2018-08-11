@@ -1044,6 +1044,13 @@ namespace lhFramework.Tools.Bundle
                         del.Add(item.Key);
                     }
                 }
+                foreach (var category in categoryData)
+                {
+                    if (!newRootInfo.ContainsKey(category.Value.category))
+                    {
+                        newRootInfo.Add(category.Value.category, 0);
+                    }
+                }
                 for (int i = 0; i < del.Count; i++)
                 {
                     newRootInfo.Remove(del[i]);
