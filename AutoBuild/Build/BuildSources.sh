@@ -49,7 +49,6 @@ major=$INI__version__major
 minor=$INI__version__minor
 revised=$INI__version__revised
 revised=$(($revised+1))
-echo "dont has this versionType:"$versionType
 
 dirname="source-$platform-"$(date +%Y_%m_%d_%H_%M)
 date=$(date +%Y%m%d)
@@ -81,16 +80,16 @@ echo "dirname = $dirname"
 
 echo "package------------------------------------------------------------>  art"
 #美术资源监测。  打开unity3d  执行AutoBuild.Build 方法。
-#$INI__executePath__unityPath \
-#-quit -batchmode \
-#-projectPath $artPath \
-#-logFile "$absoluteOutputPath/proj_art.log" \
-#-executeMethod AutoBuild.BuildSource \
-#"maintainer_filePath=$editor_maintainer_filepath" \
-#"mode=$mode" \
-#"platform=$platform" \
-#"rootName=$INI__art__rootName" \
-#"currentLevel=$INI__qualitySettings__currentLevel"
+$INI__executePath__unityPath \
+-quit -batchmode \
+-projectPath $artPath \
+-logFile "$absoluteOutputPath/proj_art.log" \
+-executeMethod AutoBuild.BuildSource \
+"maintainer_filePath=$editor_maintainer_filepath" \
+"mode=$mode" \
+"platform=$platform" \
+"rootName=$INI__art__rootName" \
+"currentLevel=$INI__qualitySettings__currentLevel"
 echo outputLog=="file://$absoluteOutputPath/proj_art.log"
 echo "package------------------------------------------------------------>  ui"
 
@@ -102,6 +101,11 @@ svn commit -m "commit bundle sources for art"
 fi
 
 echo "save---------------------------------------------------------------> version to local"
+
+artVersion=$artPath/Assets/StreamingAssets/$platform/version
+if [ ! -f $artVersion ];then
+touch $artVersion
+fi
 (
 cat << EOF
 [version]
@@ -118,7 +122,7 @@ EOF
 cat << EOF
 $version
 EOF
-) > $artPath/Assets/StreamingAssets/$platform/version
+) > $artVersion
 echo "copy---------------------------------------------------------------> to target folder"
 sourcePlatformFolder=$INI__executePath__sourcePath/$platform
 if [ ! -d $sourcePlatformFolder ];then

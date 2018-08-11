@@ -116,6 +116,10 @@ fi
 
 echo "save---------------------------------------------------------------> version to local"
 (
+artVersion=$artPath/Assets/StreamingAssets/$platform/version
+if [ ! -f $artVersion ];then
+    touch $artVersion
+fi
 cat <<EOF
 [version]
 ; 主版本号
@@ -131,7 +135,7 @@ EOF
 cat <<EOF
 $version
 EOF
-) > $artPath/Assets/StreamingAssets/$platform/version
+) > $artVersion
 echo "copy---------------------------------------------------------------> to target folder"
 sourcePlatformFolder=$INI__executePath__sourcePath/$platform
 if [ ! -d $sourcePlatformFolder ];then

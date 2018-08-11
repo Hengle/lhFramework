@@ -1304,6 +1304,7 @@ namespace lhFramework.Tools.Bundle
                     {
                         if (filesInfoArr[j].Extension == ".meta") continue;
                         if (filesInfoArr[j].Extension == ".cs") continue;
+                        if (filesInfoArr[j].Extension == ".DS_Store") continue;
                         string ext = filesInfoArr[j].Name.Substring(filesInfoArr[j].Name.LastIndexOf("."));
                         string fileName = filesInfoArr[j].Name.Substring(0, filesInfoArr[j].Name.LastIndexOf("."));
                         string fileLowerName = fileName.ToLower();
