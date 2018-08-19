@@ -96,6 +96,7 @@ namespace lhFramework.Tools.Bundle
                 Init();
                 return;
             }
+            if (m_bundleBuildManager == null) return;
             EditorGUILayout.BeginHorizontal(EditorStyles.toolbar);
             {
                 if (GUILayout.Button("Build Bundle", EditorStyles.toolbarButton))

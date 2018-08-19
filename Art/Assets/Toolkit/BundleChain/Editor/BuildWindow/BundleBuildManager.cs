@@ -1044,6 +1044,13 @@ namespace lhFramework.Tools.Bundle
                         del.Add(item.Key);
                     }
                 }
+                foreach (var category in categoryData)
+                {
+                    if (!newRootInfo.ContainsKey(category.Value.category))
+                    {
+                        newRootInfo.Add(category.Value.category, 0);
+                    }
+                }
                 for (int i = 0; i < del.Count; i++)
                 {
                     newRootInfo.Remove(del[i]);
@@ -1145,7 +1152,12 @@ namespace lhFramework.Tools.Bundle
                 else
                 {
                     FileInfo info = new FileInfo(path);
-                    string category = info.DirectoryName.Substring(info.DirectoryName.LastIndexOf('\\') + 1);
+                    int lastIndexOf = info.DirectoryName.LastIndexOf('/');
+                    if (lastIndexOf<=0)
+                    {
+                        lastIndexOf = info.DirectoryName.LastIndexOf("\\");
+                    }
+                    string category = info.DirectoryName.Substring(lastIndexOf + 1);
                     string categoryLower = category.ToLower();
                     string variantName = info.Name.Substring(info.Name.LastIndexOf('.') + 1);
                     string fileName = info.Name.Substring(0,info.Name.LastIndexOf('.')).ToLower();
@@ -1199,6 +1211,7 @@ namespace lhFramework.Tools.Bundle
                     for (int j = 0; j < directoryInfoArr.Length; j++)
                     {
                         if (directoryInfoArr[j].Extension == ".meta") continue;
+                        if (directoryInfoArr[j].Extension == ".DS_Store") continue;
                         var dirInfo = directoryInfoArr[j];
                         string dirName = dirInfo.Name;
                         string dirLowerName = dirName.ToLower();
@@ -1260,6 +1273,7 @@ namespace lhFramework.Tools.Bundle
                         {
                             if (childFilesInfoArr[x].Extension == ".meta") continue;
                             if (childFilesInfoArr[x].Extension == ".cs") continue;
+                            if (childFilesInfoArr[x].Extension == ".DS_Store") continue;
                             string ext = childFilesInfoArr[x].Name.Substring(childFilesInfoArr[x].Name.LastIndexOf("."));
                             string fileName = childFilesInfoArr[x].Name.Substring(0, childFilesInfoArr[x].Name.LastIndexOf("."));
                             string fileLowerName = fileName.ToLower();
@@ -1297,6 +1311,7 @@ namespace lhFramework.Tools.Bundle
                     {
                         if (filesInfoArr[j].Extension == ".meta") continue;
                         if (filesInfoArr[j].Extension == ".cs") continue;
+                        if (filesInfoArr[j].Extension == ".DS_Store") continue;
                         string ext = filesInfoArr[j].Name.Substring(filesInfoArr[j].Name.LastIndexOf("."));
                         string fileName = filesInfoArr[j].Name.Substring(0, filesInfoArr[j].Name.LastIndexOf("."));
                         string fileLowerName = fileName.ToLower();
@@ -1821,6 +1836,8 @@ namespace lhFramework.Tools.Bundle
                 {
                     m_infoTemp.Add(info.guid, new BaseSource()
                     {
+                        variantName = info.variant,
+                        bundleSize = info.size,
                         guid = info.guid,
                         bundleName = info.bundleName,
                         hash = Hash128.Parse(info.hash)
