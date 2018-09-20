@@ -556,7 +556,7 @@ namespace lhFramework.Infrastructure.Managers
                                     }
                                     else if (j == 1)
                                     {
-                                        assetPath = Define.sourceUrl + str.ToString();
+                                        assetPath = Define.sourceBundleUrl + str.ToString();
                                     }
                                     else
                                     {

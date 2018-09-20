@@ -15,7 +15,7 @@ namespace lhFramework.Infrastructure.Managers
         [ProtoMember(4)]
         public string hash { get; set; }
         [ProtoMember(5)]
-        public float size { get; set; }
+        public long size { get; set; }
     }
     [ProtoContract]
     public class AssetInfos

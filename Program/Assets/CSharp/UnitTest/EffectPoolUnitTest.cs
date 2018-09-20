@@ -66,14 +66,14 @@ namespace lhFramework.UnitTest
         {
             for (int m = 0; m < list.Count; m++)
             {
-                usedTest.Add(EffectManager.Get(m));
+                usedTest.Add(EffectManager.Get(m,null,Vector3.zero,Quaternion.identity));
             }
         }
         void RandomAddDelay()
         {
             for (int m = 0; m < listDelay.Count; m++)
             {
-                usedDelayTest.Add(EffectManager.Get(m+list.Count,EEffectGroup.Battle));
+                usedDelayTest.Add(EffectManager.Get(m+list.Count, null, Vector3.zero, Quaternion.identity, EEffectGroup.Battle));
             }
         }
         void RandomRemove()

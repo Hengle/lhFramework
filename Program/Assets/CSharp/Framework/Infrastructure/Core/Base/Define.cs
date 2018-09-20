@@ -32,8 +32,8 @@ namespace lhFramework.Infrastructure.Core
         Application.streamingAssetsPath;
 #else
     #if RELEASE
-            "file://" + Application.streamingAssetsPath + "/";
-    #else
+            Application.streamingAssetsPath + "/";//"file://" + 
+#else
             Application.streamingAssetsPath + "/";
 #endif
 #endif
@@ -42,23 +42,34 @@ namespace lhFramework.Infrastructure.Core
         public static readonly string localSourceUrl= Application.dataPath + "/Arts/";
         public static readonly string dataUrl = Application.dataPath + "/Resources/";
         public static readonly string tempUrl = Application.persistentDataPath + "/Temp/";
-        public static string host = "http://172.25.54.49/lhFramework";//"http://172.25.51.159:8585/HFS/lhFramework";
+        public static string host = "http://172.25.53.179/lhFramework";//"http://172.25.51.159:8585/HFS/lhFramework";
+
         public static readonly string sourceUrl =
 #if RELEASE
-        persistentUrl+ platform + "/"+Const.bundleFolder+"/";
+        persistentUrl + platform + "/";
 #elif DEBUG
-        streamingAssetUrl + platform + "/"+ Const.bundleFolder + "/";
+        streamingAssetUrl + platform + "/";
 #elif DEVELOPMENT
         localSourceUrl ;
 #else
-        streamingAssetUrl+ platform + "/"+Const.bundleFolder+"/";
+        streamingAssetUrl+ platform + "/";
+#endif
+        public static readonly string sourceBundleUrl = sourceUrl
+#if RELEASE
+        +Const.bundleFolder+"/";
+#elif DEBUG
+        +Const.bundleFolder + "/";
+#elif DEVELOPMENT
+        ;
+#else
+        +Const.bundleFolder+"/";
 #endif
         public static readonly string sourceTableUrl =
 
 #if DEVELOPMENT
             streamingAssetUrl + platform + "/" + Const.bundleFolder + "/"
 #else
-            sourceUrl
+            sourceBundleUrl
 #endif
             + Const.souceTableName;
 

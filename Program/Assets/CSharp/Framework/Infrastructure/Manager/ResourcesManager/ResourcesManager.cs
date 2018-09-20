@@ -52,7 +52,7 @@ namespace lhFramework.Infrastructure.Managers
         }
         public static string LoadFile(string path)
         {
-            var filePath = Define.sourceUrl + path;
+            var filePath =Path.Combine( Define.sourceUrl ,path);
             string file = null;
             using (FileStream fileStream=new FileStream(filePath,FileMode.Open,FileAccess.Read))
             {
@@ -62,9 +62,20 @@ namespace lhFramework.Infrastructure.Managers
             }
             return file;
         }
+        public static string LoadAbsoluteFile(string filePath)
+        {
+            string file = null;
+            using (FileStream fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+            {
+                byte[] bytes = new byte[fileStream.Length];
+                fileStream.Read(bytes, 0, bytes.Length);
+                file = System.Text.Encoding.UTF8.GetString(bytes);
+            }
+            return file;
+        }
         public static byte[] LoadBytes(string path)
         {
-            var filePath = Define.sourceUrl + path;
+            var filePath =Path.Combine( Define.sourceBundleUrl ,path);
             byte[] bytes = null;
             using (FileStream fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
             {
@@ -73,9 +84,17 @@ namespace lhFramework.Infrastructure.Managers
             }
             return bytes;
         }
+        public static bool Exists(string path)
+        {
+            return File.Exists(Path.Combine(Define.sourceUrl, path));
+        }
         public static FileStream LoadStream(string path)
         {
-            var filePath = Define.sourceUrl + path;
+            var filePath = Define.sourceBundleUrl + path;
+            return new FileStream(filePath, FileMode.Open, FileAccess.Read);
+        }
+        public static FileStream LoadAbsoluteStream(string filePath)
+        {
             return new FileStream(filePath, FileMode.Open, FileAccess.Read);
         }
         public static void Destroy(int assetId,EVariantType variant=EVariantType.n)
