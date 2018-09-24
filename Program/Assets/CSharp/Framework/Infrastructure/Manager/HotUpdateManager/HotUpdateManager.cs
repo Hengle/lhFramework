@@ -14,7 +14,7 @@ namespace lhFramework.Infrastructure.Managers
     using UnityEngine.Networking;
     using System.Threading.Tasks;
 
-    public class HotUpdateManager
+    public class HotUpdateManager:Singleton<HotUpdateManager>
     {
         private enum EStatus
         {
@@ -91,23 +91,17 @@ namespace lhFramework.Infrastructure.Managers
         /// </summary>
         public Action combineCompleteHandler;
         
-        private static HotUpdateManager m_instance;
-        public static HotUpdateManager GetInstance()
-        {
-            if (m_instance != null) return null;
-            return m_instance = new HotUpdateManager();
-        }
-        HotUpdateManager()
+        public async override Task Initialize(Action onInitialOver=null)
         {
             m_streamingAssetUrl=Core.Define.streamingAssetUrl;
-        }
-        public void Dispose()
-        {
-            m_instance = null;
         }
         public void Update()
         {
         }
+        ~HotUpdateManager() {
+            UnityEngine.Debug.Log("HotUpdateManager Dispose");
+        }
+
         public async Task CheckVersion()
         {
             if (!ResourcesManager.Exists( "version"))

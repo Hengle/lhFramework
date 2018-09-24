@@ -103,9 +103,10 @@ namespace lhFramework.Infrastructure.Managers
             IClass cls;
             int index = type.MetadataToken;
             var g = m_instance.m_dic[(int)group];
-            if (g.ContainsKey(index))
+            ClassPool pool;
+            if (g.TryGetValue(index,out pool))
             {
-                cls=g[index].GetObject();
+                cls= pool.GetObject();
             }
             else
             {
@@ -120,19 +121,16 @@ namespace lhFramework.Infrastructure.Managers
         {
             if (obj == null || m_instance == null) return;
             int index = (int)obj.GetType().MetadataToken;
-#if UNITY_EDITOR
             var g = m_instance.m_dic[(int)group];
-            if (g.ContainsKey(index))
+            ClassPool pool;
+            if (g.TryGetValue(index,out pool))
             {
-                g[index].FreeObject(obj);
+                pool.FreeObject(obj);
             }
             else
             {
                 Log.i(ELogType.Class, "LaoHan: freeObject dont has this type =>" + obj.GetType());
             }
-#else
-            m_instance.m_dic[(int)group][index].FreeObject(obj);
-#endif
             if (freeHandler != null)
                 freeHandler(obj.GetType());
         }

@@ -16,6 +16,7 @@ namespace lhFramework.UnitTest
         {
 #if RELEASE
             m_manager = HotUpdateManager.GetInstance();
+            m_manager.Initialize();
             m_manager.downloadCompletedHandler = () =>
             {
                 UnityEngine.Debug.Log("success");

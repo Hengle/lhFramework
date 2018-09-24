@@ -130,8 +130,8 @@ namespace lhFramework.Infrastructure.Managers
         public event Action<int> addToLoadEventHandler;
 
         private Dictionary<int, int[]> m_dependenciesChain = new Dictionary<int, int[]>();
-        private Dictionary<int, string> m_guidPath = new Dictionary<int, string>();
-        private Dictionary<int, int> m_guidDepend = new Dictionary<int, int>();
+        private Dictionary<int, string> m_guidPaths = new Dictionary<int, string>();
+        private Dictionary<int, int> m_variantChains = new Dictionary<int, int>();
 
         public Dictionary<int, SourceData> loadingSources = new Dictionary<int, SourceData>(Const.maxBundleLoading);
         public Dictionary<int, SourceData> waitLoadSources = new Dictionary<int, SourceData>();
@@ -145,7 +145,8 @@ namespace lhFramework.Infrastructure.Managers
         /// </summary>
         void ISource.Initialize()
         {
-            AnalizeSourceTable();
+            //AnalizeSourceTable();
+            AnalizeSourceTableBinary();
         }
         /// <summary>
         /// 加载主资源
@@ -155,7 +156,7 @@ namespace lhFramework.Infrastructure.Managers
         void ISource.Load(int assetId, DataHandler<UnityEngine.Object> loadHandler, EVariantType variant)
         {
             int guid = assetId * Const.variantMaxLength + (int)variant;
-            var chainId = m_guidDepend[guid];
+            var chainId = m_variantChains[guid];
             int[] chain = m_dependenciesChain[chainId];
             if (chain.Length == 1)
             {
@@ -183,9 +184,9 @@ namespace lhFramework.Infrastructure.Managers
                 {
                     string assetPath = null;
 #if UNITY_EDITOR
-                    if (m_guidPath.ContainsKey(dep))
+                    if (m_guidPaths.ContainsKey(dep))
                     {
-                        assetPath = m_guidPath[dep];
+                        assetPath = m_guidPaths[dep];
                     }
                     else
                     {
@@ -256,9 +257,9 @@ namespace lhFramework.Infrastructure.Managers
                     {
                         string assetPath = null;
 #if UNITY_EDITOR
-                        if (m_guidPath.ContainsKey(dep))
+                        if (m_guidPaths.ContainsKey(dep))
                         {
-                            assetPath = m_guidPath[dep];
+                            assetPath = m_guidPaths[dep];
                         }
                         else
                         {
@@ -295,7 +296,7 @@ namespace lhFramework.Infrastructure.Managers
         void ISource.Load(int assetId, DataHandler<UnityEngine.Object[]> loadHandler, EVariantType variant)
         {
             int guid = assetId * Const.variantMaxLength + (int)variant;
-            var chainId = m_guidDepend[guid];
+            var chainId = m_variantChains[guid];
             int[] chain = m_dependenciesChain[chainId];
             if (chain.Length == 1)
             {
@@ -323,9 +324,9 @@ namespace lhFramework.Infrastructure.Managers
                 {
                     string assetPath = null;
 #if UNITY_EDITOR
-                    if (m_guidPath.ContainsKey(dep))
+                    if (m_guidPaths.ContainsKey(dep))
                     {
-                        assetPath = m_guidPath[dep];
+                        assetPath = m_guidPaths[dep];
                     }
                     else
                     {
@@ -396,9 +397,9 @@ namespace lhFramework.Infrastructure.Managers
                     {
                         string assetPath = null;
 #if UNITY_EDITOR
-                        if (m_guidPath.ContainsKey(dep))
+                        if (m_guidPaths.ContainsKey(dep))
                         {
-                            assetPath = m_guidPath[dep];
+                            assetPath = m_guidPaths[dep];
                         }
                         else
                         {
@@ -449,7 +450,7 @@ namespace lhFramework.Infrastructure.Managers
                 return;
             }
 #endif
-            var chainId = m_guidDepend[guid];
+            var chainId = m_variantChains[guid];
             var chain = m_dependenciesChain[chainId];
             for (int i = 0; i < chain.Length; i++)
             {
@@ -476,7 +477,7 @@ namespace lhFramework.Infrastructure.Managers
                 UnityEngine.Debug.LogError("BundleSource.Unload dont has this assetId:" + assetId);
             }
 #endif
-            var chainId = m_guidDepend[guid];
+            var chainId = m_variantChains[guid];
             var chain = m_dependenciesChain[chainId];
             for (int i = 0; i < chain.Length; i++)
             {
@@ -571,7 +572,7 @@ namespace lhFramework.Infrastructure.Managers
                                             int variantId = variant[m];
                                             int g = assetId * Const.variantMaxLength + variantId;
                                             string path = assetPath + "." + ((EVariantType)variantId).ToString();
-                                            m_guidPath.Add(g, path);
+                                            m_guidPaths.Add(g, path);
                                         }
                                     }
                                 }
@@ -633,7 +634,7 @@ namespace lhFramework.Infrastructure.Managers
                                     j++;
                                     if (i == s.Length - 1)
                                     {
-                                        m_guidDepend.Add(guid, chainId);
+                                        m_variantChains.Add(guid, chainId);
                                     }
                                 }
                                 else
@@ -645,6 +646,42 @@ namespace lhFramework.Infrastructure.Managers
                     }
                 }
             }
+        }
+        void AnalizeSourceTableBinary()
+        {
+            string tablePath = Define.sourceTableUrl;
+            if (!File.Exists(tablePath))
+            {
+                Debug.Log.i(Debug.ELogType.Error, "dont has sourceTable: " + tablePath);
+            }
+            SourceTable sourceTable=null;
+            using (FileStream fileStream = new FileStream(tablePath, FileMode.Open))
+            {
+                byte[] bytes = new byte[fileStream.Length];
+                fileStream.Read(bytes, 0, bytes.Length);
+                sourceTable = Utility.ProtobufUtility.Deserialize<SourceTable>(bytes);
+            }
+            for (int i = 0; i < sourceTable.guidPaths.Count; i++)
+            {
+                m_guidPaths.Add(sourceTable.guidPaths[i].guid, Define.sourceBundleUrl+sourceTable.guidPaths[i].path);
+            }
+            for (int i = 0; i < sourceTable.dependenciesChains.Count; i++)
+            {
+                List<int> arr = new List<int>();
+                for (int j = 0; j < sourceTable.dependenciesChains[i].depends.Count; j++)
+                {
+                    for (int x = 0; x < sourceTable.dependenciesChains[i].depends[j].deps.Count; x++)
+                    {
+                        arr.Add(sourceTable.dependenciesChains[i].depends[j].deps[x] * Const.dependLayerDigit + j);
+                    }
+                }
+                m_dependenciesChain.Add(sourceTable.dependenciesChains[i].chainId, arr.ToArray());
+            }
+            for (int i = 0; i < sourceTable.variantChains.Count; i++)
+            {
+                m_variantChains.Add(sourceTable.variantChains[i].guid, sourceTable.variantChains[i].chainId);
+            }
+            sourceTable = null;
         }
         void LoadingToUse()
         {
@@ -717,7 +754,7 @@ namespace lhFramework.Infrastructure.Managers
                 UnityEngine.Debug.Log(o.name);
             };
             int a = 0;
-            foreach (var item in m_guidPath)
+            foreach (var item in m_guidPaths)
             {
                 if (a > count)
                 {
@@ -726,7 +763,7 @@ namespace lhFramework.Infrastructure.Managers
                 a++;
                 int guid = item.Key;
                 if (guid % Const.variantMaxLength != 0) continue;
-                var chainId = m_guidDepend[guid];
+                var chainId = m_variantChains[guid];
                 int[] chain = m_dependenciesChain[chainId];
                 if (chain.Length == 1)
                 {
@@ -754,9 +791,9 @@ namespace lhFramework.Infrastructure.Managers
                     {
                         string assetPath = null;
 #if UNITY_EDITOR
-                        if (m_guidPath.ContainsKey(dep))
+                        if (m_guidPaths.ContainsKey(dep))
                         {
-                            assetPath = m_guidPath[dep];
+                            assetPath = m_guidPaths[dep];
                         }
                         else
                         {
@@ -827,9 +864,9 @@ namespace lhFramework.Infrastructure.Managers
                         {
                             string assetPath = null;
 #if UNITY_EDITOR
-                            if (m_guidPath.ContainsKey(dep))
+                            if (m_guidPaths.ContainsKey(dep))
                             {
-                                assetPath = m_guidPath[dep];
+                                assetPath = m_guidPaths[dep];
                             }
                             else
                             {

@@ -267,7 +267,7 @@ namespace lhFramework.Tools.Bundle
                 d.state = item.Value.state;
                 d.allAssets = item.Value.allAssets;
                 d.bundle = item.Value.bundle;
-                d.assetPath = item.Value.assetPath.Replace(Define.sourceUrl, "");
+                d.assetPath = item.Value.assetPath.Replace(Define.sourceBundleUrl, "");
                 d.dependencieds = new List<int>();
                 for (int i = 0; i < item.Value.dependencieds.Count; i++)
                 {
@@ -283,7 +283,7 @@ namespace lhFramework.Tools.Bundle
                 d.state = item.Value.state;
                 d.allAssets = item.Value.allAssets;
                 d.bundle = item.Value.bundle;
-                d.assetPath = item.Value.assetPath.Replace(Define.sourceUrl, "");
+                d.assetPath = item.Value.assetPath.Replace(Define.sourceBundleUrl, "");
                 d.dependencieds = new List<int>();
                 for (int i = 0; i < item.Value.dependencieds.Count; i++)
                 {
@@ -299,7 +299,7 @@ namespace lhFramework.Tools.Bundle
                 d.state = item.Value.state;
                 d.allAssets = item.Value.allAssets;
                 d.bundle = item.Value.bundle;
-                d.assetPath = item.Value.assetPath.Replace(Define.sourceUrl, "");
+                d.assetPath = item.Value.assetPath.Replace(Define.sourceBundleUrl, "");
                 d.dependencieds = new List<int>();
                 for (int i = 0; i < item.Value.dependencieds.Count; i++)
                 {

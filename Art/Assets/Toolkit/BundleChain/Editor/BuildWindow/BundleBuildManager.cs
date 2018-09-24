@@ -395,6 +395,7 @@ namespace lhFramework.Tools.Bundle
         private string m_tableFileName = "SourceTable.txt";
         private string m_editorTableFileName = "EditorSourceTable.txt";
         private int m_idBase;
+        private int variantMaxLength = 10;
         private Dictionary<int, BaseSource> m_infoTemp=new Dictionary<int, BaseSource>();
         private UnityEngine.AssetBundleManifest m_manifest;
         public Dictionary<string, CategoryData> categoryData { get; private set; }
@@ -438,21 +439,22 @@ namespace lhFramework.Tools.Bundle
             AnalizeSourceState();
             AnalizeDependency();
             AnalizeChain();
-
         }
         public void BuildPackage()
         {
             m_bundlePack.StartBuild();
             PackBundle(m_rootPath);
             PackInfo();
-            PackSourceTable();
+            //PackSourceTable();
+            PackSourceTableBinary();
             PackEditorSourceTable();
             m_bundlePack.BuildOver();
             AssetDatabase.Refresh();
         }
         public void BuildTable()
         {
-            PackSourceTable();
+            //PackSourceTable();
+            PackSourceTableBinary();
         }
         public void Clear()
         {
@@ -824,6 +826,119 @@ namespace lhFramework.Tools.Bundle
                     }
                     sw.Flush();
                 }
+            }
+        }
+        private void PackSourceTableBinary()
+        {
+            string tablePath = m_bundleRootPath + m_tableFileName;
+            if (File.Exists(tablePath))
+            {
+                File.Delete(tablePath);
+            }
+            SourceTable sourceTable = new SourceTable();
+            using (FileStream fileStream = new FileStream(tablePath, FileMode.Create))
+            {
+                Dictionary<int, string> pathDic = new Dictionary<int, string>();
+                Dictionary<int, List<int>> variantDic = new Dictionary<int, List<int>>();
+                foreach (var item in categoryData)
+                {
+                    foreach (var its in item.Value.variantDic)
+                    {
+                        foreach (var it in its.Value.directoriesDic)
+                        {
+                            if (it.Value.filesDic.Count > 0)
+                            {
+                                if (it.Value.fileState == ESourceState.MainBundle || it.Value.fileState == ESourceState.SharedBundle)
+                                {
+                                    if (!pathDic.ContainsKey(it.Value.assetId))
+                                    {
+                                        pathDic.Add(it.Value.assetId, it.Value.bundleName);
+                                        variantDic.Add(it.Value.assetId, new List<int>() { GetVariantInt(it.Value.variantName) });
+                                    }
+                                    else
+                                    {
+                                        int variantId = GetVariantInt(it.Value.variantName);
+                                        if (!variantDic[it.Value.assetId].Contains(variantId))
+                                            variantDic[it.Value.assetId].Add(variantId);
+                                    }
+                                }
+                            }
+                        }
+                        foreach (var it in its.Value.filesDic)
+                        {
+                            if (it.Value.fileState == ESourceState.MainBundle || it.Value.fileState == ESourceState.SharedBundle)
+                            {
+                                if (!pathDic.ContainsKey(it.Value.assetId))
+                                {
+                                    pathDic.Add(it.Value.assetId, it.Value.bundleName);
+                                    variantDic.Add(it.Value.assetId, new List<int>() { GetVariantInt(it.Value.variantName) });
+                                }
+                                else
+                                {
+                                    int variantId = GetVariantInt(it.Value.variantName);
+                                    if (!variantDic[it.Value.assetId].Contains(variantId))
+                                        variantDic[it.Value.assetId].Add(variantId);
+                                }
+                            }
+                        }
+                    }
+                }
+                foreach (var item in pathDic)
+                {
+                    var varientList = variantDic[item.Key];
+                    for (int i = 0; i < varientList.Count; i++)
+                    {
+                        sourceTable.guidPaths.Add(new GuidPath()
+                        {
+                            guid = item.Key * variantMaxLength + varientList[i],
+                            path = item.Value + "." + ((EVariantType)varientList[i]).ToString()
+                        });
+                    }
+                }
+                for (int m = 0; m < dependChains.Count; m++)
+                {
+                    var chains = dependChains[m];
+                    DependenciesChain depChain = new DependenciesChain();
+                    depChain.chainId = m;
+                    for (int i = 0; i < chains.Count; i++)
+                    {
+                        var chain = chains[i];
+                        if (chain.Count > 0)
+                        {
+                            Depends deps = new Depends();
+                            for (int j = 0; j < chain.Count; j++)
+                            {
+                                int chainId = chain[j];
+                                var source = allSourcesGuid[chainId];
+                                if (source.fileState == ESourceState.MainBundle || source.fileState == ESourceState.SharedBundle)
+                                {
+                                    deps.deps.Add(chainId);
+                                }
+                            }
+                            if (deps.deps.Count>0)
+                            {
+                                depChain.depends.Add(deps);
+                            }
+                        }
+                    }
+                    if (depChain.depends.Count > 0)
+                    {
+                        sourceTable.dependenciesChains.Add(depChain);
+                    }
+                }
+                foreach (var item in allSourcesGuid)
+                {
+                    if (item.Value.fileState == ESourceState.MainBundle || item.Value.fileState == ESourceState.SharedBundle)
+                    {
+                        sourceTable.variantChains.Add(new VariantChain()
+                        {
+                            guid = item.Key,
+                            chainId = item.Value.dependenciesChain
+                        });
+                    }
+                }
+                var bytes = Serialize<SourceTable>(sourceTable);
+                fileStream.Write(bytes, 0, bytes.Length);
             }
         }
         private void PackEditorSourceTable()
@@ -1892,9 +2007,9 @@ namespace lhFramework.Tools.Bundle
             using (var ms = new MemoryStream())
             {
                 Serializer.Serialize(ms, instance);
-                bytes = new byte[ms.Position];
-                var fullBytes = ms.GetBuffer();
-                Array.Copy(fullBytes, bytes, bytes.Length);
+                bytes = ms.ToArray();// new byte[ms.Position];
+                //var fullBytes = ms.GetBuffer();
+                //Array.Copy(fullBytes, bytes, bytes.Length);
             }
             return bytes;
         }
