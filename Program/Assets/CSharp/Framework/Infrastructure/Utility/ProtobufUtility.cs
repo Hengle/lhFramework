@@ -13,9 +13,9 @@ namespace lhFramework.Infrastructure.Utility
             using (var ms = new MemoryStream())
             {
                 Serializer.Serialize(ms, instance);
-                bytes = new byte[ms.Position];
-                var fullBytes = ms.GetBuffer();
-                Array.Copy(fullBytes, bytes, bytes.Length);
+                bytes = ms.ToArray();// new byte[ms.Position];
+                //var fullBytes = ms.GetBuffer();
+                //Array.Copy(fullBytes, bytes, bytes.Length);
             }
             return bytes;
         }
