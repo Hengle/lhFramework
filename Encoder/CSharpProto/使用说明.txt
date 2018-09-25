@@ -1,0 +1,4 @@
+修改Xcopy "..\protogen\protodll\*.dll" "..\..\Client\Assets\Plugins\Protocol" /s /e /y
+为自己的路径
+
+双击compileall

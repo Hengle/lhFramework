@@ -1,0 +1,423 @@
+package com.youzu.got.protocol;
+
+enum MSDKParam {
+  OPEN_ID = 1; 
+  PLATFORM = 2; 
+  VERSION = 3; 
+  TELECOM_OPERATE = 4; 
+  REG_CHANNEL = 5; 
+  LOGIN_CHANNEL = 6; 
+  NETWORK = 7; 
+  SYSTEM_HARDWARE = 8; 
+  SYSTEM_SOFTWARE = 9; 
+  SCREEN_WIDTH = 10; 
+  SCREEN_HIGHT = 11; 
+  DENSITY = 12; 
+  CPU_HARDWARE = 13; 
+  MEMORY = 14; 
+  GL_RENDER = 15; 
+  GL_VERSION = 16; 
+  DEVICE_ID = 17; 
+  DESKTOP = 18; 
+  OPEN_KEY = 19;
+  PF = 20;
+  PF_KEY = 21;
+  IDFA = 22;
+}
+
+enum OperatePromptType {
+  LOGIN = 1; 
+  TALK = 2; 
+  SYSTEM = 3; 
+}
+
+message CSMessage {
+	optional LoginRequest loginRequest = 1;
+	optional PingRequest pingRequest = 2;
+	optional GmOrderRequest gmOrderRequest = 121;
+	optional BattleReportRequest battleReportRequest = 1001;
+	optional BattleTestRequest battleTestRequest = 1002;
+	optional WorldMapViewRequest worldmapviewRequest = 9001;
+	optional WorldEnterMapRequest worldEnterMapRequest = 9006;
+	optional WorldLeaveMapRequest worldLeaveMapRequest = 9007;
+}
+
+message SCMessage {
+	optional LoginResponse loginResponse = 1;
+	optional PingResponse pingResponse = 2;
+	optional SCChannelExpired scChannelExpired = 4;
+	optional GmOrderResponse gmOrderResponse = 121;
+	optional SCOperatePrompt scOperatePrompt = 151;
+	optional BattleReportResponse battleReportResponse = 1001;
+	optional BattleTestResponse battleTestResponse = 1002;
+	optional WorldMapViewResponse worldMapViewResponse = 9001;
+	optional WorldNewObjectNotify worldNewObjectNotify = 9002;
+	optional WorldDelObjectNotify worldDelObjectNotify = 9003;
+	optional WorldMarchNotify worldMarchNotify = 9004;
+	optional WorldCastlePostionNotify worldCastlePostionNotify = 9005;
+	optional WorldEnterMapResponse worldEnterMapResponse = 9006;
+	optional WorldLeaveMapResponse worldLeaveMapResponse = 9007;
+	optional WorldUpdateObjectNotity worldUpdateObjectNotity = 9008;
+	optional WorldObjectsNotify worldObjectsNotify = 9009;
+}
+
+message LoginRequest {
+	required string account = 1;
+	required string serverid = 2;
+	required int32 timestamp = 4;
+	required string digest = 5;
+	optional string clientIp = 6;
+	optional string clientpubkey = 7;
+	optional string nickname = 8;
+	repeated TecentMSDKParam msdkParams = 9;
+}
+
+message TecentMSDKParam {
+	required MSDKParam paramType = 1;
+	required string paramValue = 2;
+}
+
+message PingRequest {
+	required int64 clientTimestamp = 1;
+}
+
+message GmOrderRequest {
+	required string gmOrder = 1;
+	required string firstOrder = 2;
+	required string secondOrder = 3;
+	required string targetParams = 4;
+}
+
+message BattleReportRequest {
+	required int64 id = 1;
+}
+
+message BattleTestRequest {
+	required int32 type = 1;
+	required int32 atkId = 2;
+	required int32 defId = 3;
+}
+
+message WorldMapViewRequest {
+	required int32 grid = 1;
+}
+
+message WorldEnterMapRequest {
+}
+
+message WorldLeaveMapRequest {
+}
+
+message LoginResponse {
+	optional PlayerInfo playerInfo = 1;
+	optional int32 timeZone = 2;
+	optional int64 servertime = 3;
+	optional int32 result = 4;
+	optional string serverkey = 5;
+}
+
+message PlayerInfo {
+	required string csid = 1;
+	required string nickname = 2;
+	required string icon = 3;
+	required int32 sex = 4;
+	required int32 level = 5;
+	required int32 exp = 6;
+	required bool isVipActive = 7;
+	required int32 vipLevel = 8;
+	required int32 vipExp = 9;
+	optional int64 allianceId = 11;
+	required int32 castleGrid = 12;
+	required int64 power = 13;
+	required int64 createTime = 14;
+	optional int64 playerId = 15;
+	optional int64 allianceWorldId = 16;
+}
+
+message PingResponse {
+	required int64 clientTimestamp = 1;
+	required int64 serverTimestamp = 2;
+}
+
+message SCChannelExpired {
+}
+
+message GmOrderResponse {
+	optional bool isSuccess = 1;
+	optional string result = 2;
+}
+
+message SCOperatePrompt {
+	required OperatePromptType type = 1;
+	required string reason = 2;
+}
+
+message BattleReportResponse {
+	required int32 battleType = 1;
+	optional PBBattleReport report = 2;
+	optional PBPVEBattleReport pveReport = 3;
+	required int32 fieldId = 4;
+}
+
+message PBBattleReport {
+	required PBBattleGroup atkGrp = 1;
+	required PBBattleGroup defGrp = 2;
+	repeated PBBattleRecord record = 3;
+	required PBCommonResult result = 4;
+}
+
+message PBBattleGroup {
+	repeated PBBattleSoldier units = 1;
+	repeated PBBattleHero heroes = 2;
+	repeated PBBattleMachine machines = 3;
+	required int32 formationId = 4;
+	optional PBBattleWall wall = 5;
+	optional int32 x = 6;
+	optional int32 y = 7;
+}
+
+message PBBattleSoldier {
+	required int32 id = 1;
+	required int32 cnt = 2;
+	repeated IntPair viewCnt = 3;
+	required int32 atkSpeed = 4;
+	required int32 runSpeed = 5;
+	required int32 x = 6;
+	required int32 y = 7;
+	required int32 index = 8;
+	optional int32 heroId = 10;
+	optional int32 wallIdx = 11;
+}
+
+message IntPair {
+	required int32 key = 1;
+	required int32 value = 2;
+}
+
+message PBBattleHero {
+	required int32 id = 1;
+	required int32 cfgId = 2;
+	required int32 index = 3;
+	required int32 x = 4;
+	required int32 y = 5;
+	required int32 star = 7;
+	optional bool isLord = 8;
+	required int32 atkSpeed = 9;
+	required int32 rank = 10;
+	required int32 lv = 11;
+}
+
+message PBBattleMachine {
+	required int32 id = 1;
+	required int32 cfgId = 2;
+	required int32 index = 3;
+	required int32 x = 4;
+	required int32 y = 5;
+	required int32 atkSpeed = 6;
+	required int32 cnt = 7;
+}
+
+message PBBattleWall {
+	required int32 id = 1;
+	required int32 cfgId = 2;
+	required int32 x = 3;
+	required int32 y = 4;
+	required int32 hp = 5;
+	required int32 maxHp = 6;
+	repeated PBBattleWallPoint pointList = 7;
+}
+
+message PBBattleWallPoint {
+	required int32 id = 1;
+	required int32 x = 2;
+	required int32 y = 3;
+}
+
+message PBBattleRecord {
+	required int32 frame = 1;
+	repeated PBBattleEntityData entityData = 2;
+	repeated IntPair dataChange = 3;
+	repeated PBBattleCmd cmd = 4;
+	repeated PBSKillEntity summonedSkills = 5;
+}
+
+message PBBattleEntityData {
+	required int32 unitId = 1;
+	optional PBBuffChange buffChange = 2;
+	repeated IntPair dataChange = 3;
+	optional PBBattleCmd cmd = 4;
+	repeated PBDamageData damageData = 5;
+	optional PBBattleCmd heroCmd = 6;
+}
+
+message PBBuffChange {
+	repeated IntPair addBuff = 1;
+	repeated int32 removeBuff = 2;
+}
+
+message PBBattleCmd {
+	required int32 cmdType = 1;
+	repeated int32 params = 2;
+}
+
+message PBDamageData {
+	required int32 type = 1;
+	required int64 value = 2;
+}
+
+message PBSKillEntity {
+	required int32 unitId = 1;
+	required int32 skillId = 2;
+	required int32 x = 3;
+	required int32 y = 4;
+	required int32 endFrame = 5;
+}
+
+message PBCommonResult {
+	required bool isWin = 1;
+	required PBGroupResult atkResult = 2;
+	required PBGroupResult defResult = 3;
+	optional int32 morale = 4;
+	optional int32 monsterId = 5;
+	optional int32 maxFrame = 6;
+}
+
+message PBGroupResult {
+	required string name = 1;
+	required int32 deadNum = 2;
+	optional string allianceCode = 3;
+}
+
+message PBPVEBattleReport {
+	required PBPVEBattleGroup atkGrp = 1;
+	required PBPVEBattleGroup defGrp = 2;
+	repeated PBBattleRecord record = 3;
+	optional int32 fortuneId = 4;
+	required PBCommonResult result = 5;
+}
+
+message PBPVEBattleGroup {
+	repeated PBPVEBattleUnit pveUnits = 1;
+	required int32 formationId = 2;
+}
+
+message PBPVEBattleUnit {
+	required int32 unitId = 1;
+	required int32 cfgId = 2;
+	required int32 x = 3;
+	required int32 y = 4;
+	required IntPair guard = 5;
+	required int32 runSpeed = 6;
+	required int32 atkSpeed = 7;
+	required int32 hp = 8;
+	required int32 maxHp = 9;
+	required int32 star = 10;
+	required int32 lv = 11;
+	required int32 rank = 12;
+	required int32 energy = 13;
+	optional bool isFortune = 14;
+	optional int32 squareId = 15;
+}
+
+message BattleTestResponse {
+	required string id = 1;
+}
+
+message WorldMapViewResponse {
+	repeated WorldMapObject allviewobjects = 1;
+	repeated WorldMarch allviewmarchs = 2;
+	repeated WorldCastle allviewcastles = 3;
+	repeated WorldMiracle allviewmiracles = 4;
+	optional int32 areaId = 6;
+}
+
+message WorldMapObject {
+	required int32 grid = 1;
+	required int32 ID = 2;
+	required int32 Type = 3;
+	optional int64 MarchID = 4;
+	optional int32 Life = 5;
+	optional int64 param1 = 6;
+}
+
+message WorldMarch {
+	required int64 ID = 1;
+	required int32 Type = 2;
+	required int32 Source = 3;
+	required int32 Target = 4;
+	required string PlayerName = 5;
+	required int64 PlayerID = 6;
+	required int64 StartTime = 7;
+	required int64 EndTime = 8;
+	required int32 State = 9;
+	optional int64 AllianceID = 10;
+	optional int32 param1 = 11;
+	optional int32 param2 = 12;
+	optional int32 resType = 13;
+}
+
+message WorldCastle {
+	required int32 Grid = 1;
+	required int64 PlayerID = 2;
+	required string PlayerName = 3;
+	required int32 Level = 4;
+	required int32 Skin = 5;
+	optional string Code = 6;
+	optional string AllianceName = 7;
+	optional bool Prison = 8;
+	optional int32 Title = 9;
+	optional int32 Status = 10;
+}
+
+message WorldMiracle {
+	required int32 Grid = 1;
+	required int32 MiracleID = 2;
+	optional int64 AllianceID = 3;
+	optional string AllianceName = 4;
+	optional int32 Icon = 5;
+	required bool Peace = 6;
+	optional string Code = 7;
+}
+
+message WorldNewObjectNotify {
+	optional WorldCastle Castle = 1;
+	optional WorldMapObject MapObject = 2;
+	required int32 Grid = 3;
+}
+
+message WorldDelObjectNotify {
+	required int32 Grid = 1;
+}
+
+message WorldMarchNotify {
+	required WorldMarch worldMarch = 1;
+}
+
+message WorldCastlePostionNotify {
+	required int32 Grid = 1;
+	optional int32 areaId = 2;
+}
+
+message WorldEnterMapResponse {
+	repeated WorldMapObject allviewobjects = 1;
+	repeated WorldMarch allviewmarchs = 2;
+	repeated WorldCastle allviewcastles = 3;
+	required int32 CastleGrid = 4;
+	repeated WorldMiracle allviewmiracles = 5;
+	optional int32 areaId = 6;
+}
+
+message WorldLeaveMapResponse {
+}
+
+message WorldUpdateObjectNotity {
+	optional WorldMapObject MapObject = 1;
+	optional WorldCastle Castle = 2;
+	optional WorldMiracle Miracle = 3;
+	required int32 Grid = 4;
+}
+
+message WorldObjectsNotify {
+	repeated int32 delgrids = 1;
+	repeated WorldMapObject newObjects = 2;
+}
