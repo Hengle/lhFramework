@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 3894339308
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b9a16c08be40b2c4ed499da64865ccce
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 0a4381b8d24d7546af2f9b5d2b1de238
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/AnimatorControls/UV_001_WaterWave.controller
+Dependencies:
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/animations/uv_001_waterwave.n

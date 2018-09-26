@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3849851772
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a3494c475c72127d7902e13d127d4f9f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Materials/Circle_009.mat
+Dependencies: []

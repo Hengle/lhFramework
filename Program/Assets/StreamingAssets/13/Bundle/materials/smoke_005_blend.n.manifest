@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 4149479697
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: af5e6e33e1a696a1da88eb9b8067e968
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Materials/Smoke_005_Blend.mat
+Dependencies:
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/smoke_005.n

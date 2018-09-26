@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3130570820
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b96cec6f48562c6af62c70454c1116d8
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Materials/Crack_shield_01.mat
+Dependencies: []

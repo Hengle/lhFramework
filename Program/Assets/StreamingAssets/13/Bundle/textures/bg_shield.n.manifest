@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 2191040244
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 935fc62c30ea2d80568bc9bab37b45e3
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/bg_shield.png
+Dependencies: []

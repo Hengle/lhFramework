@@ -1,0 +1,32 @@
+ManifestFileVersion: 0
+CRC: 3900338802
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 596d396f35b94c970f0f0a6f86869f28
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 49c318d97990f2f843929a8bd7947255
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Prefabs/HeroShowEffect.prefab
+Dependencies:
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/plane_003.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/fire_001.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/glow_001_2.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/line_007.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/smoke_004.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/smoke_004_2.n

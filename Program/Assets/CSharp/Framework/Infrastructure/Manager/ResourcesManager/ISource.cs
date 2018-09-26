@@ -17,19 +17,19 @@ namespace lhFramework.Infrastructure.Managers
         /// </summary>
         void LateUpdate();
         /// <summary>
-        /// 加载单个主资源
+        /// 异步加载单个主资源
         /// </summary>
         /// <param name="assetId"></param>
         /// <param name="loadHandler"></param>
         /// <param name="variant"></param>
-        void Load(int assetId, DataHandler<UnityEngine.Object> loadHandler, EVariantType variant );
+        void Load(int assetId, DataHandler<UnityEngine.Object> loadHandler, EVariantType variant ,bool toAsync);
         /// <summary>
-        /// 加载bundle包里所有的资源
+        /// 异步加载bundle包里所有的资源
         /// </summary>
         /// <param name="assetId"></param>
         /// <param name="loadHandler"></param>
         /// <param name="variant"></param>
-        void Load(int assetId, DataHandler<UnityEngine.Object[]> loadHandler, EVariantType variant);
+        void Load(int assetId, DataHandler<UnityEngine.Object[]> loadHandler, EVariantType variant,bool toAsync);
         /// <summary>
         /// 释放bundle包引用
         /// </summary>

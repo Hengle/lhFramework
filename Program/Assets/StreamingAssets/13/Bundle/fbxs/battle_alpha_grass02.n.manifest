@@ -1,0 +1,33 @@
+ManifestFileVersion: 0
+CRC: 2426287730
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6e5f811924b3e97c0af8628b3fd0e003
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c51367943af01ede2ca0cd4946c31bcd
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Fbxs/battle_alpha_grass02.FBX
+Dependencies:
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/tx_pve_background_model_01.n

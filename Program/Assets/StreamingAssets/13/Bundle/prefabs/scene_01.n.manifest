@@ -1,0 +1,72 @@
+ManifestFileVersion: 0
+CRC: 2786329300
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4fee051c3ce99f5089a26f991fda932b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 97f1bb129d998040060fa4a085a6c2fc
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 71ae5f4cc81d84e428d8af73b433960c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a75738c3606cfa844b30a5001460bc22, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 23b4d7f144e3fe945860bfc250ac4f43, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 124
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+- Class: 320
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Prefabs/scene_01/Battle004-Lightmap-0_comp_light.exr
+- Assets/Arts/n/Prefabs/scene_01/Show_01.prefab
+- Assets/Arts/n/Prefabs/scene_01/show_build02.prefab
+Dependencies:
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/smoke_004_2.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/smoke_004.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/show_prop01.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/show_build03_d.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/show_build01_d.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/fire_001.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/glow_001_2.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/line_007.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/show_build02_d.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/show_plant01_d.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/show_build01.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/show_build03.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/show_build04.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/show_plant01.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/plane_003.n
+- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/show_prop01.n

@@ -22,15 +22,38 @@ namespace lhFramework.Infrastructure.Managers
         public UnityEngine.Object[] allAssets;
         public string assetPath;
         public ESourceState state;
+        public bool toAsync;
         public List<int> dependencieds = new List<int>();
         public AssetBundle bundle;
         private List<DataHandler<UnityEngine.Object>> m_mainCompleteEventHandlers = new List<DataHandler<UnityEngine.Object>>();
         private List<DataHandler<UnityEngine.Object[]>> m_allCompleteEventHandlers = new List<DataHandler<UnityEngine.Object[]>>();
         public void Load()
         {
-            state = ESourceState.Loading;
-            var request = AssetBundle.LoadFromFileAsync(assetPath);
-            request.completed += OnCreateReuqest;
+            if (toAsync)
+            {
+                state = ESourceState.Loading;
+                var request = AssetBundle.LoadFromFileAsync(assetPath);
+                request.completed += OnCreateRequest;
+            }
+            else
+            {
+                state = ESourceState.Loading;
+                bundle = AssetBundle.LoadFromFile(assetPath);
+                allAssets = bundle.LoadAllAssets();
+                if (allAssets.Length > 0)
+                    mainAsset = allAssets[0];
+                state = ESourceState.Loaded;
+                for (int i = 0; i < m_mainCompleteEventHandlers.Count; i++)
+                {
+                    m_mainCompleteEventHandlers[i](mainAsset);
+                }
+                m_mainCompleteEventHandlers.Clear();
+                for (int i = 0; i < m_allCompleteEventHandlers.Count; i++)
+                {
+                    m_allCompleteEventHandlers[i](allAssets);
+                }
+                m_allCompleteEventHandlers.Clear();
+            }
         }
         public bool Unload(int guid)
         {
@@ -94,8 +117,9 @@ namespace lhFramework.Infrastructure.Managers
             state = ESourceState.None;
             m_allCompleteEventHandlers.Clear();
             assetPath = null;
+            toAsync = false;
         }
-        private void OnCreateReuqest(AsyncOperation async)
+        private void OnCreateRequest(AsyncOperation async)
         {
             var request = (AssetBundleCreateRequest)async;
             bundle = request.assetBundle;
@@ -153,7 +177,7 @@ namespace lhFramework.Infrastructure.Managers
         /// </summary>
         /// <param name="assetId"></param>
         /// <param name="loadHandler"></param>
-        void ISource.Load(int assetId, DataHandler<UnityEngine.Object> loadHandler, EVariantType variant)
+        void ISource.Load(int assetId, DataHandler<UnityEngine.Object> loadHandler, EVariantType variant,bool toAsync)
         {
             int guid = assetId * Const.variantMaxLength + (int)variant;
             var chainId = m_variantChains[guid];
@@ -199,6 +223,7 @@ namespace lhFramework.Infrastructure.Managers
                     m_waitLoadSourcesIndex.Add(dep, layer);
                     SourceData d = new SourceData();
                     d.guid = dep;
+                    d.toAsync = toAsync;
                     d.assetPath = assetPath;
                     d.state = ESourceState.WaitLoad;
                     d.AddCompleteHandler(loadHandler);
@@ -272,6 +297,7 @@ namespace lhFramework.Infrastructure.Managers
                         m_waitLoadSourcesIndex.Add(dep, maxWaitInsertIndex + layer);
                         SourceData d = new SourceData();
                         d.guid = dep;
+                        d.toAsync = toAsync;
                         d.assetPath = assetPath;
                         d.state = ESourceState.WaitLoad;
                         if (i == chain.Length - 1)
@@ -293,7 +319,7 @@ namespace lhFramework.Infrastructure.Managers
         /// </summary>
         /// <param name="assetId"></param>
         /// <param name="loadHandler"></param>
-        void ISource.Load(int assetId, DataHandler<UnityEngine.Object[]> loadHandler, EVariantType variant)
+        void ISource.Load(int assetId, DataHandler<UnityEngine.Object[]> loadHandler, EVariantType variant,bool toAsync)
         {
             int guid = assetId * Const.variantMaxLength + (int)variant;
             var chainId = m_variantChains[guid];
@@ -339,6 +365,7 @@ namespace lhFramework.Infrastructure.Managers
                     m_waitLoadSourcesIndex.Add(dep, layer);
                     SourceData d = new SourceData();
                     d.guid = dep;
+                    d.toAsync = toAsync;
                     d.assetPath = assetPath;
                     d.state = ESourceState.WaitLoad;
                     d.AddCompleteHandler(loadHandler);
@@ -412,6 +439,7 @@ namespace lhFramework.Infrastructure.Managers
                         m_waitLoadSourcesIndex.Add(dep, maxWaitInsertIndex + layer);
                         SourceData d = new SourceData();
                         d.guid = dep;
+                        d.toAsync = toAsync;
                         d.assetPath = assetPath;
                         d.state = ESourceState.WaitLoad;
                         if (i == chain.Length - 1)
@@ -746,7 +774,7 @@ namespace lhFramework.Infrastructure.Managers
                 m_loadingWaitDeleteSources.Clear();
             }
         }
-        public void LoadAll(int count)
+        public void LoadAll(int count,bool toAsync)
         {
             DataHandler<UnityEngine.Object> loadHandler = (o) =>
             {
@@ -807,6 +835,7 @@ namespace lhFramework.Infrastructure.Managers
                         SourceData d = new SourceData();
                         d.guid = dep;
                         d.assetPath = assetPath;
+                        d.toAsync = toAsync;
                         d.state = ESourceState.WaitLoad;
                         d.AddCompleteHandler(loadHandler);
                         d.dependencieds.Add(guid);
@@ -880,6 +909,7 @@ namespace lhFramework.Infrastructure.Managers
                             SourceData d = new SourceData();
                             d.guid = dep;
                             d.assetPath = assetPath;
+                            d.toAsync = toAsync;
                             d.state = ESourceState.WaitLoad;
                             if (i == chain.Length - 1)
                             {
@@ -896,5 +926,6 @@ namespace lhFramework.Infrastructure.Managers
                 }
             }
         }
+
     }
 }

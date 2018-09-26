@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1948852234
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d1f1dde76c817d1fad5f512f455f0f4e
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/battle_snow_build01.png
+Dependencies: []

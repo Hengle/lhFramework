@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 4141389082
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 24fbcb17d78e6363711c2a5932ea762c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f97869c28a1aa28c8d991fd457505a12
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Altas/Activity_LM/Activity_LM.bytes
+- Assets/Arts/n/Altas/Activity_LM/Activity_LM@atlas0.png
+- Assets/Arts/n/Altas/Activity_LM/Activity_LM@sprites.bytes
+Dependencies: []

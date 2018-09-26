@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 2451280473
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a1402e644e685abadfbea8642f6583dc
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Materials/Sequence_Cloud_1x4_Blend.mat
+Dependencies: []

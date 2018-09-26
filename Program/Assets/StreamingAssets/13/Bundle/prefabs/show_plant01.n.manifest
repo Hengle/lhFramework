@@ -1,0 +1,32 @@
+ManifestFileVersion: 0
+CRC: 1664858541
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6bb0e91e534887847ba33ce4db6de7b9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ec52db577b9a327c3f473871268fd48e
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Prefabs/Show_plant01.prefab
+Dependencies:
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/show_plant01.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/show_plant01_d.n

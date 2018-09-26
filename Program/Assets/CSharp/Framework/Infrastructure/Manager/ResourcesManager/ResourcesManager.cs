@@ -42,13 +42,13 @@ namespace lhFramework.Infrastructure.Managers
             source.Dispose();
             m_instance = null;
         }
-        public static void LoadAsset(int assetId, DataHandler<UnityEngine.Object> onLoadOver,EVariantType variant=EVariantType.n)
+        public static void LoadAsset(int assetId, DataHandler<UnityEngine.Object> onLoadOver,EVariantType variant=EVariantType.n,bool toAsync=true)
         {
-            source.Load(assetId, onLoadOver, variant);
+            source.Load(assetId, onLoadOver, variant, toAsync);
         }
-        public static void LoadAsset(int assetId, DataHandler<UnityEngine.Object[]> onLoadOver, EVariantType variant = EVariantType.n)
+        public static void LoadAsset(int assetId, DataHandler<UnityEngine.Object[]> onLoadOver, EVariantType variant = EVariantType.n,bool toAsync=true)
         {
-            source.Load(assetId, onLoadOver, variant);
+            source.Load(assetId, onLoadOver, variant, toAsync);
         }
         public static string LoadFile(string path)
         {

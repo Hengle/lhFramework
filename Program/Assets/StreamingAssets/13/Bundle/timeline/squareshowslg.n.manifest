@@ -1,0 +1,28 @@
+ManifestFileVersion: 0
+CRC: 406907144
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 342764685644cd880b02663ebacd1940
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ee3a94cfbf39f1968cb9512d56f4167d
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 2024714994, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
+- Class: 114
+  Script: {fileID: 1467732076, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
+- Class: 114
+  Script: {fileID: 337831424, guid: 6a10b2909283487f913b00d94cd3faf5, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 05acc715f855ced458d76ee6f8ac6c61, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 90fb794a295e73545af71bcdb7375791, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Timeline/SquareShowSLG.playable
+Dependencies: []

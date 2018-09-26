@@ -8,6 +8,7 @@ namespace lhFramework.UnitTest
     public class ResourceManagerUnitTest:MonoBehaviour
     {
         public int bundleCount;
+        public bool toAsync;
         private ResourcesManager m_resources;
         void Start()
         {
@@ -36,7 +37,7 @@ namespace lhFramework.UnitTest
             //        UnityEngine.Debug.Log(o.name);
             //    });
             //}
-            ((BundleSource)ResourcesManager.source).LoadAll(bundleCount);
+            ((BundleSource)ResourcesManager.source).LoadAll(bundleCount, toAsync);
         }
     }
 }

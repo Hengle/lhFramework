@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 6431073
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: de5e811f88575c33b6809911e292f372
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Materials/Object_Heraldry_002.mat
+Dependencies:
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/object_heraldry_002.n

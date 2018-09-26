@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 1229989429
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: fe2e93d40d2bd5a2708c9fa4adf2c44a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b103ef19b2d7cddceae276dd515dde3e
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Prefabs/battle_alpha_grass06.prefab
+Dependencies: []

@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 650590086
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 7654b80e86f34027968e95b4a3c829f8
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Materials/Flash_004.mat
+Dependencies: []

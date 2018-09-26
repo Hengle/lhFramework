@@ -21,7 +21,7 @@ namespace lhFramework.Infrastructure.Managers
         }
         void ISource.Update() { }
         void ISource.LateUpdate() { }
-        void ISource.Load(int assetId, DataHandler<UnityEngine.Object> loadHandler,EVariantType variant) {
+        void ISource.Load(int assetId, DataHandler<UnityEngine.Object> loadHandler,EVariantType variant,bool toAsync) {
             int guid = assetId * Const.variantMaxLength + (int)variant;
             if (m_guidPath.ContainsKey(guid))
             {
@@ -38,7 +38,7 @@ namespace lhFramework.Infrastructure.Managers
                 loadHandler(null);
             }
         }
-        void ISource.Load(int assetId, DataHandler<UnityEngine.Object[]> loadHandler, EVariantType variant)
+        void ISource.Load(int assetId, DataHandler<UnityEngine.Object[]> loadHandler, EVariantType variant, bool toAsync)
         {
             int guid = assetId * Const.variantMaxLength + (int)variant;
             if (m_guidPath.ContainsKey(guid))

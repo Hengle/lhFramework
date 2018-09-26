@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1296361648
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 37b45437e6a0e3410b61044238a5b9f0
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Materials/Sequence_sea_waves_1x4.mat
+Dependencies: []

@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 65215821
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 212e14095b4dba79b08d7c08037b78b7
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 0a4381b8d24d7546af2f9b5d2b1de238
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/AnimatorControls/levelup.controller
+Dependencies: []

@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3126563861
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 7fe1eb1b861fceed4d4facedb740f3ae
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Materials/Object_001.mat
+Dependencies: []

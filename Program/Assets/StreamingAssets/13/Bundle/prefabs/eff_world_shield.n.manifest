@@ -1,0 +1,35 @@
+ManifestFileVersion: 0
+CRC: 2446091869
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c950c9259f26f355b49529e8e636778a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4634d6ef697eccb2c1fcdee0f31f72b9
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Prefabs/eff_world_shield.prefab
+Dependencies:
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/mask_003.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/vein_001.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/vein_001_2.n

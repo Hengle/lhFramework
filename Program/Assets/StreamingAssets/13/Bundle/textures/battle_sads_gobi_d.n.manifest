@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1032789225
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 691391e7ea6bc4528e329db891b552ad
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/battle_sads_gobi_d.png
+Dependencies: []
