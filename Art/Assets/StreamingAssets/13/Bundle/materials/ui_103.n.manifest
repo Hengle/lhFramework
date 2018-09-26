@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2388686189
+CRC: 2053761783
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c38eebcd4d6b8baa02c1800434e66446
+    Hash: 60a84ebc4f1809e6e49163c228dca65d
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
@@ -14,4 +14,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Materials/UI_103.mat
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/ui_103.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/ui_103.n

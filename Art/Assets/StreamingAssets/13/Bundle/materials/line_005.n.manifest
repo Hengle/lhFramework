@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2197099806
+CRC: 3213761703
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: fc1c251178add7bb7b093ae755820001
+    Hash: a522fc4fc033e354de61dfee26e31a81
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
@@ -14,4 +14,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Materials/Line_005.mat
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/line_005.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/line_005.n

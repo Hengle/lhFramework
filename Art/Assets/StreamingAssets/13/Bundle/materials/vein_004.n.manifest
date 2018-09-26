@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2103319164
+CRC: 1076171717
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d1705df753bc34818e72860b3b2d1f9d
+    Hash: b6d448facddc6c929eceb8292e08c2e8
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
@@ -14,5 +14,5 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Materials/Vein_004.mat
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/vein_001.n
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/mask_003.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/mask_003.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/vein_001.n

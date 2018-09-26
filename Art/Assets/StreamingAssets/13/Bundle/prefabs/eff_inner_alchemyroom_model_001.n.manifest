@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3682733492
+CRC: 2895337422
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 9d13d0d83dae8d21f484d9dd2e4da633
+    Hash: 7771037411b1eccbb4c256a6678a0be8
   TypeTreeHash:
     serializedVersion: 2
     Hash: bfb44ca415e6ea42952d66ef1c3a0f2e
@@ -28,4 +28,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Prefabs/eff_inner_alchemyroom_model_001.prefab
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/plane_002.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/plane_002.n

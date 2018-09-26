@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1264854041
+CRC: 1658868332
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d47a7256b0773d90eaccf9156be63468
+    Hash: 4ece70364bef078507d63348fc296036
   TypeTreeHash:
     serializedVersion: 2
     Hash: ec52db577b9a327c3f473871268fd48e
@@ -28,5 +28,5 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Prefabs/show_build04.prefab
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/show_build02_d.n
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/show_build04.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/show_build04.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/show_build02_d.n

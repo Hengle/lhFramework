@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2468315889
+CRC: 2426287730
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 9baa2fe7e1fb4c75bd3b86c408eade87
+    Hash: 6e5f811924b3e97c0af8628b3fd0e003
   TypeTreeHash:
     serializedVersion: 2
     Hash: c51367943af01ede2ca0cd4946c31bcd
@@ -30,4 +30,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Fbxs/battle_alpha_grass02.FBX
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/tx_pve_background_model_01.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/tx_pve_background_model_01.n

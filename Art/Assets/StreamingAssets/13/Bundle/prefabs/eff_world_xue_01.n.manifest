@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1725237990
+CRC: 811915016
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 68c862954621c9bd1143611166b27b0e
+    Hash: 019d5c78c01e6e162655cd26632456a5
   TypeTreeHash:
     serializedVersion: 2
     Hash: ab0283cdc76d68aa778fae1a8f59f763
@@ -22,4 +22,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Prefabs/eff_world_xue_01.prefab
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/smoke_004.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/smoke_004.n

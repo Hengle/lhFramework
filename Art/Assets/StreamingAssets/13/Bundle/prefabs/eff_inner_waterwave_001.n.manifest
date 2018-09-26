@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3780660417
+CRC: 3152817398
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: db82c08cec8ef03489a3962f3f714da0
+    Hash: 41963f2c6c4064373883b92cbd1514e1
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9aaac0f4ab4727a763e31ad4a8494ab6
@@ -28,8 +28,8 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Prefabs/eff_inner_waterwave_001.prefab
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/vein_001.n
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/water_003.n
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/mask_004.n
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/waterplane_001.n
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/animatorcontrols/uv_001_waterwave.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/mask_004.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/vein_001.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/water_003.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/animatorcontrols/uv_001_waterwave.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/waterplane_001.n

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 4273901203
+CRC: 2597029881
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 1f18c5ce35996bc49688c143ae274764
+    Hash: 27a87ba43450ebcc81d44c2dc7014999
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
@@ -14,4 +14,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Materials/Flash_001.mat
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/flash_001.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/flash_001.n

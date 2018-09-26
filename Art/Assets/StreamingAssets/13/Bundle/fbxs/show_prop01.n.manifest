@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 151125259
+CRC: 488544146
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 6edc45053bd658e78580c9b3f96041a9
+    Hash: cf7363afcc792e12c902ab2a9b161766
   TypeTreeHash:
     serializedVersion: 2
     Hash: ec52db577b9a327c3f473871268fd48e
@@ -28,4 +28,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Fbxs/show_prop01.FBX
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/show_prop01.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/show_prop01.n

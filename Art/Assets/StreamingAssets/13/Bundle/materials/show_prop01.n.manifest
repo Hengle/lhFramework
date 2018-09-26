@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1976023925
+CRC: 1002128465
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 6be190892752909c3dde50f7bd211cfd
+    Hash: 6c29c3c6baf21abc2970cd3d4dfca7d5
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -18,4 +18,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Materials/show_prop01.mat
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/show_prop01_d.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/show_prop01_d.n

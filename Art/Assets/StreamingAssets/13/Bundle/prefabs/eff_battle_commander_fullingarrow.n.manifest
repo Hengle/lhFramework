@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 4145904784
+CRC: 4041458114
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 1fb094db6d5259822a4a54ba9ceeefa7
+    Hash: b7275848871177e07618c5e15d5803a0
   TypeTreeHash:
     serializedVersion: 2
     Hash: bfb44ca415e6ea42952d66ef1c3a0f2e
@@ -28,7 +28,7 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Prefabs/eff_battle_commander_fullingarrow.prefab
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/hunter_d.n
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/line_005.n
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/missile_001.n
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/plane_002.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/missile_001.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/plane_002.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/hunter_d.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/line_005.n

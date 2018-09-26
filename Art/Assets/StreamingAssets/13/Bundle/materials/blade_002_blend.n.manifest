@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1678813613
+CRC: 4254700598
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: dab66b32a24f4fd003343bb627b8c030
+    Hash: 624b8a4d430e93e77ad9972944ae8059
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
@@ -14,4 +14,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Materials/Blade_002_Blend.mat
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/blade_002.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/blade_002.n

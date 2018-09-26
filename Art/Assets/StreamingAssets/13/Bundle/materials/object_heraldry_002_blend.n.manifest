@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 143381938
+CRC: 2750461832
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: ba5e1d1395b913b0eaf107953f172ae9
+    Hash: 9d8626c3e4520610f067565a6a97b64e
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
@@ -14,4 +14,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Materials/Object_Heraldry_002_Blend.mat
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/object_heraldry_002.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/object_heraldry_002.n

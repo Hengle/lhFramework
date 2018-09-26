@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2600683923
+CRC: 4285939961
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: dbac7c9cd22c7414f6755e7d8fb95e01
+    Hash: c75eae422c1542a9a688cc29aeb179b0
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
@@ -14,4 +14,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Materials/Circle_013.mat
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/circle_010.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/circle_010.n

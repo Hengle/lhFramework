@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 48025255
+CRC: 2606101308
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 0f3ddacb78be39f9107d22ac0f2a3dea
+    Hash: b81400c2081004e44a6316191a18ee48
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
@@ -14,4 +14,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Materials/object_rain_high.mat
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/object_rain.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/object_rain.n

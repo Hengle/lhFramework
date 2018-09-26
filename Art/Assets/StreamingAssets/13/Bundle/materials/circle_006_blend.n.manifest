@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2018290612
+CRC: 3787822639
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 19404fa1010af920b9d162d02c951e6e
+    Hash: ba9508d5fed43b59d0641c207ca1decd
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
@@ -14,4 +14,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Materials/Circle_006_Blend.mat
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/circle_006.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/circle_006.n

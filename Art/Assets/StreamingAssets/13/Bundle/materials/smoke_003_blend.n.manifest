@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2923948222
+CRC: 936301861
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 7c3e57912dfcdad41ac52d68546696f5
+    Hash: 59ed9498bd55e26bd21bbbd4a88aceb0
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
@@ -14,4 +14,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Materials/Smoke_003_Blend.mat
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/smoke_003.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/smoke_003.n

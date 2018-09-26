@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2461452168
+CRC: 4140027618
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 1071690aa92ac61e330e835878a6e589
+    Hash: 3eac5e413c4fa13a733b4d33516bdb88
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
@@ -14,4 +14,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Materials/Crack_001.mat
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/crack_001.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/crack_001.n

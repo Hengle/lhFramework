@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 4152550791
+CRC: 3968116899
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: e6de24bbba934d484f485d39c6b12869
+    Hash: 88208104d247f15f9d5dcfbba8d75082
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
@@ -14,4 +14,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Materials/Fire_003_Blend.mat
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/fire_003.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/fire_003.n

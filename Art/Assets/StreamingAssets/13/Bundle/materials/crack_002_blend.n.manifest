@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1556729282
+CRC: 3309367385
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d7be520522b7a22478b10fa978f97abd
+    Hash: be35ac84280d7f16d8338f33696fb735
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
@@ -14,4 +14,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Materials/Crack_002_Blend.mat
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/crack_002.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/crack_002.n

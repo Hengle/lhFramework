@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3374714242
+CRC: 486881262
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 28109c55dfb370b5ab95eaefc474e6a6
+    Hash: 11b9657d61bda511f38b955774d00dd8
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6487a8a9f26e8dfe02c3b41af02266ba
@@ -26,6 +26,6 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Prefabs/eff_battle_soldier_huner_model_001_missile.prefab
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/hunter_d.n
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/line_005.n
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/missile_001.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/missile_001.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/hunter_d.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/line_005.n

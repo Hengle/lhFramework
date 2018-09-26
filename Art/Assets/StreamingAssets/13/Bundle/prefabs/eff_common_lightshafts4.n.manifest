@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3386716893
+CRC: 841595980
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b0a10c542c0ae33e37980da989affacd
+    Hash: 58e3c5a064f13828b5dea938d3a60952
   TypeTreeHash:
     serializedVersion: 2
     Hash: 4bb96948b47ad6ca1df035de75994dde
@@ -24,4 +24,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Prefabs/eff_common_lightshafts4.prefab
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/plane_002.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/plane_002.n

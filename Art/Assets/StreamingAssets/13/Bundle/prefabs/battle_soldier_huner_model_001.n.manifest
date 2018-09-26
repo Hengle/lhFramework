@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 696152240
+CRC: 2212155491
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: dd419a5bae94d0f7574f049ceb736352
+    Hash: 175ab1771a3e5dfee143162eee97d7e8
   TypeTreeHash:
     serializedVersion: 2
     Hash: 5e3ddb43ce30c8fb96097ed63e727fd9
@@ -30,4 +30,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Prefabs/battle_soldier_huner_model_001.prefab
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/hunter_d.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/hunter_d.n

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 853993340
+CRC: 149481917
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 009da6aa28265ff7d923cdf5e70e2d3c
+    Hash: 0567f4b429650f083239a4b1e253fe7f
   TypeTreeHash:
     serializedVersion: 2
     Hash: ab0283cdc76d68aa778fae1a8f59f763
@@ -22,7 +22,7 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Prefabs/eff_inner_hightower_001.prefab
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/fire_003.n
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/fire_001.n
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/glow_001_2.n
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/glow_003.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/fire_001.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/fire_003.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/glow_001_2.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/glow_003.n

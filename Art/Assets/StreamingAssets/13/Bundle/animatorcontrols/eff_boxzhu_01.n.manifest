@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1813867346
+CRC: 2810082366
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d2226110b08de8fbe0d537dfb5e0d5dc
+    Hash: e9abc66f3b248efa1bbee79bf3a980c9
   TypeTreeHash:
     serializedVersion: 2
     Hash: 0a4381b8d24d7546af2f9b5d2b1de238
@@ -16,4 +16,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/AnimatorControls/eff_boxzhu_01.controller
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/animations/eff_word_castle_teleport.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/animations/eff_word_castle_teleport.n

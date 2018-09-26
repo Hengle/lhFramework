@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3744352720
+CRC: 1409483072
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c7eb6628800cb09b96ddac0e55b7c7f3
+    Hash: db607b0b47f2d825638e7295ff1a8917
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
@@ -14,4 +14,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Materials/Glow_003_Blend.mat
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/glow_003.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/glow_003.n

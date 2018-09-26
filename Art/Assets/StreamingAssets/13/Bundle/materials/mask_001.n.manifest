@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 928954269
+CRC: 170245668
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 83d6786b9746f7e93ddfef6683eb52df
+    Hash: 1cf103b541909760049dc0ba536743e4
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
@@ -14,4 +14,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Materials/Mask_001.mat
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/mask_001.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/mask_001.n

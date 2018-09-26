@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1661664122
+CRC: 1270759816
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 15d8b66bcde1fba83503840ab6c81fe3
+    Hash: ea02ee0820067850a09be20e4eba6a13
   TypeTreeHash:
     serializedVersion: 2
     Hash: 49c318d97990f2f843929a8bd7947255
@@ -24,7 +24,6 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Prefabs/eff_battle_soldier_giant_model_001_satk02.prefab
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/smoke_002.n
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/glow_004.n
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/flash_001.n
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/plane_002.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/glow_004.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/smoke_002.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/fbxs/plane_002.n

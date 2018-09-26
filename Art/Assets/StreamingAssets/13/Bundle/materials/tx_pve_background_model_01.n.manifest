@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3533801030
+CRC: 4224303026
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 24fe5c44afa76ae6ac93961efb019cba
+    Hash: ee7c9cc718daebbd54bd8bb37d1bd205
   TypeTreeHash:
     serializedVersion: 2
     Hash: 6f165f44e4778b6c9d85e7a145a54cb1
@@ -18,4 +18,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Materials/tx_PVE_background_model_01.mat
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/tx_pve_background_model_01.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/tx_pve_background_model_01.n

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1029826618
+CRC: 3058475178
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: ca6692a36261b0661b4727b998e0f706
+    Hash: fd684e6a5004b7585e64f730c1091cee
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
@@ -14,4 +14,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Materials/Vein_102_uv01.mat
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/smoke_005.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/smoke_005.n

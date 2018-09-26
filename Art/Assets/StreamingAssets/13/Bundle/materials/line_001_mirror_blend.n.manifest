@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1148605214
+CRC: 1179633858
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 9f9a3559901b2fe0efa867797c71a240
+    Hash: de95a0d821efbc42803de2b745d2340b
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
@@ -14,4 +14,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Materials/Line_001_Mirror_Blend.mat
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/line_001_alpha.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/line_001_alpha.n

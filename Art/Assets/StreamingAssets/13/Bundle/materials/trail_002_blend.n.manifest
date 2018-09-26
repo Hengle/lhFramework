@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 969942053
+CRC: 2690193854
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d3646653ee6cd4a110508627a52f6423
+    Hash: aa65b00413b059f367f86fb48ee9bbb8
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
@@ -14,4 +14,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Materials/Trail_002_Blend.mat
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/trail_002.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/trail_002.n
