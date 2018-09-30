@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 238765670
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ebc66cc90dc7e2ad609e42e9f813fa58
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/Flash_005.tga
+Dependencies: []

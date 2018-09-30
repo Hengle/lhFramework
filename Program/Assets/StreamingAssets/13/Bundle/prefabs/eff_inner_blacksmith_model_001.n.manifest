@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 417730648
+CRC: 3972024614
 Hashes:
   AssetFileHash:
     serializedVersion: 2
@@ -22,4 +22,4 @@ ClassTypes:
 Assets:
 - Assets/Arts/n/Prefabs/eff_inner_blacksmith_model_001.prefab
 Dependencies:
-- /Users/laohan/workSpace/Git/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/smoke_001.n
+- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/materials/smoke_001.n

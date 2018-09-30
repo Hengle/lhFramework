@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3373592067
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a67bf60fb14913b56178545f4e9426bb
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: c73412a662fd4e4f36af34cbdf078b85
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Arts/n/Textures/body_D.tga
+Dependencies: []

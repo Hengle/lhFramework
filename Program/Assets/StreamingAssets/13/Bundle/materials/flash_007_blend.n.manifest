@@ -3,7 +3,7 @@ CRC: 430518456
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 85811641b4a7c9ceb502e86104b0456d
+    Hash: ca20b3d3e852a33266800b45b2de13d7
   TypeTreeHash:
     serializedVersion: 2
     Hash: 9b71393b2ee9cb5c4f2e835e78d3d8d4
@@ -13,5 +13,4 @@ ClassTypes:
   Script: {instanceID: 0}
 Assets:
 - Assets/Arts/n/Materials/Flash_007_Blend.mat
-Dependencies:
-- E:/Personal/GitHub/lhFramework/Art/Assets/StreamingAssets/13/Bundle/textures/flash_007.n
+Dependencies: []
