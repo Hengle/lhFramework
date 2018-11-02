@@ -1,0 +1,61 @@
+ManifestFileVersion: 0
+CRC: 3886996088
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: b8cbd0a31185437811a3f86f8c5c8c15
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 579b5f2b679caa53be1bd8c1877bffba
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 49
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+Assets:
+- Assets/Package/map_battle_srpg_quests_001/l/prefab_battle_skybox01.prefab
+- Assets/Package/map_battle_srpg_quests_001/l/prefab_srpg_quests_tree01_all.prefab
+- Assets/Package/map_battle_srpg_quests_001/l/srpg_quests_alphatree01_all.prefab
+- Assets/Package/map_battle_srpg_quests_001/l/root.prefab
+- Assets/Package/map_battle_srpg_quests_001/l/srpg_quests_alphatree03_all.prefab
+- Assets/Package/map_battle_srpg_quests_001/l/prefab_srpg_quests_porp01_all.prefab
+- Assets/Package/map_battle_srpg_quests_001/l/srpg_quests_alpha02_all.prefab
+- Assets/Package/map_battle_srpg_quests_001/l/Lightmap-0_comp_light.exr
+- Assets/Package/map_battle_srpg_quests_001/l/srpg_quests_alpha01_all.prefab
+- Assets/Package/map_battle_srpg_quests_001/l/srpg_quests_background03_all.prefab
+- Assets/Package/map_battle_srpg_quests_001/l/prefab_srpg_quests_rock03_all.prefab
+- Assets/Package/map_battle_srpg_quests_001/l/prefab_pve_water_model_01.prefab
+- Assets/Package/map_battle_srpg_quests_001/l/prefab_srpg_quests_porp03_all.prefab
+- Assets/Package/map_battle_srpg_quests_001/l/srpg_quests_alphatree02_all.prefab
+- Assets/Package/map_battle_srpg_quests_001/l/prefab_srpg_quests_tree02_all.prefab
+- Assets/Package/map_battle_srpg_quests_001/l/config.bytes
+- Assets/Package/map_battle_srpg_quests_001/l/prefab_battle_alpha_flag02.prefab
+- Assets/Package/map_battle_srpg_quests_001/l/prefab_srpg_quests_rock02_all.prefab
+- Assets/Package/map_battle_srpg_quests_001/l/map_srpg_quests01_terrain02.prefab
+- Assets/Package/map_battle_srpg_quests_001/l/srpg_quests_alpha03_all.prefab
+- Assets/Package/map_battle_srpg_quests_001/l/prefab_srpg_quests_tree03_all.prefab
+- Assets/Package/map_battle_srpg_quests_001/l/prefab_srpg_quests_rock01_all.prefab
+- Assets/Package/map_battle_srpg_quests_001/l/prefab_srpg_quests_porp02_all.prefab
+- Assets/Package/map_battle_srpg_quests_001/l/srpg_quests_background01_all.prefab
+Dependencies: []

@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 889425628
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: map_battle_srpg_quests_001.n
+      Dependencies: {}
+    Info_1:
+      Name: map_battle_srpg_quests_001.l
+      Dependencies: {}

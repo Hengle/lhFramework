@@ -136,7 +136,7 @@ namespace lhFramework.Infrastructure.Managers
             {
                 try
                 {
-                    string tempDir = Define.tempUrl + "/download/" + m_newVersionStr + "/" + Core.Const.bundleFolder + "/";
+                    string tempDir = Define.tempUrl + "/download/" + m_newVersionStr + "/" + Core.Const.sourceBundleFolder + "/";
                     if (!Directory.Exists(tempDir))
                     {
                         return;
@@ -172,7 +172,7 @@ namespace lhFramework.Infrastructure.Managers
         }
         private void ToDownloadAsset(Dictionary<string,List<AssetInfo>> loadDic)
         {
-            string hostUrl = Core.Define.host + "/" + Core.Define.platform + "/" + m_major + "/" + m_newVersionStr + "/" + Core.Const.bundleFolder + "/";
+            string hostUrl = Core.Define.host + "/" + Core.Define.platform + "/" + m_major + "/" + m_newVersionStr + "/" + Core.Const.sourceBundleFolder + "/";
             int count = 0;
             foreach (var item in loadDic)
             {
@@ -189,7 +189,7 @@ namespace lhFramework.Infrastructure.Managers
                 for (int i = 0; i < item.Value.Count; i++)
                 {
                     string url = hostUrl + item.Value[i].bundleName + "." + item.Value[i].variant;
-                    string tempPath = Define.tempUrl + "/download/" + m_newVersionStr + "/" + Core.Const.bundleFolder + "/" + item.Value[i].bundleName + "." + item.Value[i].variant;
+                    string tempPath = Define.tempUrl + "/download/" + m_newVersionStr + "/" + Core.Const.sourceBundleFolder + "/" + item.Value[i].bundleName + "." + item.Value[i].variant;
                     FileInfo fileInfo = new FileInfo(tempPath);
                     if (!fileInfo.Directory.Exists)
                         fileInfo.Directory.Create();
@@ -280,7 +280,7 @@ namespace lhFramework.Infrastructure.Managers
         private async Task CheckRootInfos()
         {
             await Task.Run(() => { LoadLocalRootInfo("info"); });
-            string url = Core.Define.host + "/" + Core.Define.platform + "/" + m_major + "/" + m_newVersionStr + "/" + Core.Const.bundleFolder + "/info";
+            string url = Core.Define.host + "/" + Core.Define.platform + "/" + m_major + "/" + m_newVersionStr + "/" + Core.Const.sourceBundleFolder + "/info";
             UnityWebRequest www = UnityWebRequest.Get(url);
             www.disposeDownloadHandlerOnDispose = true;
             www.chunkedTransfer = true;
@@ -335,7 +335,7 @@ namespace lhFramework.Infrastructure.Managers
         private async Task CheckChangedInfos()
         {
             await Task.Run(()=> { LoadLocalAssetInfos(); });
-            string hostUrl = Core.Define.host + "/" + Core.Define.platform + "/" + m_major + "/" + m_newVersion.Replace('.', '_') + "/" + Core.Const.bundleFolder + "/";
+            string hostUrl = Core.Define.host + "/" + Core.Define.platform + "/" + m_major + "/" + m_newVersion.Replace('.', '_') + "/" + Core.Const.sourceBundleFolder + "/";
             m_infosCount = m_changedInfos.Count+m_addInfos.Count;
             if (m_infosCount<=0)
             {

@@ -13,19 +13,20 @@ namespace lhFramework.Infrastructure.Managers
     public class LocalSource : ISource
     {
         private Dictionary<int, int[]> m_dependenciesChain = new Dictionary<int, int[]>();
-        private Dictionary<int, string> m_guidPath = new Dictionary<int, string>();
-        private Dictionary<int, int> m_guidDepend = new Dictionary<int, int>();
+        private Dictionary<int, string> m_guidPaths = new Dictionary<int, string>();
+        private Dictionary<int, int> m_variantChains = new Dictionary<int, int>();
 
         void ISource.Initialize() {
-            AnalizeSourceTable();
+            //AnalizeSourceTable();
+            AnalizeSourceTableBinary();
         }
         void ISource.Update() { }
         void ISource.LateUpdate() { }
         void ISource.Load(int assetId, DataHandler<UnityEngine.Object> loadHandler,EVariantType variant,bool toAsync) {
             int guid = assetId * Const.variantMaxLength + (int)variant;
-            if (m_guidPath.ContainsKey(guid))
+            if (m_guidPaths.ContainsKey(guid))
             {
-                string path = m_guidPath[guid];
+                string path = m_guidPaths[guid];
                 UnityEngine.Object obj = null;
 #if UNITY_EDITOR
                 obj=AssetDatabase.LoadAssetAtPath(path, typeof(UnityEngine.Object));
@@ -41,9 +42,9 @@ namespace lhFramework.Infrastructure.Managers
         void ISource.Load(int assetId, DataHandler<UnityEngine.Object[]> loadHandler, EVariantType variant, bool toAsync)
         {
             int guid = assetId * Const.variantMaxLength + (int)variant;
-            if (m_guidPath.ContainsKey(guid))
+            if (m_guidPaths.ContainsKey(guid))
             {
-                string path = m_guidPath[guid];
+                string path = m_guidPaths[guid];
                 UnityEngine.Object[] obj = null;
 #if UNITY_EDITOR
                 obj = AssetDatabase.LoadAllAssetsAtPath(path);
@@ -54,6 +55,42 @@ namespace lhFramework.Infrastructure.Managers
             {
                 Debug.Log.i(Debug.ELogType.Error, "LocalSource dont has this path of assetId:" + assetId + "   " + variant);
                 loadHandler(null);
+            }
+        }
+        UnityEngine.Object[] ISource.Load(int assetId, EVariantType variant)
+        {
+            int guid = assetId * Const.variantMaxLength + (int)variant;
+            if (m_guidPaths.ContainsKey(guid))
+            {
+                string path = m_guidPaths[guid];
+                UnityEngine.Object[] obj = null;
+#if UNITY_EDITOR
+                obj = AssetDatabase.LoadAllAssetsAtPath(path);
+#endif
+                return obj;
+            }
+            else
+            {
+                Debug.Log.i(Debug.ELogType.Error, "LocalSource dont has this path of assetId:" + assetId + "   " + variant);
+                return null;
+            }
+        }
+        UnityEngine.Object ISource.Load(int assetId, string name, EVariantType variant)
+        {
+            int guid = assetId * Const.variantMaxLength + (int)variant;
+            if (m_guidPaths.ContainsKey(guid))
+            {
+                string path = m_guidPaths[guid];
+                UnityEngine.Object obj = null;
+#if UNITY_EDITOR
+                obj = AssetDatabase.LoadAssetAtPath(path, typeof(UnityEngine.Object));
+#endif
+                return obj;
+            }
+            else
+            {
+                Debug.Log.i(Debug.ELogType.Error, "LocalSource dont has this path of assetId:" + assetId + "   " + variant);
+                return null;
             }
         }
         void ISource.UnLoad(int assetId, EVariantType variant) {
@@ -137,7 +174,7 @@ namespace lhFramework.Infrastructure.Managers
                                             path = path + GetExtension(path);
                                             path = path.Replace(Application.dataPath, "");
                                             path = "Assets" + path;
-                                            m_guidPath.Add(g, path);
+                                            m_guidPaths.Add(g, path);
                                         }
                                     }
                                 }
@@ -199,7 +236,7 @@ namespace lhFramework.Infrastructure.Managers
                                     j++;
                                     if (i == s.Length - 1)
                                     {
-                                        m_guidDepend.Add(guid, chainId);
+                                        m_variantChains.Add(guid, chainId);
                                     }
                                 }
                                 else
@@ -211,6 +248,42 @@ namespace lhFramework.Infrastructure.Managers
                     }
                 }
             }
+        }
+        void AnalizeSourceTableBinary()
+        {
+            string tablePath = Define.sourceTableUrl;
+            if (!File.Exists(tablePath))
+            {
+                Debug.Log.i(Debug.ELogType.Error, "dont has sourceTable: " + tablePath);
+            }
+            SourceTable sourceTable = null;
+            using (FileStream fileStream = new FileStream(tablePath, FileMode.Open))
+            {
+                byte[] bytes = new byte[fileStream.Length];
+                fileStream.Read(bytes, 0, bytes.Length);
+                sourceTable = Utility.ProtobufUtility.Deserialize<SourceTable>(bytes);
+            }
+            for (int i = 0; i < sourceTable.guidPaths.Count; i++)
+            {
+                m_guidPaths.Add(sourceTable.guidPaths[i].guid, Define.sourceBundleUrl + sourceTable.guidPaths[i].path);
+            }
+            for (int i = 0; i < sourceTable.dependenciesChains.Count; i++)
+            {
+                List<int> arr = new List<int>();
+                for (int j = 0; j < sourceTable.dependenciesChains[i].depends.Count; j++)
+                {
+                    for (int x = 0; x < sourceTable.dependenciesChains[i].depends[j].deps.Count; x++)
+                    {
+                        arr.Add(sourceTable.dependenciesChains[i].depends[j].deps[x] * Const.dependLayerDigit + j);
+                    }
+                }
+                m_dependenciesChain.Add(sourceTable.dependenciesChains[i].chainId, arr.ToArray());
+            }
+            for (int i = 0; i < sourceTable.variantChains.Count; i++)
+            {
+                m_variantChains.Add(sourceTable.variantChains[i].guid, sourceTable.variantChains[i].chainId);
+            }
+            sourceTable = null;
         }
         string GetExtension(string path)
         {

@@ -6,27 +6,18 @@ namespace lhFramework.Infrastructure.Managers
 {
     using Core;
     using System.IO;
+    using System.Threading.Tasks;
 
-    public class ResourcesManager
+    public class ResourcesManager:Singleton<ResourcesManager>
     {
         public static ISource source { get; private set; }
-        //private bool m
-        private static ResourcesManager m_instance;
-        public static ResourcesManager GetInstance()
-        {
-            if (m_instance != null) return null;
-            return m_instance = new ResourcesManager();
-        }
-        ResourcesManager()
+        public override async Task Initialize(System.Action onInitialOver = null)
         {
 #if DEVELOPMENT
             source=new LocalSource();
 #else
             source = new BundleSource();
 #endif
-        }
-        public void Initialize()
-        {
             source.Initialize();
         }
         public void Update()
@@ -37,10 +28,11 @@ namespace lhFramework.Infrastructure.Managers
         {
             source.LateUpdate();
         }
-        public void Dispose()
+        public override void Dispose()
         {
             source.Dispose();
-            m_instance = null;
+            source = null;
+            base.Dispose();
         }
         public static void LoadAsset(int assetId, DataHandler<UnityEngine.Object> onLoadOver,EVariantType variant=EVariantType.n,bool toAsync=true)
         {

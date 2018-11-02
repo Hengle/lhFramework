@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: mat_battle_water01
+  m_Shader: {fileID: 4800000, guid: 646be25f9cf993845b136137eae4473e, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 5, y: 5}
+        m_Offset: {x: 0, y: 0}
+    - _AlphaTex1:
+        m_Texture: {fileID: 2800000, guid: 55e2cbd28dae77f4cbc13c99a5cf06d9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FlowTex:
+        m_Texture: {fileID: 2800000, guid: 7e280fc00f88c2f4fb793b0db11767e2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 7e280fc00f88c2f4fb793b0db11767e2, type: 3}
+        m_Scale: {x: 2, y: 2}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Alpha: 0.5
+    - _AlphaX: 0
+    - _ColorFresnel: 0
+    - _Cutoff: 0.5
+    - _DepthTint: 0.48
+    - _Distortion: 1
+    - _EdgeAlpha: 1
+    - _EdgeDisSpeed: 0.15
+    - _EdgeDisValue: 0.03
+    - _EdgeMaskTexBright: 0.716
+    - _EdgeSize: 1.38
+    - _FlowIntensity: 1
+    - _Focus: -100
+    - _FresnelBias: 0
+    - _FresnelPower: 1
+    - _FresnelScale: 1
+    - _Gloss: 0.1
+    - _IceBlendPosMax: 200
+    - _IceBlendPosMin: 100
+    - _IceWaterBlendTiling: 1.29
+    - _MirrorColorLerp: 0.637
+    - _MirrorIntension: 1
+    - _MirrorRate: 0.413
+    - _NormalMap1Streth: 0
+    - _NormalMap2Streth: 0
+    - _Normal_Lerp: 0
+    - _RefRate: 1
+    - _ReflDistort: 1.5
+    - _ReflectionTint: 0.392
+    - _RefrDistort: 0
+    - _Refract: 0
+    - _RiverAlpha: 0.734
+    - _Shininess: 1
+    - _Specular: 0.1
+    - _Tiling: 0.0289
+    - _USpeed: 0
+    - _Uv1_Tiling: 1
+    - _Uv2_Tiling: 1
+    - _Uv_Scale: 1
+    - _VSpeed: 0.02
+    - _WaterSpeed: 2.55
+    - _WaveScale: 0.07281132
+    m_Colors:
+    - _Color: {r: 0.38927335, g: 0.5514706, b: 0.4977777, a: 1}
+    - _Color0: {r: 0, g: 0.87412596, b: 1, a: 1}
+    - _Color1: {r: 0.28676468, g: 0.28676468, b: 0.28676468, a: 0.41960785}
+    - _DeepColor: {r: 0, g: 1, b: 0.08965492, a: 0}
+    - _DeepColorIce: {r: 0.28, g: 0.28, b: 0.28, a: 0}
+    - _DepthColor: {r: 0, g: 0.2794118, b: 0.10598385, a: 1}
+    - _EdgeColor: {r: 0, g: 0.17241383, b: 1, a: 1}
+    - _EdgeTexTiling: {r: 0.2, g: 0.3, b: 0, a: 0}
+    - _IceTexScale: {r: 1, g: 1, b: 1, a: 2}
+    - _InvFadeParemeter: {r: 0.23, g: 0.13, b: 0.9, a: 1}
+    - _InvRanges: {r: 0.53, g: 0.2, b: 0.47, a: -3.3}
+    - _MirrorColor: {r: 0.41176468, g: 0.38336706, b: 0, a: 1}
+    - _MirrorColorIce: {r: 1, g: 1, b: 1, a: 1}
+    - _Range: {r: 0.13, g: 1.53, b: 0.37, a: 0.78}
+    - _Ranges: {r: 1, g: 5, b: 0, a: 0}
+    - _RefColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RotateParam: {r: 0, g: 0, b: 0, a: 1}
+    - _SandColor: {r: 1, g: 0.96, b: 0.84, a: 1}
+    - _ShallowColor: {r: 0.2352941, g: 0, b: 0, a: 1}
+    - _ShallowColor2: {r: 1, g: 0, b: 0.22758627, a: 1}
+    - _ShallowColorIce: {r: 0.04, g: 0.7, b: 0.79, a: 1}
+    - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _Specular: {r: 0, g: 0.5808823, b: 0.052079096, a: 1}
+    - _Uv_Animation1: {r: 0, g: 0, b: 0, a: 0}
+    - _Uv_Animation2: {r: 0, g: 0, b: 0, a: 0}
+    - _WaveSpeed: {r: 9, g: 5, b: -8, a: -4}
+--- !u!1002 &2100001
+EditorExtensionImpl:
+  serializedVersion: 6

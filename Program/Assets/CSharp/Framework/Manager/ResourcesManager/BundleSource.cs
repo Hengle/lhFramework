@@ -27,7 +27,7 @@ namespace lhFramework.Infrastructure.Managers
         public AssetBundle bundle;
         private List<DataHandler<UnityEngine.Object>> m_mainCompleteEventHandlers = new List<DataHandler<UnityEngine.Object>>();
         private List<DataHandler<UnityEngine.Object[]>> m_allCompleteEventHandlers = new List<DataHandler<UnityEngine.Object[]>>();
-        public void Load()
+        public void LoadToAsync()
         {
             if (toAsync)
             {
@@ -54,6 +54,19 @@ namespace lhFramework.Infrastructure.Managers
                 }
                 m_allCompleteEventHandlers.Clear();
             }
+        }
+        public void LoadAllAsset()
+        {
+            state = ESourceState.Loading;
+            bundle = AssetBundle.LoadFromFile(assetPath);
+            allAssets = bundle.LoadAllAssets();
+            if (allAssets.Length > 0)
+                mainAsset = allAssets[0];
+            state = ESourceState.Loaded;
+        }
+        public UnityEngine.Object LoadAsset(string name)
+        {
+            return bundle.LoadAsset(name);
         }
         public bool Unload(int guid)
         {
@@ -207,19 +220,16 @@ namespace lhFramework.Infrastructure.Managers
                 else
                 {
                     string assetPath = null;
-#if UNITY_EDITOR
-                    if (m_guidPaths.ContainsKey(dep))
+                    if (m_guidPaths.TryGetValue(dep, out assetPath))
                     {
                         assetPath = m_guidPaths[dep];
                     }
                     else
                     {
                         UnityEngine.Debug.LogError("Dont has this assetId: " + dep);
+                        loadHandler(null);
                         return;
                     }
-#else
-                        assetPath= m_guidPath[dep];
-#endif
                     m_waitLoadSourcesIndex.Add(dep, layer);
                     SourceData d = new SourceData();
                     d.guid = dep;
@@ -281,19 +291,16 @@ namespace lhFramework.Infrastructure.Managers
                     else
                     {
                         string assetPath = null;
-#if UNITY_EDITOR
-                        if (m_guidPaths.ContainsKey(dep))
+                        if (m_guidPaths.TryGetValue(dep, out assetPath))
                         {
                             assetPath = m_guidPaths[dep];
                         }
                         else
                         {
                             UnityEngine.Debug.LogError("Dont has this assetId: " + dep);
+                            loadHandler(null);
                             return;
                         }
-#else
-                            assetPath= m_guidPath[dep];
-#endif
                         m_waitLoadSourcesIndex.Add(dep, maxWaitInsertIndex + layer);
                         SourceData d = new SourceData();
                         d.guid = dep;
@@ -349,19 +356,16 @@ namespace lhFramework.Infrastructure.Managers
                 else
                 {
                     string assetPath = null;
-#if UNITY_EDITOR
-                    if (m_guidPaths.ContainsKey(dep))
+                    if (m_guidPaths.TryGetValue(dep, out assetPath))
                     {
                         assetPath = m_guidPaths[dep];
                     }
                     else
                     {
                         UnityEngine.Debug.LogError("Dont has this assetId: " + dep);
+                        loadHandler(null);
                         return;
                     }
-#else
-                        assetPath= m_guidPath[dep];
-#endif
                     m_waitLoadSourcesIndex.Add(dep, layer);
                     SourceData d = new SourceData();
                     d.guid = dep;
@@ -423,8 +427,7 @@ namespace lhFramework.Infrastructure.Managers
                     else
                     {
                         string assetPath = null;
-#if UNITY_EDITOR
-                        if (m_guidPaths.ContainsKey(dep))
+                        if (m_guidPaths.TryGetValue(dep, out assetPath))
                         {
                             assetPath = m_guidPaths[dep];
                         }
@@ -433,9 +436,6 @@ namespace lhFramework.Infrastructure.Managers
                             UnityEngine.Debug.LogError("Dont has this assetId: " + dep);
                             return;
                         }
-#else
-                            assetPath= m_guidPath[dep];
-#endif
                         m_waitLoadSourcesIndex.Add(dep, maxWaitInsertIndex + layer);
                         SourceData d = new SourceData();
                         d.guid = dep;
@@ -454,6 +454,238 @@ namespace lhFramework.Infrastructure.Managers
             if (loadEventHandler != null)
             {
                 loadEventHandler(guid);
+            }
+        }
+        UnityEngine.Object[] ISource.Load(int assetId, EVariantType variant)
+        {
+            int guid = assetId * Const.variantMaxLength + (int)variant;
+            var chainId = m_variantChains[guid];
+            int[] chain = m_dependenciesChain[chainId];
+            if (chain.Length == 1)
+            {
+                int dep = chain[0] / Const.dependLayerDigit;
+                int layer = chain[0] % Const.dependLayerDigit;
+                if (usedSources.ContainsKey(dep))
+                {
+                    usedSources[dep].dependencieds.Add(guid);
+                    if (loadEventHandler != null)
+                    {
+                        loadEventHandler(guid);
+                    }
+                    return usedSources[dep].allAssets;
+                }
+                else if (m_waitLoadSourcesIndex.ContainsKey(dep))
+                {
+                    UnityEngine.Debug.LogError("assetId  is waitLoadSources: " + guid);
+                    return null;
+                }
+                else if (loadingSources.ContainsKey(dep))
+                {
+                    UnityEngine.Debug.LogError("assetId  is loadingSources: " + guid);
+                    return null;
+                }
+                else
+                {
+                    string assetPath = null;
+                    if (m_guidPaths.TryGetValue(dep,out assetPath))
+                    {
+                        assetPath = m_guidPaths[dep];
+                    }
+                    else
+                    {
+                        UnityEngine.Debug.LogError("Dont has this assetId: " + dep);
+                        return null;
+                    }
+                    
+                    SourceData d = new SourceData();
+                    d.guid = dep;
+                    d.toAsync = false;
+                    d.assetPath = assetPath;
+                    d.state = ESourceState.WaitLoad;
+                    d.dependencieds.Add(guid);
+                    d.LoadAllAsset();
+                    usedSources[dep].dependencieds.Add(guid);
+                    if (loadEventHandler != null)
+                    {
+                        loadEventHandler(guid);
+                    }
+                    return d.allAssets;
+                }
+            }
+            else
+            {
+                SourceData d=null;
+                for (int i = 0; i < chain.Length; i++)
+                {
+                    var lDep = chain[i];
+                    int dep = lDep / Const.dependLayerDigit;
+                    int layer = lDep % Const.dependLayerDigit;
+                    if (usedSources.ContainsKey(dep))
+                    {
+                        usedSources[dep].dependencieds.Add(guid);
+                        return usedSources[dep].allAssets;
+                    }
+                    else if (m_waitLoadSourcesIndex.ContainsKey(dep))
+                    {
+                        if (i == chain.Length - 1)
+                        {
+                            UnityEngine.Debug.LogError("assetId  is m_waitLoadSourcesIndex: " + guid);
+                        }
+                    }
+                    else if (loadingSources.ContainsKey(dep))
+                    {
+                        if (i == chain.Length - 1)
+                        {
+                            UnityEngine.Debug.LogError("assetId  is loadingSources: " + guid);
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                    else
+                    {
+                        string assetPath = null;
+                        if (m_guidPaths.TryGetValue(dep, out assetPath))
+                        {
+                            assetPath = m_guidPaths[dep];
+                        }
+                        else
+                        {
+                            UnityEngine.Debug.LogError("Dont has this assetId: " + dep);
+                            return null;
+                        }
+                        d = new SourceData();
+                        d.guid = dep;
+                        d.toAsync = false;
+                        d.assetPath = assetPath;
+                        d.state = ESourceState.WaitLoad;
+                        d.dependencieds.Add(guid);
+                        d.LoadAllAsset();
+                        usedSources[dep].dependencieds.Add(guid);
+                    }
+                }
+                if (loadEventHandler != null)
+                {
+                    loadEventHandler(guid);
+                }
+                return d.allAssets;
+            }
+        }
+        UnityEngine.Object ISource.Load(int assetId,string name,EVariantType variant)
+        {
+            int guid = assetId * Const.variantMaxLength + (int)variant;
+            var chainId = m_variantChains[guid];
+            int[] chain = m_dependenciesChain[chainId];
+            if (chain.Length == 1)
+            {
+                int dep = chain[0] / Const.dependLayerDigit;
+                int layer = chain[0] % Const.dependLayerDigit;
+                if (usedSources.ContainsKey(dep))
+                {
+                    usedSources[dep].dependencieds.Add(guid);
+                    if (loadEventHandler != null)
+                    {
+                        loadEventHandler(guid);
+                    }
+                    return usedSources[dep].LoadAsset(name);
+                }
+                else if (m_waitLoadSourcesIndex.ContainsKey(dep))
+                {
+                    UnityEngine.Debug.LogError("assetId  is waitLoadSources: " + guid);
+                    return null;
+                }
+                else if (loadingSources.ContainsKey(dep))
+                {
+                    UnityEngine.Debug.LogError("assetId  is loadingSources: " + guid);
+                    return null;
+                }
+                else
+                {
+                    string assetPath = null;
+                    if (m_guidPaths.TryGetValue(dep, out assetPath))
+                    {
+                        assetPath = m_guidPaths[dep];
+                    }
+                    else
+                    {
+                        UnityEngine.Debug.LogError("Dont has this assetId: " + dep);
+                        return null;
+                    }
+
+                    SourceData d = new SourceData();
+                    d.guid = dep;
+                    d.toAsync = false;
+                    d.assetPath = assetPath;
+                    d.state = ESourceState.WaitLoad;
+                    d.dependencieds.Add(guid);
+                    d.LoadAllAsset();
+                    usedSources[dep].dependencieds.Add(guid);
+                    if (loadEventHandler != null)
+                    {
+                        loadEventHandler(guid);
+                    }
+                    return d.LoadAsset(name);
+                }
+            }
+            else
+            {
+                SourceData d = null;
+                for (int i = 0; i < chain.Length; i++)
+                {
+                    var lDep = chain[i];
+                    int dep = lDep / Const.dependLayerDigit;
+                    int layer = lDep % Const.dependLayerDigit;
+                    if (usedSources.ContainsKey(dep))
+                    {
+                        usedSources[dep].dependencieds.Add(guid);
+                        return usedSources[dep].LoadAsset(name);
+                    }
+                    else if (m_waitLoadSourcesIndex.ContainsKey(dep))
+                    {
+                        if (i == chain.Length - 1)
+                        {
+                            UnityEngine.Debug.LogError("assetId  is m_waitLoadSourcesIndex: " + guid);
+                        }
+                    }
+                    else if (loadingSources.ContainsKey(dep))
+                    {
+                        if (i == chain.Length - 1)
+                        {
+                            UnityEngine.Debug.LogError("assetId  is loadingSources: " + guid);
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                    else
+                    {
+                        string assetPath = null;
+                        if (m_guidPaths.TryGetValue(dep, out assetPath))
+                        {
+                            assetPath = m_guidPaths[dep];
+                        }
+                        else
+                        {
+                            UnityEngine.Debug.LogError("Dont has this assetId: " + dep);
+                            return null;
+                        }
+                        d = new SourceData();
+                        d.guid = dep;
+                        d.toAsync = false;
+                        d.assetPath = assetPath;
+                        d.state = ESourceState.WaitLoad;
+                        d.dependencieds.Add(guid);
+                        d.LoadAllAsset();
+                        usedSources[dep].dependencieds.Add(guid);
+                    }
+                }
+                if (loadEventHandler != null)
+                {
+                    loadEventHandler(guid);
+                }
+                return d.LoadAsset(name);
             }
         }
         void ISource.Update()
@@ -755,7 +987,7 @@ namespace lhFramework.Infrastructure.Managers
                             var guid = item.Key;
                             var s = waitLoadSources[guid];
                             loadingSources.Add(guid, s);
-                            s.Load();
+                            s.LoadToAsync();
                             waitLoadSources.Remove(guid);
                             m_loadingWaitDeleteSources.Add(guid);
                             if (addToLoadEventHandler != null)

@@ -55,24 +55,32 @@ namespace lhFramework.Infrastructure.Core
         streamingAssetUrl+ platform + "/";
 #endif
         public static readonly string sourceBundleUrl = sourceUrl
-#if RELEASE
-        +Const.bundleFolder+"/";
-#elif DEBUG
-        +Const.bundleFolder + "/";
-#elif DEVELOPMENT
+#if DEVELOPMENT
         ;
 #else
-        +Const.bundleFolder+"/";
+        +Const.sourceBundleFolder+"/";
+#endif
+        public static readonly string sceneBundleUrl = sourceUrl
+#if DEVELOPMENT
+        ;
+#else
+        +Const.sceneBundleFolder+"/";
 #endif
         public static readonly string sourceTableUrl =
 
 #if DEVELOPMENT
-            streamingAssetUrl + platform + "/" + Const.bundleFolder + "/"
+            streamingAssetUrl + platform + "/" + Const.sourceBundleFolder + "/"
 #else
             sourceBundleUrl
 #endif
-            + Const.souceTableName;
-
+            + Const.sourceTableName;
+        public static readonly string sceneTableUrl =
+#if DEVELOPMENT
+            streamingAssetUrl + platform + "/" + Const.sceneBundleFolder + "/"
+#else
+            sceneBundleUrl
+#endif
+            + Const.sceneTableName;
 
     }
 }

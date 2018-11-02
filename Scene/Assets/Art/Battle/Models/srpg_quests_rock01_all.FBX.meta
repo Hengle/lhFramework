@@ -1,0 +1,190 @@
+fileFormatVersion: 2
+guid: 9f65bbaed98fd5342885250474e073be
+timeCreated: 1517388235
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: maya_all:_UNKNOWN_REF_NODE_fosterParent1
+    100002: maya_all:building
+    100004: maya_all:building_1
+    100006: maya_all:building_2
+    100008: maya_all:map_battle_srpg_quests
+    100010: maya_all:plant
+    100012: maya_all:plant_1
+    100014: maya_all:plant_2
+    100016: maya_all:PVE_water_model
+    100018: maya_all:PVE_water_model_1
+    100020: maya_all:rock
+    100022: maya_all:rock_1
+    100024: maya_all:rock_2
+    100026: maya_all:Terrain
+    100028: maya_all:tree
+    100030: maya_all:tree_1
+    100032: maya_all:tree_2
+    100034: maya_all:water
+    100036: maya_all:water_1
+    100038: srpg_quests_001_terrain
+    100040: srpg_quests_porp01_all
+    100042: srpg_quests_porp02_all
+    100044: srpg_quests_porp03_all
+    100046: //RootNode
+    100048: srpg_quests_rock01_all
+    100050: srpg_quests_rock02_all
+    100052: srpg_quests_rock03_all
+    100054: srpg_quests_tree01_all
+    100056: srpg_quests_tree02_all
+    100058: srpg_quests_tree03_all
+    400000: maya_all:_UNKNOWN_REF_NODE_fosterParent1
+    400002: maya_all:building
+    400004: maya_all:building_1
+    400006: maya_all:building_2
+    400008: maya_all:map_battle_srpg_quests
+    400010: maya_all:plant
+    400012: maya_all:plant_1
+    400014: maya_all:plant_2
+    400016: maya_all:PVE_water_model
+    400018: maya_all:PVE_water_model_1
+    400020: maya_all:rock
+    400022: maya_all:rock_1
+    400024: maya_all:rock_2
+    400026: maya_all:Terrain
+    400028: maya_all:tree
+    400030: maya_all:tree_1
+    400032: maya_all:tree_2
+    400034: maya_all:water
+    400036: maya_all:water_1
+    400038: srpg_quests_001_terrain
+    400040: srpg_quests_porp01_all
+    400042: srpg_quests_porp02_all
+    400044: srpg_quests_porp03_all
+    400046: //RootNode
+    400048: srpg_quests_rock01_all
+    400050: srpg_quests_rock02_all
+    400052: srpg_quests_rock03_all
+    400054: srpg_quests_tree01_all
+    400056: srpg_quests_tree02_all
+    400058: srpg_quests_tree03_all
+    2300000: maya_all:PVE_water_model
+    2300002: maya_all:PVE_water_model_1
+    2300004: srpg_quests_001_terrain
+    2300006: srpg_quests_porp01_all
+    2300008: srpg_quests_porp02_all
+    2300010: srpg_quests_porp03_all
+    2300012: srpg_quests_rock01_all
+    2300014: srpg_quests_rock02_all
+    2300016: srpg_quests_rock03_all
+    2300018: srpg_quests_tree01_all
+    2300020: srpg_quests_tree02_all
+    2300022: srpg_quests_tree03_all
+    2300024: //RootNode
+    3300000: maya_all:PVE_water_model
+    3300002: maya_all:PVE_water_model_1
+    3300004: srpg_quests_001_terrain
+    3300006: srpg_quests_porp01_all
+    3300008: srpg_quests_porp02_all
+    3300010: srpg_quests_porp03_all
+    3300012: srpg_quests_rock01_all
+    3300014: srpg_quests_rock02_all
+    3300016: srpg_quests_rock03_all
+    3300018: srpg_quests_tree01_all
+    3300020: srpg_quests_tree02_all
+    3300022: srpg_quests_tree03_all
+    3300024: //RootNode
+    4300000: srpg_quests_rock01_all
+    4300002: srpg_quests_tree01_all
+    4300004: srpg_quests_porp01_all
+    4300006: maya_all:PVE_water_model
+    4300008: srpg_quests_tree02_all
+    4300010: srpg_quests_rock02_all
+    4300012: srpg_quests_porp02_all
+    4300014: srpg_quests_rock03_all
+    4300016: maya_all:PVE_water_model_1
+    4300018: srpg_quests_porp03_all
+    4300020: srpg_quests_tree03_all
+    4300022: srpg_quests_001_terrain
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 19 aa- Default
+    second: {fileID: 2100000, guid: 6706d5ab82e361f42afc7a1050af6246, type: 2}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 2
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

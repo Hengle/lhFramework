@@ -31,7 +31,22 @@ namespace lhFramework.Infrastructure.Managers
         /// <param name="variant"></param>
         void Load(int assetId, DataHandler<UnityEngine.Object[]> loadHandler, EVariantType variant,bool toAsync);
         /// <summary>
-        /// 释放bundle包引用
+        /// 同步加载bundle所有资源
+        /// </summary>
+        /// <param name="assetId"></param>
+        /// <param name="variant"></param>
+        /// <returns></returns>
+        UnityEngine.Object[] Load(int assetId, EVariantType variant);
+        /// <summary>
+        /// 同步加载获取bundle单个资源（此方法不能和异步加载同时使用，因为如果加载同一个参数的时候，如果异步加载的资源在等待中或正在加载中会出现报错）
+        /// </summary>
+        /// <param name="assetId"></param>
+        /// <param name="name"></param>
+        /// <param name="variant"></param>
+        /// <returns></returns>
+        UnityEngine.Object Load(int assetId,string name, EVariantType variant);
+        /// <summary>
+        /// 释放bundle包引用（此方法不能和异步加载同时使用，因为如果加载同一个参数的时候，如果异步加载的资源在等待中或正在加载中会出现报错）
         /// </summary>
         /// <param name="assetId"></param>
         /// <param name="variant"></param>
